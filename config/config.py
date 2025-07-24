@@ -1,1 +1,0 @@
-PATHS = {"template": "./data/template.csv"}
