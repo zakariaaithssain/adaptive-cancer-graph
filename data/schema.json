@@ -1,2703 +1,1563 @@
-﻿[
-  {
-    "first degree connection": {
-"r": "DIAGNOSED",
-"l1": [
-        "Patient"
-      ],
-"l2": [
-        "CancerCase"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "FROM",
-"l1": [
-        "CancerCase"
-      ],
-"l2": [
-        "TumorSample"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "ISTYPE",
-"l1": [
-        "CancerCase"
-      ],
-"l2": [
-        "CancerType"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "DIAGNOSED",
-"l1": [
-        "CancerCase"
-      ],
-"l2": [
-        "Patient"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "MUTATION",
-"l1": [
-        "TumorSample"
-      ],
-"l2": [
-        "Variant"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "FROM",
-"l1": [
-        "TumorSample"
-      ],
-"l2": [
-        "CancerCase"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "ISTYPE",
-"l1": [
-        "CancerType"
-      ],
-"l2": [
-        "CancerCase"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "TREATED",
-"l1": [
-        "CancerCase"
-      ],
-"l2": [
-        "Treatment"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "PCOR",
-"l1": [
-        "TumorSample"
-      ],
-"l2": [
-        "TumorSample"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "SCORE",
-"l1": [
-        "TumorSample"
-      ],
-"l2": [
-        "Pathway"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "PARTICIPATES",
-"l1": [
-        "MolecularFunction",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "CAUSES",
-"l1": [
-        "SideEffect",
-        "Hetio"
-      ],
-"l2": [
-        "Compound",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": null,
-"l1": [
-        "SideEffect",
-        "Hetio"
-      ],
-"l2": null
-    }
-  },
-  {
-    "first degree connection": {
-"r": "UPREGULATES",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Anatomy",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "EXPRESSES",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Anatomy",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "INTERACTS",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "PARTICIPATES",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "BiologicalProcess",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "PARTICIPATES",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Pathway",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "PARTICIPATES",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "MolecularFunction",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "PARTICIPATES",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "CellularComponent",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "DOWNREGULATES",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Anatomy",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "DOWNREGULATES",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Disease",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "REGULATES",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "ASSOCIATES",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Disease",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "COVARIES",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "predicted",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "catalyzed by",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "complex",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "expression regulated by",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "PPrel",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "activated by",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "expression regulates",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "UPREGULATES",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Compound",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "UPREGULATES",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Disease",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "input",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "activate",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "inhibited by",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "inhibite",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "PPrel",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "inhibition",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "inhibition",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "phosphorylation",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "phosphorylation",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "phosphorylated by",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "binding",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "association",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "DOWNREGULATES",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Compound",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "complex",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "input",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "reaction",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "reaction",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "predicted",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "GErel",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "GErel",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "indirect effect",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "expression",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "expression",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "catalyze",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "activation",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "activation",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "catalyzed by",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "inhibit",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "catalyze",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "activate",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "inhibite",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "activated",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": null,
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": null
-    }
-  },
-  {
-    "first degree connection": {
-"r": "expression by",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "VAR_GENE",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Variant"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "VARIANT",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "VOM_Variant"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "dephosphorylation",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "BINDS",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Compound",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "interaction",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "inhibited",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "methylation",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "activated by",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "state change",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "inhibited by",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "PCrel",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "binding",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "association",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "phosphorylated by",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "dissociation",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "ubiquitination",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "inhibit",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "indirect effect",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "activated",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "compound",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "ECrel",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "expressed by",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "interaction",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "expression regulated by",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "expression regulates",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "compound",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "ECrel",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "activated binding",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "repression",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "expression by",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "expressed by",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "repressed by",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "dephosphorylated",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "ubiquitination",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "ubiquitinated",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "PCrel",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "activated binding",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "dephosphorylated by",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "dephosphorylation",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "inhibited",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "glycosylation",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "glycosylated",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "repressed",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "repressed",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "inhibited glycosylation",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "glycosylation",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "ubiquitinated",
-"l1": [
-        "Gene",
-        "Hetio"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "PARTICIPATES",
-"l1": [
-        "BiologicalProcess",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "UPREGULATES",
-"l1": [
-        "Compound",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "DOWNREGULATES",
-"l1": [
-        "Compound",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "CAUSES",
-"l1": [
-        "Compound",
-        "Hetio"
-      ],
-"l2": [
-        "SideEffect",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "BINDS",
-"l1": [
-        "Compound",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "RESEMBLES",
-"l1": [
-        "Compound",
-        "Hetio"
-      ],
-"l2": [
-        "Compound",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "INCLUDES",
-"l1": [
-        "Compound",
-        "Hetio"
-      ],
-"l2": [
-        "PharmacologicClass",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "PALLIATES",
-"l1": [
-        "Compound",
-        "Hetio"
-      ],
-"l2": [
-        "Disease",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": null,
-"l1": [
-        "Compound",
-        "Hetio"
-      ],
-"l2": null
-    }
-  },
-  {
-    "first degree connection": {
-"r": "TREATS",
-"l1": [
-        "Compound",
-        "Hetio"
-      ],
-"l2": [
-        "Disease",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "COMPONENT_OF",
-"l1": [
-        "Compound",
-        "Hetio"
-      ],
-"l2": [
-        "Regimen"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "PARTICIPATES",
-"l1": [
-        "Pathway",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "PARTICIPATES",
-"l1": [
-        "CellularComponent",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": null,
-"l1": [
-        "Symptom",
-        "Hetio"
-      ],
-"l2": null
-    }
-  },
-  {
-    "first degree connection": {
-"r": "PRESENTS",
-"l1": [
-        "Symptom",
-        "Hetio"
-      ],
-"l2": [
-        "Disease",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "UPREGULATES",
-"l1": [
-        "Disease",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "DOWNREGULATES",
-"l1": [
-        "Disease",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "ASSOCIATES",
-"l1": [
-        "Disease",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "LOCALIZES",
-"l1": [
-        "Disease",
-        "Hetio"
-      ],
-"l2": [
-        "Anatomy",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "RESEMBLES",
-"l1": [
-        "Disease",
-        "Hetio"
-      ],
-"l2": [
-        "Disease",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "TREATS",
-"l1": [
-        "Disease",
-        "Hetio"
-      ],
-"l2": [
-        "Compound",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "PRESENTS",
-"l1": [
-        "Disease",
-        "Hetio"
-      ],
-"l2": [
-        "Symptom",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "PALLIATES",
-"l1": [
-        "Disease",
-        "Hetio"
-      ],
-"l2": [
-        "Compound",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": null,
-"l1": [
-        "Disease",
-        "Hetio"
-      ],
-"l2": null
-    }
-  },
-  {
-    "first degree connection": {
-"r": "INCLUDES",
-"l1": [
-        "PharmacologicClass",
-        "Hetio"
-      ],
-"l2": [
-        "Compound",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "LOCALIZES",
-"l1": [
-        "Anatomy",
-        "Hetio"
-      ],
-"l2": [
-        "Disease",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "EXPRESSES",
-"l1": [
-        "Anatomy",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "UPREGULATES",
-"l1": [
-        "Anatomy",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "DOWNREGULATES",
-"l1": [
-        "Anatomy",
-        "Hetio"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": null,
-"l1": [
-        "Anatomy",
-        "Hetio"
-      ],
-"l2": null
-    }
-  },
-  {
-    "first degree connection": {
-"r": "SCORE",
-"l1": [
-        "Pathway"
-      ],
-"l2": [
-        "TumorSample"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": null,
-"l1": [
-        "Patient"
-      ],
-"l2": null
-    }
-  },
-  {
-    "first degree connection": {
-"r": "TREATED",
-"l1": [
-        "Treatment"
-      ],
-"l2": [
-        "CancerCase"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "THERAPY_REGIMEN",
-"l1": [
-        "Treatment"
-      ],
-"l2": [
-        "Regimen"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "COMPONENT_OF",
-"l1": [
-        "Regimen"
-      ],
-"l2": [
-        "Compound",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "THERAPY_REGIMEN",
-"l1": [
-        "Regimen"
-      ],
-"l2": [
-        "Treatment"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "COMPONENT_OF",
-"l1": [
-        "Regimen"
-      ],
-"l2": [
-        "Compound"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "COMPONENT_OF",
-"l1": [
-        "Compound"
-      ],
-"l2": [
-        "Regimen"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "predicted",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "activated by",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "complex",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "input",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "input",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "PPrel",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "association",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "reaction",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "binding",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "complex",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "activated by",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "catalyzed by",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "catalyze",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "expression regulated by",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "PPrel",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "inhibition",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "activate",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "binding",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "association",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "activation",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "reaction",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "inhibited by",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "phosphorylated by",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "activation",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "phosphorylation",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "GErel",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "expression by",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "phosphorylation",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "predicted",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "ubiquitination",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "PCrel",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "indirect effect",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "expression",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "inhibition",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "dephosphorylation",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "inhibited",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "expressed by",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "activated",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "interaction",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "compound",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "ECrel",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "GErel",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "expression",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "inhibite",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "activate",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "ubiquitinated",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "catalyzed by",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "inhibit",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "expression regulates",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "inhibit",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "catalyze",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "inhibite",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "inhibited by",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "phosphorylated by",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "activated binding",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "compound",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "ECrel",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "activated binding",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "glycosylation",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "repressed",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "VAR_GENE",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "Variant"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "MUTATION",
-"l1": [
-        "Variant"
-      ],
-"l2": [
-        "TumorSample"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "VAR_GENE",
-"l1": [
-        "Variant"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "VAR_GENE",
-"l1": [
-        "Variant"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": null,
-"l1": [
-        "Variant"
-      ],
-"l2": null
-    }
-  },
-  {
-    "first degree connection": {
-"r": "VARIANT",
-"l1": [
-        "Gene"
-      ],
-"l2": [
-        "VOM_Variant"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "ANNOTATED_VARIANT",
-"l1": [
-        "VOM_Variant"
-      ],
-"l2": [
-        "Variant"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "VARIANT",
-"l1": [
-        "VOM_Variant"
-      ],
-"l2": [
-        "Gene",
-        "Hetio"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "ANNOTATED_VARIANT",
-"l1": [
-        "Variant"
-      ],
-"l2": [
-        "VOM_Variant"
-      ]
-    }
-  },
-  {
-    "first degree connection": {
-"r": "VARIANT",
-"l1": [
-        "VOM_Variant"
-      ],
-"l2": [
-        "Gene"
-      ]
-    }
+[
+  {
+    "relationship": "DIAGNOSED",
+    "source_nodes": "['Patient']",
+    "target_nodes": "['CancerCase']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "FROM",
+    "source_nodes": "['CancerCase']",
+    "target_nodes": "['TumorSample']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "ISTYPE",
+    "source_nodes": "['CancerCase']",
+    "target_nodes": "['CancerType']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "DIAGNOSED",
+    "source_nodes": "['CancerCase']",
+    "target_nodes": "['Patient']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "MUTATION",
+    "source_nodes": "['TumorSample']",
+    "target_nodes": "['Variant']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "FROM",
+    "source_nodes": "['TumorSample']",
+    "target_nodes": "['CancerCase']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "ISTYPE",
+    "source_nodes": "['CancerType']",
+    "target_nodes": "['CancerCase']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "TREATED",
+    "source_nodes": "['CancerCase']",
+    "target_nodes": "['Treatment']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "PCOR",
+    "source_nodes": "['TumorSample']",
+    "target_nodes": "['TumorSample']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "SCORE",
+    "source_nodes": "['TumorSample']",
+    "target_nodes": "['Pathway']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "PARTICIPATES",
+    "source_nodes": "['MolecularFunction', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "CAUSES",
+    "source_nodes": "['SideEffect', 'Hetio']",
+    "target_nodes": "['Compound', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": null,
+    "source_nodes": "['SideEffect', 'Hetio']",
+    "target_nodes": "None",
+    "source_count": 2,
+    "target_count": 0
+  },
+  {
+    "relationship": "UPREGULATES",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Anatomy', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "EXPRESSES",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Anatomy', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "INTERACTS",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "PARTICIPATES",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['BiologicalProcess', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "PARTICIPATES",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Pathway', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "PARTICIPATES",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['MolecularFunction', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "PARTICIPATES",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['CellularComponent', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "DOWNREGULATES",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Anatomy', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "DOWNREGULATES",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Disease', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "REGULATES",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "ASSOCIATES",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Disease', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "COVARIES",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "predicted",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "catalyzed by",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "complex",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "expression regulated by",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "PPrel",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "activated by",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "expression regulates",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "UPREGULATES",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Compound', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "UPREGULATES",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Disease', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "input",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "activate",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "inhibited by",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "inhibite",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "PPrel",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "inhibition",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "inhibition",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "phosphorylation",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "phosphorylation",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "phosphorylated by",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "binding",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "association",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "DOWNREGULATES",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Compound', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "complex",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "input",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "reaction",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "reaction",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "predicted",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "GErel",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "GErel",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "indirect effect",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "expression",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "expression",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "catalyze",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "activation",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "activation",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "catalyzed by",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "inhibit",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "catalyze",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "activate",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "inhibite",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "activated",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": null,
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "None",
+    "source_count": 2,
+    "target_count": 0
+  },
+  {
+    "relationship": "expression by",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "VAR_GENE",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Variant']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "VARIANT",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['VOM_Variant']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "dephosphorylation",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "BINDS",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Compound', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "interaction",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "inhibited",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "methylation",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "activated by",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "state change",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "inhibited by",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "PCrel",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "binding",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "association",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "phosphorylated by",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "dissociation",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "ubiquitination",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "inhibit",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "indirect effect",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "activated",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "compound",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "ECrel",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "expressed by",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "interaction",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "expression regulated by",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "expression regulates",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "compound",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "ECrel",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "activated binding",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "repression",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "expression by",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "expressed by",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "repressed by",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "dephosphorylated",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "ubiquitination",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "ubiquitinated",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "PCrel",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "activated binding",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "dephosphorylated by",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "dephosphorylation",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "inhibited",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "glycosylation",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "glycosylated",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "repressed",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "repressed",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "inhibited glycosylation",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "glycosylation",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "ubiquitinated",
+    "source_nodes": "['Gene', 'Hetio']",
+    "target_nodes": "['Gene']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "PARTICIPATES",
+    "source_nodes": "['BiologicalProcess', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "UPREGULATES",
+    "source_nodes": "['Compound', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "DOWNREGULATES",
+    "source_nodes": "['Compound', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "CAUSES",
+    "source_nodes": "['Compound', 'Hetio']",
+    "target_nodes": "['SideEffect', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "BINDS",
+    "source_nodes": "['Compound', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "RESEMBLES",
+    "source_nodes": "['Compound', 'Hetio']",
+    "target_nodes": "['Compound', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "INCLUDES",
+    "source_nodes": "['Compound', 'Hetio']",
+    "target_nodes": "['PharmacologicClass', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "PALLIATES",
+    "source_nodes": "['Compound', 'Hetio']",
+    "target_nodes": "['Disease', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": null,
+    "source_nodes": "['Compound', 'Hetio']",
+    "target_nodes": "None",
+    "source_count": 2,
+    "target_count": 0
+  },
+  {
+    "relationship": "TREATS",
+    "source_nodes": "['Compound', 'Hetio']",
+    "target_nodes": "['Disease', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "COMPONENT_OF",
+    "source_nodes": "['Compound', 'Hetio']",
+    "target_nodes": "['Regimen']",
+    "source_count": 2,
+    "target_count": 1
+  },
+  {
+    "relationship": "PARTICIPATES",
+    "source_nodes": "['Pathway', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "PARTICIPATES",
+    "source_nodes": "['CellularComponent', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": null,
+    "source_nodes": "['Symptom', 'Hetio']",
+    "target_nodes": "None",
+    "source_count": 2,
+    "target_count": 0
+  },
+  {
+    "relationship": "PRESENTS",
+    "source_nodes": "['Symptom', 'Hetio']",
+    "target_nodes": "['Disease', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "UPREGULATES",
+    "source_nodes": "['Disease', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "DOWNREGULATES",
+    "source_nodes": "['Disease', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "ASSOCIATES",
+    "source_nodes": "['Disease', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "LOCALIZES",
+    "source_nodes": "['Disease', 'Hetio']",
+    "target_nodes": "['Anatomy', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "RESEMBLES",
+    "source_nodes": "['Disease', 'Hetio']",
+    "target_nodes": "['Disease', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "TREATS",
+    "source_nodes": "['Disease', 'Hetio']",
+    "target_nodes": "['Compound', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "PRESENTS",
+    "source_nodes": "['Disease', 'Hetio']",
+    "target_nodes": "['Symptom', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "PALLIATES",
+    "source_nodes": "['Disease', 'Hetio']",
+    "target_nodes": "['Compound', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": null,
+    "source_nodes": "['Disease', 'Hetio']",
+    "target_nodes": "None",
+    "source_count": 2,
+    "target_count": 0
+  },
+  {
+    "relationship": "INCLUDES",
+    "source_nodes": "['PharmacologicClass', 'Hetio']",
+    "target_nodes": "['Compound', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "LOCALIZES",
+    "source_nodes": "['Anatomy', 'Hetio']",
+    "target_nodes": "['Disease', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "EXPRESSES",
+    "source_nodes": "['Anatomy', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "UPREGULATES",
+    "source_nodes": "['Anatomy', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": "DOWNREGULATES",
+    "source_nodes": "['Anatomy', 'Hetio']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 2,
+    "target_count": 2
+  },
+  {
+    "relationship": null,
+    "source_nodes": "['Anatomy', 'Hetio']",
+    "target_nodes": "None",
+    "source_count": 2,
+    "target_count": 0
+  },
+  {
+    "relationship": "SCORE",
+    "source_nodes": "['Pathway']",
+    "target_nodes": "['TumorSample']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": null,
+    "source_nodes": "['Patient']",
+    "target_nodes": "None",
+    "source_count": 1,
+    "target_count": 0
+  },
+  {
+    "relationship": "TREATED",
+    "source_nodes": "['Treatment']",
+    "target_nodes": "['CancerCase']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "THERAPY_REGIMEN",
+    "source_nodes": "['Treatment']",
+    "target_nodes": "['Regimen']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "COMPONENT_OF",
+    "source_nodes": "['Regimen']",
+    "target_nodes": "['Compound', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "THERAPY_REGIMEN",
+    "source_nodes": "['Regimen']",
+    "target_nodes": "['Treatment']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "COMPONENT_OF",
+    "source_nodes": "['Regimen']",
+    "target_nodes": "['Compound']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "COMPONENT_OF",
+    "source_nodes": "['Compound']",
+    "target_nodes": "['Regimen']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "predicted",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "activated by",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "complex",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "input",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "input",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "PPrel",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "association",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "reaction",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "binding",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "complex",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "activated by",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "catalyzed by",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "catalyze",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "expression regulated by",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "PPrel",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "inhibition",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "activate",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "binding",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "association",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "activation",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "reaction",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "inhibited by",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "phosphorylated by",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "activation",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "phosphorylation",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "GErel",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "expression by",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "phosphorylation",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "predicted",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "ubiquitination",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "PCrel",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "indirect effect",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "expression",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "inhibition",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "dephosphorylation",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "inhibited",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "expressed by",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "activated",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "interaction",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "compound",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "ECrel",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "GErel",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "expression",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "inhibite",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "activate",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "ubiquitinated",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "catalyzed by",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "inhibit",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "expression regulates",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "inhibit",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "catalyze",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "inhibite",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "inhibited by",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "phosphorylated by",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "activated binding",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "compound",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "ECrel",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "activated binding",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "glycosylation",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "repressed",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "VAR_GENE",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['Variant']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "MUTATION",
+    "source_nodes": "['Variant']",
+    "target_nodes": "['TumorSample']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "VAR_GENE",
+    "source_nodes": "['Variant']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "VAR_GENE",
+    "source_nodes": "['Variant']",
+    "target_nodes": "['Gene']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": null,
+    "source_nodes": "['Variant']",
+    "target_nodes": "None",
+    "source_count": 1,
+    "target_count": 0
+  },
+  {
+    "relationship": "VARIANT",
+    "source_nodes": "['Gene']",
+    "target_nodes": "['VOM_Variant']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "ANNOTATED_VARIANT",
+    "source_nodes": "['VOM_Variant']",
+    "target_nodes": "['Variant']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "VARIANT",
+    "source_nodes": "['VOM_Variant']",
+    "target_nodes": "['Gene', 'Hetio']",
+    "source_count": 1,
+    "target_count": 2
+  },
+  {
+    "relationship": "ANNOTATED_VARIANT",
+    "source_nodes": "['Variant']",
+    "target_nodes": "['VOM_Variant']",
+    "source_count": 1,
+    "target_count": 1
+  },
+  {
+    "relationship": "VARIANT",
+    "source_nodes": "['VOM_Variant']",
+    "target_nodes": "['Gene']",
+    "source_count": 1,
+    "target_count": 1
   }
 ]
