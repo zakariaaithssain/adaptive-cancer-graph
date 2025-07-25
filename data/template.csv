@@ -1,19 +1,345 @@
-fromLabel,relation,toLabel,example
-Gene,HAS_MUTATION,Mutation,BRCA1 → HAS_MUTATION → BRCA1 c.68_69delAG
-Mutation,ASSOCIATED_WITH,Tumor,BRAF V600E → ASSOCIATED_WITH → Melanoma
-Gene,ASSOCIATED_WITH,Tumor,TP53 → ASSOCIATED_WITH → Lung cancer
-Gene,ENCODES,Protein,EGFR → ENCODES → EGFR protein
-Protein,ASSOCIATED_WITH,Tumor,HER2 → ASSOCIATED_WITH → Breast cancer
-Protein,PART_OF,Pathway,EGFR → PART_OF → MAPK signaling pathway
-Pathway,REGULATES,Function,PI3K → REGULATES → Cell growth
-Gene,REGULATES,Function,TP53 → REGULATES → Apoptosis
-Protein,REGULATES,Function,Caspase-3 → REGULATES → Apoptosis
-RiskFactor,ASSOCIATED_WITH,Tumor,Smoking → ASSOCIATED_WITH → Lung cancer
-RiskFactor,ASSOCIATED_WITH,Mutation,UV → ASSOCIATED_WITH → DNA breaks
-Treatment,TREATS,Tumor,Chemotherapy → TREATS → Leukemia
-Treatment,TARGETS,Protein,Trastuzumab → TARGETS → HER2
-Treatment,TARGETS,Mutation,Osimertinib → TARGETS → EGFR mutation
-Treatment,INHIBITS,Pathway,Vemurafenib → INHIBITS → MAPK pathway
-Tumor,LOCATED_IN,Organ,Tumor → LOCATED_IN → Prostate
-CancerType,PROPAGATES_TO,CancerType,Breast cancer → PROPAGATES_TO → Bone cancer
-NormalCell,TRANSFORMS_INTO,CancerCell,Luminal cell → TRANSFORMS_INTO → Adenocarcinoma
+,relationship,fromLabel,toLabel
+0,DIAGNOSED,Patient,CancerCase
+1,FROM,CancerCase,TumorSample
+2,ISTYPE,CancerCase,CancerType
+3,DIAGNOSED,CancerCase,Patient
+4,MUTATION,TumorSample,Variant
+5,FROM,TumorSample,CancerCase
+6,ISTYPE,CancerType,CancerCase
+7,TREATED,CancerCase,Treatment
+8,PCOR,TumorSample,TumorSample
+9,SCORE,TumorSample,Pathway
+10,PARTICIPATES,MolecularFunction,Gene
+11,PARTICIPATES,MolecularFunction,Hetio
+12,PARTICIPATES,Hetio,Gene
+13,PARTICIPATES,Hetio,Hetio
+14,CAUSES,SideEffect,Compound
+15,CAUSES,SideEffect,Hetio
+16,CAUSES,Hetio,Compound
+17,CAUSES,Hetio,Hetio
+18,UPREGULATES,Gene,Anatomy
+19,UPREGULATES,Gene,Hetio
+20,UPREGULATES,Hetio,Anatomy
+21,UPREGULATES,Hetio,Hetio
+22,EXPRESSES,Gene,Anatomy
+23,EXPRESSES,Gene,Hetio
+24,EXPRESSES,Hetio,Anatomy
+25,EXPRESSES,Hetio,Hetio
+26,INTERACTS,Gene,Gene
+27,INTERACTS,Gene,Hetio
+28,INTERACTS,Hetio,Gene
+29,INTERACTS,Hetio,Hetio
+30,PARTICIPATES,Gene,BiologicalProcess
+31,PARTICIPATES,Gene,Hetio
+32,PARTICIPATES,Hetio,BiologicalProcess
+33,PARTICIPATES,Gene,Pathway
+34,PARTICIPATES,Hetio,Pathway
+35,PARTICIPATES,Gene,MolecularFunction
+36,PARTICIPATES,Hetio,MolecularFunction
+37,PARTICIPATES,Gene,CellularComponent
+38,PARTICIPATES,Hetio,CellularComponent
+39,DOWNREGULATES,Gene,Anatomy
+40,DOWNREGULATES,Gene,Hetio
+41,DOWNREGULATES,Hetio,Anatomy
+42,DOWNREGULATES,Hetio,Hetio
+43,DOWNREGULATES,Gene,Disease
+44,DOWNREGULATES,Hetio,Disease
+45,REGULATES,Gene,Gene
+46,REGULATES,Gene,Hetio
+47,REGULATES,Hetio,Gene
+48,REGULATES,Hetio,Hetio
+49,ASSOCIATES,Gene,Disease
+50,ASSOCIATES,Gene,Hetio
+51,ASSOCIATES,Hetio,Disease
+52,ASSOCIATES,Hetio,Hetio
+53,COVARIES,Gene,Gene
+54,COVARIES,Gene,Hetio
+55,COVARIES,Hetio,Gene
+56,COVARIES,Hetio,Hetio
+57,predicted,Gene,Gene
+58,predicted,Gene,Hetio
+59,predicted,Hetio,Gene
+60,predicted,Hetio,Hetio
+61,catalyzed by,Gene,Gene
+62,catalyzed by,Gene,Hetio
+63,catalyzed by,Hetio,Gene
+64,catalyzed by,Hetio,Hetio
+65,complex,Gene,Gene
+66,complex,Gene,Hetio
+67,complex,Hetio,Gene
+68,complex,Hetio,Hetio
+69,expression regulated by,Gene,Gene
+70,expression regulated by,Gene,Hetio
+71,expression regulated by,Hetio,Gene
+72,expression regulated by,Hetio,Hetio
+73,PPrel,Gene,Gene
+74,PPrel,Gene,Hetio
+75,PPrel,Hetio,Gene
+76,PPrel,Hetio,Hetio
+77,activated by,Gene,Gene
+78,activated by,Gene,Hetio
+79,activated by,Hetio,Gene
+80,activated by,Hetio,Hetio
+81,expression regulates,Gene,Gene
+82,expression regulates,Gene,Hetio
+83,expression regulates,Hetio,Gene
+84,expression regulates,Hetio,Hetio
+85,UPREGULATES,Gene,Compound
+86,UPREGULATES,Hetio,Compound
+87,UPREGULATES,Gene,Disease
+88,UPREGULATES,Hetio,Disease
+89,input,Gene,Gene
+90,input,Gene,Hetio
+91,input,Hetio,Gene
+92,input,Hetio,Hetio
+93,activate,Gene,Gene
+94,activate,Gene,Hetio
+95,activate,Hetio,Gene
+96,activate,Hetio,Hetio
+97,inhibited by,Gene,Gene
+98,inhibited by,Gene,Hetio
+99,inhibited by,Hetio,Gene
+100,inhibited by,Hetio,Hetio
+101,inhibite,Gene,Gene
+102,inhibite,Gene,Hetio
+103,inhibite,Hetio,Gene
+104,inhibite,Hetio,Hetio
+105,inhibition,Gene,Gene
+106,inhibition,Hetio,Gene
+107,inhibition,Gene,Hetio
+108,inhibition,Hetio,Hetio
+109,phosphorylation,Gene,Gene
+110,phosphorylation,Hetio,Gene
+111,phosphorylation,Gene,Hetio
+112,phosphorylation,Hetio,Hetio
+113,phosphorylated by,Gene,Gene
+114,phosphorylated by,Gene,Hetio
+115,phosphorylated by,Hetio,Gene
+116,phosphorylated by,Hetio,Hetio
+117,binding,Gene,Gene
+118,binding,Gene,Hetio
+119,binding,Hetio,Gene
+120,binding,Hetio,Hetio
+121,association,Gene,Gene
+122,association,Gene,Hetio
+123,association,Hetio,Gene
+124,association,Hetio,Hetio
+125,DOWNREGULATES,Gene,Compound
+126,DOWNREGULATES,Hetio,Compound
+127,reaction,Gene,Gene
+128,reaction,Gene,Hetio
+129,reaction,Hetio,Gene
+130,reaction,Hetio,Hetio
+131,GErel,Gene,Gene
+132,GErel,Gene,Hetio
+133,GErel,Hetio,Gene
+134,GErel,Hetio,Hetio
+135,indirect effect,Gene,Gene
+136,indirect effect,Gene,Hetio
+137,indirect effect,Hetio,Gene
+138,indirect effect,Hetio,Hetio
+139,expression,Gene,Gene
+140,expression,Gene,Hetio
+141,expression,Hetio,Gene
+142,expression,Hetio,Hetio
+143,catalyze,Gene,Gene
+144,catalyze,Gene,Hetio
+145,catalyze,Hetio,Gene
+146,catalyze,Hetio,Hetio
+147,activation,Gene,Gene
+148,activation,Gene,Hetio
+149,activation,Hetio,Gene
+150,activation,Hetio,Hetio
+151,inhibit,Gene,Gene
+152,inhibit,Gene,Hetio
+153,inhibit,Hetio,Gene
+154,inhibit,Hetio,Hetio
+155,activated,Gene,Gene
+156,activated,Gene,Hetio
+157,activated,Hetio,Gene
+158,activated,Hetio,Hetio
+159,expression by,Gene,Gene
+160,expression by,Gene,Hetio
+161,expression by,Hetio,Gene
+162,expression by,Hetio,Hetio
+163,VAR_GENE,Gene,Variant
+164,VAR_GENE,Hetio,Variant
+165,VARIANT,Gene,VOM_Variant
+166,VARIANT,Hetio,VOM_Variant
+167,dephosphorylation,Gene,Gene
+168,dephosphorylation,Gene,Hetio
+169,dephosphorylation,Hetio,Gene
+170,dephosphorylation,Hetio,Hetio
+171,BINDS,Gene,Compound
+172,BINDS,Gene,Hetio
+173,BINDS,Hetio,Compound
+174,BINDS,Hetio,Hetio
+175,interaction,Gene,Gene
+176,interaction,Gene,Hetio
+177,interaction,Hetio,Gene
+178,interaction,Hetio,Hetio
+179,inhibited,Gene,Gene
+180,inhibited,Gene,Hetio
+181,inhibited,Hetio,Gene
+182,inhibited,Hetio,Hetio
+183,methylation,Gene,Gene
+184,methylation,Gene,Hetio
+185,methylation,Hetio,Gene
+186,methylation,Hetio,Hetio
+187,state change,Gene,Gene
+188,state change,Gene,Hetio
+189,state change,Hetio,Gene
+190,state change,Hetio,Hetio
+191,PCrel,Gene,Gene
+192,PCrel,Gene,Hetio
+193,PCrel,Hetio,Gene
+194,PCrel,Hetio,Hetio
+195,dissociation,Gene,Gene
+196,dissociation,Gene,Hetio
+197,dissociation,Hetio,Gene
+198,dissociation,Hetio,Hetio
+199,ubiquitination,Gene,Gene
+200,ubiquitination,Gene,Hetio
+201,ubiquitination,Hetio,Gene
+202,ubiquitination,Hetio,Hetio
+203,compound,Gene,Gene
+204,compound,Gene,Hetio
+205,compound,Hetio,Gene
+206,compound,Hetio,Hetio
+207,ECrel,Gene,Gene
+208,ECrel,Gene,Hetio
+209,ECrel,Hetio,Gene
+210,ECrel,Hetio,Hetio
+211,expressed by,Gene,Gene
+212,expressed by,Gene,Hetio
+213,expressed by,Hetio,Gene
+214,expressed by,Hetio,Hetio
+215,activated binding,Gene,Gene
+216,activated binding,Gene,Hetio
+217,activated binding,Hetio,Gene
+218,activated binding,Hetio,Hetio
+219,repression,Gene,Gene
+220,repression,Gene,Hetio
+221,repression,Hetio,Gene
+222,repression,Hetio,Hetio
+223,repressed by,Gene,Gene
+224,repressed by,Gene,Hetio
+225,repressed by,Hetio,Gene
+226,repressed by,Hetio,Hetio
+227,dephosphorylated,Gene,Gene
+228,dephosphorylated,Gene,Hetio
+229,dephosphorylated,Hetio,Gene
+230,dephosphorylated,Hetio,Hetio
+231,ubiquitinated,Gene,Gene
+232,ubiquitinated,Gene,Hetio
+233,ubiquitinated,Hetio,Gene
+234,ubiquitinated,Hetio,Hetio
+235,dephosphorylated by,Gene,Gene
+236,dephosphorylated by,Gene,Hetio
+237,dephosphorylated by,Hetio,Gene
+238,dephosphorylated by,Hetio,Hetio
+239,glycosylation,Gene,Gene
+240,glycosylation,Gene,Hetio
+241,glycosylation,Hetio,Gene
+242,glycosylation,Hetio,Hetio
+243,glycosylated,Gene,Gene
+244,glycosylated,Gene,Hetio
+245,glycosylated,Hetio,Gene
+246,glycosylated,Hetio,Hetio
+247,repressed,Gene,Gene
+248,repressed,Gene,Hetio
+249,repressed,Hetio,Gene
+250,repressed,Hetio,Hetio
+251,inhibited glycosylation,Gene,Gene
+252,inhibited glycosylation,Gene,Hetio
+253,inhibited glycosylation,Hetio,Gene
+254,inhibited glycosylation,Hetio,Hetio
+255,PARTICIPATES,BiologicalProcess,Gene
+256,PARTICIPATES,BiologicalProcess,Hetio
+257,UPREGULATES,Compound,Gene
+258,UPREGULATES,Compound,Hetio
+259,UPREGULATES,Hetio,Gene
+260,DOWNREGULATES,Compound,Gene
+261,DOWNREGULATES,Compound,Hetio
+262,DOWNREGULATES,Hetio,Gene
+263,CAUSES,Compound,SideEffect
+264,CAUSES,Compound,Hetio
+265,CAUSES,Hetio,SideEffect
+266,BINDS,Compound,Gene
+267,BINDS,Compound,Hetio
+268,BINDS,Hetio,Gene
+269,RESEMBLES,Compound,Compound
+270,RESEMBLES,Compound,Hetio
+271,RESEMBLES,Hetio,Compound
+272,RESEMBLES,Hetio,Hetio
+273,INCLUDES,Compound,PharmacologicClass
+274,INCLUDES,Compound,Hetio
+275,INCLUDES,Hetio,PharmacologicClass
+276,INCLUDES,Hetio,Hetio
+277,PALLIATES,Compound,Disease
+278,PALLIATES,Compound,Hetio
+279,PALLIATES,Hetio,Disease
+280,PALLIATES,Hetio,Hetio
+281,TREATS,Compound,Disease
+282,TREATS,Compound,Hetio
+283,TREATS,Hetio,Disease
+284,TREATS,Hetio,Hetio
+285,COMPONENT_OF,Compound,Regimen
+286,COMPONENT_OF,Hetio,Regimen
+287,PARTICIPATES,Pathway,Gene
+288,PARTICIPATES,Pathway,Hetio
+289,PARTICIPATES,CellularComponent,Gene
+290,PARTICIPATES,CellularComponent,Hetio
+291,PRESENTS,Symptom,Disease
+292,PRESENTS,Symptom,Hetio
+293,PRESENTS,Hetio,Disease
+294,PRESENTS,Hetio,Hetio
+295,UPREGULATES,Disease,Gene
+296,UPREGULATES,Disease,Hetio
+297,DOWNREGULATES,Disease,Gene
+298,DOWNREGULATES,Disease,Hetio
+299,ASSOCIATES,Disease,Gene
+300,ASSOCIATES,Disease,Hetio
+301,ASSOCIATES,Hetio,Gene
+302,LOCALIZES,Disease,Anatomy
+303,LOCALIZES,Disease,Hetio
+304,LOCALIZES,Hetio,Anatomy
+305,LOCALIZES,Hetio,Hetio
+306,RESEMBLES,Disease,Disease
+307,RESEMBLES,Disease,Hetio
+308,RESEMBLES,Hetio,Disease
+309,TREATS,Disease,Compound
+310,TREATS,Disease,Hetio
+311,TREATS,Hetio,Compound
+312,PRESENTS,Disease,Symptom
+313,PRESENTS,Disease,Hetio
+314,PRESENTS,Hetio,Symptom
+315,PALLIATES,Disease,Compound
+316,PALLIATES,Disease,Hetio
+317,PALLIATES,Hetio,Compound
+318,INCLUDES,PharmacologicClass,Compound
+319,INCLUDES,PharmacologicClass,Hetio
+320,INCLUDES,Hetio,Compound
+321,LOCALIZES,Anatomy,Disease
+322,LOCALIZES,Anatomy,Hetio
+323,LOCALIZES,Hetio,Disease
+324,EXPRESSES,Anatomy,Gene
+325,EXPRESSES,Anatomy,Hetio
+326,EXPRESSES,Hetio,Gene
+327,UPREGULATES,Anatomy,Gene
+328,UPREGULATES,Anatomy,Hetio
+329,DOWNREGULATES,Anatomy,Gene
+330,DOWNREGULATES,Anatomy,Hetio
+331,SCORE,Pathway,TumorSample
+332,TREATED,Treatment,CancerCase
+333,THERAPY_REGIMEN,Treatment,Regimen
+334,COMPONENT_OF,Regimen,Compound
+335,COMPONENT_OF,Regimen,Hetio
+336,THERAPY_REGIMEN,Regimen,Treatment
+337,MUTATION,Variant,TumorSample
+338,VAR_GENE,Variant,Gene
+339,VAR_GENE,Variant,Hetio
+340,ANNOTATED_VARIANT,VOM_Variant,Variant
+341,VARIANT,VOM_Variant,Gene
+342,VARIANT,VOM_Variant,Hetio
+343,ANNOTATED_VARIANT,Variant,VOM_Variant
