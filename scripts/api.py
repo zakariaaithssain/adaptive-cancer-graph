@@ -1,20 +1,22 @@
 from modules.pubmed_api import PubMedAPI
-from config.apiconfig import API_KEY_EMAIL
-
-api = PubMedAPI(api_key = API_KEY_EMAIL["api_key"], email = API_KEY_EMAIL["email"])
+from config.apiconfig import API_KEY_EMAIL, QUERIES
 
 
-queries = [
-    "stomach cancer mutations genes",
-    "prostate cancer risk factors treatment", 
-    "gastric adenocarcinoma molecular pathways",
-    "prostate cancer therapy resistance"
-]
+pubmed_api = PubMedAPI(api_key = API_KEY_EMAIL["api_key"], email = API_KEY_EMAIL["email"])
 
-all_articles = []
-for query in queries:
-    articles = api.search_and_fetch(query, max_results=500)
-    all_articles.extend(articles)
-    print(f"Retrieved {len(articles)} articles for: {query}")
+
+
+
+all_articles = {}
+
+for cancer in QUERIES.keys():  
+    articles = pubmed_api.search_and_fetch(QUERIES[cancer], max_results=1000)
+    all_articles[cancer] = articles
+    print(cancer, ":", len(all_articles[cancer]))
+
+
+
+
+
 
 
