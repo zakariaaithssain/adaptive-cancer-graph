@@ -12,15 +12,16 @@ df["target_nodes"] = df["target_nodes"].apply(lambda x: ast.literal_eval(x))
 df = df.explode("source_nodes", ignore_index=True)
 df = df.explode("target_nodes", ignore_index=True)
 
+#handle missing values
 df.drop(columns=["source_count", "target_count"], inplace=True)
 df.drop_duplicates(inplace= True, ignore_index=True)
 df.dropna(inplace=True, ignore_index=True)
 
-#check if there remain some None values
-print(df[(df.relationship == None) | (df.source_nodes == None) | (df.target_nodes == None)])
-
+#better names for columns and capitalizing all.
 df.columns = ["relationship", "fromLabel", "toLabel"]
+df = df.map(lambda x: x.upper() if isinstance(x, str) else x)
 
-df.to_csv("./data/template.csv")
+df.to_csv("./data/template.csv", index=False)
+
 
 print("template saved!")
