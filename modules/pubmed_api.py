@@ -12,16 +12,18 @@ class PubMedAPI:
         self.api_key = api_key
         self.email = email
     
+
+    
     def search_and_fetch(self, query, max_results=1000):
         
         # Step 1: Search
         search_url = f"{self.base_url}esearch.fcgi"
         search_params = {
-            'db': 'pubmed',
-            'term': query,
-            'retmax': max_results,
-            'retmode': 'json',
-            'usehistory': 'y'
+            'db': 'pubmed', #database
+            'term': query, #the query like the one we write in the search bar
+            'retmax': max_results, #ret: return
+            'retmode': 'json', #json is available as a return type for search endpoint
+            'usehistory': 'y' #whether to use the history or not
         }
         
         if self.api_key:
@@ -29,12 +31,14 @@ class PubMedAPI:
         if self.email:
             search_params['email'] = self.email
             
-        response = rq.get(search_url, params=search_params)
+        search_response = rq.get(search_url, params=search_params)
         
-        if self.api_key: API_SLEEP_TIME["with_key"]   #with an api key, we are allowed to do 10req/second
-        else: API_SLEEP_TIME["without_key"]           #without an api key, we only have 3req/second 
+        if self.api_key: 
+            time.sleep(API_SLEEP_TIME["with_key"])    #with an api key, we are allowed to do 10req/second
+        else: 
+            time.sleep(API_SLEEP_TIME["without_key"]) #without an api key, we only have 3req/second 
         
-        search_data = response.json()
+        search_data = search_response.json()
         
         # Step 2: Fetch abstracts using history
         fetch_url = f"{self.base_url}efetch.fcgi"
@@ -42,7 +46,7 @@ class PubMedAPI:
             'db': 'pubmed',
             'WebEnv': search_data['esearchresult']['webenv'],
             'query_key': search_data['esearchresult']['querykey'],
-            'retmode': 'xml',
+            'retmode': 'xml', #json is not available for fetching endpoint
             'rettype': 'abstract',
             'retmax': max_results
         }
@@ -51,23 +55,35 @@ class PubMedAPI:
             fetch_params['api_key'] = self.api_key
             
         fetch_response = rq.get(fetch_url, params=fetch_params)
-        time.sleep(0.34)
+        if self.api_key: 
+            time.sleep(API_SLEEP_TIME["with_key"])  
+        else: 
+            time.sleep(API_SLEEP_TIME["without_key"])   
         
-        return self.parse_abstracts(fetch_response.text)
+        return self.parse_metadata_from_xml(fetch_response)
     
-    def parse_abstracts(self, xml_text):
-        root = ET.fromstring(xml_text)
-        articles = []
+
+    
+    def parse_metadata_from_xml(self, xml):
+        root = ET.fromstring(xml.text)
+        articles = [] 
         
         for article in root.findall('.//PubmedArticle'):
-            title_elem = article.find('.//ArticleTitle')
-            abstract_elem = article.find('.//AbstractText')
-            pmid_elem = article.find('.//PMID')
+            article_title = article.find('.//ArticleTitle')
+            article_abstract = article.find('.//AbstractText')
+            article_pmid = article.find('.//PMID') #PubMed id of the article
+
+            article_pmcid = None #PubMed Central id of the article (it is available only when the articles body is available for free)
+            for article_id in article.findall('.//ArticleId'):
+                id_type = article_id.get('IdType')
+                if id_type == 'pmc':
+                    article_pmcid = article_id
+                if article_pmcid: break
             
-            # get MeSH terms (medical subject headings for additional entities or labels in neo4j)
-            mesh_terms = []
+            # get mesh terms (medical subject headings for additional entities or labels in neo4j)
+            medical_subject_headings  = []
             for mesh in article.findall('.//MeshHeading/DescriptorName'):
-                mesh_terms.append(mesh.text)
+                medical_subject_headings.append(mesh.text)
             
             # get keywords for more entities 
             keywords = []
@@ -75,14 +91,21 @@ class PubMedAPI:
                 keywords.append(keyword.text)
                 
             articles.append({
-                'pmid': pmid_elem.text if pmid_elem is not None else None,
-                'title': title_elem.text if title_elem is not None else None,
-                'abstract': abstract_elem.text if abstract_elem is not None else None,
-                'mesh_terms': mesh_terms,  # curated medical terms
+
+                'pmid': article_pmid.text if article_pmid is not None else None, 
+
+                'pmcid': article_pmcid.text.replace("PMC", "") if article_pmcid is not None else None,
+
+                'title': article_title.text if article_title is not None else None,
+
+                'abstract': article_abstract.text if article_abstract is not None else None,
+
+                'medical_subject_headings': medical_subject_headings ,  # curated medical terms
+
                 'keywords': keywords       # keywords provided by author
             })
         
-        return articles
+        return articles #list of dicts, each dict is an article's metadata containing the keys above.
 
 
 
