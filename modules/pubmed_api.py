@@ -93,7 +93,7 @@ class PubMedAPI:
             articles.append({
 
                 'pmid': article_pmid.text if article_pmid is not None else None, 
-
+                #remove the PMC prefixe from the pmc ids.
                 'pmcid': article_pmcid.text.replace("PMC", "") if article_pmcid is not None else None,
 
                 'title': article_title.text if article_title is not None else None,
