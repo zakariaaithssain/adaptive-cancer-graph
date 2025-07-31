@@ -9,7 +9,8 @@ import datetime
 
 
 from config.apis_config import QUERIES
-from config.mongodb_config import CONNECTION_STR
+from config.mongodb_config import CONNECTION_STR, DB_STRUCTURE
+
 
 """
     a cluster contains multiple databases, a database contains multiple collections,
@@ -36,9 +37,9 @@ class APIsToMongo:
         self.db = self.cluster["fetched-data-db"]
         self.collection = self.db["pm-pmc-data"]
 
-        logging.info("Connector: Cluster: 'articles-cluster'.")
-        logging.info("Connector: DataBase: 'fetched-data-db'.")
-        logging.info("Connector: Collection: 'pm-pmc-data'.")
+        logging.info(f"Connector: Cluster: {DB_STRUCTURE["cluster"]}.")
+        logging.info(f"Connector: DataBase: {DB_STRUCTURE["database"]}.")
+        logging.info(f"Connector: Collection: {DB_STRUCTURE["collection"]}.")
 
         # using 'pmid' to prevent duplicates
         self.collection.create_index("pmid", unique=True)
@@ -84,7 +85,7 @@ class APIsToMongo:
 
 
     def insert_docs_to_mongo(self):
-        logging.info("Connector: Inserting New Docs. Already Present Ones Are Ignored.")
+        logging.info("Connector: Inserting New Docs. Already Present Ones Will Be Ignored.")
         for article in tqdm(self.all_articles):
             try:
                 # adding the date of fetching the article
