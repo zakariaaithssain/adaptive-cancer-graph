@@ -11,69 +11,87 @@ class PubMedAPI:
         self.base_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
         self.api_key = api_key
         self.email = email
+        self.headers = { "User-Agent": "MyResearchBot/1.0 (zakaria04aithssain@gmail.com)" }
     
 
     
-    def search_and_fetch(self, query, max_results=1000):
+    def search_and_fetch(self, query = None, max_results=1000, db = "pubmed", pmc_id = None, rettype = 'abstract'): 
+        """ 
+        for PubMed Central API:
+                db = 'pmc'
+                pmc_id = string pmc id without the PMC prefixe
+                rettype = 'full' 
+
+                """
         
-        # Step 1: Search
-        search_url = f"{self.base_url}esearch.fcgi"
-        search_params = {
-            'db': 'pubmed', #database
-            'term': query, #the query like the one we write in the search bar
-            'retmax': max_results, #ret: return
-            'retmode': 'json', #json is available as a return type for search endpoint
-            'usehistory': 'y' #whether to use the history or not
-        }
-        
-        if self.api_key:
-            search_params['api_key'] = self.api_key
-        if self.email:
-            search_params['email'] = self.email
+        # step1: search, only when using the pubmed API, not for PMC API (we already have an id)
+        if pmc_id is None: #which means that we are using the PubMed API
+            search_url = f"{self.base_url}esearch.fcgi"
+            search_params = {
+                'db': db,              #database
+                'term': query,         #the query like the one we write in the search bar
+                'retmax': max_results, #ret: return
+                'retmode': 'json',     #json is available as a return type for search endpoint
+                'usehistory': 'y'      #whether to use the history or not
+            }
+            if self.api_key:
+                search_params['api_key'] = self.api_key
+            if self.email:
+                search_params['email'] = self.email
             
-        search_response = rq.get(search_url, params=search_params)
+            search_response = rq.get(search_url, params=search_params, headers=self.headers)
+                
+            if self.api_key: 
+                time.sleep(API_SLEEP_TIME["with_key"])    #with an api key, we are allowed to do 10req/second
+            else: 
+                time.sleep(API_SLEEP_TIME["without_key"]) #without an api key, we only have 3req/second 
+            
+            search_data = search_response.json()
         
-        if self.api_key: 
-            time.sleep(API_SLEEP_TIME["with_key"])    #with an api key, we are allowed to do 10req/second
-        else: 
-            time.sleep(API_SLEEP_TIME["without_key"]) #without an api key, we only have 3req/second 
-        
-        search_data = search_response.json()
-        
-        # Step 2: Fetch abstracts using history
+        # step2: fetching (either using history if PubMed API, or using mpc_id if PubMedCentral API) 
         fetch_url = f"{self.base_url}efetch.fcgi"
         fetch_params = {
-            'db': 'pubmed',
-            'WebEnv': search_data['esearchresult']['webenv'],
-            'query_key': search_data['esearchresult']['querykey'],
-            'retmode': 'xml', #json is not available for fetching endpoint
-            'rettype': 'abstract',
-            'retmax': max_results
+            'db': db,
+            'retmode': 'xml',   #json is not available for fetch endpoint
+            'rettype': rettype, #"abstract" if PubMed else "full"
         }
-        
+
+        #adding history params and max results only if dealing with PubMed API 
+        if pmc_id is None: #which means that we are using PubMed API, we already have the search_data.
+            fetch_params['WebEnv'] = search_data['esearchresult']['webenv']
+            fetch_params['query_key'] = search_data['esearchresult']['querykey']
+            fetch_params['retmax'] = max_results
+        else:              #which means that we are using PMC API, we have an id. 
+            fetch_params['id'] = pmc_id 
+
         if self.api_key:
             fetch_params['api_key'] = self.api_key
+        if self.email:
+            fetch_params['email'] = self.email
+        
             
-        fetch_response = rq.get(fetch_url, params=fetch_params)
+        fetch_response = rq.get(fetch_url, params=fetch_params, headers=self.headers)
         if self.api_key: 
             time.sleep(API_SLEEP_TIME["with_key"])  
         else: 
             time.sleep(API_SLEEP_TIME["without_key"])   
         
-        return self.parse_metadata_from_xml(fetch_response)
+        return fetch_response #xml that contains the data of searched articles
+                              #(resp. article with pmc_id)
+                              # if we are using PM API (resp. PMC API)
     
 
     
-    def parse_metadata_from_xml(self, xml):
-        root = ET.fromstring(xml.text)
+    def get_data_from_xml(self, fetch_response): #this is only for the PubMed API, I @override it for MPC API. 
+        root = ET.fromstring(fetch_response.text)
         articles = [] 
         
         for article in root.findall('.//PubmedArticle'):
             article_title = article.find('.//ArticleTitle')
             article_abstract = article.find('.//AbstractText')
             article_pmid = article.find('.//PMID') #PubMed id of the article
-
-            article_pmcid = None #PubMed Central id of the article (it is available only when the articles body is available for free)
+#PubMed Central id of the article (it is available only when the articles body is available for free)
+            article_pmcid = None 
             for article_id in article.findall('.//ArticleId'):
                 id_type = article_id.get('IdType')
                 if id_type == 'pmc':
