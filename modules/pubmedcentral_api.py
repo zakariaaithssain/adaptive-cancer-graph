@@ -9,29 +9,41 @@ from modules.pubmed_api import PubMedAPI
 #PubMed Central API to get the body text of free available articles. 
 class PubMedCentralAPI(PubMedAPI): 
     def __init__(self, api_key = None, email = None):
-        #the two APIs have the same base url, endpoints, email, key, and some params
-        super().__init__() 
+        self.base_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
+        self.api_key = api_key
+        self.email = email
+        self.headers = { "User-Agent": "MyResearchBot/1.0 (zakaria04aithssain@gmail.com)" }
+
+        if api_key: logging.info("PubMedCentral API: API Key Used.")
+        else: logging.warning("PubMedCentral API: API Key Absent.")
+
+        if self.email: logging.info("PubMedCentral API: Email Used.")
+        else: logging.warning("PubMedCentral API: Email Absent.")
+
                         
     @override
     def get_data_from_xml(self, pmc_id):
         logging.info(f"PubMedCentral API: Article PMCid: {pmc_id}: Looking For Article Content.")
         response_xml = self.search_and_fetch(db="pmc", pmc_id= pmc_id, rettype="full")
-        root = ET.fromstring(response_xml.text)
+        if response_xml: 
+            root = ET.fromstring(response_xml.text)
 
-        article_body = root.find(".//body")
-        if article_body is None:
-            logging.warning(f"PubMedCentral API: Article PMCid: {pmc_id}: Content Not Found.")
+            article_body = root.find(".//body")
+            if article_body is None:
+                logging.warning(f"PubMedCentral API: Article PMCid: {pmc_id}: Content Not Found.")
+                return None
+
+            paragraphs = []
+            for p in article_body.findall(".//p"):
+                if p.text: 
+                    paragraphs.append(p.text.strip())
+            
+            if paragraphs: 
+                logging.info(f"PubMedCentral API: Article PMCid: {pmc_id}: Content Found.")
+            return "\n\n".join(paragraphs)
+
+        else: 
             return None
-
-        paragraphs = []
-        for p in article_body.findall(".//p"):
-            if p.text: 
-                paragraphs.append(p.text.strip())
-        
-        if paragraphs: 
-            logging.info(f"PubMedCentral API: Article PMCid: {pmc_id}: Content Found.")
-        return "\n\n".join(paragraphs)
-
         
 
 

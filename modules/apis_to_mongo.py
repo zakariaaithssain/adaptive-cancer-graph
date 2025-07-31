@@ -5,6 +5,7 @@ from datetime import datetime
 from tqdm import tqdm
 
 import logging
+import datetime
 
 
 from config.apis_config import QUERIES
@@ -54,7 +55,7 @@ class APIsToMongo:
         
         logging.info("Connector: Getting Docs From APIs.")
         for cancer in QUERIES.keys(): 
-            logging.info(f"Connector: Working On: {cancer}.") 
+            logging.info(f"Connector: Working On: {cancer} cancer.") 
 
             fetched_xml = self.pubmed_api.search_and_fetch(QUERIES[cancer], max_results=max_results)
             articles = self.pubmed_api.get_data_from_xml(fetched_xml)
@@ -83,11 +84,11 @@ class APIsToMongo:
 
 
     def insert_docs_to_mongo(self):
+        logging.info("Connector: Inserting New Docs. Already Present Ones Are Ignored.")
         for article in tqdm(self.all_articles):
             try:
                 # adding the date of fetching the article
-                article["fetchingdate"] = datetime.now(datetime.timezone.utc)
-                logging.info("Connector: Inserting New Docs. Already Present Ones Are Ignored.")
+                article["fetchingdate"] = datetime.datetime.now(datetime.timezone.utc)
                 self.collection.update_one(
                     {"pmid": article["pmid"]},     # matching by PubMed id
                     {"$setOnInsert": article},     # insert only if not already present

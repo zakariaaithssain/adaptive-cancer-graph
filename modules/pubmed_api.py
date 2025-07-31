@@ -13,6 +13,12 @@ class PubMedAPI:
         self.api_key = api_key
         self.email = email
         self.headers = { "User-Agent": "MyResearchBot/1.0 (zakaria04aithssain@gmail.com)" }
+
+        if api_key: logging.info("PubMed API: API Key Used.")
+        else: logging.warning("PubMed API: API Key Absent.")
+
+        if self.email: logging.info("PubMed API: Email Used.")
+        else: logging.warning("PubMed API: Email Absent.")
     
 
     
@@ -36,11 +42,8 @@ class PubMedAPI:
                 'usehistory': 'y'      #whether to use the history or not
             }
             if self.api_key:
-                logging.info("Pubmed API: API Key Used.")
                 search_params['api_key'] = self.api_key
-            else: 
-                logging.warning("PubMed API: API Key Absent.")
-
+            
             if self.email:
                 logging.info("PubMed API: Email Used.")
                 search_params['email'] = self.email
@@ -59,10 +62,10 @@ class PubMedAPI:
                 logging.error(f"Search Endpoint: Error: {e}")
                 
             if self.api_key:
-                logging.info(f"Search Endpoint: Sleeping For {API_SLEEP_TIME["with_key"]}")
+                logging.info(f"Search Endpoint: Sleeping For {API_SLEEP_TIME["with_key"]}s.")
                 time.sleep(API_SLEEP_TIME["with_key"])    #with an api key, we are allowed to do 10req/second
             else: 
-                logging.info(f"Search Endpoint: Sleeping For {API_SLEEP_TIME["without_key"]}")
+                logging.info(f"Search Endpoint: Sleeping For {API_SLEEP_TIME["without_key"]}s.")
                 time.sleep(API_SLEEP_TIME["without_key"]) #without an api key, we only have 3req/second 
             
             search_data = search_response.json()
@@ -90,15 +93,10 @@ class PubMedAPI:
 
             if self.api_key:
                 fetch_params['api_key'] = self.api_key
-                logging.info("PubMedCentral API: API Key Used.")
-            else: 
-                logging.warning("PubMedCentral API: API Key Absent.")
 
             if self.email:
                 fetch_params['email'] = self.email
-                logging.info("PubMedCentral API: Email Used.")
-            else: 
-                logging.warning("PubMedCentral API: Email Absent.")
+            
 
         try:
             fetch_response = rq.get(fetch_url, params=fetch_params, headers=self.headers)
@@ -115,12 +113,13 @@ class PubMedAPI:
                     logging.warning(f"PubMedCentral API: Fetch Endpoint: Response NOT OK: {response_code}")
         except Exception as e: 
             logging.error(f"Fetch Endpoint: Error: {e}")
+            return None
                     
         if self.api_key: 
-            logging.info(f"Fetch Endpoint: Sleeping For {API_SLEEP_TIME["with_key"]}")
+            logging.info(f"Fetch Endpoint: Sleeping For {API_SLEEP_TIME["with_key"]}s.")
             time.sleep(API_SLEEP_TIME["with_key"])  
         else: 
-            logging.info(f"Fetch Endpoint: Sleeping For {API_SLEEP_TIME["without_key"]}")
+            logging.info(f"Fetch Endpoint: Sleeping For {API_SLEEP_TIME["without_key"]}s.")
             time.sleep(API_SLEEP_TIME["without_key"])   
         
         return fetch_response #xml that contains the data of searched articles
@@ -129,54 +128,56 @@ class PubMedAPI:
     
 
     
-    def get_data_from_xml(self, fetch_response): #this is only for the PubMed API, I @override it for MPC API. 
-        root = ET.fromstring(fetch_response.text)
-        articles = [] 
-        found = root.findall('.//PubmedArticle')
-        if len(found) > 0: 
-            logging.info(f"PubMed API: Found {len(found)} Articles In XML Root.")
-        else: 
-            logging.warning(f"PubMed API: Found {len(found)} Articles In XML Root.")
+    def get_data_from_xml(self, fetch_response): #this is only for the PubMed API, I @override it for MPC API.
+        if fetch_response: 
+            root = ET.fromstring(fetch_response.text)
+            articles = [] 
+            found = root.findall('.//PubmedArticle')
+            if len(found) > 0: 
+                logging.info(f"PubMed API: Found {len(found)} Articles In XML Root.")
+            else: 
+                logging.warning(f"PubMed API: Found {len(found)} Articles In XML Root.")
 
-        for article in found:
-            article_title = article.find('.//ArticleTitle')
-            article_abstract = article.find('.//AbstractText')
-            article_pmid = article.find('.//PMID') #PubMed id of the article
-#PubMed Central id of the article (it is available only when the articles body is available for free)
-            article_pmcid = None 
-            for article_id in article.findall('.//ArticleId'):
-                id_type = article_id.get('IdType')
-                if id_type == 'pmc':
-                    article_pmcid = article_id
-                if article_pmcid: break
-            
-            # get mesh terms (medical subject headings for additional entities or labels in neo4j)
-            medical_subject_headings  = []
-            for mesh in article.findall('.//MeshHeading/DescriptorName'):
-                medical_subject_headings.append(mesh.text)
-            
-            # get keywords for more entities 
-            keywords = []
-            for keyword in article.findall('.//Keyword'):
-                keywords.append(keyword.text)
+            for article in found:
+                article_title = article.find('.//ArticleTitle')
+                article_abstract = article.find('.//AbstractText')
+                article_pmid = article.find('.//PMID') #PubMed id of the article
+    #PubMed Central id of the article (it is available only when the articles body is available for free)
+                article_pmcid = None 
+                for article_id in article.findall('.//ArticleId'):
+                    id_type = article_id.get('IdType')
+                    if id_type == 'pmc':
+                        article_pmcid = article_id
+                    if article_pmcid: break
                 
-            articles.append({
+                # get mesh terms (medical subject headings for additional entities or labels in neo4j)
+                medical_subject_headings  = []
+                for mesh in article.findall('.//MeshHeading/DescriptorName'):
+                    medical_subject_headings.append(mesh.text)
+                
+                # get keywords for more entities 
+                keywords = []
+                for keyword in article.findall('.//Keyword'):
+                    keywords.append(keyword.text)
+                    
+                articles.append({
 
-                'pmid': article_pmid.text if article_pmid is not None else None, 
-                #remove the PMC prefixe from the pmc ids.
-                'pmcid': article_pmcid.text.replace("PMC", "") if article_pmcid is not None else None,
+                    'pmid': article_pmid.text if article_pmid is not None else None, 
+                    #remove the PMC prefixe from the pmc ids.
+                    'pmcid': article_pmcid.text.replace("PMC", "") if article_pmcid is not None else None,
 
-                'title': article_title.text if article_title is not None else None,
+                    'title': article_title.text if article_title is not None else None,
 
-                'abstract': article_abstract.text if article_abstract is not None else None,
+                    'abstract': article_abstract.text if article_abstract is not None else None,
 
-                'medical_subject_headings': medical_subject_headings ,  # curated medical terms
+                    'medical_subject_headings': medical_subject_headings ,  # curated medical terms
 
-                'keywords': keywords       # keywords provided by author
-            })
-            logging.info(f"PubMed API: Found Article With PMid: {article_pmid}.")
-        
-        return articles #list of dicts, each dict is an article's metadata containing the keys above.
-
+                    'keywords': keywords       # keywords provided by author
+                })
+                logging.info(f"PubMed API: Found Article With PMid: {article_pmid.text}.")
+            
+            return articles #list of dicts, each dict is an article's metadata containing the keys above.
+        else: 
+            return []
 
 
