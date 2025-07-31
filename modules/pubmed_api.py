@@ -3,7 +3,7 @@ import xml.etree.ElementTree as ET
 
 import time
 
-from config.apiconfig import API_SLEEP_TIME
+from config.apis_config import API_SLEEP_TIME
 
 
 class PubMedAPI:
