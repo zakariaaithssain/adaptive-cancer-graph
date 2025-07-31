@@ -1,6 +1,8 @@
 from xml.etree import ElementTree as ET
 from typing import override
 
+import logging
+
 from modules.pubmed_api import PubMedAPI
 
 
@@ -12,11 +14,13 @@ class PubMedCentralAPI(PubMedAPI):
                         
     @override
     def get_data_from_xml(self, pmc_id):
+        logging.info(f"PubMedCentral API: Article PMCid: {pmc_id}: Looking For Article Content.")
         response_xml = self.search_and_fetch(db="pmc", pmc_id= pmc_id, rettype="full")
         root = ET.fromstring(response_xml.text)
 
         article_body = root.find(".//body")
         if article_body is None:
+            logging.warning(f"PubMedCentral API: Article PMCid: {pmc_id}: Content Not Found.")
             return None
 
         paragraphs = []
@@ -24,6 +28,8 @@ class PubMedCentralAPI(PubMedAPI):
             if p.text: 
                 paragraphs.append(p.text.strip())
         
+        if paragraphs: 
+            logging.info(f"PubMedCentral API: Article PMCid: {pmc_id}: Content Found.")
         return "\n\n".join(paragraphs)
 
         

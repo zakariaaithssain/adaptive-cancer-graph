@@ -2,6 +2,7 @@ import requests as rq
 import xml.etree.ElementTree as ET
 
 import time
+import logging
 
 from config.apis_config import API_SLEEP_TIME
 
@@ -35,15 +36,33 @@ class PubMedAPI:
                 'usehistory': 'y'      #whether to use the history or not
             }
             if self.api_key:
+                logging.info("Pubmed API: API Key Used.")
                 search_params['api_key'] = self.api_key
+            else: 
+                logging.warning("PubMed API: API Key Absent.")
+
             if self.email:
+                logging.info("PubMed API: Email Used.")
                 search_params['email'] = self.email
-            
-            search_response = rq.get(search_url, params=search_params, headers=self.headers)
+            else: 
+                logging.warning("PubMed API: Email Absent.")
+
+            try:
+                logging.info("PubMed API: Search Endpoint: Sending Get Request.")
+                search_response = rq.get(search_url, params=search_params, headers=self.headers)
+                response_code = search_response.status_code
+                if response_code == 200:
+                    logging.info(f"PubMed API: Search Endpoint: Response OK: {response_code}")
+                else: 
+                    logging.warning(f"PubMed API: Search Endpoint: Response NOT OK: {response_code}")
+            except Exception as e:
+                logging.error(f"Search Endpoint: Error: {e}")
                 
-            if self.api_key: 
+            if self.api_key:
+                logging.info(f"Search Endpoint: Sleeping For {API_SLEEP_TIME["with_key"]}")
                 time.sleep(API_SLEEP_TIME["with_key"])    #with an api key, we are allowed to do 10req/second
             else: 
+                logging.info(f"Search Endpoint: Sleeping For {API_SLEEP_TIME["without_key"]}")
                 time.sleep(API_SLEEP_TIME["without_key"]) #without an api key, we only have 3req/second 
             
             search_data = search_response.json()
@@ -58,22 +77,50 @@ class PubMedAPI:
 
         #adding history params and max results only if dealing with PubMed API 
         if pmc_id is None: #which means that we are using PubMed API, we already have the search_data.
+            logging.info("PubMed API: Fetch Endpoint: Sending Get Request.")
             fetch_params['WebEnv'] = search_data['esearchresult']['webenv']
             fetch_params['query_key'] = search_data['esearchresult']['querykey']
             fetch_params['retmax'] = max_results
-        else:              #which means that we are using PMC API, we have an id. 
+            if self.api_key: fetch_params['api_key'] = self.api_key
+            if self.email: fetch_params['email'] = self.email
+            
+        else: #which means that we are using PMC API, we have an id.
+            logging.info("PubMedCentral API: Fetch Endpoint: Sending Get Request.") 
             fetch_params['id'] = pmc_id 
 
-        if self.api_key:
-            fetch_params['api_key'] = self.api_key
-        if self.email:
-            fetch_params['email'] = self.email
-        
-            
-        fetch_response = rq.get(fetch_url, params=fetch_params, headers=self.headers)
+            if self.api_key:
+                fetch_params['api_key'] = self.api_key
+                logging.info("PubMedCentral API: API Key Used.")
+            else: 
+                logging.warning("PubMedCentral API: API Key Absent.")
+
+            if self.email:
+                fetch_params['email'] = self.email
+                logging.info("PubMedCentral API: Email Used.")
+            else: 
+                logging.warning("PubMedCentral API: Email Absent.")
+
+        try:
+            fetch_response = rq.get(fetch_url, params=fetch_params, headers=self.headers)
+            response_code = fetch_response.status_code
+            if pmc_id is None: #pubmed API
+                if response_code == 200: 
+                    logging.info(f"PubMed API: Fetch Endpoint: Response OK: {response_code}")
+                else: 
+                    logging.warning(f"PubMed API: Fetch Endpoint: Response NOT OK: {response_code}")
+            else: #pubmedcentral API
+                if response_code == 200: 
+                    logging.info(f"PubMedCentral API: Fetch Endpoint: Response OK: {response_code}")
+                else: 
+                    logging.warning(f"PubMedCentral API: Fetch Endpoint: Response NOT OK: {response_code}")
+        except Exception as e: 
+            logging.error(f"Fetch Endpoint: Error: {e}")
+                    
         if self.api_key: 
+            logging.info(f"Fetch Endpoint: Sleeping For {API_SLEEP_TIME["with_key"]}")
             time.sleep(API_SLEEP_TIME["with_key"])  
         else: 
+            logging.info(f"Fetch Endpoint: Sleeping For {API_SLEEP_TIME["without_key"]}")
             time.sleep(API_SLEEP_TIME["without_key"])   
         
         return fetch_response #xml that contains the data of searched articles
@@ -85,8 +132,13 @@ class PubMedAPI:
     def get_data_from_xml(self, fetch_response): #this is only for the PubMed API, I @override it for MPC API. 
         root = ET.fromstring(fetch_response.text)
         articles = [] 
-        
-        for article in root.findall('.//PubmedArticle'):
+        found = root.findall('.//PubmedArticle')
+        if len(found) > 0: 
+            logging.info(f"PubMed API: Found {len(found)} Articles In XML Root.")
+        else: 
+            logging.warning(f"PubMed API: Found {len(found)} Articles In XML Root.")
+
+        for article in found:
             article_title = article.find('.//ArticleTitle')
             article_abstract = article.find('.//AbstractText')
             article_pmid = article.find('.//PMID') #PubMed id of the article
@@ -122,6 +174,7 @@ class PubMedAPI:
 
                 'keywords': keywords       # keywords provided by author
             })
+            logging.info(f"PubMed API: Found Article With PMid: {article_pmid}.")
         
         return articles #list of dicts, each dict is an article's metadata containing the keys above.
 

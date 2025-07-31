@@ -1,8 +1,11 @@
 from pymongo import MongoClient
 from pymongo import errors
 from pymongo.server_api import ServerApi
-
 from datetime import datetime
+from tqdm import tqdm
+
+import logging
+
 
 from config.apis_config import QUERIES
 from config.mongodb_config import CONNECTION_STR
@@ -23,15 +26,22 @@ class APIsToMongo:
 
         #send a ping to confirm a successful connection
         try:
+            logging.info("Connector: Sending A Ping To Confirm Connection.")
             self.cluster.admin.command('ping')
-            print("Pinged your deployment. Successfully connected to MongoDB.")
+            logging.info("Connector: Deployment Pinged. Successfully Connected To MongoDB Atlas.")
         except Exception as e:
-            print(e)
+            logging.error("Connector: Error: {e}")
 
         self.db = self.cluster["fetched-data-db"]
         self.collection = self.db["pm-pmc-data"]
+
+        logging.info("Connector: Cluster: 'articles-cluster'.")
+        logging.info("Connector: DataBase: 'fetched-data-db'.")
+        logging.info("Connector: Collection: 'pm-pmc-data'.")
+
         # using 'pmid' to prevent duplicates
         self.collection.create_index("pmid", unique=True)
+        logging.info("Connector: Using 'pmid' As An Index.")
 
         self.all_articles = []
         self.pmc_prost_articles = 0
@@ -42,8 +52,10 @@ class APIsToMongo:
 
     def get_docs_from_apis(self, max_results = 1000): 
         
-        print("fetching...")
-        for cancer in QUERIES.keys():  
+        logging.info("Connector: Getting Docs From APIs.")
+        for cancer in QUERIES.keys(): 
+            logging.info(f"Connector: Working On: {cancer}.") 
+
             fetched_xml = self.pubmed_api.search_and_fetch(QUERIES[cancer], max_results=max_results)
             articles = self.pubmed_api.get_data_from_xml(fetched_xml)
 
@@ -63,28 +75,28 @@ class APIsToMongo:
                     else:
                         self.pmc_stomach_articles +=1
 
-        print("pmc ids for prostate: ", self.pmc_prost_articles)
-        print("pmc id for stomach: ", self.pmc_stomach_articles)
+        logging.info(f"Connector: Prostate Cancer: {self.pmc_prost_articles} Articles Content Is Available For Free.")
+        logging.info(f"Connector: Stomach Cancer: {self.pmc_stomach_articles} Articles Content Is Available For Free.")
 
         return self #to be able to chain call methods 
 
 
 
     def insert_docs_to_mongo(self):
-        for article in self.all_articles:
+        for article in tqdm(self.all_articles):
             try:
                 # adding the date of fetching the article
                 article["fetchingdate"] = datetime.now(datetime.timezone.utc)
-
+                logging.info("Connector: Inserting New Docs. Already Present Ones Are Ignored.")
                 self.collection.update_one(
                     {"pmid": article["pmid"]},     # matching by PubMed id
                     {"$setOnInsert": article},     # insert only if not already present
                     upsert=True
                 )
             except errors.PyMongoError as e:
-                print(f"error inserting article with PMID {article.get('pmid')}: {e}")
+                logging.error(f"Connector: Article PMid: {article.get('pmid')}: Error: {e}.")
         else: 
-            print(f"{len(self.all_articles)} (counting also already existing ones) docs inserted successfully.")
+            logging.info("Connector: Data Inserted With No Errors.")
 
         
 
