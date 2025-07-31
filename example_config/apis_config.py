@@ -1,6 +1,6 @@
-API_KEY_EMAIL = {"api_key" : "85f5c781096e923df6acda8f61c1adb5be09", 
+API_KEY_EMAIL = {"api_key" : "GET YOUR API KEY JUST BY SIGNING IN TO THE PUBMED WEBSITE IT IS THIS EASY.", 
               
-              "email" : "zakaria04aithssain@gmail.com", 
+              "email" : "REPLACE WITH THE EMAIL YOU USED FOR SIGNING IN",  
               }
 
 

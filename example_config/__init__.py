@@ -1,0 +1,1 @@
+print("the config files are just examples and you should get real values for them.")
