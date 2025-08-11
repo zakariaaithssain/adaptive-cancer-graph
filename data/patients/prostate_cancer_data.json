@@ -1,0 +1,2792 @@
+{
+  "study": {
+    "studyId": "prad_tcga",
+    "name": "Prostate Adenocarcinoma (TCGA, Firehose Legacy)",
+    "description": "TCGA Prostate Adenocarcinoma. Source data from <A HREF=\"http://gdac.broadinstitute.org/runs/stddata__2016_01_28/data/PRAD/20160128/\">GDAC Firehose</A>. Previously known as TCGA Provisional.",
+    "source": "cBioPortal Patient Database"
+  },
+  "patients": [
+    {
+      "patientId": "TCGA-CH-5767",
+      "studyId": "prad_tcga",
+      "cancerType": "PROSTATE",
+      "cancerName": "Prostate Cancer",
+      "source": "cBioPortal Patient Database",
+      "url": "https://www.cbioportal.org",
+      "samples": [
+        {
+          "sampleId": "TCGA-CH-5767-01",
+          "source": "cBioPortal Sample Database",
+          "uniqueSampleKey": "VENHQS1DSC01NzY3LTAxOnByYWRfdGNnYQ",
+          "uniquePatientKey": "VENHQS1DSC01NzY3OnByYWRfdGNnYQ",
+          "sampleType": "Primary Solid Tumor",
+          "studyId": "prad_tcga"
+        }
+      ],
+      "variants": [
+        {
+          "gene": null,
+          "proteinChange": "I146K",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "L93W",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R900Q",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "I678V",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "V281L",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "H133P",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "C179*",
+          "mutationType": "Nonsense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "L15P",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "S588L",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "I124V",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "G446D",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "S615A",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "F22L",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "V32721I",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A255V",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "E71G",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A1632S",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "G536W",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A521P",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "L101F",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "Q341del",
+          "mutationType": "In_Frame_Del",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "E332K",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "Q92P",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "S340P",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "T185A",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R748H",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R323L",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "M155I",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "Y4660S",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P1252R",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "N481Kfs*6",
+          "mutationType": "Frame_Shift_Ins",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "Q18H",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R342*",
+          "mutationType": "Nonsense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A2814V",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "M122I",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "S146L",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A208V",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "G345D",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A542V",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "T762M",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R741*",
+          "mutationType": "Nonsense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R220M",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "G88D",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "E330Q",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        }
+      ],
+      "treatments": [],
+      "clinicalAttributes": {
+        "AGE": "66",
+        "BIOCHEMICAL_RECURRENCE_INDICATOR": "NO",
+        "CLIN_M_STAGE": "M0",
+        "CT_SCAN_AB_PELVIS_INDICATOR": "NO",
+        "DAYS_TO_INITIAL_PATHOLOGIC_DIAGNOSIS": "0",
+        "DAYS_TO_PSA": "377",
+        "DFS_MONTHS": "15.05",
+        "DFS_STATUS": "0:DiseaseFree",
+        "DIAGNOSTIC_MRI_RESULT": "NO",
+        "ETHNICITY": "NOT HISPANIC OR LATINO",
+        "FORM_COMPLETION_DATE": "3/16/12",
+        "GLEASON_PATTERN_PRIMARY": "4",
+        "GLEASON_PATTERN_SECONDARY": "3",
+        "GLEASON_SCORE": "7",
+        "HISTOLOGICAL_DIAGNOSIS": "Prostate Adenocarcinoma Acinar Type",
+        "HISTORY_NEOADJUVANT_TRTYN": "No",
+        "HISTORY_OTHER_MALIGNANCY": "No",
+        "ICD_10": "C61",
+        "ICD_O_3_HISTOLOGY": "8550/3",
+        "ICD_O_3_SITE": "C61.9",
+        "INFORMED_CONSENT_VERIFIED": "YES",
+        "INITIAL_PATHOLOGIC_DIAGNOSIS_METHOD": "Core needle biopsy",
+        "INITIAL_PATHOLOGIC_DX_YEAR": "2007",
+        "LATERALITY": "Bilateral",
+        "LYMPH_NODE_EXAMINED_COUNT": "19",
+        "LYMPH_NODES_EXAMINED": "YES",
+        "LYMPH_NODES_EXAMINED_HE_COUNT": "0",
+        "OS_MONTHS": "15.05",
+        "OS_STATUS": "0:LIVING",
+        "OTHER_PATIENT_ID": "8dc53431-44ab-485e-b4e6-c3d06509506d",
+        "PATH_N_STAGE": "N0",
+        "PATH_T_STAGE": "T2c",
+        "PRIMARY_SITE_PATIENT": "Peripheral Zone",
+        "PROSPECTIVE_COLLECTION": "YES",
+        "PSA_MOST_RECENT_RESULTS": "0.04",
+        "RACE": "WHITE",
+        "RESIDUAL_TUMOR": "R0",
+        "RETROSPECTIVE_COLLECTION": "NO",
+        "SAMPLE_COUNT": "1",
+        "SEX": "Male",
+        "SITE_OF_TUMOR_TISSUE": "Prostate",
+        "TISSUE_SOURCE_SITE": "CH",
+        "TUMOR_STATUS": "TUMOR FREE"
+      }
+    },
+    {
+      "patientId": "TCGA-G9-6332",
+      "studyId": "prad_tcga",
+      "cancerType": "PROSTATE",
+      "cancerName": "Prostate Cancer",
+      "source": "cBioPortal Patient Database",
+      "url": "https://www.cbioportal.org",
+      "samples": [
+        {
+          "sampleId": "TCGA-G9-6332-01",
+          "source": "cBioPortal Sample Database",
+          "uniqueSampleKey": "VENHQS1HOS02MzMyLTAxOnByYWRfdGNnYQ",
+          "uniquePatientKey": "VENHQS1HOS02MzMyOnByYWRfdGNnYQ",
+          "sampleType": "Primary Solid Tumor",
+          "studyId": "prad_tcga"
+        }
+      ],
+      "variants": [
+        {
+          "gene": null,
+          "proteinChange": "G732S",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R2194*",
+          "mutationType": "Nonsense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "S158Y",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "Y2461H",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R657C",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "L122R",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "C7G",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "K155R",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "K49R",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A1980V",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "F31201L",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R498H",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P527T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "D24G",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "V318L",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "T993K",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A114V",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "K450N",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R572H",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "X166_splice",
+          "mutationType": "Splice_Site",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "T121A",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "E1563K",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "M1?",
+          "mutationType": "Translation_Start_Site",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "G637R",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "L142F",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "L668R",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "F193L",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A80P",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "N85D",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "I68M",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        }
+      ],
+      "treatments": [],
+      "clinicalAttributes": {
+        "AGE": "55",
+        "BONE_SCAN_RESULT": "Normal (no evidence of prostate cancer) [cM0]",
+        "CLIN_M_STAGE": "M0",
+        "CLIN_T_STAGE": "T2b",
+        "CT_SCAN_AB_PELVIS_INDICATOR": "YES",
+        "CT_SCAN_AB_PELVIS_RESULTS": "No Evidence of Extraprostatic Extension",
+        "DAYS_TO_BONE_SCAN_PERFORMED": "11",
+        "DAYS_TO_CT_SCAN_AB_PELVIS": "11",
+        "DAYS_TO_INITIAL_PATHOLOGIC_DIAGNOSIS": "0",
+        "DAYS_TO_PSA": "2090",
+        "DFS_MONTHS": "42.21",
+        "DFS_STATUS": "1:Recurred/Progressed",
+        "DIAGNOSTIC_MRI_RESULT": "NO",
+        "ETHNICITY": "NOT HISPANIC OR LATINO",
+        "FORM_COMPLETION_DATE": "3/20/12",
+        "GLEASON_PATTERN_PRIMARY": "4",
+        "GLEASON_PATTERN_SECONDARY": "3",
+        "GLEASON_SCORE": "7",
+        "HISTOLOGICAL_DIAGNOSIS": "Prostate Adenocarcinoma Acinar Type",
+        "HISTORY_NEOADJUVANT_TRTYN": "No",
+        "HISTORY_OTHER_MALIGNANCY": "No",
+        "ICD_10": "C61",
+        "ICD_O_3_HISTOLOGY": "8550/3",
+        "ICD_O_3_SITE": "C61.9",
+        "INFORMED_CONSENT_VERIFIED": "YES",
+        "INITIAL_PATHOLOGIC_DIAGNOSIS_METHOD": "Core needle biopsy",
+        "INITIAL_PATHOLOGIC_DX_YEAR": "2005",
+        "LATERALITY": "Bilateral",
+        "LYMPH_NODE_EXAMINED_COUNT": "7",
+        "LYMPH_NODES_EXAMINED": "YES",
+        "LYMPH_NODES_EXAMINED_HE_COUNT": "0",
+        "OS_MONTHS": "87.29",
+        "OS_STATUS": "0:LIVING",
+        "OTHER_PATIENT_ID": "c46022f8-b122-4367-836b-ec1ae641a87d",
+        "PATH_N_STAGE": "N0",
+        "PATH_T_STAGE": "T3a",
+        "PROSPECTIVE_COLLECTION": "NO",
+        "PSA_MOST_RECENT_RESULTS": "0.73",
+        "RACE": "WHITE",
+        "RESIDUAL_TUMOR": "R0",
+        "RETROSPECTIVE_COLLECTION": "YES",
+        "SAMPLE_COUNT": "1",
+        "SEX": "Male",
+        "SITE_OF_TUMOR_TISSUE": "Prostate",
+        "TISSUE_SOURCE_SITE": "G9",
+        "TUMOR_LEVEL": "Apex|Base",
+        "TUMOR_STATUS": "TUMOR FREE"
+      }
+    },
+    {
+      "patientId": "TCGA-G9-6336",
+      "studyId": "prad_tcga",
+      "cancerType": "PROSTATE",
+      "cancerName": "Prostate Cancer",
+      "source": "cBioPortal Patient Database",
+      "url": "https://www.cbioportal.org",
+      "samples": [
+        {
+          "sampleId": "TCGA-G9-6336-01",
+          "source": "cBioPortal Sample Database",
+          "uniqueSampleKey": "VENHQS1HOS02MzM2LTAxOnByYWRfdGNnYQ",
+          "uniquePatientKey": "VENHQS1HOS02MzM2OnByYWRfdGNnYQ",
+          "sampleType": "Primary Solid Tumor",
+          "studyId": "prad_tcga"
+        }
+      ],
+      "variants": [
+        {
+          "gene": null,
+          "proteinChange": "R368L",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P994L",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R86Q",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A50V",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "E478G",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P724T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "E427K",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R947L",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "S1090*",
+          "mutationType": "Nonsense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "E300Q",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "D964N",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A247Cfs*51",
+          "mutationType": "Frame_Shift_Ins",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "C65Y",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "T398R",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A55T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "T642K",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "S731L",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "Q679H",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A80P",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "H600N",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A365T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        }
+      ],
+      "treatments": [],
+      "clinicalAttributes": {
+        "AGE": "57",
+        "BIOCHEMICAL_RECURRENCE_INDICATOR": "NO",
+        "BONE_SCAN_RESULT": "Normal (no evidence of prostate cancer) [cM0]",
+        "CLIN_M_STAGE": "M0",
+        "CLIN_T_STAGE": "T2c",
+        "CT_SCAN_AB_PELVIS_INDICATOR": "YES",
+        "CT_SCAN_AB_PELVIS_RESULTS": "No Evidence of Extraprostatic Extension",
+        "DAYS_TO_BONE_SCAN_PERFORMED": "98",
+        "DAYS_TO_CT_SCAN_AB_PELVIS": "104",
+        "DAYS_TO_INITIAL_PATHOLOGIC_DIAGNOSIS": "0",
+        "DAYS_TO_PSA": "1669",
+        "DFS_MONTHS": "67.94",
+        "DFS_STATUS": "0:DiseaseFree",
+        "DIAGNOSTIC_MRI_RESULT": "NO",
+        "ETHNICITY": "NOT HISPANIC OR LATINO",
+        "FORM_COMPLETION_DATE": "3/19/12",
+        "GLEASON_PATTERN_PRIMARY": "3",
+        "GLEASON_PATTERN_SECONDARY": "4",
+        "GLEASON_SCORE": "7",
+        "HISTOLOGICAL_DIAGNOSIS": "Prostate Adenocarcinoma Acinar Type",
+        "HISTORY_NEOADJUVANT_TRTYN": "No",
+        "HISTORY_OTHER_MALIGNANCY": "No",
+        "ICD_10": "C61",
+        "ICD_O_3_HISTOLOGY": "8550/3",
+        "ICD_O_3_SITE": "C61.9",
+        "INFORMED_CONSENT_VERIFIED": "YES",
+        "INITIAL_PATHOLOGIC_DIAGNOSIS_METHOD": "Core needle biopsy",
+        "INITIAL_PATHOLOGIC_DX_YEAR": "2007",
+        "LATERALITY": "Bilateral",
+        "LYMPH_NODE_EXAMINED_COUNT": "5",
+        "LYMPH_NODES_EXAMINED": "YES",
+        "LYMPH_NODES_EXAMINED_HE_COUNT": "0",
+        "OS_MONTHS": "67.94",
+        "OS_STATUS": "0:LIVING",
+        "OTHER_PATIENT_ID": "59207bcd-f127-481f-b576-8716da7d7d97",
+        "PATH_N_STAGE": "N0",
+        "PROSPECTIVE_COLLECTION": "NO",
+        "PSA_MOST_RECENT_RESULTS": "0.1",
+        "RACE": "WHITE",
+        "RESIDUAL_TUMOR": "R1",
+        "RETROSPECTIVE_COLLECTION": "YES",
+        "SAMPLE_COUNT": "1",
+        "SEX": "Male",
+        "SITE_OF_TUMOR_TISSUE": "Prostate",
+        "TISSUE_SOURCE_SITE": "G9",
+        "TUMOR_LEVEL": "Apex|Base",
+        "TUMOR_STATUS": "TUMOR FREE"
+      }
+    },
+    {
+      "patientId": "TCGA-G9-6348",
+      "studyId": "prad_tcga",
+      "cancerType": "PROSTATE",
+      "cancerName": "Prostate Cancer",
+      "source": "cBioPortal Patient Database",
+      "url": "https://www.cbioportal.org",
+      "samples": [
+        {
+          "sampleId": "TCGA-G9-6348-01",
+          "source": "cBioPortal Sample Database",
+          "uniqueSampleKey": "VENHQS1HOS02MzQ4LTAxOnByYWRfdGNnYQ",
+          "uniquePatientKey": "VENHQS1HOS02MzQ4OnByYWRfdGNnYQ",
+          "sampleType": "Primary Solid Tumor",
+          "studyId": "prad_tcga"
+        }
+      ],
+      "variants": [
+        {
+          "gene": null,
+          "proteinChange": "R160G",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "E753K",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A57T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "T390N",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "S15A",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R361H",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "Q78R",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P338Tfs*56",
+          "mutationType": "Frame_Shift_Ins",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A186E",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "N333S",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "S557_G563del",
+          "mutationType": "In_Frame_Del",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "X439_splice",
+          "mutationType": "Splice_Site",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A257V",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "T94M",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R329Q",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "K51Nfs*9",
+          "mutationType": "Frame_Shift_Del",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R3940*",
+          "mutationType": "Nonsense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "Q64*",
+          "mutationType": "Frame_Shift_Del",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "X236_splice",
+          "mutationType": "Splice_Site",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A975G",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "I440T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A32D",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A316P",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "N592S",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P555S",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "X12_splice",
+          "mutationType": "Splice_Site",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R850C",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A94V",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R954H",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P1042S",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A389T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "E125D",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R69H",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "S365Lfs*43",
+          "mutationType": "Frame_Shift_Del",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "I495=",
+          "mutationType": "Splice_Region",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "G216Dfs*10",
+          "mutationType": "Frame_Shift_Del",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "E406D",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "D2160V",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R72S",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R72K",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A83T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "L82S",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "K735N",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "Y9dup",
+          "mutationType": "In_Frame_Ins",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "D18V",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        }
+      ],
+      "treatments": [],
+      "clinicalAttributes": {
+        "AGE": "68",
+        "BIOCHEMICAL_RECURRENCE_INDICATOR": "NO",
+        "BONE_SCAN_RESULT": "Abnormal (not related to prostate cancer)",
+        "CLIN_M_STAGE": "M0",
+        "CLIN_T_STAGE": "T3a",
+        "CT_SCAN_AB_PELVIS_INDICATOR": "YES",
+        "CT_SCAN_AB_PELVIS_RESULTS": "No Evidence of Extraprostatic Extension",
+        "DAYS_TO_BONE_SCAN_PERFORMED": "31",
+        "DAYS_TO_CT_SCAN_AB_PELVIS": "31",
+        "DAYS_TO_INITIAL_PATHOLOGIC_DIAGNOSIS": "0",
+        "DAYS_TO_PSA": "1136",
+        "DFS_MONTHS": "49.77",
+        "DFS_STATUS": "0:DiseaseFree",
+        "DIAGNOSTIC_MRI_RESULT": "NO",
+        "ETHNICITY": "NOT HISPANIC OR LATINO",
+        "FORM_COMPLETION_DATE": "3/15/12",
+        "GLEASON_PATTERN_PRIMARY": "3",
+        "GLEASON_PATTERN_SECONDARY": "4",
+        "GLEASON_SCORE": "7",
+        "HISTOLOGICAL_DIAGNOSIS": "Prostate Adenocarcinoma Acinar Type",
+        "HISTORY_NEOADJUVANT_TRTYN": "No",
+        "HISTORY_OTHER_MALIGNANCY": "No",
+        "ICD_10": "C61",
+        "ICD_O_3_HISTOLOGY": "8550/3",
+        "ICD_O_3_SITE": "C61.9",
+        "INFORMED_CONSENT_VERIFIED": "YES",
+        "INITIAL_PATHOLOGIC_DIAGNOSIS_METHOD": "Core needle biopsy",
+        "INITIAL_PATHOLOGIC_DX_YEAR": "2008",
+        "LATERALITY": "Bilateral",
+        "LYMPH_NODE_EXAMINED_COUNT": "15",
+        "LYMPH_NODES_EXAMINED_HE_COUNT": "0",
+        "OS_MONTHS": "49.77",
+        "OS_STATUS": "0:LIVING",
+        "OTHER_PATIENT_ID": "8ad78c4f-c84c-4f9e-88c9-42a05eb65498",
+        "PATH_N_STAGE": "N0",
+        "PATH_T_STAGE": "T2c",
+        "PROSPECTIVE_COLLECTION": "NO",
+        "PSA_MOST_RECENT_RESULTS": "0.02",
+        "RACE": "WHITE",
+        "RESIDUAL_TUMOR": "R0",
+        "RETROSPECTIVE_COLLECTION": "YES",
+        "SAMPLE_COUNT": "1",
+        "SEX": "Male",
+        "SITE_OF_TUMOR_TISSUE": "Prostate",
+        "TISSUE_SOURCE_SITE": "G9",
+        "TUMOR_LEVEL": "Apex|Base",
+        "TUMOR_STATUS": "TUMOR FREE"
+      }
+    },
+    {
+      "patientId": "TCGA-G9-6356",
+      "studyId": "prad_tcga",
+      "cancerType": "PROSTATE",
+      "cancerName": "Prostate Cancer",
+      "source": "cBioPortal Patient Database",
+      "url": "https://www.cbioportal.org",
+      "samples": [
+        {
+          "sampleId": "TCGA-G9-6356-01",
+          "source": "cBioPortal Sample Database",
+          "uniqueSampleKey": "VENHQS1HOS02MzU2LTAxOnByYWRfdGNnYQ",
+          "uniquePatientKey": "VENHQS1HOS02MzU2OnByYWRfdGNnYQ",
+          "sampleType": "Primary Solid Tumor",
+          "studyId": "prad_tcga"
+        }
+      ],
+      "variants": [
+        {
+          "gene": null,
+          "proteinChange": "R1260C",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "X1787_splice",
+          "mutationType": "Splice_Site",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "L31_L33del",
+          "mutationType": "In_Frame_Del",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "E190*",
+          "mutationType": "Nonsense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "G366E",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A365D",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "T81K",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "G515Afs*56",
+          "mutationType": "Frame_Shift_Del",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "S2026dup",
+          "mutationType": "In_Frame_Ins",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "L459P",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A920T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R930W",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P315S",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "D134Y",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "V2969I",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "Q133*",
+          "mutationType": "Nonsense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P1233T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R690C",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P1076Sfs*34",
+          "mutationType": "Frame_Shift_Ins",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "V45M",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P28Afs*41",
+          "mutationType": "Frame_Shift_Ins",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "X134_splice",
+          "mutationType": "Splice_Site",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "N693K",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "H1078R",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "I491L",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "C522Y",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "D451N",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R114W",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "K312N",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "T542M",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R343W",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "X543_splice",
+          "mutationType": "Splice_Site",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "L24_L26del",
+          "mutationType": "In_Frame_Del",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "Q42*",
+          "mutationType": "Nonsense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "F147C",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R121H",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        }
+      ],
+      "treatments": [],
+      "clinicalAttributes": {
+        "AGE": "60",
+        "BIOCHEMICAL_RECURRENCE_INDICATOR": "NO",
+        "BONE_SCAN_RESULT": "Normal (no evidence of prostate cancer) [cM0]",
+        "CLIN_M_STAGE": "M0",
+        "CLIN_T_STAGE": "T1c",
+        "CT_SCAN_AB_PELVIS_INDICATOR": "YES",
+        "CT_SCAN_AB_PELVIS_RESULTS": "No Evidence of Extraprostatic Extension",
+        "DAYS_TO_BONE_SCAN_PERFORMED": "24",
+        "DAYS_TO_CT_SCAN_AB_PELVIS": "21",
+        "DAYS_TO_INITIAL_PATHOLOGIC_DIAGNOSIS": "0",
+        "DAYS_TO_PSA": "986",
+        "DFS_MONTHS": "47.11",
+        "DFS_STATUS": "0:DiseaseFree",
+        "DIAGNOSTIC_MRI_RESULT": "NO",
+        "ETHNICITY": "NOT HISPANIC OR LATINO",
+        "FORM_COMPLETION_DATE": "3/14/12",
+        "GLEASON_PATTERN_PRIMARY": "4",
+        "GLEASON_PATTERN_SECONDARY": "5",
+        "GLEASON_PATTERN_TERTIARY": "3",
+        "GLEASON_SCORE": "9",
+        "HISTOLOGICAL_DIAGNOSIS": "Prostate Adenocarcinoma Acinar Type",
+        "HISTORY_NEOADJUVANT_TRTYN": "No",
+        "HISTORY_OTHER_MALIGNANCY": "No",
+        "ICD_10": "C61",
+        "ICD_O_3_HISTOLOGY": "8550/3",
+        "ICD_O_3_SITE": "C61.9",
+        "INFORMED_CONSENT_VERIFIED": "YES",
+        "INITIAL_PATHOLOGIC_DIAGNOSIS_METHOD": "Core needle biopsy",
+        "INITIAL_PATHOLOGIC_DX_YEAR": "2009",
+        "LATERALITY": "Bilateral",
+        "LYMPH_NODE_EXAMINED_COUNT": "5",
+        "LYMPH_NODES_EXAMINED": "YES",
+        "LYMPH_NODES_EXAMINED_HE_COUNT": "0",
+        "OS_MONTHS": "47.11",
+        "OS_STATUS": "0:LIVING",
+        "OTHER_PATIENT_ID": "1d7ffbe7-6139-412b-8739-8082a63a2b33",
+        "PATH_N_STAGE": "N0",
+        "PATH_T_STAGE": "T3b",
+        "PROSPECTIVE_COLLECTION": "NO",
+        "PSA_MOST_RECENT_RESULTS": "0.13",
+        "RACE": "WHITE",
+        "RESIDUAL_TUMOR": "R1",
+        "RETROSPECTIVE_COLLECTION": "YES",
+        "SAMPLE_COUNT": "1",
+        "SEX": "Male",
+        "SITE_OF_TUMOR_TISSUE": "Prostate",
+        "TISSUE_SOURCE_SITE": "G9",
+        "TUMOR_LEVEL": "Apex|Base",
+        "TUMOR_STATUS": "TUMOR FREE"
+      }
+    },
+    {
+      "patientId": "TCGA-G9-6362",
+      "studyId": "prad_tcga",
+      "cancerType": "PROSTATE",
+      "cancerName": "Prostate Cancer",
+      "source": "cBioPortal Patient Database",
+      "url": "https://www.cbioportal.org",
+      "samples": [
+        {
+          "sampleId": "TCGA-G9-6362-01",
+          "source": "cBioPortal Sample Database",
+          "uniqueSampleKey": "VENHQS1HOS02MzYyLTAxOnByYWRfdGNnYQ",
+          "uniquePatientKey": "VENHQS1HOS02MzYyOnByYWRfdGNnYQ",
+          "sampleType": "Primary Solid Tumor",
+          "studyId": "prad_tcga"
+        }
+      ],
+      "variants": [
+        {
+          "gene": null,
+          "proteinChange": "H145P",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "Y38C",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R327H",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R293C",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "V205I",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "V83A",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "T130N",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "X541_splice",
+          "mutationType": "Splice_Site",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A31T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "S25162T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P1296R",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P1296T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R225H",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "N1845T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "T597P",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "K373E",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "G1210D",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "L2031H",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A211G",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "G239W",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "G112R",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "X12_splice",
+          "mutationType": "Splice_Site",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "E1525*",
+          "mutationType": "Nonsense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "H388Y",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R1566H",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "H92Tfs*24",
+          "mutationType": "Frame_Shift_Del",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "S57*",
+          "mutationType": "Nonsense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R1104W",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "V284I",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "I476T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "X109_splice",
+          "mutationType": "Splice_Region",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "L163F",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "T197S",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "K153*",
+          "mutationType": "Nonsense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "S1466Ffs*15",
+          "mutationType": "Splice_Site",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "G194D",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R42C",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "V271I",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "S244G",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A247T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P1760A",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        }
+      ],
+      "treatments": [],
+      "clinicalAttributes": {
+        "AGE": "57",
+        "BIOCHEMICAL_RECURRENCE_INDICATOR": "NO",
+        "BONE_SCAN_RESULT": "Normal (no evidence of prostate cancer) [cM0]",
+        "CLIN_M_STAGE": "M0",
+        "CLIN_T_STAGE": "T1c",
+        "CT_SCAN_AB_PELVIS_INDICATOR": "NO",
+        "DAYS_TO_BONE_SCAN_PERFORMED": "8",
+        "DAYS_TO_INITIAL_PATHOLOGIC_DIAGNOSIS": "0",
+        "DAYS_TO_PSA": "815",
+        "DFS_MONTHS": "47.4",
+        "DFS_STATUS": "0:DiseaseFree",
+        "DIAGNOSTIC_MRI_RESULT": "NO",
+        "ETHNICITY": "NOT HISPANIC OR LATINO",
+        "FORM_COMPLETION_DATE": "3/13/12",
+        "GLEASON_PATTERN_PRIMARY": "4",
+        "GLEASON_PATTERN_SECONDARY": "3",
+        "GLEASON_PATTERN_TERTIARY": "5",
+        "GLEASON_SCORE": "7",
+        "HISTOLOGICAL_DIAGNOSIS": "Prostate Adenocarcinoma Acinar Type",
+        "HISTORY_NEOADJUVANT_TRTYN": "No",
+        "HISTORY_OTHER_MALIGNANCY": "No",
+        "ICD_10": "C61",
+        "ICD_O_3_HISTOLOGY": "8550/3",
+        "ICD_O_3_SITE": "C61.9",
+        "INFORMED_CONSENT_VERIFIED": "YES",
+        "INITIAL_PATHOLOGIC_DIAGNOSIS_METHOD": "Core needle biopsy",
+        "INITIAL_PATHOLOGIC_DX_YEAR": "2009",
+        "LATERALITY": "Bilateral",
+        "LYMPH_NODE_EXAMINED_COUNT": "2",
+        "LYMPH_NODES_EXAMINED": "YES",
+        "LYMPH_NODES_EXAMINED_HE_COUNT": "0",
+        "OS_MONTHS": "47.4",
+        "OS_STATUS": "0:LIVING",
+        "OTHER_PATIENT_ID": "f228ef91-ecfb-4d1e-8e6a-b43d2185270e",
+        "PATH_N_STAGE": "N0",
+        "PATH_T_STAGE": "T3a",
+        "PROSPECTIVE_COLLECTION": "NO",
+        "PSA_MOST_RECENT_RESULTS": "0.07",
+        "RACE": "WHITE",
+        "RESIDUAL_TUMOR": "R1",
+        "RETROSPECTIVE_COLLECTION": "YES",
+        "SAMPLE_COUNT": "1",
+        "SEX": "Male",
+        "SITE_OF_TUMOR_TISSUE": "Prostate",
+        "TISSUE_SOURCE_SITE": "G9",
+        "TUMOR_LEVEL": "Apex|Base",
+        "TUMOR_STATUS": "TUMOR FREE"
+      }
+    },
+    {
+      "patientId": "TCGA-G9-6363",
+      "studyId": "prad_tcga",
+      "cancerType": "PROSTATE",
+      "cancerName": "Prostate Cancer",
+      "source": "cBioPortal Patient Database",
+      "url": "https://www.cbioportal.org",
+      "samples": [
+        {
+          "sampleId": "TCGA-G9-6363-01",
+          "source": "cBioPortal Sample Database",
+          "uniqueSampleKey": "VENHQS1HOS02MzYzLTAxOnByYWRfdGNnYQ",
+          "uniquePatientKey": "VENHQS1HOS02MzYzOnByYWRfdGNnYQ",
+          "sampleType": "Primary Solid Tumor",
+          "studyId": "prad_tcga"
+        }
+      ],
+      "variants": [
+        {
+          "gene": null,
+          "proteinChange": "D186N",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "L952Q",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "G971S",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "L728V",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "F235L",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "Y1125*",
+          "mutationType": "Nonsense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "F1058L",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "Q918Tfs*24",
+          "mutationType": "Frame_Shift_Ins",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R467W",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "S208N",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P174L",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P417S",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "X11644_splice",
+          "mutationType": "Splice_Site",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "S790C",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R54H",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "S228F",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "K409N",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "D108Y",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "L36Q",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "E328_L329dup",
+          "mutationType": "In_Frame_Ins",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P40S",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "E338del",
+          "mutationType": "In_Frame_Del",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "T666R",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "X1286_splice",
+          "mutationType": "Splice_Site",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "Q73R",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "W671*",
+          "mutationType": "Nonsense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R317G",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "G476S",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "L106P",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "E455*",
+          "mutationType": "Nonsense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "N566Mfs*22",
+          "mutationType": "Frame_Shift_Del",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R838Q",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P35del",
+          "mutationType": "In_Frame_Del",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "N379T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "Y470H",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R885L",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "T405A",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "K518R",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "X109_splice",
+          "mutationType": "Splice_Region",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R85T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "I690T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "Q538*",
+          "mutationType": "Nonsense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "S1694*",
+          "mutationType": "Nonsense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R208W",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R437L",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "T292P",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A80P",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "K43N",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "I40T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "D112del",
+          "mutationType": "In_Frame_Del",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P87L",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A67Vfs*11",
+          "mutationType": "Frame_Shift_Del",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "X66_splice",
+          "mutationType": "Splice_Region",
+          "source": "cBioPortal Mutation Database"
+        }
+      ],
+      "treatments": [],
+      "clinicalAttributes": {
+        "AGE": "64",
+        "BIOCHEMICAL_RECURRENCE_INDICATOR": "NO",
+        "BONE_SCAN_RESULT": "Normal (no evidence of prostate cancer) [cM0]",
+        "CLIN_M_STAGE": "M0",
+        "CLIN_T_STAGE": "T2b",
+        "CT_SCAN_AB_PELVIS_INDICATOR": "YES",
+        "CT_SCAN_AB_PELVIS_RESULTS": "No Evidence of Extraprostatic Extension",
+        "DAYS_TO_BONE_SCAN_PERFORMED": "58",
+        "DAYS_TO_CT_SCAN_AB_PELVIS": "23",
+        "DAYS_TO_INITIAL_PATHOLOGIC_DIAGNOSIS": "0",
+        "DAYS_TO_PSA": "993",
+        "DFS_MONTHS": "45.27",
+        "DFS_STATUS": "0:DiseaseFree",
+        "DIAGNOSTIC_MRI_RESULT": "NO",
+        "ETHNICITY": "NOT HISPANIC OR LATINO",
+        "FORM_COMPLETION_DATE": "3/9/12",
+        "GLEASON_PATTERN_PRIMARY": "4",
+        "GLEASON_PATTERN_SECONDARY": "3",
+        "GLEASON_SCORE": "7",
+        "HISTOLOGICAL_DIAGNOSIS": "Prostate Adenocarcinoma Acinar Type",
+        "HISTORY_NEOADJUVANT_TRTYN": "No",
+        "HISTORY_OTHER_MALIGNANCY": "No",
+        "ICD_10": "C61",
+        "ICD_O_3_HISTOLOGY": "8550/3",
+        "ICD_O_3_SITE": "C61.9",
+        "INFORMED_CONSENT_VERIFIED": "YES",
+        "INITIAL_PATHOLOGIC_DIAGNOSIS_METHOD": "Core needle biopsy",
+        "INITIAL_PATHOLOGIC_DX_YEAR": "2009",
+        "LATERALITY": "Bilateral",
+        "LYMPH_NODE_EXAMINED_COUNT": "6",
+        "LYMPH_NODES_EXAMINED": "YES",
+        "LYMPH_NODES_EXAMINED_HE_COUNT": "0",
+        "OS_MONTHS": "45.27",
+        "OS_STATUS": "0:LIVING",
+        "OTHER_PATIENT_ID": "b5b3871c-078c-46a7-ac50-ef916d4a6781",
+        "PATH_N_STAGE": "N0",
+        "PATH_T_STAGE": "T4",
+        "PROSPECTIVE_COLLECTION": "NO",
+        "PSA_MOST_RECENT_RESULTS": "0.03",
+        "RACE": "WHITE",
+        "RESIDUAL_TUMOR": "R0",
+        "RETROSPECTIVE_COLLECTION": "YES",
+        "SAMPLE_COUNT": "1",
+        "SEX": "Male",
+        "SITE_OF_TUMOR_TISSUE": "Prostate",
+        "TISSUE_SOURCE_SITE": "G9",
+        "TUMOR_LEVEL": "Base",
+        "TUMOR_STATUS": "TUMOR FREE"
+      }
+    },
+    {
+      "patientId": "TCGA-G9-6364",
+      "studyId": "prad_tcga",
+      "cancerType": "PROSTATE",
+      "cancerName": "Prostate Cancer",
+      "source": "cBioPortal Patient Database",
+      "url": "https://www.cbioportal.org",
+      "samples": [
+        {
+          "sampleId": "TCGA-G9-6364-01",
+          "source": "cBioPortal Sample Database",
+          "uniqueSampleKey": "VENHQS1HOS02MzY0LTAxOnByYWRfdGNnYQ",
+          "uniquePatientKey": "VENHQS1HOS02MzY0OnByYWRfdGNnYQ",
+          "sampleType": "Primary Solid Tumor",
+          "studyId": "prad_tcga"
+        }
+      ],
+      "variants": [
+        {
+          "gene": null,
+          "proteinChange": "Q66K",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "H62Qfs*35",
+          "mutationType": "Frame_Shift_Del",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R570C",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R255H",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "G712D",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "E666Rfs*335",
+          "mutationType": "Frame_Shift_Del",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "G434V",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "I485V",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P1273A",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "I524L",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P299T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "S933F",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P70T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "L73P",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "N1125T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "K373E",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "Q1087H",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "G28V",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "F55L",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "N314S",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "S3216Ffs*4",
+          "mutationType": "Frame_Shift_Ins",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "G272R",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "Y1409C",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "Y185C",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A214T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "V308A",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "S57P",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        }
+      ],
+      "treatments": [],
+      "clinicalAttributes": {
+        "AGE": "72",
+        "BIOCHEMICAL_RECURRENCE_INDICATOR": "NO",
+        "CLIN_M_STAGE": "M0",
+        "CT_SCAN_AB_PELVIS_INDICATOR": "NO",
+        "DAYS_TO_INITIAL_PATHOLOGIC_DIAGNOSIS": "0",
+        "DAYS_TO_PSA": "841",
+        "DFS_MONTHS": "39.36",
+        "DFS_STATUS": "0:DiseaseFree",
+        "DIAGNOSTIC_MRI_RESULT": "NO",
+        "ETHNICITY": "NOT HISPANIC OR LATINO",
+        "FORM_COMPLETION_DATE": "3/9/12",
+        "GLEASON_PATTERN_PRIMARY": "3",
+        "GLEASON_PATTERN_SECONDARY": "4",
+        "GLEASON_SCORE": "7",
+        "HISTOLOGICAL_DIAGNOSIS": "Prostate Adenocarcinoma Acinar Type",
+        "HISTORY_NEOADJUVANT_TRTYN": "No",
+        "HISTORY_OTHER_MALIGNANCY": "Yes",
+        "ICD_10": "C61",
+        "ICD_O_3_HISTOLOGY": "8550/3",
+        "ICD_O_3_SITE": "C61.9",
+        "INFORMED_CONSENT_VERIFIED": "YES",
+        "INITIAL_PATHOLOGIC_DIAGNOSIS_METHOD": "Transurethral resection (TURBT)",
+        "INITIAL_PATHOLOGIC_DX_YEAR": "2009",
+        "LATERALITY": "Bilateral",
+        "LYMPH_NODE_EXAMINED_COUNT": "25",
+        "LYMPH_NODES_EXAMINED": "YES",
+        "LYMPH_NODES_EXAMINED_HE_COUNT": "0",
+        "OS_MONTHS": "39.36",
+        "OS_STATUS": "0:LIVING",
+        "OTHER_PATIENT_ID": "f8d8b417-5945-42a5-850a-fbc04b4f0e61",
+        "PATH_N_STAGE": "N0",
+        "PATH_T_STAGE": "T3a",
+        "PROSPECTIVE_COLLECTION": "NO",
+        "PSA_MOST_RECENT_RESULTS": "0.03",
+        "RACE": "WHITE",
+        "RESIDUAL_TUMOR": "R0",
+        "RETROSPECTIVE_COLLECTION": "YES",
+        "SAMPLE_COUNT": "1",
+        "SEX": "Male",
+        "SITE_OF_TUMOR_TISSUE": "Prostate",
+        "TISSUE_SOURCE_SITE": "G9",
+        "TUMOR_STATUS": "TUMOR FREE"
+      }
+    },
+    {
+      "patientId": "TCGA-G9-6365",
+      "studyId": "prad_tcga",
+      "cancerType": "PROSTATE",
+      "cancerName": "Prostate Cancer",
+      "source": "cBioPortal Patient Database",
+      "url": "https://www.cbioportal.org",
+      "samples": [
+        {
+          "sampleId": "TCGA-G9-6365-01",
+          "source": "cBioPortal Sample Database",
+          "uniqueSampleKey": "VENHQS1HOS02MzY1LTAxOnByYWRfdGNnYQ",
+          "uniquePatientKey": "VENHQS1HOS02MzY1OnByYWRfdGNnYQ",
+          "sampleType": "Primary Solid Tumor",
+          "studyId": "prad_tcga"
+        }
+      ],
+      "variants": [
+        {
+          "gene": null,
+          "proteinChange": "D182A",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "T379M",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A2102S",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "S577P",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "X419_splice",
+          "mutationType": "Splice_Site",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A486T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "I370Lfs*17",
+          "mutationType": "Frame_Shift_Del",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "L546Q",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "X322_splice",
+          "mutationType": "Splice_Site",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "Q641R",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "D432V",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P26175S",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A130del",
+          "mutationType": "In_Frame_Del",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "T712M",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "G24D",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "L674_N676del",
+          "mutationType": "In_Frame_Del",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A599T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "E41D",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "L348R",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "N107I",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R520H",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "X12_splice",
+          "mutationType": "Splice_Site",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A600T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R61C",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "T316N",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "N628H",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P157S",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "I64M",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R170S",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "K276N",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A157V",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "C45R",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "E685G",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A213V",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "G165del",
+          "mutationType": "In_Frame_Del",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P57S",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "I89V",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "I40T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R258G",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R234H",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R172H",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "X238_splice",
+          "mutationType": "Splice_Region",
+          "source": "cBioPortal Mutation Database"
+        }
+      ],
+      "treatments": [],
+      "clinicalAttributes": {
+        "AGE": "71",
+        "BIOCHEMICAL_RECURRENCE_INDICATOR": "NO",
+        "CLIN_T_STAGE": "T2a",
+        "CT_SCAN_AB_PELVIS_INDICATOR": "NO",
+        "DAYS_TO_INITIAL_PATHOLOGIC_DIAGNOSIS": "0",
+        "DAYS_TO_PSA": "804",
+        "DFS_MONTHS": "44.78",
+        "DFS_STATUS": "0:DiseaseFree",
+        "DIAGNOSTIC_MRI_RESULT": "NO",
+        "ETHNICITY": "NOT HISPANIC OR LATINO",
+        "FORM_COMPLETION_DATE": "3/9/12",
+        "GLEASON_PATTERN_PRIMARY": "3",
+        "GLEASON_PATTERN_SECONDARY": "4",
+        "GLEASON_SCORE": "7",
+        "HISTOLOGICAL_DIAGNOSIS": "Prostate Adenocarcinoma Acinar Type",
+        "HISTORY_NEOADJUVANT_TRTYN": "No",
+        "HISTORY_OTHER_MALIGNANCY": "No",
+        "ICD_10": "C61",
+        "ICD_O_3_HISTOLOGY": "8550/3",
+        "ICD_O_3_SITE": "C61.9",
+        "INFORMED_CONSENT_VERIFIED": "YES",
+        "INITIAL_PATHOLOGIC_DIAGNOSIS_METHOD": "Core needle biopsy",
+        "INITIAL_PATHOLOGIC_DX_YEAR": "2009",
+        "LATERALITY": "Bilateral",
+        "LYMPH_NODE_EXAMINED_COUNT": "13",
+        "LYMPH_NODES_EXAMINED": "YES",
+        "LYMPH_NODES_EXAMINED_HE_COUNT": "0",
+        "OS_MONTHS": "44.78",
+        "OS_STATUS": "0:LIVING",
+        "OTHER_PATIENT_ID": "6845076e-e940-4437-8618-81db4a447544",
+        "PATH_N_STAGE": "N0",
+        "PATH_T_STAGE": "T4",
+        "PROSPECTIVE_COLLECTION": "NO",
+        "PSA_MOST_RECENT_RESULTS": "0.01",
+        "RACE": "WHITE",
+        "RESIDUAL_TUMOR": "R1",
+        "RETROSPECTIVE_COLLECTION": "YES",
+        "SAMPLE_COUNT": "1",
+        "SEX": "Male",
+        "SITE_OF_TUMOR_TISSUE": "Prostate",
+        "TISSUE_SOURCE_SITE": "G9",
+        "TUMOR_LEVEL": "Apex|Base",
+        "TUMOR_STATUS": "TUMOR FREE"
+      }
+    },
+    {
+      "patientId": "TCGA-G9-6367",
+      "studyId": "prad_tcga",
+      "cancerType": "PROSTATE",
+      "cancerName": "Prostate Cancer",
+      "source": "cBioPortal Patient Database",
+      "url": "https://www.cbioportal.org",
+      "samples": [
+        {
+          "sampleId": "TCGA-G9-6367-01",
+          "source": "cBioPortal Sample Database",
+          "uniqueSampleKey": "VENHQS1HOS02MzY3LTAxOnByYWRfdGNnYQ",
+          "uniquePatientKey": "VENHQS1HOS02MzY3OnByYWRfdGNnYQ",
+          "sampleType": "Primary Solid Tumor",
+          "studyId": "prad_tcga"
+        }
+      ],
+      "variants": [
+        {
+          "gene": null,
+          "proteinChange": "G824V",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "E114*",
+          "mutationType": "Nonsense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "A203S",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "G902R",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "R67*",
+          "mutationType": "Nonsense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "I40T",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "L161V",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "P2659A",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        },
+        {
+          "gene": null,
+          "proteinChange": "D18V",
+          "mutationType": "Missense_Mutation",
+          "source": "cBioPortal Mutation Database"
+        }
+      ],
+      "treatments": [],
+      "clinicalAttributes": {
+        "AGE": "60",
+        "BONE_SCAN_RESULT": "Normal (no evidence of prostate cancer) [cM0]",
+        "CLIN_M_STAGE": "M0",
+        "CLIN_T_STAGE": "T2b",
+        "CT_SCAN_AB_PELVIS_INDICATOR": "YES",
+        "CT_SCAN_AB_PELVIS_RESULTS": "No Evidence of Extraprostatic Extension",
+        "DAYS_TO_BONE_SCAN_PERFORMED": "30",
+        "DAYS_TO_CT_SCAN_AB_PELVIS": "30",
+        "DAYS_TO_INITIAL_PATHOLOGIC_DIAGNOSIS": "0",
+        "DAYS_TO_PSA": "836",
+        "DFS_MONTHS": "40.14",
+        "DFS_STATUS": "0:DiseaseFree",
+        "DIAGNOSTIC_MRI_RESULT": "NO",
+        "ETHNICITY": "NOT HISPANIC OR LATINO",
+        "FORM_COMPLETION_DATE": "3/8/12",
+        "GLEASON_PATTERN_PRIMARY": "4",
+        "GLEASON_PATTERN_SECONDARY": "5",
+        "GLEASON_PATTERN_TERTIARY": "3",
+        "GLEASON_SCORE": "9",
+        "HISTOLOGICAL_DIAGNOSIS": "Prostate Adenocarcinoma Acinar Type",
+        "HISTORY_NEOADJUVANT_TRTYN": "No",
+        "HISTORY_OTHER_MALIGNANCY": "No",
+        "ICD_10": "C61",
+        "ICD_O_3_HISTOLOGY": "8550/3",
+        "ICD_O_3_SITE": "C61.9",
+        "INFORMED_CONSENT_VERIFIED": "YES",
+        "INITIAL_PATHOLOGIC_DIAGNOSIS_METHOD": "Core needle biopsy",
+        "INITIAL_PATHOLOGIC_DX_YEAR": "2009",
+        "LATERALITY": "Bilateral",
+        "LYMPH_NODE_EXAMINED_COUNT": "5",
+        "LYMPH_NODES_EXAMINED": "YES",
+        "LYMPH_NODES_EXAMINED_HE_COUNT": "0",
+        "OS_MONTHS": "40.14",
+        "OS_STATUS": "0:LIVING",
+        "OTHER_PATIENT_ID": "9f751c9d-ad41-4f02-b7f8-12423857d418",
+        "PATH_N_STAGE": "N0",
+        "PATH_T_STAGE": "T3a",
+        "PROSPECTIVE_COLLECTION": "NO",
+        "PSA_MOST_RECENT_RESULTS": "0.42",
+        "RACE": "WHITE",
+        "RESIDUAL_TUMOR": "R1",
+        "RETROSPECTIVE_COLLECTION": "YES",
+        "SAMPLE_COUNT": "1",
+        "SEX": "Male",
+        "SITE_OF_TUMOR_TISSUE": "Prostate",
+        "TISSUE_SOURCE_SITE": "G9",
+        "TUMOR_LEVEL": "Apex|Base",
+        "TUMOR_STATUS": "WITH TUMOR"
+      }
+    }
+  ],
+  "totalPatients": 10,
+  "cancerType": "PROSTATE",
+  "cancerName": "Prostate Cancer"
+}

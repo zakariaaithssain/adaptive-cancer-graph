@@ -17,8 +17,8 @@ class PubMedCentralAPI(PubMedAPI):
         if api_key: logging.info("PubMedCentral API: API Key Used.")
         else: logging.warning("PubMedCentral API: API Key Absent.")
 
-        if self.email: logging.info("PubMedCentral API: Email Used.")
-        else: logging.warning("PubMedCentral API: Email Absent.")
+        if self.email: logging.info("PubMedCentral API: Email Used.\n")
+        else: logging.warning("PubMedCentral API: Email Absent.\n")
 
                         
     @override
@@ -30,7 +30,7 @@ class PubMedCentralAPI(PubMedAPI):
 
             article_body = root.find(".//body")
             if article_body is None:
-                logging.warning(f"PubMedCentral API: Article PMCid: {pmc_id}: Content Not Found.")
+                logging.warning(f"PubMedCentral API: Article PMCid: {pmc_id}: Content Not Found.\n")
                 return None
 
             paragraphs = []
@@ -39,7 +39,7 @@ class PubMedCentralAPI(PubMedAPI):
                     paragraphs.append(p.text.strip())
             
             if paragraphs: 
-                logging.info(f"PubMedCentral API: Article PMCid: {pmc_id}: Content Found.")
+                logging.info(f"PubMedCentral API: Article PMCid: {pmc_id}: Content Found.\n")
             return "\n\n".join(paragraphs)
 
         else: 

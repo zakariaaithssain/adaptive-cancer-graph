@@ -43,7 +43,7 @@ class APIsToMongo:
 
         # using 'pmid' to prevent duplicates
         self.collection.create_index("pmid", unique=True)
-        logging.info("Connector: Using 'pmid' As An Index.")
+        logging.info("Connector: Using 'pmid' As An Index.\n")
 
         self.all_articles = []
         self.pmc_prost_articles = 0
@@ -53,10 +53,8 @@ class APIsToMongo:
 
 
     def get_docs_from_apis(self, max_results = 1000): 
-        
-        logging.info("Connector: Getting Docs From APIs.")
         for cancer in QUERIES.keys(): 
-            logging.info(f"Connector: Working On: {cancer} cancer.") 
+            logging.info(f"Connector: Working On: {cancer} cancer.\n") 
 
             fetched_xml = self.pubmed_api.search_and_fetch(QUERIES[cancer], max_results=max_results)
             articles = self.pubmed_api.get_data_from_xml(fetched_xml)
@@ -77,8 +75,8 @@ class APIsToMongo:
                     else:
                         self.pmc_stomach_articles +=1
 
-        logging.info(f"Connector: Prostate Cancer: {self.pmc_prost_articles} Articles Content Is Available For Free.")
-        logging.info(f"Connector: Stomach Cancer: {self.pmc_stomach_articles} Articles Content Is Available For Free.")
+        logging.info(f"Connector: Prostate Cancer: {self.pmc_prost_articles} Articles Content Present In PubMedCentral.")
+        logging.info(f"Connector: Stomach Cancer: {self.pmc_stomach_articles} Articles Content Present In PubMedCentral.")
 
         return self #to be able to chain call methods 
 
@@ -88,12 +86,12 @@ class APIsToMongo:
         logging.info("Connector: Inserting New Docs. Already Present Ones Will Be Ignored.")
         for article in tqdm(self.all_articles):
             try:
-                # adding the date of fetching the article
-                article["fetchingdate"] = datetime.datetime.now(datetime.timezone.utc)
+                # adding the date of fetching the article (utc: coordinated universal time)
+                article["fetchingdate"] = datetime.datetime.now(datetime.timezone.utc) 
                 self.collection.update_one(
                     {"pmid": article["pmid"]},     # matching by PubMed id
-                    {"$setOnInsert": article},     # insert only if not already present
-                    upsert=True
+                    {"$setOnInsert": article},   
+                    upsert=True                    #insert if no doc with that pmid is already there
                 )
             except errors.PyMongoError as e:
                 logging.error(f"Connector: Article PMid: {article.get('pmid')}: Error: {e}.")

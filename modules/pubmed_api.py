@@ -12,7 +12,11 @@ class PubMedAPI:
         self.base_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
         self.api_key = api_key
         self.email = email
-        self.headers = { "User-Agent": "MyResearchBot/1.0 (zakaria04aithssain@gmail.com)" }
+        self.headers = {
+            "User-Agent": "MyResearchBot/1.0 (zakaria04aithssain@gmail.com)",
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        }
 
         if api_key: logging.info("PubMed API: API Key Used.")
         else: logging.warning("PubMed API: API Key Absent.")
@@ -45,19 +49,15 @@ class PubMedAPI:
                 search_params['api_key'] = self.api_key
             
             if self.email:
-                logging.info("PubMed API: Email Used.")
                 search_params['email'] = self.email
-            else: 
-                logging.warning("PubMed API: Email Absent.")
 
             try:
-                logging.info("PubMed API: Search Endpoint: Sending Get Request.")
                 search_response = rq.get(search_url, params=search_params, headers=self.headers)
                 response_code = search_response.status_code
                 if response_code == 200:
                     logging.info(f"PubMed API: Search Endpoint: Response OK: {response_code}")
                 else: 
-                    logging.warning(f"PubMed API: Search Endpoint: Response NOT OK: {response_code}")
+                    logging.error(f"PubMed API: Search Endpoint: Response NOT OK: {response_code}")
             except Exception as e:
                 logging.error(f"Search Endpoint: Error: {e}")
                 
@@ -80,7 +80,6 @@ class PubMedAPI:
 
         #adding history params and max results only if dealing with PubMed API 
         if pmc_id is None: #which means that we are using PubMed API, we already have the search_data.
-            logging.info("PubMed API: Fetch Endpoint: Sending Get Request.")
             fetch_params['WebEnv'] = search_data['esearchresult']['webenv']
             fetch_params['query_key'] = search_data['esearchresult']['querykey']
             fetch_params['retmax'] = max_results
@@ -88,7 +87,6 @@ class PubMedAPI:
             if self.email: fetch_params['email'] = self.email
             
         else: #which means that we are using PMC API, we have an id.
-            logging.info("PubMedCentral API: Fetch Endpoint: Sending Get Request.") 
             fetch_params['id'] = pmc_id 
 
             if self.api_key:
@@ -110,7 +108,7 @@ class PubMedAPI:
                 if response_code == 200: 
                     logging.info(f"PubMedCentral API: Fetch Endpoint: Response OK: {response_code}")
                 else: 
-                    logging.warning(f"PubMedCentral API: Fetch Endpoint: Response NOT OK: {response_code}")
+                    logging.error(f"PubMedCentral API: Fetch Endpoint: Response NOT OK: {response_code}")
         except Exception as e: 
             logging.error(f"Fetch Endpoint: Error: {e}")
             return None
@@ -134,9 +132,9 @@ class PubMedAPI:
             articles = [] 
             found = root.findall('.//PubmedArticle')
             if len(found) > 0: 
-                logging.info(f"PubMed API: Found {len(found)} Articles In XML Root.")
+                logging.info(f"PubMed API: Found {len(found)} Articles In Fetched XML Root.")
             else: 
-                logging.warning(f"PubMed API: Found {len(found)} Articles In XML Root.")
+                logging.warning(f"PubMed API: Found {len(found)} Articles In Fetched XML Root.")
 
             for article in found:
                 article_title = article.find('.//ArticleTitle')
@@ -174,7 +172,7 @@ class PubMedAPI:
 
                     'keywords': keywords       # keywords provided by author
                 })
-                logging.info(f"PubMed API: Found Article With PMid: {article_pmid.text}.")
+                logging.info(f"PubMed API: PMid: {article_pmid.text}: Metadata Found.")
             
             return articles #list of dicts, each dict is an article's metadata containing the keys above.
         else: 
