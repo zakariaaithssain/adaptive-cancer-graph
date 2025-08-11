@@ -20,4 +20,4 @@ logging.basicConfig(level=LOG_OPTIONS["level"], format=LOG_OPTIONS["format"],
                             ]
                 )
 
-logging.info("modules/__init__.py : Old Logs File Is Deleted.")   
+logging.info("Modules init: Logs File Cleaned.\n")   
