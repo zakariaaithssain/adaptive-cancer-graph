@@ -62,10 +62,10 @@ class PubMedAPI:
                 logging.error(f"Search Endpoint: Error: {e}")
                 
             if self.api_key:
-                logging.info(f"Search Endpoint: Sleeping For {API_SLEEP_TIME["with_key"]}s.")
+                logging.info(f"Search Endpoint: Sleeping For {API_SLEEP_TIME['with_key']}s.")
                 time.sleep(API_SLEEP_TIME["with_key"])    #with an api key, we are allowed to do 10req/second
             else: 
-                logging.info(f"Search Endpoint: Sleeping For {API_SLEEP_TIME["without_key"]}s.")
+                logging.info(f"Search Endpoint: Sleeping For {API_SLEEP_TIME['without_key']}s.")
                 time.sleep(API_SLEEP_TIME["without_key"]) #without an api key, we only have 3req/second 
             
             search_data = search_response.json()
@@ -114,10 +114,10 @@ class PubMedAPI:
             return None
                     
         if self.api_key: 
-            logging.info(f"Fetch Endpoint: Sleeping For {API_SLEEP_TIME["with_key"]}s.")
+            logging.info(f"Fetch Endpoint: Sleeping For {API_SLEEP_TIME['with_key']}s.")
             time.sleep(API_SLEEP_TIME["with_key"])  
         else: 
-            logging.info(f"Fetch Endpoint: Sleeping For {API_SLEEP_TIME["without_key"]}s.")
+            logging.info(f"Fetch Endpoint: Sleeping For {API_SLEEP_TIME['without_key']}s.")
             time.sleep(API_SLEEP_TIME["without_key"])   
         
         return fetch_response #xml that contains the data of searched articles

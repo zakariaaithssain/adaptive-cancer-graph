@@ -2,10 +2,9 @@ import logging
 
 from modules.pubmed_api import PubMedAPI
 from modules.pubmedcentral_api import PubMedCentralAPI
-from modules.apis_to_mongo import APIsToMongo
+from modules.load_to_mongo import APIsToMongo
 
 from config.apis_config import API_KEY_EMAIL
-
 
 
 pubmed_api = PubMedAPI(api_key = API_KEY_EMAIL["api_key"], email = API_KEY_EMAIL["email"])
