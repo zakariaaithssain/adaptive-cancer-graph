@@ -8,6 +8,7 @@ import logging
 import datetime
 import sys
 
+from modules.nlp import NLP
 
 from config.apis_config import QUERIES
 from config.mongodb_config import CONNECTION_STR, DB_STRUCTURE
@@ -22,6 +23,7 @@ class LoadToMongo:
     def __init__(self,pubmed_api, pubmedcentral_api, use_abstracts_only = True):
         self.use_abstracts_only = use_abstracts_only
         self.pubmed_api = pubmed_api
+        self.nlp = NLP()
         #if we wanna get also the articles body, set to False
         if not self.use_abstracts_only: self.pubmedcentral_api = pubmedcentral_api
 
@@ -53,6 +55,7 @@ class LoadToMongo:
         self.all_articles = []
         self.pmc_prost_articles = 0
         self.pmc_stomach_articles = 0 
+        self.relations = []
 
 
 
@@ -69,12 +72,26 @@ class LoadToMongo:
                 #adding cancer type
                 article["cancertype"] = cancer
 
+                #nlp on abstract:
+                abstract = article['abstract']
+                if abstract is not None: 
+                    abstract_relations = self.nlp.extract_entities_and_relations(abstract)['relations']
+                    if abstract_relations != []: 
+                        self.relations.extend(abstract_relations)
+                
                 #checking if MPC id is available for the article
                 
                 pmc_id = article["pmcid"]
                 if not self.use_abstracts_only: #only get the full article body if required.
                     if pmc_id: 
                         article["body"] = self.pubmedcentral_api.get_data_from_xml(pmc_id=pmc_id)
+
+                        #nlp on abstract:
+                        body = article['body']
+                        if body is not None: 
+                            body_relations = self.nlp.extract_entities_and_relations(body)['relations']
+                            if body_relations != []: 
+                                self.relations.extend(body_relations)
 
                         if cancer == "prostate":
                             self.pmc_prost_articles+=1
@@ -83,6 +100,7 @@ class LoadToMongo:
 
         logging.info(f"Connector: Prostate Cancer: {self.pmc_prost_articles} Articles Content Present In PubMedCentral.")
         logging.info(f"Connector: Stomach Cancer: {self.pmc_stomach_articles} Articles Content Present In PubMedCentral.")
+        print(self.relations)
 
         return self #to be able to chain call methods 
 
