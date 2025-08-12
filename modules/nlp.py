@@ -1,7 +1,6 @@
 import spacy
 
 from spacy.matcher import Matcher, DependencyMatcher
-from spacy.tokens import Span
 
 from config.nlp_config import MATCHER_PATTERNS, DEPENDENCY_MATCHER_PATTERNS
 
@@ -58,5 +57,6 @@ class NLP:
       return {"entities": entities, "relations": relations}
 
 
-
+nlp = NLP()
+print(nlp.nlp_pipe.get_pipe("ner").labels)
 

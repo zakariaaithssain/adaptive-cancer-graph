@@ -72,12 +72,12 @@ class LoadToMongo:
                 #adding cancer type
                 article["cancertype"] = cancer
 
-                #nlp on abstract:
-                abstract = article['abstract']
-                if abstract is not None: 
-                    abstract_relations = self.nlp.extract_entities_and_relations(abstract)['relations']
-                    if abstract_relations != []: 
-                        self.relations.extend(abstract_relations)
+                # #nlp on abstract:
+                # abstract = article['abstract']
+                # if abstract is not None: 
+                #     abstract_relations = self.nlp.extract_entities_and_relations(abstract)['relations']
+                #     if abstract_relations != []: 
+                #         self.relations.extend(abstract_relations)
                 
                 #checking if MPC id is available for the article
                 
@@ -86,12 +86,12 @@ class LoadToMongo:
                     if pmc_id: 
                         article["body"] = self.pubmedcentral_api.get_data_from_xml(pmc_id=pmc_id)
 
-                        #nlp on abstract:
-                        body = article['body']
-                        if body is not None: 
-                            body_relations = self.nlp.extract_entities_and_relations(body)['relations']
-                            if body_relations != []: 
-                                self.relations.extend(body_relations)
+                        # #nlp on body:
+                        # body = article['body']
+                        # if body is not None: 
+                        #     body_relations = self.nlp.extract_entities_and_relations(body)['relations']
+                        #     if body_relations != []: 
+                        #         self.relations.extend(body_relations)
 
                         if cancer == "prostate":
                             self.pmc_prost_articles+=1
