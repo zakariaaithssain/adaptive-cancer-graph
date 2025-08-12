@@ -18,7 +18,7 @@ from config.mongodb_config import CONNECTION_STR, DB_STRUCTURE
     a collection contains multiple docs, a doc contains multiple features.
     """
 
-class APIsToMongo:
+class LoadToMongo:
     def __init__(self,pubmed_api, pubmedcentral_api, use_abstracts_only = True):
         self.use_abstracts_only = use_abstracts_only
         self.pubmed_api = pubmed_api
@@ -35,6 +35,7 @@ class APIsToMongo:
             logging.info("Connector: Deployment Pinged. Successfully Connected To MongoDB Atlas.")
         except Exception as e:
             logging.error(f"Connector: Error: {e}")
+            #no need to continue the execution if connection failed
             sys.exit(1)
 
 
