@@ -1,4 +1,5 @@
 from xml.etree import ElementTree as ET
+from typing import override
 
 import logging
 #override was added to typing module only in recent python, that's why we cannot use from typing import override
@@ -20,7 +21,7 @@ class PubMedCentralAPI(PubMedAPI):
         if self.email: logging.info("PubMedCentral API: Email Used.\n")
         else: logging.warning("PubMedCentral API: Email Absent.\n")
 
-                        
+    @override             
     def get_data_from_xml(self, pmc_id):
         logging.info(f"PubMedCentral API: Article PMCid: {pmc_id}: Looking For Article Content.")
         response_xml = self.search_and_fetch(db="pmc", pmc_id= pmc_id, rettype="full")
