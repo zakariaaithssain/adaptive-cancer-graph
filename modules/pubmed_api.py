@@ -60,7 +60,7 @@ class PubMedAPI:
                     #to get the number of results the search returned
                     data = search_response.json()
                     total_results = int(data["esearchresult"]["count"])
-                    print("total results for query: ", total_results)
+                    logging.info(f"PubMed API: Search Endpoint: Total Search Results For Current Query: {total_results}")
                 else: 
                     logging.error(f"PubMed API: Search Endpoint: Response NOT OK: {response_code}")
             except Exception as e:
