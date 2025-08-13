@@ -15,11 +15,11 @@ class PubMedAPI:
         self.base_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
         self.api_key = api_key
         self.email = email
-        self.headers = {
-            "User-Agent": "MyResearchBot/1.0 (zakaria04aithssain@gmail.com)",
-            "Accept": "application/json",
-            "Content-Type": "application/json"
-        }
+        #this header is specific for POST HTTP method, consider changing it for GET method.
+        self.headers = { 
+    "User-Agent": "MedicalGraphBot/1.0 (zakaria04aithssain@gmail.com)",
+    "Content-Type": "application/x-www-form-urlencoded"
+}
 
         if api_key: logging.info("PubMed API: API Key Used.")
         else: logging.warning("PubMed API: API Key Absent.")
@@ -41,7 +41,7 @@ class PubMedAPI:
         # step1: search, only when using the pubmed API, not for PMC API (we already have an id)
         if pmc_id is None: #which means that we are using the PubMed API
             search_url = f"{self.base_url}esearch.fcgi"
-            search_params = {
+            search_post_data = {
                 'db': db,              #database
                 'term': query,         #the query like the one we write in the search bar
                 'retmax': max_results, #ret: return
@@ -49,25 +49,28 @@ class PubMedAPI:
                 'usehistory': 'y'      #whether to use the history or not
             }
             if self.api_key:
-                search_params['api_key'] = self.api_key
+                search_post_data['api_key'] = self.api_key
             
             if self.email:
-                search_params['email'] = self.email
+                search_post_data['email'] = self.email
 
-            try:
-                search_response = rq.get(search_url, params=search_params, headers=self.headers)
+            try: #get recieves params, post recieves data
+                search_response = rq.post(search_url, data=search_post_data, headers=self.headers)
                 response_code = search_response.status_code
                 if response_code == 200:
                     logging.info(f"PubMed API: Search Endpoint: Response OK: {response_code}")
                     
                     #to get the number of results the search returned
-                    data = search_response.json()
-                    self.search_results_count = int(data["esearchresult"]["count"])
+                    json_resp = search_response.json()
+                    self.search_results_count = int(json_resp["esearchresult"]["count"])
                     logging.info(f"PubMed API: Search Endpoint: Total Search Results For Current Query: {self.search_results_count}")
                 else: 
                     logging.error(f"PubMed API: Search Endpoint: Response NOT OK: {response_code}")
+                    return
             except Exception as e:
-                logging.error(f"Search Endpoint: Error: {e}")
+                logging.error(f"Search Endpoint: Likely Not Related To Endpoint: {e}")
+                return
+
                 
             if self.api_key:
                 logging.info(f"Search Endpoint: Sleeping For {API_SLEEP_TIME['with_key']}s.")
@@ -76,8 +79,7 @@ class PubMedAPI:
                 logging.info(f"Search Endpoint: Sleeping For {API_SLEEP_TIME['without_key']}s.")
                 time.sleep(API_SLEEP_TIME["without_key"]) #without an api key, we only have 3req/second 
             
-            search_data = search_response.json() #assigned to self so I can use them from fetch function.
-            return search_data                            #to enable chained calls. 
+            return search_response.json()                    
         
 
     def fetch(self, search_data, max_results=1000, start = 0, db = "pubmed", pmc_id = None, rettype = 'abstract'):
@@ -94,7 +96,7 @@ class PubMedAPI:
                 """
             # step2: fetching (either using history if PubMed API, or using mpc_id if PubMedCentral API) 
             fetch_url = f"{self.base_url}efetch.fcgi"
-            fetch_params = {
+            fetch_post_data = {
                 'db': db,
                 'retmode': 'xml',   #json is not available for fetch endpoint
                 'rettype': rettype, #"abstract" if PubMed else "full"
@@ -102,24 +104,24 @@ class PubMedAPI:
         
             #adding history params and max results only if dealing with PubMed API 
             if pmc_id is None: #which means that we are using PubMed API, we already have the search_data.
-                fetch_params['WebEnv'] = search_data['esearchresult']['webenv']
-                fetch_params['query_key'] = search_data['esearchresult']['querykey']
-                fetch_params['retmax'] = max_results
-                fetch_params['retstart'] = start
-                if self.api_key: fetch_params['api_key'] = self.api_key
-                if self.email: fetch_params['email'] = self.email
+                fetch_post_data['WebEnv'] = search_data['esearchresult']['webenv']
+                fetch_post_data['query_key'] = search_data['esearchresult']['querykey']
+                fetch_post_data['retmax'] = max_results
+                fetch_post_data['retstart'] = start
+                if self.api_key: fetch_post_data['api_key'] = self.api_key
+                if self.email: fetch_post_data['email'] = self.email
             else: #which means that we are using PMC API, we have an id.
-                fetch_params['id'] = pmc_id 
+                fetch_post_data['id'] = pmc_id 
 
                 if self.api_key:
-                    fetch_params['api_key'] = self.api_key
+                    fetch_post_data['api_key'] = self.api_key
 
                 if self.email:
-                    fetch_params['email'] = self.email
+                    fetch_post_data['email'] = self.email
                 
 
-            try:
-                fetch_response = rq.get(fetch_url, params=fetch_params, headers=self.headers)
+            try: 
+                fetch_response = rq.post(fetch_url, data=fetch_post_data, headers=self.headers)
                 response_code = fetch_response.status_code
                 if pmc_id is None: #pubmed API
                     if response_code == 200: 
@@ -238,18 +240,18 @@ class PubMedAPI:
             
             # Fetch the MeSH term details
             fetch_url = f"{self.base_url}efetch.fcgi"
-            fetch_params = {
+            fetch_post_data = {
                 'db': 'mesh',
                 'id': id_list[0],  # Get the first (best) match
                 'retmode': 'xml'
             }
             
             if self.api_key:
-                fetch_params['api_key'] = self.api_key
+                fetch_post_data['api_key'] = self.api_key
             if self.email:
-                fetch_params['email'] = self.email
+                fetch_post_data['email'] = self.email
             
-            fetch_response = rq.get(fetch_url, params=fetch_params, headers=self.headers)
+            fetch_response = rq.get(fetch_url, params=fetch_post_data, headers=self.headers)
             if fetch_response.status_code != 200:
                 return None
             
