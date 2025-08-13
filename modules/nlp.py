@@ -11,6 +11,7 @@ from config.nlp_config import MATCHER_PATTERNS, DEPENDENCY_MATCHER_PATTERNS
 class NLP:
    def __init__(self):
       self.nlp_pipe = spacy.load("en_ner_bionlp13cg_md") 
+      logging.info("NLP: NER Model Loaded.")
       self.nlp_pipe.add_pipe("merge_entities", after="ner")
       self.entities= []
       self.relations = []
@@ -27,21 +28,26 @@ class NLP:
 
    
    #NER using en_ner_bionlp13cg_md scispacy model.
-   def extract_entities(self, text):
+   def extract_entities(self, text, article_metadata):
       doc = self.nlp_pipe(text)
+      entities = set() #to get rid of duplicated entities in the text
       for ent in doc.ents:
          if __name__ == "__main__": print(f"entity: {ent.text} --- label: {ent.label_}\n ******* ")
-         self.entities.append({"text": ent.text, "label": ent.label_})
+
+         #updating the entities with metadata of the article they were extracted from
+         entities.add({"text": ent.text, "label": ent.label_}.update(article_metadata)) 
+      if len(list(entities)): print(list(entities))
+      self.entities.extend(list(entities))
       return self
 
 #rule based and dependency based ER, so it's not that accurate like Model based ER.
-   def extract_relations(self, text): 
+   def extract_relations(self, text, article_metadata): 
       doc = self.nlp_pipe(text)
       #matcher results
       matches = self.matcher(doc)
       # dependency matcher results
       dep_matches = self.dep_matcher(doc)
-      relations = set() #to get rid of duplicated relations
+      relations = set() #to get rid of duplicated relations in the text
 
       for match_id, start, end in matches:
          # get only relations related to entities recognized
@@ -51,7 +57,9 @@ class NLP:
                relation = self.nlp_pipe.vocab.strings[match_id]
                #print relations only if running as main
                if __name__ == "__main__": print(f"{ent1.text} -[{relation}]-> {ent2.text}\n ******* ")
-               relations.add({"ent1": ent1.text, "relation": relation, "ent2": ent2.text})
+               
+               #updating the relations with metadata of the article they were extracted from
+               relations.add({"ent1": ent1.text, "relation": relation, "ent2": ent2.text}.update(article_metadata))
 
       for match_id, token_ids in dep_matches:
          relation = self.nlp_pipe.vocab.strings[match_id]
@@ -59,9 +67,11 @@ class NLP:
          ent2 = doc[token_ids[-1]]
          #print relations only if running as main
          if __name__ == "__main__": print(f"{ent1.text} -[{relation}]-> {ent2.text}\n ******* ")
-         relations.add({"ent1": ent1.text, "relation": relation, "ent2": ent2.text})
 
-      self.relations = list(relations)
+         #updating the entities with metadata of the article they were extracted from
+         relations.add({"ent1": ent1.text, "relation": relation, "ent2": ent2.text}.update(article_metadata))
+      if len(list(relation)): print(relations)
+      self.relations.extend(list(relations))
       return self
    
 

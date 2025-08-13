@@ -75,23 +75,35 @@ class MongoAtlasConnector:
             cursor = self.collection.find({}) #it returns a cursor, we must iterate through it.
         except errors.PyMongoError as e: 
             logging.error(f"Connector: Unable To Fetch Docs: {e}.")
-
+        logging.info("Connector: Fetching Docs From Mongo Atlas.")
         for doc in tqdm(cursor):
             try:
-                article = {}
+                if isinstance(doc['abstract'], str) or ('body' in doc.keys() and isinstance(doc['body'], str)):
+                    article = {}
 
-                article['pmid'] = doc['pmid']
-                article['pmcid'] = doc['pmid'] #will be null if article not available in MPCentral.
-                article['fetching_date'] = doc['fetchingdate']
-                article['pm_keywords'] = doc['keywords']
-                article['mesh'] = doc['medical_subject_headings']
+                    article['pmid'] = doc['pmid']
+                    article['pmcid'] = doc['pmid'] #will be null if article not available in MPCentral.
+                    article['fetching_date'] = doc['fetchingdate']
 
-                texts = [doc['title'], doc['abstract']]
-                #can be missing if we only fetched abstracts.
-                if 'body' in doc.keys(): texts.append(doc['body']) 
-                article['text'] = ". ".join(texts)
+                    keywords = [elt for elt in doc['keywords'] if isinstance(elt, str)]
+                    article['pm_keywords'] = ' ; '.join(keywords) #making them flat for csv
 
-                articles.append(article)
+                    mesh = [elt for elt in doc['medical_subject_headings'] if isinstance(elt, str)]
+                    article['mesh'] = ' ; '.join(mesh) #making them flat for csv
+
+                    texts = []
+                    if isinstance(doc.get('abstract'), str):
+                        texts.append(doc['abstract'])
+
+                    if isinstance(doc['title'], str): 
+                        texts.append(doc['title'])
+                    #can be missing if we only fetched abstracts.
+                    if 'body' in doc.keys() and isinstance(doc['body'], str):
+                        texts.append(doc['body']) 
+
+                    article['text'] = ". ".join(texts)
+
+                    articles.append(article)
             except Exception as e: 
                 logging.error(f"Connector: Unable To Fetch Article PMID{article.get('pmid')}: {e}.")
         else: 
