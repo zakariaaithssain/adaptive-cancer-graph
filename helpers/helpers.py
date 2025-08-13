@@ -14,7 +14,7 @@ def get_data_from_apis(pubmed_api, pubmedcentral_api, extract_abstracts_only = T
                 max_results = the number of articles to get per iteration.
                 #Note = the code is designed to always get all the articles available per query, so 
                 the max_results is only for specifiying what to request from the API per iteration. 
-                Decreasing max_results increases the number of loop iterations and of PubMed Efetch API endpoint calls
+                Decreasing max_results increases the number of loop iterations.
                 """
         
         all_articles = []
