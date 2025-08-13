@@ -11,10 +11,10 @@ import sys
 from config.mongodb_config import CONNECTION_STR, DB_STRUCTURE
 
 
+#TODO: clean the database from old data before running the fetching script
+#TODO: add logic to load_articles_to_cloud that verifies also that the body
+#  is not None before inserting to cloud
 
-#TODO: ADD A METHOD THAT GETS ALL ARTICLES FROM MONGO TO BE PROCESSED USING NLP
-#TODO 2: IF I WILL STORE THE ENTITIES AND RELATIONS IN MONGO, IMPLEMENT A METHOD TO LOAD THEM TO CLOUD.
-# BUT I THINK IT'S BETTER TO STORE THEM AS TABULAR DATA OR IN CSV THEN TO NEO4J.
 """
     a cluster contains multiple databases, a database contains multiple collections,
     a collection contains multiple docs, a doc contains multiple features.
@@ -63,15 +63,41 @@ class MongoAtlasConnector:
                         upsert=True                    #insert if no doc with that pmid is already there
                     )
             except errors.PyMongoError as e:
-                logging.error(f"Connector: Article PMid: {article.get('pmid')}: Error: {e}.")
+                logging.error(f"Connector: Unable To Store Article PMID{article.get('pmid')}: {e}.")
         else: 
             logging.info("Connector: Data Inserted With No Errors.")
 
+
+    
+    def fetch_articles_from_cloud(self):
+        articles = []
+        try: 
+            cursor = self.collection.find({}) #it returns a cursor, we must iterate through it.
+        except errors.PyMongoError as e: 
+            logging.error(f"Connector: Unable To Fetch Docs: {e}.")
+
+        for doc in tqdm(cursor):
+            try:
+                article = {}
+
+                article['pmid'] = doc['pmid']
+                article['pmcid'] = doc['pmid'] #will be null if article not available in MPCentral.
+                article['fetching_date'] = doc['fetchingdate']
+                article['pm_keywords'] = doc['keywords']
+                article['mesh'] = doc['medical_subject_headings']
+
+                texts = [doc['title'], doc['abstract']]
+                #can be missing if we only fetched abstracts.
+                if 'body' in doc.keys(): texts.append(doc['body']) 
+                article['text'] = ". ".join(texts)
+
+                articles.append(article)
+            except Exception as e: 
+                logging.error(f"Connector: Unable To Fetch Article PMID{article.get('pmid')}: {e}.")
+        else: 
+            logging.info("Connector: Data Fetched With No Errors.")
+        return articles
+        
         
 
-
-
-
-
-
-
+            
