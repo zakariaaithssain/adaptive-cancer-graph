@@ -50,17 +50,18 @@ class MongoAtlasConnector:
         
 
 
-    def load_articles_to_cloud(self, all_articles):
+    def load_articles_to_cloud(self, all_articles, abstract_only = True):
         logging.info("Connector: Inserting New Docs. Already Present Ones Will Be Ignored.")
         for article in tqdm(all_articles):
             try:
-                # adding the date of fetching the article (utc: coordinated universal time)
-                article["fetchingdate"] = datetime.datetime.now(datetime.timezone.utc) 
-                self.collection.update_one(
-                    {"pmid": article["pmid"]},     # matching by PubMed id
-                    {"$setOnInsert": article},   
-                    upsert=True                    #insert if no doc with that pmid is already there
-                )
+                if article['abstract']: #ignoring empty articles.
+                    # adding the date of fetching the article (utc: coordinated universal time)
+                    article["fetchingdate"] = datetime.datetime.now(datetime.timezone.utc) 
+                    self.collection.update_one(
+                        {"pmid": article["pmid"]},     # matching by PubMed id
+                        {"$setOnInsert": article},   
+                        upsert=True                    #insert if no doc with that pmid is already there
+                    )
             except errors.PyMongoError as e:
                 logging.error(f"Connector: Article PMid: {article.get('pmid')}: Error: {e}.")
         else: 

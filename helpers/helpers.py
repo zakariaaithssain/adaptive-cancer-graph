@@ -12,14 +12,17 @@ def get_data_from_apis(pubmed_api, pubmedcentral_api, extract_abstracts_only = T
                 extract_abstracts_only = when set to False, it extracts also articles body.
                                         This takes time because it requires an API call per article.
                 max_results = the number of articles to get per iteration.
-                #Note = the code is designed to always get all the articles available per query, so 
-                the max_results is only for specifiying what to request from the API per iteration. 
-                Decreasing max_results increases the number of loop iterations.
+                #Note = the code is designed to always get all articles available per query, so 
+                the max_results is only for specifiying how much to request from the API per iteration. 
+                Decreasing max_results increases the number of loop iterations, but inhances API performance.
                 """
         
         all_articles = []
         pmc_prost_articles = 0
         pmc_stomach_articles = 0 
+
+        if extract_abstracts_only: logging.info(f"Helper: Extracting Abstracts Only. No Calls To PubMedCentral API.\n")
+        else: logging.info(f"Helper: Extracting Abstracts And Body. PubMedCentral API Will Be Called For Each Article.\n")
         
         for cancer in QUERIES.keys():
             logging.info(f"Helper: Working On: {cancer.capitalize()} Cancer.\n")
@@ -28,10 +31,15 @@ def get_data_from_apis(pubmed_api, pubmedcentral_api, extract_abstracts_only = T
             search_results = pubmed_api.search(QUERIES[cancer], max_results=max_results) #a json format
             total_count = pubmed_api.search_results_count
             start = 0
+            
+            # checking the hard limit (10k articles per query)
+            while start < total_count and start < 10000:  
+                remaining = min(total_count - start, 10000 - start) 
+                current_max = min(max_results, remaining)
+                logging.info(f"Helper: {remaining} Articles To Get.")
 
-            while start < total_count: #to get all the articles returned from query
-                logging.info(f"Helper: {total_count - start} Articles To Get.")
-                fetched_xml = pubmed_api.fetch(search_results, start=start, max_results=max_results)
+                current_max = min(max_results, remaining)
+                fetched_xml = pubmed_api.fetch(search_results, start=start, max_results=current_max)
                 articles = pubmed_api.get_data_from_xml(fetched_xml)
                 all_articles.extend(articles)
 
@@ -50,8 +58,9 @@ def get_data_from_apis(pubmed_api, pubmedcentral_api, extract_abstracts_only = T
                 start += max_results
 
 
-
-        logging.info(f"Helper: Prostate Cancer: {pmc_prost_articles} Articles Content Present In PubMedCentral.")
-        logging.info(f"Helper: Stomach Cancer: {pmc_stomach_articles} Articles Content Present In PubMedCentral.")
+        if not extract_abstracts_only:
+            logging.info(f"Helper: Prostate Cancer: {pmc_prost_articles} Articles Content Present In PubMedCentral.")
+            logging.info(f"Helper: Stomach Cancer: {pmc_stomach_articles} Articles Content Present In PubMedCentral.")
+        else: logging.info(f"Helper: Finished Collecting Articles Abstracts.")
 
         return all_articles 
