@@ -21,19 +21,7 @@ from config.mongodb_config import CONNECTION_STR, DB_STRUCTURE
     """
 
 class MongoAtlasConnector:
-    def __init__(self,pubmed_api, pubmedcentral_api, extract_abstracts_only = True):
-        """ to extract articles body from PubMedCentral API,
-        set extract_abstracts_only to False. 
-        Extracting only the abstract accelerates the process,
-        because it only needs few API calls, to extract articles
-          body we need an API call per article."""
-        
-        self.extract_abstracts_only = extract_abstracts_only
-        self.pubmed_api = pubmed_api
-
-        if not self.extract_abstracts_only: 
-            self.pubmedcentral_api = pubmedcentral_api
-
+    def __init__(self):
         #create a new client and connect to the server
         self.cluster = MongoClient(host= CONNECTION_STR, server_api=ServerApi('1'))
 
