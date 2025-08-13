@@ -29,7 +29,7 @@ class PubMedAPI:
     
 
     
-    def search_and_fetch(self, query = None, max_results=1000, db = "pubmed", pmc_id = None, rettype = 'abstract'): 
+    def search(self, query = None, max_results=1000, db = "pubmed", pmc_id = None, rettype = 'abstract'): 
         """ 
         for PubMed Central API:
                 db = 'pmc'
@@ -76,64 +76,75 @@ class PubMedAPI:
                 logging.info(f"Search Endpoint: Sleeping For {API_SLEEP_TIME['without_key']}s.")
                 time.sleep(API_SLEEP_TIME["without_key"]) #without an api key, we only have 3req/second 
             
-            search_data = search_response.json()
+            search_data = search_response.json() #assigned to self so I can use them from fetch function.
+            return search_data                            #to enable chained calls. 
         
-        # step2: fetching (either using history if PubMed API, or using mpc_id if PubMedCentral API) 
-        fetch_url = f"{self.base_url}efetch.fcgi"
-        fetch_params = {
-            'db': db,
-            'retmode': 'xml',   #json is not available for fetch endpoint
-            'rettype': rettype, #"abstract" if PubMed else "full"
-        }
 
-        #adding history params and max results only if dealing with PubMed API 
-        if pmc_id is None: #which means that we are using PubMed API, we already have the search_data.
-            fetch_params['WebEnv'] = search_data['esearchresult']['webenv']
-            fetch_params['query_key'] = search_data['esearchresult']['querykey']
-            fetch_params['retmax'] = max_results
-            if self.api_key: fetch_params['api_key'] = self.api_key
-            if self.email: fetch_params['email'] = self.email
-            
-        else: #which means that we are using PMC API, we have an id.
-            fetch_params['id'] = pmc_id 
+    def fetch(self, search_data, max_results=1000, db = "pubmed", pmc_id = None, rettype = 'abstract'):
+            """ 
+        for PubMed Central API:
+                db = 'pmc'
+                pmc_id = string pmc id without the PMC prefixe
+                rettype = 'full' 
 
-            if self.api_key:
-                fetch_params['api_key'] = self.api_key
-
-            if self.email:
-                fetch_params['email'] = self.email
-            
-
-        try:
-            fetch_response = rq.get(fetch_url, params=fetch_params, headers=self.headers)
-            response_code = fetch_response.status_code
-            if pmc_id is None: #pubmed API
-                if response_code == 200: 
-                    logging.info(f"PubMed API: Fetch Endpoint: Response OK: {response_code}")
-                else: 
-                    logging.warning(f"PubMed API: Fetch Endpoint: Response NOT OK: {response_code}")
-            else: #pubmedcentral API
-                if response_code == 200: 
-                    logging.info(f"PubMedCentral API: Fetch Endpoint: Response OK: {response_code}")
-                else: 
-                    logging.error(f"PubMedCentral API: Fetch Endpoint: Response NOT OK: {response_code}")
-        except Exception as e: 
-            logging.error(f"Fetch Endpoint: Error: {e}")
-            return None
-                    
-        if self.api_key: 
-            logging.info(f"Fetch Endpoint: Sleeping For {API_SLEEP_TIME['with_key']}s.")
-            time.sleep(API_SLEEP_TIME["with_key"])  
-        else: 
-            logging.info(f"Fetch Endpoint: Sleeping For {API_SLEEP_TIME['without_key']}s.")
-            time.sleep(API_SLEEP_TIME["without_key"])   
+                """
+            # step2: fetching (either using history if PubMed API, or using mpc_id if PubMedCentral API) 
+            fetch_url = f"{self.base_url}efetch.fcgi"
+            fetch_params = {
+                'db': db,
+                'retmode': 'xml',   #json is not available for fetch endpoint
+                'rettype': rettype, #"abstract" if PubMed else "full"
+            }
         
-        return fetch_response #xml that contains the data of searched articles
-                              #(resp. article with pmc_id)
-                              # if we are using PM API (resp. PMC API)
-    
+            #adding history params and max results only if dealing with PubMed API 
+            if pmc_id is None: #which means that we are using PubMed API, we already have the search_data.
+                fetch_params['WebEnv'] = search_data['esearchresult']['webenv']
+                fetch_params['query_key'] = search_data['esearchresult']['querykey']
+                fetch_params['retmax'] = max_results
+                if self.api_key: fetch_params['api_key'] = self.api_key
+                if self.email: fetch_params['email'] = self.email
+                
+            else: #which means that we are using PMC API, we have an id.
+                fetch_params['id'] = pmc_id 
 
-    
+                if self.api_key:
+                    fetch_params['api_key'] = self.api_key
+
+                if self.email:
+                    fetch_params['email'] = self.email
+                
+
+            try:
+                fetch_response = rq.get(fetch_url, params=fetch_params, headers=self.headers)
+                response_code = fetch_response.status_code
+                if pmc_id is None: #pubmed API
+                    if response_code == 200: 
+                        logging.info(f"PubMed API: Fetch Endpoint: Response OK: {response_code}")
+                    else: 
+                        logging.warning(f"PubMed API: Fetch Endpoint: Response NOT OK: {response_code}")
+                else: #pubmedcentral API
+                    if response_code == 200: 
+                        logging.info(f"PubMedCentral API: Fetch Endpoint: Response OK: {response_code}")
+                    else: 
+                        logging.error(f"PubMedCentral API: Fetch Endpoint: Response NOT OK: {response_code}")
+            except Exception as e: 
+                logging.error(f"Fetch Endpoint: Error: {e}")
+                return None
+                        
+            if self.api_key: 
+                logging.info(f"Fetch Endpoint: Sleeping For {API_SLEEP_TIME['with_key']}s.")
+                time.sleep(API_SLEEP_TIME["with_key"])  
+            else: 
+                logging.info(f"Fetch Endpoint: Sleeping For {API_SLEEP_TIME['without_key']}s.")
+                time.sleep(API_SLEEP_TIME["without_key"])   
+            
+            return fetch_response #xml that contains the data of searched articles
+                                #(resp. article with pmc_id)
+                                # if we are using PM API (resp. PMC API)
+        
+        
+
+        
     def get_data_from_xml(self, fetch_response): #this is only for the PubMed API, I @override it for MPC API.
         if fetch_response: 
             root = ET.fromstring(fetch_response.text)

@@ -23,7 +23,7 @@ class LoadToMongo:
     def __init__(self,pubmed_api, pubmedcentral_api, use_abstracts_only = True):
         self.use_abstracts_only = use_abstracts_only
         self.pubmed_api = pubmed_api
-        self.nlp = NLP()
+        #self.nlp = NLP()
         #if we wanna get also the articles body, set to False
         if not self.use_abstracts_only: self.pubmedcentral_api = pubmedcentral_api
 
@@ -64,7 +64,9 @@ class LoadToMongo:
         for cancer in QUERIES.keys(): 
             logging.info(f"Connector: Working On: {cancer} cancer.\n") 
 
-            fetched_xml = self.pubmed_api.search_and_fetch(QUERIES[cancer], max_results=max_results)
+            search_result = self.pubmed_api.search(QUERIES[cancer], max_results=max_results)
+            fetched_xml = self.pubmed_api.fetch(search_data = search_result, max_results=max_results)
+
             articles = self.pubmed_api.get_data_from_xml(fetched_xml)
 
             self.all_articles.extend(articles)
@@ -100,7 +102,7 @@ class LoadToMongo:
 
         logging.info(f"Connector: Prostate Cancer: {self.pmc_prost_articles} Articles Content Present In PubMedCentral.")
         logging.info(f"Connector: Stomach Cancer: {self.pmc_stomach_articles} Articles Content Present In PubMedCentral.")
-        print(self.relations)
+        #print(self.relations)
 
         return self #to be able to chain call methods 
 
