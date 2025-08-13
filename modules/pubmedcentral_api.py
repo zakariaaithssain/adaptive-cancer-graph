@@ -2,7 +2,6 @@ from xml.etree import ElementTree as ET
 from typing import override
 
 import logging
-#override was added to typing module only in recent python, that's why we cannot use from typing import override
 
 from modules.pubmed_api import PubMedAPI
 

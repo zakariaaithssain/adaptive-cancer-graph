@@ -10,33 +10,38 @@ def get_data_from_apis(pubmed_api, pubmedcentral_api, extract_abstracts_only, ma
         pmc_prost_articles = 0
         pmc_stomach_articles = 0 
         
-        for cancer in QUERIES.keys(): 
-            logging.info(f"Connector: Working On: {cancer} cancer.\n") 
+        for cancer in QUERIES.keys():
+            logging.info(f"Helper: Working On: {cancer.capitalize()} Cancer.\n")
 
+            # searching only once, and using pagination to get all articles per search
             search_results = pubmed_api.search(QUERIES[cancer], max_results=max_results)
-            search_results_count = pubmed_api.search_results_count
+            total_count = pubmed_api.search_results_count
             start = 0
-            while search_results_count:
-                print("while loop: ", search_results_count)
-                fetched_xml = pubmed_api.fetch(search_results, start=start, max_results=max_results)
+
+            # loop for pagination
+            while start < total_count:
+                # get a batch of IDs
+                batch_ids = search_results[start:start + max_results]
+
+                # fetch details for this batch
+                fetched_xml = pubmed_api.fetch(batch_ids, max_results=len(batch_ids))
                 articles = pubmed_api.get_data_from_xml(fetched_xml)
                 all_articles.extend(articles)
 
-                #only get the full article body if required.
-                if not extract_abstracts_only: 
-                    for article in articles: 
-                        #adding cancer type
+                #get full body if specified
+                if not extract_abstracts_only:
+                    for article in articles:
                         article["cancertype"] = cancer
-                        #checking if MPC id is available for the article
                         pmc_id = article["pmcid"]
-                        if pmc_id: 
+                        if pmc_id:
                             article["body"] = pubmedcentral_api.get_data_from_xml(pmc_id=pmc_id)
                             if cancer == "prostate":
-                                pmc_prost_articles+=1
+                                pmc_prost_articles += 1
                             else:
-                                pmc_stomach_articles +=1
-                search_results_count-= max_results
+                                pmc_stomach_articles += 1
+
                 start += max_results
+
 
         logging.info(f"Helper: Prostate Cancer: {pmc_prost_articles} Articles Content Present In PubMedCentral.")
         logging.info(f"Helper: Stomach Cancer: {pmc_stomach_articles} Articles Content Present In PubMedCentral.")
