@@ -14,7 +14,7 @@ pubmedcentral_api = PubMedCentralAPI(api_key = API_KEY_EMAIL["api_key"], email =
 #use_abstract_only = False means that we are getting also articles body if available. 
 connector = MongoAtlasConnector(pubmed_api=pubmed_api, pubmedcentral_api=pubmedcentral_api, extract_abstracts_only=False)
 try: 
-    all_articles = get_data_from_apis(pubmed_api, pubmedcentral_api, extract_abstracts_only=False, max_results=10000)
+    all_articles = get_data_from_apis(pubmed_api, pubmedcentral_api, extract_abstracts_only=False, max_results=1000)
     connector.load_articles_to_cloud(all_articles)
 
 except KeyboardInterrupt: 

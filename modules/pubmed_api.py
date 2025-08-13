@@ -108,7 +108,6 @@ class PubMedAPI:
                 fetch_params['retstart'] = start
                 if self.api_key: fetch_params['api_key'] = self.api_key
                 if self.email: fetch_params['email'] = self.email
-                
             else: #which means that we are using PMC API, we have an id.
                 fetch_params['id'] = pmc_id 
 
