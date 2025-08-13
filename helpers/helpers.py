@@ -5,7 +5,18 @@ import logging
 from config.apis_config import QUERIES
 
 
-def get_data_from_apis(pubmed_api, pubmedcentral_api, extract_abstracts_only, max_results = 1000): 
+def get_data_from_apis(pubmed_api, pubmedcentral_api, extract_abstracts_only = True, max_results = 1000): 
+        """ 
+        #arguments:
+                pubmed_api (resp. pubmedcentral_api) = PubMedAPI (resp. PubMedCentralAPI) instance 
+                extract_abstracts_only = when set to False, it extracts also articles body.
+                                        This takes time because it requires an API call per article.
+                max_results = the number of articles to get per iteration.
+                #Note = the code is designed to always get all the articles available per query, so 
+                the max_results is only for specifiying what to request from the API per iteration. 
+                Decreasing max_results increases the number of loop iterations and of PubMed Efetch API endpoint calls
+                """
+        
         all_articles = []
         pmc_prost_articles = 0
         pmc_stomach_articles = 0 
@@ -19,6 +30,7 @@ def get_data_from_apis(pubmed_api, pubmedcentral_api, extract_abstracts_only, ma
             start = 0
 
             while start < total_count: #to get all the articles returned from query
+                logging.info(f"Helper: {total_count - start} Articles To Get.")
                 fetched_xml = pubmed_api.fetch(search_results, start=start, max_results=max_results)
                 articles = pubmed_api.get_data_from_xml(fetched_xml)
                 all_articles.extend(articles)

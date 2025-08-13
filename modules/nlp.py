@@ -7,7 +7,6 @@ from spacy.matcher import Matcher, DependencyMatcher
 
 from config.nlp_config import MATCHER_PATTERNS, DEPENDENCY_MATCHER_PATTERNS
 
-#TODO: ADD A METHOD TO SAVE ENTITIES AND RELATIONS TO CSV FORMAT USING PANDAS.
 
 class NLP:
    def __init__(self):
