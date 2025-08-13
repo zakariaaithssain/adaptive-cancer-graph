@@ -35,46 +35,69 @@ class NLP:
          if __name__ == "__main__": print(f"entity: {ent.text} --- label: {ent.label_}\n ******* ")
 
          #updating the entities with metadata of the article they were extracted from
-         entities.add({"text": ent.text, "label": ent.label_}.update(article_metadata)) 
+         entity = {"text": ent.text, "label": ent.label_}
+         entity.update(article_metadata)
+         entities.add(frozenset(entity.items())) 
       if len(list(entities)): print(list(entities))
-      self.entities.extend(list(entities))
+      entities_list = [dict(fs) for fs in entities]
+      self.entities.extend(entities_list)
       return self
 
 #rule based and dependency based ER, so it's not that accurate like Model based ER.
-   def extract_relations(self, text, article_metadata): 
-      doc = self.nlp_pipe(text)
-      #matcher results
-      matches = self.matcher(doc)
-      # dependency matcher results
-      dep_matches = self.dep_matcher(doc)
-      relations = set() #to get rid of duplicated relations in the text
+   def extract_relations(self, text, article_metadata):
+    doc = self.nlp_pipe(text)
+    
+    matches = self.matcher(doc)
+    dep_matches = self.dep_matcher(doc)
+    
+    relations = set()  # Deduplicate relations
+    
+    # Matcher-based relations
+    for match_id, start, end in matches:
+        entities_in_span = [ent for ent in doc.ents if ent.start >= start and ent.end <= end]
+        
+        if len(entities_in_span) == 2:
+            ent1, ent2 = entities_in_span
+            relation_label = self.nlp_pipe.vocab.strings[match_id]
+            
+            if __name__ == "__main__":
+                print(f"{ent1.text} -[{relation_label}]-> {ent2.text}\n*******")
+            
+            rel_dict = {
+                "ent1": ent1.text,
+                "relation": relation_label,
+                "ent2": ent2.text,
+                **article_metadata
+            }
+            relations.add(frozenset(rel_dict.items()))
+    
+    # Dependency-matcher-based relations
+    for match_id, token_ids in dep_matches:
+        relation_label = self.nlp_pipe.vocab.strings[match_id]
+        ent1 = doc[token_ids[0]]
+        ent2 = doc[token_ids[-1]]
+        
+        if __name__ == "__main__":
+            print(f"{ent1.text} -[{relation_label}]-> {ent2.text}\n*******")
+        
+        rel_dict = {
+            "ent1": ent1.text,
+            "relation": relation_label,
+            "ent2": ent2.text,
+            **article_metadata
+        }
+        relations.add(frozenset(rel_dict.items()))
+    
+    # Convert set of frozensets back to list of dicts
+    relations_list = [dict(fs) for fs in relations]
 
-      for match_id, start, end in matches:
-         # get only relations related to entities recognized
-         entities_in_span = [ent for ent in doc.ents if ent.start >= start and ent.end <= end]
-         if len(entities_in_span) == 2:
-               ent1, ent2 = entities_in_span
-               relation = self.nlp_pipe.vocab.strings[match_id]
-               #print relations only if running as main
-               if __name__ == "__main__": print(f"{ent1.text} -[{relation}]-> {ent2.text}\n ******* ")
-               
-               #updating the relations with metadata of the article they were extracted from
-               relations.add({"ent1": ent1.text, "relation": relation, "ent2": ent2.text}.update(article_metadata))
-
-      for match_id, token_ids in dep_matches:
-         relation = self.nlp_pipe.vocab.strings[match_id]
-         ent1 = doc[token_ids[0]]
-         ent2 = doc[token_ids[-1]]
-         #print relations only if running as main
-         if __name__ == "__main__": print(f"{ent1.text} -[{relation}]-> {ent2.text}\n ******* ")
-
-         #updating the entities with metadata of the article they were extracted from
-         relations.add({"ent1": ent1.text, "relation": relation, "ent2": ent2.text}.update(article_metadata))
-      if len(list(relation)): print(relations)
-      self.relations.extend(list(relations))
-      return self
-   
-
+    
+    if relations_list:
+        print(relations_list)
+        exit(0)
+    
+    self.relations.extend(relations_list)
+    return self
 
    def generate_entities_csv(self, file_path = "data/extracted_entities.csv"):
       if self.entities == []:
