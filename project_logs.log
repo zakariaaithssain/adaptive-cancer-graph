@@ -1,7 +1,1149 @@
-2025-08-13 00:47:19,391 - INFO - Modules init: Logs File Cleaned.
+2025-08-13 12:20:13,498 - INFO - Modules init: Logs File Cleaned.
 
-2025-08-13 00:47:20,985 - INFO - PubMed API: API Key Used.
-2025-08-13 00:47:20,985 - INFO - PubMed API: Email Used.
-2025-08-13 00:47:20,986 - INFO - PubMedCentral API: API Key Used.
-2025-08-13 00:47:20,986 - INFO - PubMedCentral API: Email Used.
+2025-08-13 12:20:14,366 - INFO - PubMed API: API Key Used.
+2025-08-13 12:20:14,366 - INFO - PubMed API: Email Used.
+2025-08-13 12:20:14,367 - INFO - PubMedCentral API: API Key Used.
+2025-08-13 12:20:14,367 - INFO - PubMedCentral API: Email Used.
 
+2025-08-13 12:20:14,458 - INFO - Connector: Sending A Ping To Confirm Connection.
+2025-08-13 12:20:15,193 - INFO - Connector: Deployment Pinged. Successfully Connected To MongoDB Atlas.
+2025-08-13 12:20:15,193 - INFO - Connector: Cluster: articles-cluster.
+2025-08-13 12:20:15,193 - INFO - Connector: DataBase: fetched-data-db.
+2025-08-13 12:20:15,193 - INFO - Connector: Collection: pm-pmc-data.
+2025-08-13 12:20:15,271 - INFO - Connector: Using 'pmid' As An Index.
+
+2025-08-13 12:20:15,271 - INFO - Connector: Working On: stomach cancer.
+
+2025-08-13 12:20:16,170 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-13 12:20:16,171 - INFO - PubMed API: Search Endpoint: Total Search Results For Current Query: 22308
+2025-08-13 12:20:16,171 - INFO - Search Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:26,409 - INFO - PubMed API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:26,409 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:27,255 - INFO - PubMed API: Found 1000 Articles In Fetched XML Root.
+2025-08-13 12:20:27,256 - INFO - PubMed API: PMid: 40788742: Metadata Found.
+2025-08-13 12:20:27,256 - INFO - PubMed API: PMid: 40785680: Metadata Found.
+2025-08-13 12:20:27,256 - INFO - PubMed API: PMid: 40783730: Metadata Found.
+2025-08-13 12:20:27,257 - INFO - PubMed API: PMid: 40779780: Metadata Found.
+2025-08-13 12:20:27,257 - INFO - PubMed API: PMid: 40777970: Metadata Found.
+2025-08-13 12:20:27,258 - INFO - PubMed API: PMid: 40777025: Metadata Found.
+2025-08-13 12:20:27,259 - INFO - PubMed API: PMid: 40775711: Metadata Found.
+2025-08-13 12:20:27,259 - INFO - PubMed API: PMid: 40775648: Metadata Found.
+2025-08-13 12:20:27,260 - INFO - PubMed API: PMid: 40775431: Metadata Found.
+2025-08-13 12:20:27,261 - INFO - PubMed API: PMid: 40775351: Metadata Found.
+2025-08-13 12:20:27,261 - INFO - PubMed API: PMid: 40775258: Metadata Found.
+2025-08-13 12:20:27,262 - INFO - PubMed API: PMid: 40775202: Metadata Found.
+2025-08-13 12:20:27,263 - INFO - PubMed API: PMid: 40775000: Metadata Found.
+2025-08-13 12:20:27,265 - INFO - PubMed API: PMid: 40774945: Metadata Found.
+2025-08-13 12:20:27,266 - INFO - PubMed API: PMid: 40771813: Metadata Found.
+2025-08-13 12:20:27,266 - INFO - PubMed API: PMid: 40771810: Metadata Found.
+2025-08-13 12:20:27,268 - INFO - PubMed API: PMid: 40771798: Metadata Found.
+2025-08-13 12:20:27,269 - INFO - PubMed API: PMid: 40770796: Metadata Found.
+2025-08-13 12:20:27,269 - INFO - PubMed API: PMid: 40770215: Metadata Found.
+2025-08-13 12:20:27,270 - INFO - PubMed API: PMid: 40770005: Metadata Found.
+2025-08-13 12:20:27,273 - INFO - PubMed API: PMid: 40768514: Metadata Found.
+2025-08-13 12:20:27,273 - INFO - PubMed API: PMid: 40768000: Metadata Found.
+2025-08-13 12:20:27,274 - INFO - PubMed API: PMid: 40766846: Metadata Found.
+2025-08-13 12:20:27,277 - INFO - PubMed API: PMid: 40765835: Metadata Found.
+2025-08-13 12:20:27,278 - INFO - PubMed API: PMid: 40765570: Metadata Found.
+2025-08-13 12:20:27,279 - INFO - PubMed API: PMid: 40761936: Metadata Found.
+2025-08-13 12:20:27,280 - INFO - PubMed API: PMid: 40760586: Metadata Found.
+2025-08-13 12:20:27,281 - INFO - PubMed API: PMid: 40759445: Metadata Found.
+2025-08-13 12:20:27,282 - INFO - PubMed API: PMid: 40755776: Metadata Found.
+2025-08-13 12:20:27,283 - INFO - PubMed API: PMid: 40755765: Metadata Found.
+2025-08-13 12:20:27,284 - INFO - PubMed API: PMid: 40755756: Metadata Found.
+2025-08-13 12:20:27,285 - INFO - PubMed API: PMid: 40755752: Metadata Found.
+2025-08-13 12:20:27,286 - INFO - PubMed API: PMid: 40749150: Metadata Found.
+2025-08-13 12:20:27,286 - INFO - PubMed API: PMid: 40745533: Metadata Found.
+2025-08-13 12:20:27,287 - INFO - PubMed API: PMid: 40741776: Metadata Found.
+2025-08-13 12:20:27,288 - INFO - PubMed API: PMid: 40741479: Metadata Found.
+2025-08-13 12:20:27,291 - INFO - PubMed API: PMid: 40741103: Metadata Found.
+2025-08-13 12:20:27,294 - INFO - PubMed API: PMid: 40740771: Metadata Found.
+2025-08-13 12:20:27,295 - INFO - PubMed API: PMid: 40731404: Metadata Found.
+2025-08-13 12:20:27,295 - INFO - PubMed API: PMid: 40729092: Metadata Found.
+2025-08-13 12:20:27,296 - INFO - PubMed API: PMid: 40725485: Metadata Found.
+2025-08-13 12:20:27,297 - INFO - PubMed API: PMid: 40724968: Metadata Found.
+2025-08-13 12:20:27,297 - INFO - PubMed API: PMid: 40721618: Metadata Found.
+2025-08-13 12:20:27,297 - INFO - PubMed API: PMid: 40717056: Metadata Found.
+2025-08-13 12:20:27,298 - INFO - PubMed API: PMid: 40718490: Metadata Found.
+2025-08-13 12:20:27,298 - INFO - PubMed API: PMid: 40715454: Metadata Found.
+2025-08-13 12:20:27,299 - INFO - PubMed API: PMid: 40715337: Metadata Found.
+2025-08-13 12:20:27,300 - INFO - PubMed API: PMid: 40713854: Metadata Found.
+2025-08-13 12:20:27,303 - INFO - PubMed API: PMid: 40710343: Metadata Found.
+2025-08-13 12:20:27,305 - INFO - PubMed API: PMid: 40709427: Metadata Found.
+2025-08-13 12:20:27,306 - INFO - PubMed API: PMid: 40707596: Metadata Found.
+2025-08-13 12:20:27,307 - INFO - PubMed API: PMid: 40707450: Metadata Found.
+2025-08-13 12:20:27,309 - INFO - PubMed API: PMid: 40704685: Metadata Found.
+2025-08-13 12:20:27,311 - INFO - PubMed API: PMid: 40704465: Metadata Found.
+2025-08-13 12:20:27,312 - INFO - PubMed API: PMid: 40702544: Metadata Found.
+2025-08-13 12:20:27,314 - INFO - PubMed API: PMid: 40702064: Metadata Found.
+2025-08-13 12:20:27,314 - INFO - PubMed API: PMid: 40701960: Metadata Found.
+2025-08-13 12:20:27,315 - INFO - PubMed API: PMid: 40700119: Metadata Found.
+2025-08-13 12:20:27,315 - INFO - PubMed API: PMid: 40696733: Metadata Found.
+2025-08-13 12:20:27,316 - INFO - PubMed API: PMid: 40696666: Metadata Found.
+2025-08-13 12:20:27,317 - INFO - PubMed API: PMid: 40696490: Metadata Found.
+2025-08-13 12:20:27,318 - INFO - PubMed API: PMid: 40696397: Metadata Found.
+2025-08-13 12:20:27,319 - INFO - PubMed API: PMid: 40696067: Metadata Found.
+2025-08-13 12:20:27,319 - INFO - PubMed API: PMid: 40691605: Metadata Found.
+2025-08-13 12:20:27,320 - INFO - PubMed API: PMid: 40689396: Metadata Found.
+2025-08-13 12:20:27,323 - INFO - PubMed API: PMid: 40688093: Metadata Found.
+2025-08-13 12:20:27,326 - INFO - PubMed API: PMid: 40686717: Metadata Found.
+2025-08-13 12:20:27,329 - INFO - PubMed API: PMid: 40686307: Metadata Found.
+2025-08-13 12:20:27,330 - INFO - PubMed API: PMid: 40682841: Metadata Found.
+2025-08-13 12:20:27,331 - INFO - PubMed API: PMid: 40682156: Metadata Found.
+2025-08-13 12:20:27,332 - INFO - PubMed API: PMid: 40677704: Metadata Found.
+2025-08-13 12:20:27,332 - INFO - PubMed API: PMid: 40676618: Metadata Found.
+2025-08-13 12:20:27,333 - INFO - PubMed API: PMid: 40675356: Metadata Found.
+2025-08-13 12:20:27,333 - INFO - PubMed API: PMid: 40673317: Metadata Found.
+2025-08-13 12:20:27,334 - INFO - PubMed API: PMid: 40673308: Metadata Found.
+2025-08-13 12:20:27,335 - INFO - PubMed API: PMid: 40673298: Metadata Found.
+2025-08-13 12:20:27,336 - INFO - PubMed API: PMid: 40666515: Metadata Found.
+2025-08-13 12:20:27,337 - INFO - PubMed API: PMid: 40665405: Metadata Found.
+2025-08-13 12:20:27,338 - INFO - PubMed API: PMid: 40665360: Metadata Found.
+2025-08-13 12:20:27,339 - INFO - PubMed API: PMid: 40664751: Metadata Found.
+2025-08-13 12:20:27,341 - INFO - PubMed API: PMid: 40664635: Metadata Found.
+2025-08-13 12:20:27,342 - INFO - PubMed API: PMid: 40661955: Metadata Found.
+2025-08-13 12:20:27,343 - INFO - PubMed API: PMid: 40660564: Metadata Found.
+2025-08-13 12:20:27,345 - INFO - PubMed API: PMid: 40660403: Metadata Found.
+2025-08-13 12:20:27,347 - INFO - PubMed API: PMid: 40659630: Metadata Found.
+2025-08-13 12:20:27,349 - INFO - PubMed API: PMid: 40657397: Metadata Found.
+2025-08-13 12:20:27,352 - INFO - PubMed API: PMid: 40656957: Metadata Found.
+2025-08-13 12:20:27,353 - INFO - PubMed API: PMid: 40655149: Metadata Found.
+2025-08-13 12:20:27,354 - INFO - PubMed API: PMid: 40655141: Metadata Found.
+2025-08-13 12:20:27,355 - INFO - PubMed API: PMid: 40654572: Metadata Found.
+2025-08-13 12:20:27,356 - INFO - PubMed API: PMid: 40653807: Metadata Found.
+2025-08-13 12:20:27,356 - INFO - PubMed API: PMid: 40653542: Metadata Found.
+2025-08-13 12:20:27,356 - INFO - PubMed API: PMid: 40652510: Metadata Found.
+2025-08-13 12:20:27,358 - INFO - PubMed API: PMid: 40652278: Metadata Found.
+2025-08-13 12:20:27,361 - INFO - PubMed API: PMid: 40651012: Metadata Found.
+2025-08-13 12:20:27,364 - INFO - PubMed API: PMid: 40650758: Metadata Found.
+2025-08-13 12:20:27,366 - INFO - PubMed API: PMid: 40650701: Metadata Found.
+2025-08-13 12:20:27,367 - INFO - PubMed API: PMid: 40650581: Metadata Found.
+2025-08-13 12:20:27,367 - INFO - PubMed API: PMid: 40649776: Metadata Found.
+2025-08-13 12:20:27,368 - INFO - PubMed API: PMid: 40649716: Metadata Found.
+2025-08-13 12:20:27,369 - INFO - PubMed API: PMid: 40643914: Metadata Found.
+2025-08-13 12:20:27,371 - INFO - PubMed API: PMid: 40642068: Metadata Found.
+2025-08-13 12:20:27,372 - INFO - PubMed API: PMid: 40641712: Metadata Found.
+2025-08-13 12:20:27,374 - INFO - PubMed API: PMid: 40641125: Metadata Found.
+2025-08-13 12:20:27,375 - INFO - PubMed API: PMid: 40640775: Metadata Found.
+2025-08-13 12:20:27,376 - INFO - PubMed API: PMid: 40640500: Metadata Found.
+2025-08-13 12:20:27,376 - INFO - PubMed API: PMid: 40640119: Metadata Found.
+2025-08-13 12:20:27,377 - INFO - PubMed API: PMid: 40638694: Metadata Found.
+2025-08-13 12:20:27,378 - INFO - PubMed API: PMid: 40637774: Metadata Found.
+2025-08-13 12:20:27,378 - INFO - PubMed API: PMid: 40637070: Metadata Found.
+2025-08-13 12:20:27,379 - INFO - PubMed API: PMid: 40635031: Metadata Found.
+2025-08-13 12:20:27,380 - INFO - PubMed API: PMid: 40631474: Metadata Found.
+2025-08-13 12:20:27,385 - INFO - PubMed API: PMid: 40631471: Metadata Found.
+2025-08-13 12:20:27,387 - INFO - PubMed API: PMid: 40630953: Metadata Found.
+2025-08-13 12:20:27,388 - INFO - PubMed API: PMid: 40629181: Metadata Found.
+2025-08-13 12:20:27,388 - INFO - PubMed API: PMid: 40629017: Metadata Found.
+2025-08-13 12:20:27,389 - INFO - PubMed API: PMid: 40619579: Metadata Found.
+2025-08-13 12:20:27,389 - INFO - PubMed API: PMid: 40618428: Metadata Found.
+2025-08-13 12:20:27,391 - INFO - PubMed API: PMid: 40616546: Metadata Found.
+2025-08-13 12:20:27,392 - INFO - PubMed API: PMid: 40616020: Metadata Found.
+2025-08-13 12:20:27,392 - INFO - PubMed API: PMid: 40615529: Metadata Found.
+2025-08-13 12:20:27,393 - INFO - PubMed API: PMid: 40615435: Metadata Found.
+2025-08-13 12:20:27,395 - INFO - PubMed API: PMid: 40615151: Metadata Found.
+2025-08-13 12:20:27,395 - INFO - PubMed API: PMid: 40614569: Metadata Found.
+2025-08-13 12:20:27,397 - INFO - PubMed API: PMid: 40613881: Metadata Found.
+2025-08-13 12:20:27,398 - INFO - PubMed API: PMid: 40613290: Metadata Found.
+2025-08-13 12:20:27,399 - INFO - PubMed API: PMid: 40613240: Metadata Found.
+2025-08-13 12:20:27,401 - INFO - PubMed API: PMid: 40609990: Metadata Found.
+2025-08-13 12:20:27,402 - INFO - PubMed API: PMid: 40607419: Metadata Found.
+2025-08-13 12:20:27,403 - INFO - PubMed API: PMid: 40604818: Metadata Found.
+2025-08-13 12:20:27,403 - INFO - PubMed API: PMid: 40604718: Metadata Found.
+2025-08-13 12:20:27,404 - INFO - PubMed API: PMid: 40603395: Metadata Found.
+2025-08-13 12:20:27,404 - INFO - PubMed API: PMid: 40598530: Metadata Found.
+2025-08-13 12:20:27,406 - INFO - PubMed API: PMid: 40598522: Metadata Found.
+2025-08-13 12:20:27,407 - INFO - PubMed API: PMid: 40598472: Metadata Found.
+2025-08-13 12:20:27,409 - INFO - PubMed API: PMid: 40598208: Metadata Found.
+2025-08-13 12:20:27,410 - INFO - PubMed API: PMid: 40597891: Metadata Found.
+2025-08-13 12:20:27,411 - INFO - PubMed API: PMid: 40597880: Metadata Found.
+2025-08-13 12:20:27,412 - INFO - PubMed API: PMid: 40597847: Metadata Found.
+2025-08-13 12:20:27,413 - INFO - PubMed API: PMid: 40597779: Metadata Found.
+2025-08-13 12:20:27,414 - INFO - PubMed API: PMid: 40597721: Metadata Found.
+2025-08-13 12:20:27,415 - INFO - PubMed API: PMid: 40597264: Metadata Found.
+2025-08-13 12:20:27,415 - INFO - PubMed API: PMid: 40596888: Metadata Found.
+2025-08-13 12:20:27,417 - INFO - PubMed API: PMid: 40596880: Metadata Found.
+2025-08-13 12:20:27,419 - INFO - PubMed API: PMid: 40596565: Metadata Found.
+2025-08-13 12:20:27,420 - INFO - PubMed API: PMid: 40596319: Metadata Found.
+2025-08-13 12:20:27,421 - INFO - PubMed API: PMid: 40595924: Metadata Found.
+2025-08-13 12:20:27,422 - INFO - PubMed API: PMid: 40595738: Metadata Found.
+2025-08-13 12:20:27,422 - INFO - PubMed API: PMid: 40595708: Metadata Found.
+2025-08-13 12:20:27,424 - INFO - PubMed API: PMid: 40595652: Metadata Found.
+2025-08-13 12:20:27,429 - INFO - PubMed API: PMid: 40595559: Metadata Found.
+2025-08-13 12:20:27,430 - INFO - PubMed API: PMid: 40594780: Metadata Found.
+2025-08-13 12:20:27,431 - INFO - PubMed API: PMid: 40594436: Metadata Found.
+2025-08-13 12:20:27,432 - INFO - PubMed API: PMid: 40594240: Metadata Found.
+2025-08-13 12:20:27,432 - INFO - PubMed API: PMid: 40593877: Metadata Found.
+2025-08-13 12:20:27,434 - INFO - PubMed API: PMid: 40593094: Metadata Found.
+2025-08-13 12:20:27,435 - INFO - PubMed API: PMid: 40592733: Metadata Found.
+2025-08-13 12:20:27,435 - INFO - PubMed API: PMid: 40580616: Metadata Found.
+2025-08-13 12:20:27,436 - INFO - PubMed API: PMid: 40579136: Metadata Found.
+2025-08-13 12:20:27,437 - INFO - PubMed API: PMid: 40579007: Metadata Found.
+2025-08-13 12:20:27,439 - INFO - PubMed API: PMid: 40579004: Metadata Found.
+2025-08-13 12:20:27,447 - INFO - PubMed API: PMid: 40578990: Metadata Found.
+2025-08-13 12:20:27,448 - INFO - PubMed API: PMid: 40576306: Metadata Found.
+2025-08-13 12:20:27,449 - INFO - PubMed API: PMid: 40574483: Metadata Found.
+2025-08-13 12:20:27,449 - INFO - PubMed API: PMid: 40574291: Metadata Found.
+2025-08-13 12:20:27,450 - INFO - PubMed API: PMid: 40572762: Metadata Found.
+2025-08-13 12:20:27,451 - INFO - PubMed API: PMid: 40572737: Metadata Found.
+2025-08-13 12:20:27,452 - INFO - PubMed API: PMid: 40572713: Metadata Found.
+2025-08-13 12:20:27,452 - INFO - PubMed API: PMid: 40571773: Metadata Found.
+2025-08-13 12:20:27,453 - INFO - PubMed API: PMid: 40571483: Metadata Found.
+2025-08-13 12:20:27,453 - INFO - PubMed API: PMid: 40569929: Metadata Found.
+2025-08-13 12:20:27,455 - INFO - PubMed API: PMid: 40569674: Metadata Found.
+2025-08-13 12:20:27,455 - INFO - PubMed API: PMid: 40569140: Metadata Found.
+2025-08-13 12:20:27,464 - INFO - PubMed API: PMid: 40568785: Metadata Found.
+2025-08-13 12:20:27,465 - INFO - PubMed API: PMid: 40565509: Metadata Found.
+2025-08-13 12:20:27,467 - INFO - PubMed API: PMid: 40565098: Metadata Found.
+2025-08-13 12:20:27,469 - INFO - PubMed API: PMid: 40565055: Metadata Found.
+2025-08-13 12:20:27,470 - INFO - PubMed API: PMid: 40565036: Metadata Found.
+2025-08-13 12:20:27,470 - INFO - PubMed API: PMid: 40562705: Metadata Found.
+2025-08-13 12:20:27,471 - INFO - PubMed API: PMid: 40562563: Metadata Found.
+2025-08-13 12:20:27,472 - INFO - PubMed API: PMid: 40557969: Metadata Found.
+2025-08-13 12:20:27,472 - INFO - PubMed API: PMid: 40555320: Metadata Found.
+2025-08-13 12:20:27,473 - INFO - PubMed API: PMid: 40554953: Metadata Found.
+2025-08-13 12:20:27,475 - INFO - PubMed API: PMid: 40554667: Metadata Found.
+2025-08-13 12:20:27,482 - INFO - PubMed API: PMid: 40552296: Metadata Found.
+2025-08-13 12:20:27,483 - INFO - PubMed API: PMid: 40552288: Metadata Found.
+2025-08-13 12:20:27,484 - INFO - PubMed API: PMid: 40551175: Metadata Found.
+2025-08-13 12:20:27,485 - INFO - PubMed API: PMid: 40549789: Metadata Found.
+2025-08-13 12:20:27,486 - INFO - PubMed API: PMid: 40547041: Metadata Found.
+2025-08-13 12:20:27,487 - INFO - PubMed API: PMid: 40546800: Metadata Found.
+2025-08-13 12:20:27,488 - INFO - PubMed API: PMid: 40544554: Metadata Found.
+2025-08-13 12:20:27,493 - INFO - PubMed API: PMid: 40540760: Metadata Found.
+2025-08-13 12:20:27,494 - INFO - PubMed API: PMid: 40539646: Metadata Found.
+2025-08-13 12:20:27,497 - INFO - PubMed API: PMid: 40539460: Metadata Found.
+2025-08-13 12:20:27,498 - INFO - PubMed API: PMid: 40539201: Metadata Found.
+2025-08-13 12:20:27,499 - INFO - PubMed API: PMid: 40539058: Metadata Found.
+2025-08-13 12:20:27,500 - INFO - PubMed API: PMid: 40539041: Metadata Found.
+2025-08-13 12:20:27,501 - INFO - PubMed API: PMid: 40538517: Metadata Found.
+2025-08-13 12:20:27,502 - INFO - PubMed API: PMid: 40538016: Metadata Found.
+2025-08-13 12:20:27,503 - INFO - PubMed API: PMid: 40534096: Metadata Found.
+2025-08-13 12:20:27,503 - INFO - PubMed API: PMid: 40532817: Metadata Found.
+2025-08-13 12:20:27,504 - INFO - PubMed API: PMid: 40532664: Metadata Found.
+2025-08-13 12:20:27,505 - INFO - PubMed API: PMid: 40530565: Metadata Found.
+2025-08-13 12:20:27,509 - INFO - PubMed API: PMid: 40529304: Metadata Found.
+2025-08-13 12:20:27,512 - INFO - PubMed API: PMid: 40528805: Metadata Found.
+2025-08-13 12:20:27,512 - INFO - PubMed API: PMid: 40528576: Metadata Found.
+2025-08-13 12:20:27,514 - INFO - PubMed API: PMid: 40528239: Metadata Found.
+2025-08-13 12:20:27,515 - INFO - PubMed API: PMid: 40527179: Metadata Found.
+2025-08-13 12:20:27,516 - INFO - PubMed API: PMid: 40525824: Metadata Found.
+2025-08-13 12:20:27,516 - INFO - PubMed API: PMid: 40524516: Metadata Found.
+2025-08-13 12:20:27,519 - INFO - PubMed API: PMid: 40524157: Metadata Found.
+2025-08-13 12:20:27,520 - INFO - PubMed API: PMid: 40524072: Metadata Found.
+2025-08-13 12:20:27,521 - INFO - PubMed API: PMid: 40523768: Metadata Found.
+2025-08-13 12:20:27,521 - INFO - PubMed API: PMid: 40523763: Metadata Found.
+2025-08-13 12:20:27,522 - INFO - PubMed API: PMid: 40522270: Metadata Found.
+2025-08-13 12:20:27,522 - INFO - PubMed API: PMid: 40521987: Metadata Found.
+2025-08-13 12:20:27,523 - INFO - PubMed API: PMid: 40521255: Metadata Found.
+2025-08-13 12:20:27,524 - INFO - PubMed API: PMid: 40521254: Metadata Found.
+2025-08-13 12:20:27,527 - INFO - PubMed API: PMid: 40519938: Metadata Found.
+2025-08-13 12:20:27,529 - INFO - PubMed API: PMid: 40519936: Metadata Found.
+2025-08-13 12:20:27,532 - INFO - PubMed API: PMid: 40519900: Metadata Found.
+2025-08-13 12:20:27,533 - INFO - PubMed API: PMid: 40518541: Metadata Found.
+2025-08-13 12:20:27,533 - INFO - PubMed API: PMid: 40517212: Metadata Found.
+2025-08-13 12:20:27,534 - INFO - PubMed API: PMid: 40515562: Metadata Found.
+2025-08-13 12:20:27,534 - INFO - PubMed API: PMid: 40513139: Metadata Found.
+2025-08-13 12:20:27,534 - INFO - PubMed API: PMid: 40512406: Metadata Found.
+2025-08-13 12:20:27,536 - INFO - PubMed API: PMid: 40510364: Metadata Found.
+2025-08-13 12:20:27,538 - INFO - PubMed API: PMid: 40507876: Metadata Found.
+2025-08-13 12:20:27,539 - INFO - PubMed API: PMid: 40506764: Metadata Found.
+2025-08-13 12:20:27,544 - INFO - PubMed API: PMid: 40504549: Metadata Found.
+2025-08-13 12:20:27,544 - INFO - PubMed API: PMid: 40501119: Metadata Found.
+2025-08-13 12:20:27,545 - INFO - PubMed API: PMid: 40500263: Metadata Found.
+2025-08-13 12:20:27,545 - INFO - PubMed API: PMid: 40498685: Metadata Found.
+2025-08-13 12:20:27,546 - INFO - PubMed API: PMid: 40498647: Metadata Found.
+2025-08-13 12:20:27,547 - INFO - PubMed API: PMid: 40498284: Metadata Found.
+2025-08-13 12:20:27,548 - INFO - PubMed API: PMid: 40497941: Metadata Found.
+2025-08-13 12:20:27,549 - INFO - PubMed API: PMid: 40497089: Metadata Found.
+2025-08-13 12:20:27,549 - INFO - PubMed API: PMid: 40496866: Metadata Found.
+2025-08-13 12:20:27,550 - INFO - PubMed API: PMid: 40496367: Metadata Found.
+2025-08-13 12:20:27,550 - INFO - PubMed API: PMid: 40496358: Metadata Found.
+2025-08-13 12:20:27,551 - INFO - PubMed API: PMid: 40495175: Metadata Found.
+2025-08-13 12:20:27,552 - INFO - PubMed API: PMid: 40494952: Metadata Found.
+2025-08-13 12:20:27,552 - INFO - PubMed API: PMid: 40494845: Metadata Found.
+2025-08-13 12:20:27,553 - INFO - PubMed API: PMid: 40489463: Metadata Found.
+2025-08-13 12:20:27,554 - INFO - PubMed API: PMid: 40488271: Metadata Found.
+2025-08-13 12:20:27,555 - INFO - PubMed API: PMid: 40486876: Metadata Found.
+2025-08-13 12:20:27,555 - INFO - PubMed API: PMid: 40483456: Metadata Found.
+2025-08-13 12:20:27,556 - INFO - PubMed API: PMid: 40481489: Metadata Found.
+2025-08-13 12:20:27,557 - INFO - PubMed API: PMid: 40481442: Metadata Found.
+2025-08-13 12:20:27,558 - INFO - PubMed API: PMid: 40481392: Metadata Found.
+2025-08-13 12:20:27,562 - INFO - PubMed API: PMid: 40481119: Metadata Found.
+2025-08-13 12:20:27,562 - INFO - PubMed API: PMid: 40476844: Metadata Found.
+2025-08-13 12:20:27,563 - INFO - PubMed API: PMid: 40474106: Metadata Found.
+2025-08-13 12:20:27,565 - INFO - PubMed API: PMid: 40473764: Metadata Found.
+2025-08-13 12:20:27,566 - INFO - PubMed API: PMid: 40473706: Metadata Found.
+2025-08-13 12:20:27,567 - INFO - PubMed API: PMid: 40473597: Metadata Found.
+2025-08-13 12:20:27,567 - INFO - PubMed API: PMid: 40472683: Metadata Found.
+2025-08-13 12:20:27,568 - INFO - PubMed API: PMid: 40470592: Metadata Found.
+2025-08-13 12:20:27,569 - INFO - PubMed API: PMid: 40469295: Metadata Found.
+2025-08-13 12:20:27,570 - INFO - PubMed API: PMid: 40468032: Metadata Found.
+2025-08-13 12:20:27,571 - INFO - PubMed API: PMid: 40467837: Metadata Found.
+2025-08-13 12:20:27,572 - INFO - PubMed API: PMid: 40467576: Metadata Found.
+2025-08-13 12:20:27,572 - INFO - PubMed API: PMid: 40467306: Metadata Found.
+2025-08-13 12:20:27,573 - INFO - PubMed API: PMid: 40465055: Metadata Found.
+2025-08-13 12:20:27,573 - INFO - PubMed API: PMid: 40464496: Metadata Found.
+2025-08-13 12:20:27,574 - INFO - PubMed API: PMid: 40464032: Metadata Found.
+2025-08-13 12:20:27,575 - INFO - PubMed API: PMid: 40461943: Metadata Found.
+2025-08-13 12:20:27,576 - INFO - PubMed API: PMid: 40460553: Metadata Found.
+2025-08-13 12:20:27,577 - INFO - PubMed API: PMid: 40457517: Metadata Found.
+2025-08-13 12:20:27,578 - INFO - PubMed API: PMid: 40456011: Metadata Found.
+2025-08-13 12:20:27,579 - INFO - PubMed API: PMid: 40455642: Metadata Found.
+2025-08-13 12:20:27,580 - INFO - PubMed API: PMid: 40454964: Metadata Found.
+2025-08-13 12:20:27,583 - INFO - PubMed API: PMid: 40452932: Metadata Found.
+2025-08-13 12:20:27,584 - INFO - PubMed API: PMid: 40452546: Metadata Found.
+2025-08-13 12:20:27,585 - INFO - PubMed API: PMid: 40452325: Metadata Found.
+2025-08-13 12:20:27,586 - INFO - PubMed API: PMid: 40452026: Metadata Found.
+2025-08-13 12:20:27,587 - INFO - PubMed API: PMid: 40451639: Metadata Found.
+2025-08-13 12:20:27,588 - INFO - PubMed API: PMid: 40450359: Metadata Found.
+2025-08-13 12:20:27,588 - INFO - PubMed API: PMid: 40450207: Metadata Found.
+2025-08-13 12:20:27,589 - INFO - PubMed API: PMid: 40450051: Metadata Found.
+2025-08-13 12:20:27,589 - INFO - PubMed API: PMid: 40448579: Metadata Found.
+2025-08-13 12:20:27,591 - INFO - PubMed API: PMid: 40448000: Metadata Found.
+2025-08-13 12:20:27,593 - INFO - PubMed API: PMid: 40446793: Metadata Found.
+2025-08-13 12:20:27,593 - INFO - PubMed API: PMid: 40446574: Metadata Found.
+2025-08-13 12:20:27,595 - INFO - PubMed API: PMid: 40445765: Metadata Found.
+2025-08-13 12:20:27,596 - INFO - PubMed API: PMid: 40445404: Metadata Found.
+2025-08-13 12:20:27,597 - INFO - PubMed API: PMid: 40445003: Metadata Found.
+2025-08-13 12:20:27,598 - INFO - PubMed API: PMid: 40444282: Metadata Found.
+2025-08-13 12:20:27,603 - INFO - PubMed API: PMid: 40444149: Metadata Found.
+2025-08-13 12:20:27,606 - INFO - PubMed API: PMid: 40443907: Metadata Found.
+2025-08-13 12:20:27,607 - INFO - PubMed API: PMid: 40442738: Metadata Found.
+2025-08-13 12:20:27,608 - INFO - PubMed API: PMid: 40442732: Metadata Found.
+2025-08-13 12:20:27,609 - INFO - PubMed API: PMid: 40442064: Metadata Found.
+2025-08-13 12:20:27,610 - INFO - PubMed API: PMid: 40439369: Metadata Found.
+2025-08-13 12:20:27,613 - INFO - PubMed API: PMid: 40438098: Metadata Found.
+2025-08-13 12:20:27,614 - INFO - PubMed API: PMid: 40436988: Metadata Found.
+2025-08-13 12:20:27,615 - INFO - PubMed API: PMid: 40436766: Metadata Found.
+2025-08-13 12:20:27,616 - INFO - PubMed API: PMid: 40433893: Metadata Found.
+2025-08-13 12:20:27,616 - INFO - PubMed API: PMid: 40433880: Metadata Found.
+2025-08-13 12:20:27,617 - INFO - PubMed API: PMid: 40433373: Metadata Found.
+2025-08-13 12:20:27,619 - INFO - PubMed API: PMid: 40430828: Metadata Found.
+2025-08-13 12:20:27,621 - INFO - PubMed API: PMid: 40430098: Metadata Found.
+2025-08-13 12:20:27,622 - INFO - PubMed API: PMid: 40430075: Metadata Found.
+2025-08-13 12:20:27,624 - INFO - PubMed API: PMid: 40428743: Metadata Found.
+2025-08-13 12:20:27,626 - INFO - PubMed API: PMid: 40426308: Metadata Found.
+2025-08-13 12:20:27,627 - INFO - PubMed API: PMid: 40426075: Metadata Found.
+2025-08-13 12:20:27,628 - INFO - PubMed API: PMid: 40426037: Metadata Found.
+2025-08-13 12:20:27,628 - INFO - PubMed API: PMid: 40425902: Metadata Found.
+2025-08-13 12:20:27,629 - INFO - PubMed API: PMid: 40425785: Metadata Found.
+2025-08-13 12:20:27,632 - INFO - PubMed API: PMid: 40425247: Metadata Found.
+2025-08-13 12:20:27,633 - INFO - PubMed API: PMid: 40424666: Metadata Found.
+2025-08-13 12:20:27,635 - INFO - PubMed API: PMid: 40419812: Metadata Found.
+2025-08-13 12:20:27,636 - INFO - PubMed API: PMid: 40416989: Metadata Found.
+2025-08-13 12:20:27,637 - INFO - PubMed API: PMid: 40416985: Metadata Found.
+2025-08-13 12:20:27,638 - INFO - PubMed API: PMid: 40416795: Metadata Found.
+2025-08-13 12:20:27,638 - INFO - PubMed API: PMid: 40416611: Metadata Found.
+2025-08-13 12:20:27,640 - INFO - PubMed API: PMid: 40414970: Metadata Found.
+2025-08-13 12:20:27,644 - INFO - PubMed API: PMid: 40414867: Metadata Found.
+2025-08-13 12:20:27,645 - INFO - PubMed API: PMid: 40413527: Metadata Found.
+2025-08-13 12:20:27,646 - INFO - PubMed API: PMid: 40413463: Metadata Found.
+2025-08-13 12:20:27,646 - INFO - PubMed API: PMid: 40413361: Metadata Found.
+2025-08-13 12:20:27,647 - INFO - PubMed API: PMid: 40413333: Metadata Found.
+2025-08-13 12:20:27,647 - INFO - PubMed API: PMid: 40412079: Metadata Found.
+2025-08-13 12:20:27,648 - INFO - PubMed API: PMid: 40411560: Metadata Found.
+2025-08-13 12:20:27,648 - INFO - PubMed API: PMid: 40411278: Metadata Found.
+2025-08-13 12:20:27,649 - INFO - PubMed API: PMid: 40409264: Metadata Found.
+2025-08-13 12:20:27,650 - INFO - PubMed API: PMid: 40408613: Metadata Found.
+2025-08-13 12:20:27,651 - INFO - PubMed API: PMid: 40407276: Metadata Found.
+2025-08-13 12:20:27,652 - INFO - PubMed API: PMid: 40406521: Metadata Found.
+2025-08-13 12:20:27,654 - INFO - PubMed API: PMid: 40406143: Metadata Found.
+2025-08-13 12:20:27,656 - INFO - PubMed API: PMid: 40406134: Metadata Found.
+2025-08-13 12:20:27,657 - INFO - PubMed API: PMid: 40405299: Metadata Found.
+2025-08-13 12:20:27,663 - INFO - PubMed API: PMid: 40405129: Metadata Found.
+2025-08-13 12:20:27,664 - INFO - PubMed API: PMid: 40404727: Metadata Found.
+2025-08-13 12:20:27,664 - INFO - PubMed API: PMid: 40404204: Metadata Found.
+2025-08-13 12:20:27,665 - INFO - PubMed API: PMid: 40403741: Metadata Found.
+2025-08-13 12:20:27,666 - INFO - PubMed API: PMid: 40403197: Metadata Found.
+2025-08-13 12:20:27,666 - INFO - PubMed API: PMid: 40402080: Metadata Found.
+2025-08-13 12:20:27,668 - INFO - PubMed API: PMid: 40401521: Metadata Found.
+2025-08-13 12:20:27,668 - INFO - PubMed API: PMid: 40401498: Metadata Found.
+2025-08-13 12:20:27,669 - INFO - PubMed API: PMid: 40399857: Metadata Found.
+2025-08-13 12:20:27,670 - INFO - PubMed API: PMid: 40394917: Metadata Found.
+2025-08-13 12:20:27,671 - INFO - PubMed API: PMid: 40393971: Metadata Found.
+2025-08-13 12:20:27,672 - INFO - PubMed API: PMid: 40392078: Metadata Found.
+2025-08-13 12:20:27,673 - INFO - PubMed API: PMid: 40391580: Metadata Found.
+2025-08-13 12:20:27,674 - INFO - PubMed API: PMid: 40391219: Metadata Found.
+2025-08-13 12:20:27,677 - INFO - PubMed API: PMid: 40391175: Metadata Found.
+2025-08-13 12:20:27,682 - INFO - PubMed API: PMid: 40389374: Metadata Found.
+2025-08-13 12:20:27,683 - INFO - PubMed API: PMid: 40388770: Metadata Found.
+2025-08-13 12:20:27,684 - INFO - PubMed API: PMid: 40388765: Metadata Found.
+2025-08-13 12:20:27,684 - INFO - PubMed API: PMid: 40388730: Metadata Found.
+2025-08-13 12:20:27,685 - INFO - PubMed API: PMid: 40388549: Metadata Found.
+2025-08-13 12:20:27,685 - INFO - PubMed API: PMid: 40387965: Metadata Found.
+2025-08-13 12:20:27,686 - INFO - PubMed API: PMid: 40386777: Metadata Found.
+2025-08-13 12:20:27,687 - INFO - PubMed API: PMid: 40386769: Metadata Found.
+2025-08-13 12:20:27,687 - INFO - PubMed API: PMid: 40386054: Metadata Found.
+2025-08-13 12:20:27,688 - INFO - PubMed API: PMid: 40382676: Metadata Found.
+2025-08-13 12:20:27,689 - INFO - PubMed API: PMid: 40382606: Metadata Found.
+2025-08-13 12:20:27,690 - INFO - PubMed API: PMid: 40380807: Metadata Found.
+2025-08-13 12:20:27,690 - INFO - PubMed API: PMid: 40380762: Metadata Found.
+2025-08-13 12:20:27,697 - INFO - PubMed API: PMid: 40380167: Metadata Found.
+2025-08-13 12:20:27,698 - INFO - PubMed API: PMid: 40377610: Metadata Found.
+2025-08-13 12:20:27,699 - INFO - PubMed API: PMid: 40376989: Metadata Found.
+2025-08-13 12:20:27,700 - INFO - PubMed API: PMid: 40375289: Metadata Found.
+2025-08-13 12:20:27,701 - INFO - PubMed API: PMid: 40374836: Metadata Found.
+2025-08-13 12:20:27,702 - INFO - PubMed API: PMid: 40373555: Metadata Found.
+2025-08-13 12:20:27,702 - INFO - PubMed API: PMid: 40369412: Metadata Found.
+2025-08-13 12:20:27,703 - INFO - PubMed API: PMid: 40369121: Metadata Found.
+2025-08-13 12:20:27,703 - INFO - PubMed API: PMid: 40366960: Metadata Found.
+2025-08-13 12:20:27,703 - INFO - PubMed API: PMid: 40366456: Metadata Found.
+2025-08-13 12:20:27,704 - INFO - PubMed API: PMid: 40366428: Metadata Found.
+2025-08-13 12:20:27,704 - INFO - PubMed API: PMid: 40365993: Metadata Found.
+2025-08-13 12:20:27,705 - INFO - PubMed API: PMid: 40365295: Metadata Found.
+2025-08-13 12:20:27,705 - INFO - PubMed API: PMid: 40359707: Metadata Found.
+2025-08-13 12:20:27,708 - INFO - PubMed API: PMid: 40358148: Metadata Found.
+2025-08-13 12:20:27,714 - INFO - PubMed API: PMid: 40355586: Metadata Found.
+2025-08-13 12:20:27,715 - INFO - PubMed API: PMid: 40350473: Metadata Found.
+2025-08-13 12:20:27,716 - INFO - PubMed API: PMid: 40350446: Metadata Found.
+2025-08-13 12:20:27,717 - INFO - PubMed API: PMid: 40350424: Metadata Found.
+2025-08-13 12:20:27,718 - INFO - PubMed API: PMid: 40348495: Metadata Found.
+2025-08-13 12:20:27,718 - INFO - PubMed API: PMid: 40347070: Metadata Found.
+2025-08-13 12:20:27,718 - INFO - PubMed API: PMid: 40345468: Metadata Found.
+2025-08-13 12:20:27,719 - INFO - PubMed API: PMid: 40344467: Metadata Found.
+2025-08-13 12:20:27,720 - INFO - PubMed API: PMid: 40342412: Metadata Found.
+2025-08-13 12:20:27,720 - INFO - PubMed API: PMid: 40341383: Metadata Found.
+2025-08-13 12:20:27,721 - INFO - PubMed API: PMid: 40341176: Metadata Found.
+2025-08-13 12:20:27,721 - INFO - PubMed API: PMid: 40341043: Metadata Found.
+2025-08-13 12:20:27,722 - INFO - PubMed API: PMid: 40340563: Metadata Found.
+2025-08-13 12:20:27,722 - INFO - PubMed API: PMid: 40340189: Metadata Found.
+2025-08-13 12:20:27,727 - INFO - PubMed API: PMid: 40336054: Metadata Found.
+2025-08-13 12:20:27,729 - INFO - PubMed API: PMid: 40332793: Metadata Found.
+2025-08-13 12:20:27,731 - INFO - PubMed API: PMid: 40332533: Metadata Found.
+2025-08-13 12:20:27,734 - INFO - PubMed API: PMid: 40331137: Metadata Found.
+2025-08-13 12:20:27,735 - INFO - PubMed API: PMid: 40329795: Metadata Found.
+2025-08-13 12:20:27,736 - INFO - PubMed API: PMid: 40329328: Metadata Found.
+2025-08-13 12:20:27,737 - INFO - PubMed API: PMid: 40329193: Metadata Found.
+2025-08-13 12:20:27,737 - INFO - PubMed API: PMid: 40327295: Metadata Found.
+2025-08-13 12:20:27,738 - INFO - PubMed API: PMid: 40325849: Metadata Found.
+2025-08-13 12:20:27,739 - INFO - PubMed API: PMid: 40325218: Metadata Found.
+2025-08-13 12:20:27,739 - INFO - PubMed API: PMid: 40323501: Metadata Found.
+2025-08-13 12:20:27,740 - INFO - PubMed API: PMid: 40322324: Metadata Found.
+2025-08-13 12:20:27,740 - INFO - PubMed API: PMid: 40320925: Metadata Found.
+2025-08-13 12:20:27,742 - INFO - PubMed API: PMid: 40320649: Metadata Found.
+2025-08-13 12:20:27,742 - INFO - PubMed API: PMid: 40320534: Metadata Found.
+2025-08-13 12:20:27,743 - INFO - PubMed API: PMid: 40320200: Metadata Found.
+2025-08-13 12:20:27,744 - INFO - PubMed API: PMid: 40317367: Metadata Found.
+2025-08-13 12:20:27,748 - INFO - PubMed API: PMid: 40317360: Metadata Found.
+2025-08-13 12:20:27,751 - INFO - PubMed API: PMid: 40317214: Metadata Found.
+2025-08-13 12:20:27,752 - INFO - PubMed API: PMid: 40317125: Metadata Found.
+2025-08-13 12:20:27,753 - INFO - PubMed API: PMid: 40315445: Metadata Found.
+2025-08-13 12:20:27,754 - INFO - PubMed API: PMid: 40315224: Metadata Found.
+2025-08-13 12:20:27,756 - INFO - PubMed API: PMid: 40314099: Metadata Found.
+2025-08-13 12:20:27,757 - INFO - PubMed API: PMid: 40312419: Metadata Found.
+2025-08-13 12:20:27,757 - INFO - PubMed API: PMid: 40309236: Metadata Found.
+2025-08-13 12:20:27,758 - INFO - PubMed API: PMid: 40308800: Metadata Found.
+2025-08-13 12:20:27,759 - INFO - PubMed API: PMid: 40307761: Metadata Found.
+2025-08-13 12:20:27,760 - INFO - PubMed API: PMid: 40307014: Metadata Found.
+2025-08-13 12:20:27,760 - INFO - PubMed API: PMid: 40301768: Metadata Found.
+2025-08-13 12:20:27,762 - INFO - PubMed API: PMid: 40301760: Metadata Found.
+2025-08-13 12:20:27,763 - INFO - PubMed API: PMid: 40299767: Metadata Found.
+2025-08-13 12:20:27,766 - INFO - PubMed API: PMid: 40296906: Metadata Found.
+2025-08-13 12:20:27,769 - INFO - PubMed API: PMid: 40296904: Metadata Found.
+2025-08-13 12:20:27,771 - INFO - PubMed API: PMid: 40296071: Metadata Found.
+2025-08-13 12:20:27,772 - INFO - PubMed API: PMid: 40295944: Metadata Found.
+2025-08-13 12:20:27,772 - INFO - PubMed API: PMid: 40295613: Metadata Found.
+2025-08-13 12:20:27,773 - INFO - PubMed API: PMid: 40295027: Metadata Found.
+2025-08-13 12:20:27,774 - INFO - PubMed API: PMid: 40295026: Metadata Found.
+2025-08-13 12:20:27,774 - INFO - PubMed API: PMid: 40294936: Metadata Found.
+2025-08-13 12:20:27,775 - INFO - PubMed API: PMid: 40294913: Metadata Found.
+2025-08-13 12:20:27,776 - INFO - PubMed API: PMid: 40293953: Metadata Found.
+2025-08-13 12:20:27,776 - INFO - PubMed API: PMid: 40293658: Metadata Found.
+2025-08-13 12:20:27,777 - INFO - PubMed API: PMid: 40293495: Metadata Found.
+2025-08-13 12:20:27,779 - INFO - PubMed API: PMid: 40292733: Metadata Found.
+2025-08-13 12:20:27,780 - INFO - PubMed API: PMid: 40292221: Metadata Found.
+2025-08-13 12:20:27,780 - INFO - PubMed API: PMid: 40292064: Metadata Found.
+2025-08-13 12:20:27,781 - INFO - PubMed API: PMid: 40289740: Metadata Found.
+2025-08-13 12:20:27,784 - INFO - PubMed API: PMid: 40287758: Metadata Found.
+2025-08-13 12:20:27,784 - INFO - PubMed API: PMid: 40283006: Metadata Found.
+2025-08-13 12:20:27,785 - INFO - PubMed API: PMid: 40281451: Metadata Found.
+2025-08-13 12:20:27,785 - INFO - PubMed API: PMid: 40281132: Metadata Found.
+2025-08-13 12:20:27,786 - INFO - PubMed API: PMid: 40281016: Metadata Found.
+2025-08-13 12:20:27,787 - INFO - PubMed API: PMid: 40280928: Metadata Found.
+2025-08-13 12:20:27,787 - INFO - PubMed API: PMid: 40280031: Metadata Found.
+2025-08-13 12:20:27,787 - INFO - PubMed API: PMid: 40279682: Metadata Found.
+2025-08-13 12:20:27,788 - INFO - PubMed API: PMid: 40279559: Metadata Found.
+2025-08-13 12:20:27,794 - INFO - PubMed API: PMid: 40277923: Metadata Found.
+2025-08-13 12:20:27,795 - INFO - PubMed API: PMid: 40277747: Metadata Found.
+2025-08-13 12:20:27,795 - INFO - PubMed API: PMid: 40277163: Metadata Found.
+2025-08-13 12:20:27,795 - INFO - PubMed API: PMid: 40276842: Metadata Found.
+2025-08-13 12:20:27,796 - INFO - PubMed API: PMid: 40275469: Metadata Found.
+2025-08-13 12:20:27,797 - INFO - PubMed API: PMid: 40275321: Metadata Found.
+2025-08-13 12:20:27,797 - INFO - PubMed API: PMid: 40275296: Metadata Found.
+2025-08-13 12:20:27,798 - INFO - PubMed API: PMid: 40275059: Metadata Found.
+2025-08-13 12:20:27,799 - INFO - PubMed API: PMid: 40274948: Metadata Found.
+2025-08-13 12:20:27,800 - INFO - PubMed API: PMid: 40274924: Metadata Found.
+2025-08-13 12:20:27,801 - INFO - PubMed API: PMid: 40270362: Metadata Found.
+2025-08-13 12:20:27,802 - INFO - PubMed API: PMid: 40265472: Metadata Found.
+2025-08-13 12:20:27,803 - INFO - PubMed API: PMid: 40264761: Metadata Found.
+2025-08-13 12:20:27,804 - INFO - PubMed API: PMid: 40264514: Metadata Found.
+2025-08-13 12:20:27,805 - INFO - PubMed API: PMid: 40264112: Metadata Found.
+2025-08-13 12:20:27,805 - INFO - PubMed API: PMid: 40263995: Metadata Found.
+2025-08-13 12:20:27,806 - INFO - PubMed API: PMid: 40263929: Metadata Found.
+2025-08-13 12:20:27,807 - INFO - PubMed API: PMid: 40259338: Metadata Found.
+2025-08-13 12:20:27,812 - INFO - PubMed API: PMid: 40259290: Metadata Found.
+2025-08-13 12:20:27,813 - INFO - PubMed API: PMid: 40255992: Metadata Found.
+2025-08-13 12:20:27,815 - INFO - PubMed API: PMid: 40254092: Metadata Found.
+2025-08-13 12:20:27,815 - INFO - PubMed API: PMid: 40253945: Metadata Found.
+2025-08-13 12:20:27,818 - INFO - PubMed API: PMid: 40253055: Metadata Found.
+2025-08-13 12:20:27,819 - INFO - PubMed API: PMid: 40251501: Metadata Found.
+2025-08-13 12:20:27,819 - INFO - PubMed API: PMid: 40251493: Metadata Found.
+2025-08-13 12:20:27,820 - INFO - PubMed API: PMid: 40251453: Metadata Found.
+2025-08-13 12:20:27,821 - INFO - PubMed API: PMid: 40251309: Metadata Found.
+2025-08-13 12:20:27,822 - INFO - PubMed API: PMid: 40251306: Metadata Found.
+2025-08-13 12:20:27,822 - INFO - PubMed API: PMid: 40250508: Metadata Found.
+2025-08-13 12:20:27,823 - INFO - PubMed API: PMid: 40250473: Metadata Found.
+2025-08-13 12:20:27,823 - INFO - PubMed API: PMid: 40249300: Metadata Found.
+2025-08-13 12:20:27,824 - INFO - PubMed API: PMid: 40249206: Metadata Found.
+2025-08-13 12:20:27,824 - INFO - PubMed API: PMid: 40248379: Metadata Found.
+2025-08-13 12:20:27,825 - INFO - PubMed API: PMid: 40247271: Metadata Found.
+2025-08-13 12:20:27,827 - INFO - PubMed API: PMid: 40247049: Metadata Found.
+2025-08-13 12:20:27,828 - INFO - PubMed API: PMid: 40246810: Metadata Found.
+2025-08-13 12:20:27,829 - INFO - PubMed API: PMid: 40245183: Metadata Found.
+2025-08-13 12:20:27,835 - INFO - PubMed API: PMid: 40245053: Metadata Found.
+2025-08-13 12:20:27,837 - INFO - PubMed API: PMid: 40245012: Metadata Found.
+2025-08-13 12:20:27,838 - INFO - PubMed API: PMid: 40244574: Metadata Found.
+2025-08-13 12:20:27,839 - INFO - PubMed API: PMid: 40244164: Metadata Found.
+2025-08-13 12:20:27,840 - INFO - PubMed API: PMid: 40244064: Metadata Found.
+2025-08-13 12:20:27,842 - INFO - PubMed API: PMid: 40244005: Metadata Found.
+2025-08-13 12:20:27,843 - INFO - PubMed API: PMid: 40241028: Metadata Found.
+2025-08-13 12:20:27,844 - INFO - PubMed API: PMid: 40240996: Metadata Found.
+2025-08-13 12:20:27,845 - INFO - PubMed API: PMid: 40240758: Metadata Found.
+2025-08-13 12:20:27,846 - INFO - PubMed API: PMid: 40240417: Metadata Found.
+2025-08-13 12:20:27,847 - INFO - PubMed API: PMid: 40240368: Metadata Found.
+2025-08-13 12:20:27,847 - INFO - PubMed API: PMid: 40240063: Metadata Found.
+2025-08-13 12:20:27,851 - INFO - PubMed API: PMid: 40239627: Metadata Found.
+2025-08-13 12:20:27,853 - INFO - PubMed API: PMid: 40238812: Metadata Found.
+2025-08-13 12:20:27,854 - INFO - PubMed API: PMid: 40237904: Metadata Found.
+2025-08-13 12:20:27,855 - INFO - PubMed API: PMid: 40235057: Metadata Found.
+2025-08-13 12:20:27,855 - INFO - PubMed API: PMid: 40234884: Metadata Found.
+2025-08-13 12:20:27,856 - INFO - PubMed API: PMid: 40234641: Metadata Found.
+2025-08-13 12:20:27,856 - INFO - PubMed API: PMid: 40231997: Metadata Found.
+2025-08-13 12:20:27,857 - INFO - PubMed API: PMid: 40231067: Metadata Found.
+2025-08-13 12:20:27,858 - INFO - PubMed API: PMid: 40230847: Metadata Found.
+2025-08-13 12:20:27,859 - INFO - PubMed API: PMid: 40229800: Metadata Found.
+2025-08-13 12:20:27,860 - INFO - PubMed API: PMid: 40229676: Metadata Found.
+2025-08-13 12:20:27,861 - INFO - PubMed API: PMid: 40229548: Metadata Found.
+2025-08-13 12:20:27,862 - INFO - PubMed API: PMid: 40228435: Metadata Found.
+2025-08-13 12:20:27,863 - INFO - PubMed API: PMid: 40225933: Metadata Found.
+2025-08-13 12:20:27,864 - INFO - PubMed API: PMid: 40225854: Metadata Found.
+2025-08-13 12:20:27,865 - INFO - PubMed API: PMid: 40224213: Metadata Found.
+2025-08-13 12:20:27,866 - INFO - PubMed API: PMid: 40223081: Metadata Found.
+2025-08-13 12:20:27,866 - INFO - PubMed API: PMid: 40221735: Metadata Found.
+2025-08-13 12:20:27,867 - INFO - PubMed API: PMid: 40221699: Metadata Found.
+2025-08-13 12:20:27,869 - INFO - PubMed API: PMid: 40221689: Metadata Found.
+2025-08-13 12:20:27,869 - INFO - PubMed API: PMid: 40221298: Metadata Found.
+2025-08-13 12:20:27,869 - INFO - PubMed API: PMid: 40220876: Metadata Found.
+2025-08-13 12:20:27,872 - INFO - PubMed API: PMid: 40220045: Metadata Found.
+2025-08-13 12:20:27,873 - INFO - PubMed API: PMid: 40219804: Metadata Found.
+2025-08-13 12:20:27,874 - INFO - PubMed API: PMid: 40217305: Metadata Found.
+2025-08-13 12:20:27,877 - INFO - PubMed API: PMid: 40214825: Metadata Found.
+2025-08-13 12:20:27,878 - INFO - PubMed API: PMid: 40214252: Metadata Found.
+2025-08-13 12:20:27,879 - INFO - PubMed API: PMid: 40213543: Metadata Found.
+2025-08-13 12:20:27,880 - INFO - PubMed API: PMid: 40209679: Metadata Found.
+2025-08-13 12:20:27,881 - INFO - PubMed API: PMid: 40208307: Metadata Found.
+2025-08-13 12:20:27,882 - INFO - PubMed API: PMid: 40208029: Metadata Found.
+2025-08-13 12:20:27,883 - INFO - PubMed API: PMid: 40207224: Metadata Found.
+2025-08-13 12:20:27,883 - INFO - PubMed API: PMid: 40207218: Metadata Found.
+2025-08-13 12:20:27,884 - INFO - PubMed API: PMid: 40206492: Metadata Found.
+2025-08-13 12:20:27,885 - INFO - PubMed API: PMid: 40205350: Metadata Found.
+2025-08-13 12:20:27,886 - INFO - PubMed API: PMid: 40205072: Metadata Found.
+2025-08-13 12:20:27,886 - INFO - PubMed API: PMid: 40203956: Metadata Found.
+2025-08-13 12:20:27,887 - INFO - PubMed API: PMid: 40203812: Metadata Found.
+2025-08-13 12:20:27,887 - INFO - PubMed API: PMid: 40202155: Metadata Found.
+2025-08-13 12:20:27,888 - INFO - PubMed API: PMid: 40201179: Metadata Found.
+2025-08-13 12:20:27,888 - INFO - PubMed API: PMid: 40200879: Metadata Found.
+2025-08-13 12:20:27,888 - INFO - PubMed API: PMid: 40200878: Metadata Found.
+2025-08-13 12:20:27,893 - INFO - PubMed API: PMid: 40200877: Metadata Found.
+2025-08-13 12:20:27,894 - INFO - PubMed API: PMid: 40200873: Metadata Found.
+2025-08-13 12:20:27,894 - INFO - PubMed API: PMid: 40200872: Metadata Found.
+2025-08-13 12:20:27,895 - INFO - PubMed API: PMid: 40200871: Metadata Found.
+2025-08-13 12:20:27,896 - INFO - PubMed API: PMid: 40200573: Metadata Found.
+2025-08-13 12:20:27,897 - INFO - PubMed API: PMid: 40200187: Metadata Found.
+2025-08-13 12:20:27,897 - INFO - PubMed API: PMid: 40200145: Metadata Found.
+2025-08-13 12:20:27,898 - INFO - PubMed API: PMid: 40199600: Metadata Found.
+2025-08-13 12:20:27,899 - INFO - PubMed API: PMid: 40198649: Metadata Found.
+2025-08-13 12:20:27,900 - INFO - PubMed API: PMid: 40198404: Metadata Found.
+2025-08-13 12:20:27,901 - INFO - PubMed API: PMid: 40196130: Metadata Found.
+2025-08-13 12:20:27,901 - INFO - PubMed API: PMid: 40195786: Metadata Found.
+2025-08-13 12:20:27,902 - INFO - PubMed API: PMid: 40193680: Metadata Found.
+2025-08-13 12:20:27,904 - INFO - PubMed API: PMid: 40191191: Metadata Found.
+2025-08-13 12:20:27,905 - INFO - PubMed API: PMid: 40190808: Metadata Found.
+2025-08-13 12:20:27,906 - INFO - PubMed API: PMid: 40190805: Metadata Found.
+2025-08-13 12:20:27,909 - INFO - PubMed API: PMid: 40189585: Metadata Found.
+2025-08-13 12:20:27,912 - INFO - PubMed API: PMid: 40189014: Metadata Found.
+2025-08-13 12:20:27,913 - INFO - PubMed API: PMid: 40188504: Metadata Found.
+2025-08-13 12:20:27,913 - INFO - PubMed API: PMid: 40188022: Metadata Found.
+2025-08-13 12:20:27,914 - INFO - PubMed API: PMid: 40187723: Metadata Found.
+2025-08-13 12:20:27,914 - INFO - PubMed API: PMid: 40187712: Metadata Found.
+2025-08-13 12:20:27,914 - INFO - PubMed API: PMid: 40187619: Metadata Found.
+2025-08-13 12:20:27,916 - INFO - PubMed API: PMid: 40186852: Metadata Found.
+2025-08-13 12:20:27,916 - INFO - PubMed API: PMid: 40185259: Metadata Found.
+2025-08-13 12:20:27,917 - INFO - PubMed API: PMid: 40184134: Metadata Found.
+2025-08-13 12:20:27,917 - INFO - PubMed API: PMid: 40184125: Metadata Found.
+2025-08-13 12:20:27,918 - INFO - PubMed API: PMid: 40184004: Metadata Found.
+2025-08-13 12:20:27,918 - INFO - PubMed API: PMid: 40183457: Metadata Found.
+2025-08-13 12:20:27,921 - INFO - PubMed API: PMid: 40183387: Metadata Found.
+2025-08-13 12:20:27,922 - INFO - PubMed API: PMid: 40182597: Metadata Found.
+2025-08-13 12:20:27,926 - INFO - PubMed API: PMid: 40181988: Metadata Found.
+2025-08-13 12:20:27,928 - INFO - PubMed API: PMid: 40181293: Metadata Found.
+2025-08-13 12:20:27,928 - INFO - PubMed API: PMid: 40178733: Metadata Found.
+2025-08-13 12:20:27,931 - INFO - PubMed API: PMid: 40178693: Metadata Found.
+2025-08-13 12:20:27,932 - INFO - PubMed API: PMid: 40178066: Metadata Found.
+2025-08-13 12:20:27,933 - INFO - PubMed API: PMid: 40176817: Metadata Found.
+2025-08-13 12:20:27,933 - INFO - PubMed API: PMid: 40176097: Metadata Found.
+2025-08-13 12:20:27,934 - INFO - PubMed API: PMid: 40175964: Metadata Found.
+2025-08-13 12:20:27,934 - INFO - PubMed API: PMid: 40175902: Metadata Found.
+2025-08-13 12:20:27,935 - INFO - PubMed API: PMid: 40175493: Metadata Found.
+2025-08-13 12:20:27,936 - INFO - PubMed API: PMid: 40171874: Metadata Found.
+2025-08-13 12:20:27,936 - INFO - PubMed API: PMid: 40170116: Metadata Found.
+2025-08-13 12:20:27,937 - INFO - PubMed API: PMid: 40170052: Metadata Found.
+2025-08-13 12:20:27,938 - INFO - PubMed API: PMid: 40169286: Metadata Found.
+2025-08-13 12:20:27,938 - INFO - PubMed API: PMid: 40169243: Metadata Found.
+2025-08-13 12:20:27,940 - INFO - PubMed API: PMid: 40168281: Metadata Found.
+2025-08-13 12:20:27,941 - INFO - PubMed API: PMid: 40166901: Metadata Found.
+2025-08-13 12:20:27,942 - INFO - PubMed API: PMid: 40165038: Metadata Found.
+2025-08-13 12:20:27,943 - INFO - PubMed API: PMid: 40164709: Metadata Found.
+2025-08-13 12:20:27,945 - INFO - PubMed API: PMid: 40163685: Metadata Found.
+2025-08-13 12:20:27,945 - INFO - PubMed API: PMid: 40159977: Metadata Found.
+2025-08-13 12:20:27,947 - INFO - PubMed API: PMid: 40159490: Metadata Found.
+2025-08-13 12:20:27,949 - INFO - PubMed API: PMid: 40157906: Metadata Found.
+2025-08-13 12:20:27,952 - INFO - PubMed API: PMid: 40157534: Metadata Found.
+2025-08-13 12:20:27,953 - INFO - PubMed API: PMid: 40155861: Metadata Found.
+2025-08-13 12:20:27,954 - INFO - PubMed API: PMid: 40155834: Metadata Found.
+2025-08-13 12:20:27,955 - INFO - PubMed API: PMid: 40155473: Metadata Found.
+2025-08-13 12:20:27,955 - INFO - PubMed API: PMid: 40155326: Metadata Found.
+2025-08-13 12:20:27,955 - INFO - PubMed API: PMid: 40154914: Metadata Found.
+2025-08-13 12:20:27,956 - INFO - PubMed API: PMid: 40153751: Metadata Found.
+2025-08-13 12:20:27,956 - INFO - PubMed API: PMid: 40153063: Metadata Found.
+2025-08-13 12:20:27,957 - INFO - PubMed API: PMid: 40152813: Metadata Found.
+2025-08-13 12:20:27,961 - INFO - PubMed API: PMid: 40152313: Metadata Found.
+2025-08-13 12:20:27,962 - INFO - PubMed API: PMid: 40149492: Metadata Found.
+2025-08-13 12:20:27,964 - INFO - PubMed API: PMid: 40149431: Metadata Found.
+2025-08-13 12:20:27,966 - INFO - PubMed API: PMid: 40148957: Metadata Found.
+2025-08-13 12:20:27,967 - INFO - PubMed API: PMid: 40148708: Metadata Found.
+2025-08-13 12:20:27,968 - INFO - PubMed API: PMid: 40146790: Metadata Found.
+2025-08-13 12:20:27,969 - INFO - PubMed API: PMid: 40145254: Metadata Found.
+2025-08-13 12:20:27,971 - INFO - PubMed API: PMid: 40141175: Metadata Found.
+2025-08-13 12:20:27,972 - INFO - PubMed API: PMid: 40141097: Metadata Found.
+2025-08-13 12:20:27,974 - INFO - PubMed API: PMid: 40140647: Metadata Found.
+2025-08-13 12:20:27,975 - INFO - PubMed API: PMid: 40138921: Metadata Found.
+2025-08-13 12:20:27,976 - INFO - PubMed API: PMid: 40138873: Metadata Found.
+2025-08-13 12:20:27,978 - INFO - PubMed API: PMid: 40138292: Metadata Found.
+2025-08-13 12:20:27,978 - INFO - PubMed API: PMid: 40135294: Metadata Found.
+2025-08-13 12:20:27,981 - INFO - PubMed API: PMid: 40134018: Metadata Found.
+2025-08-13 12:20:27,982 - INFO - PubMed API: PMid: 40133876: Metadata Found.
+2025-08-13 12:20:27,983 - INFO - PubMed API: PMid: 40133832: Metadata Found.
+2025-08-13 12:20:27,984 - INFO - PubMed API: PMid: 40133534: Metadata Found.
+2025-08-13 12:20:27,985 - INFO - PubMed API: PMid: 40133270: Metadata Found.
+2025-08-13 12:20:27,986 - INFO - PubMed API: PMid: 40131627: Metadata Found.
+2025-08-13 12:20:27,987 - INFO - PubMed API: PMid: 40129974: Metadata Found.
+2025-08-13 12:20:27,987 - INFO - PubMed API: PMid: 40128827: Metadata Found.
+2025-08-13 12:20:27,988 - INFO - PubMed API: PMid: 40128818: Metadata Found.
+2025-08-13 12:20:27,988 - INFO - PubMed API: PMid: 40128794: Metadata Found.
+2025-08-13 12:20:27,990 - INFO - PubMed API: PMid: 40126094: Metadata Found.
+2025-08-13 12:20:27,991 - INFO - PubMed API: PMid: 40126044: Metadata Found.
+2025-08-13 12:20:27,997 - INFO - PubMed API: PMid: 40125430: Metadata Found.
+2025-08-13 12:20:28,000 - INFO - PubMed API: PMid: 40124374: Metadata Found.
+2025-08-13 12:20:28,002 - INFO - PubMed API: PMid: 40124267: Metadata Found.
+2025-08-13 12:20:28,002 - INFO - PubMed API: PMid: 40124264: Metadata Found.
+2025-08-13 12:20:28,002 - INFO - PubMed API: PMid: 40122243: Metadata Found.
+2025-08-13 12:20:28,003 - INFO - PubMed API: PMid: 40122087: Metadata Found.
+2025-08-13 12:20:28,003 - INFO - PubMed API: PMid: 40120539: Metadata Found.
+2025-08-13 12:20:28,003 - INFO - PubMed API: PMid: 40119304: Metadata Found.
+2025-08-13 12:20:28,004 - INFO - PubMed API: PMid: 40119277: Metadata Found.
+2025-08-13 12:20:28,004 - INFO - PubMed API: PMid: 40117530: Metadata Found.
+2025-08-13 12:20:28,005 - INFO - PubMed API: PMid: 40116901: Metadata Found.
+2025-08-13 12:20:28,005 - INFO - PubMed API: PMid: 40113862: Metadata Found.
+2025-08-13 12:20:28,006 - INFO - PubMed API: PMid: 40113752: Metadata Found.
+2025-08-13 12:20:28,007 - INFO - PubMed API: PMid: 40112817: Metadata Found.
+2025-08-13 12:20:28,008 - INFO - PubMed API: PMid: 40111484: Metadata Found.
+2025-08-13 12:20:28,009 - INFO - PubMed API: PMid: 40109216: Metadata Found.
+2025-08-13 12:20:28,010 - INFO - PubMed API: PMid: 40108691: Metadata Found.
+2025-08-13 12:20:28,011 - INFO - PubMed API: PMid: 40108688: Metadata Found.
+2025-08-13 12:20:28,012 - INFO - PubMed API: PMid: 40108607: Metadata Found.
+2025-08-13 12:20:28,013 - INFO - PubMed API: PMid: 40108450: Metadata Found.
+2025-08-13 12:20:28,015 - INFO - PubMed API: PMid: 40108276: Metadata Found.
+2025-08-13 12:20:28,016 - INFO - PubMed API: PMid: 40108260: Metadata Found.
+2025-08-13 12:20:28,016 - INFO - PubMed API: PMid: 40106892: Metadata Found.
+2025-08-13 12:20:28,018 - INFO - PubMed API: PMid: 40105370: Metadata Found.
+2025-08-13 12:20:28,020 - INFO - PubMed API: PMid: 40102930: Metadata Found.
+2025-08-13 12:20:28,022 - INFO - PubMed API: PMid: 40102553: Metadata Found.
+2025-08-13 12:20:28,022 - INFO - PubMed API: PMid: 40102295: Metadata Found.
+2025-08-13 12:20:28,023 - INFO - PubMed API: PMid: 40102027: Metadata Found.
+2025-08-13 12:20:28,024 - INFO - PubMed API: PMid: 40101049: Metadata Found.
+2025-08-13 12:20:28,025 - INFO - PubMed API: PMid: 40100100: Metadata Found.
+2025-08-13 12:20:28,028 - INFO - PubMed API: PMid: 40098971: Metadata Found.
+2025-08-13 12:20:28,029 - INFO - PubMed API: PMid: 40098960: Metadata Found.
+2025-08-13 12:20:28,029 - INFO - PubMed API: PMid: 40097940: Metadata Found.
+2025-08-13 12:20:28,030 - INFO - PubMed API: PMid: 40097779: Metadata Found.
+2025-08-13 12:20:28,031 - INFO - PubMed API: PMid: 40097530: Metadata Found.
+2025-08-13 12:20:28,034 - INFO - PubMed API: PMid: 40097330: Metadata Found.
+2025-08-13 12:20:28,035 - INFO - PubMed API: PMid: 40095756: Metadata Found.
+2025-08-13 12:20:28,036 - INFO - PubMed API: PMid: 40093675: Metadata Found.
+2025-08-13 12:20:28,037 - INFO - PubMed API: PMid: 40091795: Metadata Found.
+2025-08-13 12:20:28,038 - INFO - PubMed API: PMid: 40091197: Metadata Found.
+2025-08-13 12:20:28,038 - INFO - PubMed API: PMid: 40091086: Metadata Found.
+2025-08-13 12:20:28,039 - INFO - PubMed API: PMid: 40088083: Metadata Found.
+2025-08-13 12:20:28,044 - INFO - PubMed API: PMid: 40087750: Metadata Found.
+2025-08-13 12:20:28,045 - INFO - PubMed API: PMid: 40087618: Metadata Found.
+2025-08-13 12:20:28,045 - INFO - PubMed API: PMid: 40087572: Metadata Found.
+2025-08-13 12:20:28,046 - INFO - PubMed API: PMid: 40086509: Metadata Found.
+2025-08-13 12:20:28,047 - INFO - PubMed API: PMid: 40085270: Metadata Found.
+2025-08-13 12:20:28,047 - INFO - PubMed API: PMid: 40084401: Metadata Found.
+2025-08-13 12:20:28,049 - INFO - PubMed API: PMid: 40083701: Metadata Found.
+2025-08-13 12:20:28,050 - INFO - PubMed API: PMid: 40082986: Metadata Found.
+2025-08-13 12:20:28,052 - INFO - PubMed API: PMid: 40082850: Metadata Found.
+2025-08-13 12:20:28,053 - INFO - PubMed API: PMid: 40082583: Metadata Found.
+2025-08-13 12:20:28,054 - INFO - PubMed API: PMid: 40082480: Metadata Found.
+2025-08-13 12:20:28,055 - INFO - PubMed API: PMid: 40082418: Metadata Found.
+2025-08-13 12:20:28,055 - INFO - PubMed API: PMid: 40082221: Metadata Found.
+2025-08-13 12:20:28,056 - INFO - PubMed API: PMid: 40081945: Metadata Found.
+2025-08-13 12:20:28,056 - INFO - PubMed API: PMid: 40081683: Metadata Found.
+2025-08-13 12:20:28,059 - INFO - PubMed API: PMid: 40080470: Metadata Found.
+2025-08-13 12:20:28,061 - INFO - PubMed API: PMid: 40080109: Metadata Found.
+2025-08-13 12:20:28,062 - INFO - PubMed API: PMid: 40076759: Metadata Found.
+2025-08-13 12:20:28,064 - INFO - PubMed API: PMid: 40076652: Metadata Found.
+2025-08-13 12:20:28,065 - INFO - PubMed API: PMid: 40076516: Metadata Found.
+2025-08-13 12:20:28,067 - INFO - PubMed API: PMid: 40076512: Metadata Found.
+2025-08-13 12:20:28,068 - INFO - PubMed API: PMid: 40075494: Metadata Found.
+2025-08-13 12:20:28,069 - INFO - PubMed API: PMid: 40075460: Metadata Found.
+2025-08-13 12:20:28,070 - INFO - PubMed API: PMid: 40075071: Metadata Found.
+2025-08-13 12:20:28,071 - INFO - PubMed API: PMid: 40075025: Metadata Found.
+2025-08-13 12:20:28,072 - INFO - PubMed API: PMid: 40074844: Metadata Found.
+2025-08-13 12:20:28,077 - INFO - PubMed API: PMid: 40074793: Metadata Found.
+2025-08-13 12:20:28,079 - INFO - PubMed API: PMid: 40072648: Metadata Found.
+2025-08-13 12:20:28,080 - INFO - PubMed API: PMid: 40070819: Metadata Found.
+2025-08-13 12:20:28,081 - INFO - PubMed API: PMid: 40070026: Metadata Found.
+2025-08-13 12:20:28,082 - INFO - PubMed API: PMid: 40069867: Metadata Found.
+2025-08-13 12:20:28,083 - INFO - PubMed API: PMid: 40069783: Metadata Found.
+2025-08-13 12:20:28,083 - INFO - PubMed API: PMid: 40069485: Metadata Found.
+2025-08-13 12:20:28,084 - INFO - PubMed API: PMid: 40069421: Metadata Found.
+2025-08-13 12:20:28,084 - INFO - PubMed API: PMid: 40065071: Metadata Found.
+2025-08-13 12:20:28,085 - INFO - PubMed API: PMid: 40062861: Metadata Found.
+2025-08-13 12:20:28,085 - INFO - PubMed API: PMid: 40062330: Metadata Found.
+2025-08-13 12:20:28,086 - INFO - PubMed API: PMid: 40060379: Metadata Found.
+2025-08-13 12:20:28,087 - INFO - PubMed API: PMid: 40059806: Metadata Found.
+2025-08-13 12:20:28,088 - INFO - PubMed API: PMid: 40059332: Metadata Found.
+2025-08-13 12:20:28,090 - INFO - PubMed API: PMid: 40059116: Metadata Found.
+2025-08-13 12:20:28,091 - INFO - PubMed API: PMid: 40055945: Metadata Found.
+2025-08-13 12:20:28,095 - INFO - PubMed API: PMid: 40055779: Metadata Found.
+2025-08-13 12:20:28,096 - INFO - PubMed API: PMid: 40055521: Metadata Found.
+2025-08-13 12:20:28,097 - INFO - PubMed API: PMid: 40054524: Metadata Found.
+2025-08-13 12:20:28,098 - INFO - PubMed API: PMid: 40054066: Metadata Found.
+2025-08-13 12:20:28,099 - INFO - PubMed API: PMid: 40053469: Metadata Found.
+2025-08-13 12:20:28,099 - INFO - PubMed API: PMid: 40052982: Metadata Found.
+2025-08-13 12:20:28,100 - INFO - PubMed API: PMid: 40052666: Metadata Found.
+2025-08-13 12:20:28,101 - INFO - PubMed API: PMid: 40052573: Metadata Found.
+2025-08-13 12:20:28,102 - INFO - PubMed API: PMid: 40051638: Metadata Found.
+2025-08-13 12:20:28,102 - INFO - PubMed API: PMid: 40050892: Metadata Found.
+2025-08-13 12:20:28,103 - INFO - PubMed API: PMid: 40050760: Metadata Found.
+2025-08-13 12:20:28,104 - INFO - PubMed API: PMid: 40050656: Metadata Found.
+2025-08-13 12:20:28,104 - INFO - PubMed API: PMid: 40049796: Metadata Found.
+2025-08-13 12:20:28,105 - INFO - PubMed API: PMid: 40045374: Metadata Found.
+2025-08-13 12:20:28,105 - INFO - PubMed API: PMid: 40045265: Metadata Found.
+2025-08-13 12:20:28,107 - INFO - PubMed API: PMid: 40044982: Metadata Found.
+2025-08-13 12:20:28,107 - INFO - PubMed API: PMid: 40044828: Metadata Found.
+2025-08-13 12:20:28,110 - INFO - PubMed API: PMid: 40041144: Metadata Found.
+2025-08-13 12:20:28,112 - INFO - PubMed API: PMid: 40040691: Metadata Found.
+2025-08-13 12:20:28,113 - INFO - PubMed API: PMid: 40040540: Metadata Found.
+2025-08-13 12:20:28,114 - INFO - PubMed API: PMid: 40038297: Metadata Found.
+2025-08-13 12:20:28,116 - INFO - PubMed API: PMid: 40038288: Metadata Found.
+2025-08-13 12:20:28,116 - INFO - PubMed API: PMid: 40036904: Metadata Found.
+2025-08-13 12:20:28,117 - INFO - PubMed API: PMid: 40036772: Metadata Found.
+2025-08-13 12:20:28,117 - INFO - PubMed API: PMid: 40033337: Metadata Found.
+2025-08-13 12:20:28,118 - INFO - PubMed API: PMid: 40033163: Metadata Found.
+2025-08-13 12:20:28,119 - INFO - PubMed API: PMid: 40032943: Metadata Found.
+2025-08-13 12:20:28,119 - INFO - PubMed API: PMid: 40032765: Metadata Found.
+2025-08-13 12:20:28,120 - INFO - PubMed API: PMid: 40032744: Metadata Found.
+2025-08-13 12:20:28,121 - INFO - PubMed API: PMid: 40032602: Metadata Found.
+2025-08-13 12:20:28,122 - INFO - PubMed API: PMid: 40031966: Metadata Found.
+2025-08-13 12:20:28,125 - INFO - PubMed API: PMid: 40028336: Metadata Found.
+2025-08-13 12:20:28,126 - INFO - PubMed API: PMid: 40028325: Metadata Found.
+2025-08-13 12:20:28,127 - INFO - PubMed API: PMid: 40028213: Metadata Found.
+2025-08-13 12:20:28,127 - INFO - PubMed API: PMid: 40025394: Metadata Found.
+2025-08-13 12:20:28,131 - INFO - PubMed API: PMid: 40024947: Metadata Found.
+2025-08-13 12:20:28,131 - INFO - PubMed API: PMid: 40024686: Metadata Found.
+2025-08-13 12:20:28,132 - INFO - PubMed API: PMid: 40022087: Metadata Found.
+2025-08-13 12:20:28,132 - INFO - PubMed API: PMid: 40022084: Metadata Found.
+2025-08-13 12:20:28,134 - INFO - PubMed API: PMid: 40022037: Metadata Found.
+2025-08-13 12:20:28,135 - INFO - PubMed API: PMid: 40021960: Metadata Found.
+2025-08-13 12:20:28,135 - INFO - PubMed API: PMid: 40021041: Metadata Found.
+2025-08-13 12:20:28,136 - INFO - PubMed API: PMid: 40020126: Metadata Found.
+2025-08-13 12:20:28,136 - INFO - PubMed API: PMid: 40019893: Metadata Found.
+2025-08-13 12:20:28,137 - INFO - PubMed API: PMid: 40019387: Metadata Found.
+2025-08-13 12:20:28,138 - INFO - PubMed API: PMid: 40018041: Metadata Found.
+2025-08-13 12:20:28,139 - INFO - PubMed API: PMid: 40016834: Metadata Found.
+2025-08-13 12:20:28,139 - INFO - PubMed API: PMid: 40016755: Metadata Found.
+2025-08-13 12:20:28,140 - INFO - PubMed API: PMid: 40016662: Metadata Found.
+2025-08-13 12:20:28,141 - INFO - PubMed API: PMid: 40013144: Metadata Found.
+2025-08-13 12:20:28,142 - INFO - PubMed API: PMid: 40013139: Metadata Found.
+2025-08-13 12:20:28,142 - INFO - PubMed API: PMid: 40012155: Metadata Found.
+2025-08-13 12:20:28,143 - INFO - PubMed API: PMid: 40012042: Metadata Found.
+2025-08-13 12:20:28,144 - INFO - PubMed API: PMid: 40011552: Metadata Found.
+2025-08-13 12:20:28,144 - INFO - PubMed API: PMid: 40011208: Metadata Found.
+2025-08-13 12:20:28,145 - INFO - PubMed API: PMid: 40010992: Metadata Found.
+2025-08-13 12:20:28,145 - INFO - PubMed API: PMid: 40010980: Metadata Found.
+2025-08-13 12:20:28,146 - INFO - PubMed API: PMid: 40010947: Metadata Found.
+2025-08-13 12:20:28,147 - INFO - PubMed API: PMid: 40010724: Metadata Found.
+2025-08-13 12:20:28,147 - INFO - PubMed API: PMid: 40009919: Metadata Found.
+2025-08-13 12:20:28,148 - INFO - PubMed API: PMid: 40005326: Metadata Found.
+2025-08-13 12:20:28,149 - INFO - PubMed API: PMid: 40005288: Metadata Found.
+2025-08-13 12:20:28,150 - INFO - PubMed API: PMid: 40005208: Metadata Found.
+2025-08-13 12:20:28,150 - INFO - PubMed API: PMid: 40004490: Metadata Found.
+2025-08-13 12:20:28,151 - INFO - PubMed API: PMid: 40004022: Metadata Found.
+2025-08-13 12:20:28,152 - INFO - PubMed API: PMid: 40001053: Metadata Found.
+2025-08-13 12:20:28,153 - INFO - PubMed API: PMid: 40000950: Metadata Found.
+2025-08-13 12:20:28,154 - INFO - PubMed API: PMid: 39998905: Metadata Found.
+2025-08-13 12:20:28,155 - INFO - PubMed API: PMid: 39998882: Metadata Found.
+2025-08-13 12:20:28,155 - INFO - PubMed API: PMid: 39998563: Metadata Found.
+2025-08-13 12:20:28,157 - INFO - PubMed API: PMid: 39996912: Metadata Found.
+2025-08-13 12:20:28,159 - INFO - PubMed API: PMid: 39994739: Metadata Found.
+2025-08-13 12:20:28,160 - INFO - PubMed API: PMid: 39992708: Metadata Found.
+2025-08-13 12:20:28,161 - INFO - PubMed API: PMid: 39990666: Metadata Found.
+2025-08-13 12:20:28,162 - INFO - PubMed API: PMid: 39990211: Metadata Found.
+2025-08-13 12:20:28,163 - INFO - PubMed API: PMid: 39988680: Metadata Found.
+2025-08-13 12:20:28,164 - INFO - PubMed API: PMid: 39987135: Metadata Found.
+2025-08-13 12:20:28,164 - INFO - PubMed API: PMid: 39985269: Metadata Found.
+2025-08-13 12:20:28,165 - INFO - PubMed API: PMid: 39984992: Metadata Found.
+2025-08-13 12:20:28,165 - INFO - PubMed API: PMid: 39984410: Metadata Found.
+2025-08-13 12:20:28,165 - INFO - PubMed API: PMid: 39982024: Metadata Found.
+2025-08-13 12:20:28,166 - INFO - PubMed API: PMid: 39981936: Metadata Found.
+2025-08-13 12:20:28,167 - INFO - PubMed API: PMid: 39981252: Metadata Found.
+2025-08-13 12:20:28,167 - INFO - PubMed API: PMid: 39981141: Metadata Found.
+2025-08-13 12:20:28,168 - INFO - PubMed API: PMid: 39980125: Metadata Found.
+2025-08-13 12:20:28,168 - INFO - PubMed API: PMid: 39979355: Metadata Found.
+2025-08-13 12:20:28,169 - INFO - PubMed API: PMid: 39973553: Metadata Found.
+2025-08-13 12:20:28,171 - INFO - PubMed API: PMid: 39971899: Metadata Found.
+2025-08-13 12:20:28,171 - INFO - PubMed API: PMid: 39971854: Metadata Found.
+2025-08-13 12:20:28,172 - INFO - PubMed API: PMid: 39971598: Metadata Found.
+2025-08-13 12:20:28,174 - INFO - PubMed API: PMid: 39971302: Metadata Found.
+2025-08-13 12:20:28,178 - INFO - PubMed API: PMid: 39967665: Metadata Found.
+2025-08-13 12:20:28,180 - INFO - PubMed API: PMid: 39967656: Metadata Found.
+2025-08-13 12:20:28,181 - INFO - PubMed API: PMid: 39966827: Metadata Found.
+2025-08-13 12:20:28,181 - INFO - PubMed API: PMid: 39966377: Metadata Found.
+2025-08-13 12:20:28,182 - INFO - PubMed API: PMid: 39965707: Metadata Found.
+2025-08-13 12:20:28,182 - INFO - PubMed API: PMid: 39962178: Metadata Found.
+2025-08-13 12:20:28,184 - INFO - PubMed API: PMid: 39961991: Metadata Found.
+2025-08-13 12:20:28,184 - INFO - PubMed API: PMid: 39961962: Metadata Found.
+2025-08-13 12:20:28,185 - INFO - PubMed API: PMid: 39960953: Metadata Found.
+2025-08-13 12:20:28,186 - INFO - PubMed API: PMid: 39960923: Metadata Found.
+2025-08-13 12:20:28,187 - INFO - PubMed API: PMid: 39960919: Metadata Found.
+2025-08-13 12:20:28,188 - INFO - PubMed API: PMid: 39960895: Metadata Found.
+2025-08-13 12:20:28,190 - INFO - PubMed API: PMid: 39960839: Metadata Found.
+2025-08-13 12:20:28,190 - INFO - PubMed API: PMid: 39960699: Metadata Found.
+2025-08-13 12:20:28,190 - INFO - PubMed API: PMid: 39955562: Metadata Found.
+2025-08-13 12:20:28,193 - INFO - PubMed API: PMid: 39953522: Metadata Found.
+2025-08-13 12:20:28,195 - INFO - PubMed API: PMid: 39953409: Metadata Found.
+2025-08-13 12:20:28,196 - INFO - PubMed API: PMid: 39953078: Metadata Found.
+2025-08-13 12:20:28,197 - INFO - PubMed API: PMid: 39950944: Metadata Found.
+2025-08-13 12:20:28,198 - INFO - PubMed API: PMid: 39950266: Metadata Found.
+2025-08-13 12:20:28,199 - INFO - PubMed API: PMid: 39949777: Metadata Found.
+2025-08-13 12:20:28,200 - INFO - PubMed API: PMid: 39948597: Metadata Found.
+2025-08-13 12:20:28,201 - INFO - PubMed API: PMid: 39948541: Metadata Found.
+2025-08-13 12:20:28,201 - INFO - PubMed API: PMid: 39947926: Metadata Found.
+2025-08-13 12:20:28,202 - INFO - PubMed API: PMid: 39946577: Metadata Found.
+2025-08-13 12:20:28,202 - INFO - PubMed API: PMid: 39945192: Metadata Found.
+2025-08-13 12:20:28,204 - INFO - PubMed API: PMid: 39940924: Metadata Found.
+2025-08-13 12:20:28,205 - INFO - PubMed API: PMid: 39940858: Metadata Found.
+2025-08-13 12:20:28,206 - INFO - PubMed API: PMid: 39940857: Metadata Found.
+2025-08-13 12:20:28,210 - INFO - PubMed API: PMid: 39940056: Metadata Found.
+2025-08-13 12:20:28,212 - INFO - PubMed API: PMid: 39939808: Metadata Found.
+2025-08-13 12:20:28,212 - INFO - PubMed API: PMid: 39939466: Metadata Found.
+2025-08-13 12:20:28,213 - INFO - PubMed API: PMid: 39938963: Metadata Found.
+2025-08-13 12:20:28,214 - INFO - PubMed API: PMid: 39938334: Metadata Found.
+2025-08-13 12:20:28,217 - INFO - PubMed API: PMid: 39936971: Metadata Found.
+2025-08-13 12:20:28,218 - INFO - PubMed API: PMid: 39934861: Metadata Found.
+2025-08-13 12:20:28,218 - INFO - PubMed API: PMid: 39934772: Metadata Found.
+2025-08-13 12:20:28,218 - INFO - PubMed API: PMid: 39934685: Metadata Found.
+2025-08-13 12:20:28,219 - INFO - PubMed API: PMid: 39933597: Metadata Found.
+2025-08-13 12:20:28,219 - INFO - PubMed API: PMid: 39933210: Metadata Found.
+2025-08-13 12:20:28,220 - INFO - PubMed API: PMid: 39931056: Metadata Found.
+2025-08-13 12:20:28,221 - INFO - PubMed API: PMid: 39931054: Metadata Found.
+2025-08-13 12:20:28,222 - INFO - PubMed API: PMid: 39930487: Metadata Found.
+2025-08-13 12:20:28,223 - INFO - PubMed API: PMid: 39930467: Metadata Found.
+2025-08-13 12:20:28,224 - INFO - PubMed API: PMid: 39930340: Metadata Found.
+2025-08-13 12:20:28,227 - INFO - PubMed API: PMid: 39929961: Metadata Found.
+2025-08-13 12:20:28,229 - INFO - PubMed API: PMid: 39928247: Metadata Found.
+2025-08-13 12:20:28,230 - INFO - PubMed API: PMid: 39926600: Metadata Found.
+2025-08-13 12:20:28,230 - INFO - PubMed API: PMid: 39926212: Metadata Found.
+2025-08-13 12:20:28,232 - INFO - PubMed API: PMid: 39925803: Metadata Found.
+2025-08-13 12:20:28,233 - INFO - PubMed API: PMid: 39924917: Metadata Found.
+2025-08-13 12:20:28,233 - INFO - PubMed API: PMid: 39924057: Metadata Found.
+2025-08-13 12:20:28,234 - INFO - PubMed API: PMid: 39923010: Metadata Found.
+2025-08-13 12:20:28,235 - INFO - PubMed API: PMid: 39922338: Metadata Found.
+2025-08-13 12:20:28,235 - INFO - PubMed API: PMid: 39920636: Metadata Found.
+2025-08-13 12:20:28,236 - INFO - PubMed API: PMid: 39919335: Metadata Found.
+2025-08-13 12:20:28,236 - INFO - PubMed API: PMid: 39919334: Metadata Found.
+2025-08-13 12:20:28,237 - INFO - PubMed API: PMid: 39918687: Metadata Found.
+2025-08-13 12:20:28,239 - INFO - PubMed API: PMid: 39917999: Metadata Found.
+2025-08-13 12:20:28,243 - INFO - PubMed API: PMid: 39915880: Metadata Found.
+2025-08-13 12:20:28,247 - INFO - PubMed API: PMid: 39915853: Metadata Found.
+2025-08-13 12:20:28,247 - INFO - PubMed API: PMid: 39915770: Metadata Found.
+2025-08-13 12:20:28,251 - INFO - PubMed API: PMid: 39915459: Metadata Found.
+2025-08-13 12:20:28,252 - INFO - PubMed API: PMid: 39915015: Metadata Found.
+2025-08-13 12:20:28,252 - INFO - PubMed API: PMid: 39912426: Metadata Found.
+2025-08-13 12:20:28,253 - INFO - PubMed API: PMid: 39910897: Metadata Found.
+2025-08-13 12:20:28,253 - INFO - PubMed API: PMid: 39910129: Metadata Found.
+2025-08-13 12:20:28,254 - INFO - PubMed API: PMid: 39910052: Metadata Found.
+2025-08-13 12:20:28,255 - INFO - PubMed API: PMid: 39908861: Metadata Found.
+2025-08-13 12:20:28,256 - INFO - PubMed API: PMid: 39906738: Metadata Found.
+2025-08-13 12:20:28,257 - INFO - PubMed API: PMid: 39905493: Metadata Found.
+2025-08-13 12:20:28,257 - INFO - PubMed API: PMid: 39905492: Metadata Found.
+2025-08-13 12:20:28,261 - INFO - PubMed API: PMid: 39905373: Metadata Found.
+2025-08-13 12:20:28,263 - INFO - PubMed API: PMid: 39905364: Metadata Found.
+2025-08-13 12:20:28,263 - INFO - PubMed API: PMid: 39905263: Metadata Found.
+2025-08-13 12:20:28,264 - INFO - PubMed API: PMid: 39904894: Metadata Found.
+2025-08-13 12:20:28,265 - INFO - PubMed API: PMid: 39901705: Metadata Found.
+2025-08-13 12:20:28,266 - INFO - PubMed API: PMid: 39901302: Metadata Found.
+2025-08-13 12:20:28,267 - INFO - PubMed API: PMid: 39901202: Metadata Found.
+2025-08-13 12:20:28,267 - INFO - PubMed API: PMid: 39894712: Metadata Found.
+2025-08-13 12:20:28,268 - INFO - PubMed API: PMid: 39894565: Metadata Found.
+2025-08-13 12:20:28,268 - INFO - PubMed API: PMid: 39893482: Metadata Found.
+2025-08-13 12:20:28,268 - INFO - PubMed API: PMid: 39892055: Metadata Found.
+2025-08-13 12:20:28,269 - INFO - PubMed API: PMid: 39891785: Metadata Found.
+2025-08-13 12:20:28,270 - INFO - PubMed API: PMid: 39885591: Metadata Found.
+2025-08-13 12:20:28,271 - INFO - PubMed API: PMid: 39885324: Metadata Found.
+2025-08-13 12:20:28,272 - INFO - PubMed API: PMid: 39885251: Metadata Found.
+2025-08-13 12:20:28,272 - INFO - PubMed API: PMid: 39884983: Metadata Found.
+2025-08-13 12:20:28,273 - INFO - PubMed API: PMid: 39884449: Metadata Found.
+2025-08-13 12:20:28,273 - INFO - PubMed API: PMid: 39881131: Metadata Found.
+2025-08-13 12:20:28,274 - INFO - PubMed API: PMid: 39880067: Metadata Found.
+2025-08-13 12:20:28,275 - INFO - PubMed API: PMid: 39879512: Metadata Found.
+2025-08-13 12:20:28,276 - INFO - PubMed API: PMid: 39877710: Metadata Found.
+2025-08-13 12:20:28,277 - INFO - PubMed API: PMid: 39875999: Metadata Found.
+2025-08-13 12:20:28,278 - INFO - PubMed API: PMid: 39875915: Metadata Found.
+2025-08-13 12:20:28,279 - INFO - PubMed API: PMid: 39875526: Metadata Found.
+2025-08-13 12:20:28,282 - INFO - PubMed API: PMid: 39875498: Metadata Found.
+2025-08-13 12:20:28,283 - INFO - PubMed API: PMid: 39875456: Metadata Found.
+2025-08-13 12:20:28,284 - INFO - PubMed API: PMid: 39875210: Metadata Found.
+2025-08-13 12:20:28,285 - INFO - PubMed API: PMid: 39874306: Metadata Found.
+2025-08-13 12:20:28,286 - INFO - PubMed API: PMid: 39873948: Metadata Found.
+2025-08-13 12:20:28,287 - INFO - PubMed API: PMid: 39871345: Metadata Found.
+2025-08-13 12:20:28,289 - INFO - PubMed API: PMid: 39871340: Metadata Found.
+2025-08-13 12:20:28,289 - INFO - PubMed API: PMid: 39871229: Metadata Found.
+2025-08-13 12:20:28,290 - INFO - PubMed API: PMid: 39870588: Metadata Found.
+2025-08-13 12:20:28,291 - INFO - PubMed API: PMid: 39870503: Metadata Found.
+2025-08-13 12:20:28,293 - INFO - PubMed API: PMid: 39870196: Metadata Found.
+2025-08-13 12:20:28,294 - INFO - PubMed API: PMid: 39869353: Metadata Found.
+2025-08-13 12:20:28,295 - INFO - PubMed API: PMid: 39866240: Metadata Found.
+2025-08-13 12:20:28,296 - INFO - PubMed API: PMid: 39866237: Metadata Found.
+2025-08-13 12:20:28,297 - INFO - PubMed API: PMid: 39866224: Metadata Found.
+2025-08-13 12:20:28,298 - INFO - PubMed API: PMid: 39865979: Metadata Found.
+2025-08-13 12:20:28,299 - INFO - PubMed API: PMid: 39865119: Metadata Found.
+2025-08-13 12:20:28,300 - INFO - PubMed API: PMid: 39864337: Metadata Found.
+2025-08-13 12:20:28,301 - INFO - PubMed API: PMid: 39863844: Metadata Found.
+2025-08-13 12:20:28,301 - INFO - PubMed API: PMid: 39863722: Metadata Found.
+2025-08-13 12:20:28,302 - INFO - PubMed API: PMid: 39862296: Metadata Found.
+2025-08-13 12:20:28,303 - INFO - PubMed API: PMid: 39859541: Metadata Found.
+2025-08-13 12:20:28,304 - INFO - PubMed API: PMid: 39858398: Metadata Found.
+2025-08-13 12:20:28,306 - INFO - PubMed API: PMid: 39856764: Metadata Found.
+2025-08-13 12:20:28,306 - INFO - PubMed API: PMid: 39856614: Metadata Found.
+2025-08-13 12:20:28,307 - INFO - PubMed API: PMid: 39856598: Metadata Found.
+2025-08-13 12:20:28,308 - INFO - PubMed API: PMid: 39856546: Metadata Found.
+2025-08-13 12:20:28,311 - INFO - PubMed API: PMid: 39855898: Metadata Found.
+2025-08-13 12:20:28,311 - INFO - PubMed API: PMid: 39854659: Metadata Found.
+2025-08-13 12:20:28,313 - INFO - PubMed API: PMid: 39854135: Metadata Found.
+2025-08-13 12:20:28,314 - INFO - PubMed API: PMid: 39850884: Metadata Found.
+2025-08-13 12:20:28,316 - INFO - PubMed API: PMid: 39850877: Metadata Found.
+2025-08-13 12:20:28,316 - INFO - PubMed API: PMid: 39849807: Metadata Found.
+2025-08-13 12:20:28,319 - INFO - PubMed API: PMid: 39849657: Metadata Found.
+2025-08-13 12:20:28,320 - INFO - PubMed API: PMid: 39849586: Metadata Found.
+2025-08-13 12:20:28,321 - INFO - PubMed API: PMid: 39849396: Metadata Found.
+2025-08-13 12:20:28,322 - INFO - PubMed API: PMid: 39847282: Metadata Found.
+2025-08-13 12:20:28,323 - INFO - PubMed API: PMid: 39846982: Metadata Found.
+2025-08-13 12:20:28,324 - INFO - PubMed API: PMid: 39845967: Metadata Found.
+2025-08-13 12:20:28,325 - INFO - PubMed API: PMid: 39845944: Metadata Found.
+2025-08-13 12:20:28,328 - INFO - PubMed API: PMid: 39843914: Metadata Found.
+2025-08-13 12:20:28,330 - INFO - PubMed API: PMid: 39843474: Metadata Found.
+2025-08-13 12:20:28,330 - INFO - PubMed API: PMid: 39841955: Metadata Found.
+2025-08-13 12:20:28,331 - INFO - PubMed API: PMid: 39840863: Metadata Found.
+2025-08-13 12:20:28,334 - INFO - PubMed API: PMid: 39840050: Metadata Found.
+2025-08-13 12:20:28,335 - INFO - PubMed API: PMid: 39839455: Metadata Found.
+2025-08-13 12:20:28,337 - INFO - PubMed API: PMid: 39839262: Metadata Found.
+2025-08-13 12:20:28,337 - INFO - PubMed API: PMid: 39838173: Metadata Found.
+2025-08-13 12:20:28,338 - INFO - PubMed API: PMid: 39837814: Metadata Found.
+2025-08-13 12:20:28,339 - INFO - PubMed API: PMid: 39835710: Metadata Found.
+2025-08-13 12:20:28,340 - INFO - PubMed API: PMid: 39835447: Metadata Found.
+2025-08-13 12:20:28,345 - INFO - PubMed API: PMid: 39833908: Metadata Found.
+2025-08-13 12:20:28,345 - INFO - PubMed API: PMid: 39833825: Metadata Found.
+2025-08-13 12:20:28,348 - INFO - PubMed API: PMid: 39833319: Metadata Found.
+2025-08-13 12:20:28,349 - INFO - PubMed API: PMid: 39833289: Metadata Found.
+2025-08-13 12:20:28,349 - INFO - PubMed API: PMid: 39832331: Metadata Found.
+2025-08-13 12:20:28,350 - INFO - PubMed API: PMid: 39827855: Metadata Found.
+2025-08-13 12:20:28,350 - INFO - PubMed API: PMid: 39827331: Metadata Found.
+2025-08-13 12:20:28,351 - INFO - PubMed API: PMid: 39827154: Metadata Found.
+2025-08-13 12:20:28,351 - INFO - PubMed API: PMid: 39825061: Metadata Found.
+2025-08-13 12:20:28,352 - INFO - PubMed API: PMid: 39824841: Metadata Found.
+2025-08-13 12:20:28,352 - INFO - PubMed API: PMid: 39823250: Metadata Found.
+2025-08-13 12:20:28,353 - INFO - PubMed API: PMid: 39823128: Metadata Found.
+2025-08-13 12:20:28,354 - INFO - PubMed API: PMid: 39822176: Metadata Found.
+2025-08-13 12:20:28,355 - INFO - PubMed API: PMid: 39822175: Metadata Found.
+2025-08-13 12:20:28,356 - INFO - PubMed API: PMid: 39822174: Metadata Found.
+2025-08-13 12:20:28,356 - INFO - PubMed API: PMid: 39822173: Metadata Found.
+2025-08-13 12:20:28,357 - INFO - PubMed API: PMid: 39822172: Metadata Found.
+2025-08-13 12:20:28,362 - INFO - PubMed API: PMid: 39822170: Metadata Found.
+2025-08-13 12:20:28,363 - INFO - PubMed API: PMid: 39821721: Metadata Found.
+2025-08-13 12:20:28,364 - INFO - PubMed API: PMid: 39821576: Metadata Found.
+2025-08-13 12:20:28,365 - INFO - PubMed API: PMid: 39817495: Metadata Found.
+2025-08-13 12:20:28,366 - INFO - PubMed API: PMid: 39815331: Metadata Found.
+2025-08-13 12:20:28,366 - INFO - PubMed API: PMid: 39815301: Metadata Found.
+2025-08-13 12:20:28,367 - INFO - PubMed API: PMid: 39815188: Metadata Found.
+2025-08-13 12:20:28,367 - INFO - PubMed API: PMid: 39813554: Metadata Found.
+2025-08-13 12:20:28,368 - INFO - PubMed API: PMid: 39813178: Metadata Found.
+2025-08-13 12:20:28,368 - INFO - PubMed API: PMid: 39812918: Metadata Found.
+2025-08-13 12:20:28,369 - INFO - PubMed API: PMid: 39811500: Metadata Found.
+2025-08-13 12:20:28,370 - INFO - PubMed API: PMid: 39810215: Metadata Found.
+2025-08-13 12:20:28,371 - INFO - PubMed API: PMid: 39809787: Metadata Found.
+2025-08-13 12:20:28,371 - INFO - PubMed API: PMid: 39809174: Metadata Found.
+2025-08-13 12:20:28,371 - INFO - PubMed API: PMid: 39806853: Metadata Found.
+2025-08-13 12:20:28,372 - INFO - PubMed API: PMid: 39806334: Metadata Found.
+2025-08-13 12:20:28,372 - INFO - PubMed API: PMid: 39799895: Metadata Found.
+2025-08-13 12:20:28,373 - INFO - PubMed API: PMid: 39798422: Metadata Found.
+2025-08-13 12:20:28,373 - INFO - PubMed API: PMid: 39796578: Metadata Found.
+2025-08-13 12:20:28,374 - INFO - PubMed API: PMid: 39796161: Metadata Found.
+2025-08-13 12:20:28,376 - INFO - PubMed API: PMid: 39796106: Metadata Found.
+2025-08-13 12:20:28,377 - INFO - PubMed API: PMid: 39796030: Metadata Found.
+2025-08-13 12:20:28,380 - INFO - PubMed API: PMid: 39794732: Metadata Found.
+2025-08-13 12:20:28,381 - INFO - PubMed API: PMid: 39794466: Metadata Found.
+2025-08-13 12:20:28,382 - INFO - PubMed API: PMid: 39793706: Metadata Found.
+2025-08-13 12:20:28,384 - INFO - PubMed API: PMid: 39792765: Metadata Found.
+2025-08-13 12:20:28,384 - INFO - PubMed API: PMid: 39792693: Metadata Found.
+2025-08-13 12:20:28,385 - INFO - PubMed API: PMid: 39792482: Metadata Found.
+2025-08-13 12:20:28,387 - INFO - PubMed API: PMid: 39791716: Metadata Found.
+2025-08-13 12:20:28,388 - INFO - PubMed API: PMid: 39789426: Metadata Found.
+2025-08-13 12:20:28,389 - INFO - PubMed API: PMid: 39788916: Metadata Found.
+2025-08-13 12:20:28,389 - INFO - PubMed API: PMid: 39788390: Metadata Found.
+2025-08-13 12:20:28,389 - INFO - PubMed API: PMid: 39784731: Metadata Found.
+2025-08-13 12:20:28,389 - INFO - PubMed API: PMid: 39784713: Metadata Found.
+2025-08-13 12:20:28,390 - INFO - PubMed API: PMid: 39782682: Metadata Found.
+2025-08-13 12:20:28,391 - INFO - PubMed API: PMid: 39781526: Metadata Found.
+2025-08-13 12:20:28,432 - INFO - PubMedCentral API: Article PMCid: 1914054: Looking For Article Content.
+2025-08-13 12:20:29,121 - INFO - PubMedCentral API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:29,121 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:29,233 - INFO - PubMedCentral API: Article PMCid: 1914054: Content Found.
+
+2025-08-13 12:20:29,234 - INFO - PubMedCentral API: Article PMCid: 11486895: Looking For Article Content.
+2025-08-13 12:20:30,050 - INFO - PubMedCentral API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:30,050 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:30,163 - INFO - PubMedCentral API: Article PMCid: 11486895: Content Found.
+
+2025-08-13 12:20:30,163 - INFO - PubMedCentral API: Article PMCid: 11347894: Looking For Article Content.
+2025-08-13 12:20:31,163 - INFO - PubMedCentral API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:31,163 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:31,278 - INFO - PubMedCentral API: Article PMCid: 11347894: Content Found.
+
+2025-08-13 12:20:31,279 - INFO - PubMedCentral API: Article PMCid: 9225841: Looking For Article Content.
+2025-08-13 12:20:32,018 - INFO - PubMedCentral API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:32,018 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:32,159 - INFO - PubMedCentral API: Article PMCid: 9225841: Content Found.
+
+2025-08-13 12:20:32,160 - INFO - PubMedCentral API: Article PMCid: 8814427: Looking For Article Content.
+2025-08-13 12:20:33,037 - INFO - PubMedCentral API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:33,038 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:33,152 - INFO - PubMedCentral API: Article PMCid: 8814427: Content Found.
+
+2025-08-13 12:20:33,153 - INFO - PubMedCentral API: Article PMCid: 7611127: Looking For Article Content.
+2025-08-13 12:20:33,867 - INFO - PubMedCentral API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:33,868 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:33,979 - WARNING - PubMedCentral API: Article PMCid: 7611127: Content Not Found.
+
+2025-08-13 12:20:33,979 - INFO - PubMedCentral API: Article PMCid: 9136969: Looking For Article Content.
+2025-08-13 12:20:34,797 - INFO - PubMedCentral API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:34,798 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:34,911 - INFO - PubMedCentral API: Article PMCid: 9136969: Content Found.
+
+2025-08-13 12:20:34,911 - INFO - PubMedCentral API: Article PMCid: 10422953: Looking For Article Content.
+2025-08-13 12:20:35,792 - INFO - PubMedCentral API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:35,792 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:35,906 - INFO - PubMedCentral API: Article PMCid: 10422953: Content Found.
+
+2025-08-13 12:20:35,907 - INFO - PubMedCentral API: Article PMCid: 6332605: Looking For Article Content.
+2025-08-13 12:20:36,620 - INFO - PubMedCentral API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:36,620 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:36,734 - INFO - PubMedCentral API: Article PMCid: 6332605: Content Found.
+
+2025-08-13 12:20:36,735 - INFO - PubMedCentral API: Article PMCid: 8099392: Looking For Article Content.
+2025-08-13 12:20:37,511 - INFO - PubMedCentral API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:37,511 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:37,624 - INFO - PubMedCentral API: Article PMCid: 8099392: Content Found.
+
+2025-08-13 12:20:37,625 - INFO - PubMedCentral API: Article PMCid: 5890941: Looking For Article Content.
+2025-08-13 12:20:38,338 - INFO - PubMedCentral API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:38,338 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:38,449 - WARNING - PubMedCentral API: Article PMCid: 5890941: Content Not Found.
+
+2025-08-13 12:20:38,450 - INFO - PubMedCentral API: Article PMCid: 9131288: Looking For Article Content.
+2025-08-13 12:20:39,166 - INFO - PubMedCentral API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:39,166 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:39,279 - INFO - PubMedCentral API: Article PMCid: 9131288: Content Found.
+
+2025-08-13 12:20:39,280 - INFO - PubMedCentral API: Article PMCid: 11800637: Looking For Article Content.
+2025-08-13 12:20:40,228 - INFO - PubMedCentral API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:40,228 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:40,342 - INFO - PubMedCentral API: Article PMCid: 11800637: Content Found.
+
+2025-08-13 12:20:40,343 - INFO - PubMedCentral API: Article PMCid: 9013334: Looking For Article Content.
+2025-08-13 12:20:41,093 - INFO - PubMedCentral API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:41,093 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:41,205 - INFO - PubMedCentral API: Article PMCid: 9013334: Content Found.
+
+2025-08-13 12:20:41,206 - INFO - PubMedCentral API: Article PMCid: 10591801: Looking For Article Content.
+2025-08-13 12:20:41,914 - INFO - PubMedCentral API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:41,915 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:42,026 - WARNING - PubMedCentral API: Article PMCid: 10591801: Content Not Found.
+
+2025-08-13 12:20:42,027 - INFO - PubMedCentral API: Article PMCid: 11827163: Looking For Article Content.
+2025-08-13 12:20:42,759 - INFO - PubMedCentral API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:42,759 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:42,875 - INFO - PubMedCentral API: Article PMCid: 11827163: Content Found.
+
+2025-08-13 12:20:42,877 - INFO - PubMedCentral API: Article PMCid: 4303841: Looking For Article Content.
+2025-08-13 12:20:43,603 - INFO - PubMedCentral API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:43,603 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:43,716 - INFO - PubMedCentral API: Article PMCid: 4303841: Content Found.
+
+2025-08-13 12:20:43,717 - INFO - PubMedCentral API: Article PMCid: 5793350: Looking For Article Content.
+2025-08-13 12:20:44,444 - INFO - PubMedCentral API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:44,444 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:44,556 - INFO - PubMedCentral API: Article PMCid: 5793350: Content Found.
+
+2025-08-13 12:20:44,557 - INFO - PubMedCentral API: Article PMCid: 8426496: Looking For Article Content.
+2025-08-13 12:20:45,278 - INFO - PubMedCentral API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:45,279 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:45,392 - INFO - PubMedCentral API: Article PMCid: 8426496: Content Found.
+
+2025-08-13 12:20:45,392 - INFO - PubMedCentral API: Article PMCid: 6872491: Looking For Article Content.
+2025-08-13 12:20:46,262 - INFO - PubMedCentral API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:46,262 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:46,377 - INFO - PubMedCentral API: Article PMCid: 6872491: Content Found.
+
+2025-08-13 12:20:46,378 - INFO - PubMedCentral API: Article PMCid: 5574587: Looking For Article Content.
+2025-08-13 12:20:47,091 - INFO - PubMedCentral API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:47,091 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:47,203 - INFO - PubMedCentral API: Article PMCid: 5574587: Content Found.
+
+2025-08-13 12:20:47,203 - INFO - PubMedCentral API: Article PMCid: 8894008: Looking For Article Content.
+2025-08-13 12:20:48,835 - INFO - PubMedCentral API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:48,836 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:48,949 - INFO - PubMedCentral API: Article PMCid: 8894008: Content Found.
+
+2025-08-13 12:20:48,949 - INFO - PubMedCentral API: Article PMCid: 6909592: Looking For Article Content.
+2025-08-13 12:20:50,315 - INFO - PubMedCentral API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:50,315 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:50,429 - INFO - PubMedCentral API: Article PMCid: 6909592: Content Found.
+
+2025-08-13 12:20:50,430 - INFO - PubMedCentral API: Article PMCid: 10599278: Looking For Article Content.
+2025-08-13 12:20:52,068 - INFO - PubMedCentral API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:52,068 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:52,181 - INFO - PubMedCentral API: Article PMCid: 10599278: Content Found.
+
+2025-08-13 12:20:52,182 - INFO - PubMedCentral API: Article PMCid: 11583495: Looking For Article Content.
+2025-08-13 12:20:53,327 - INFO - PubMedCentral API: Fetch Endpoint: Response OK: 200
+2025-08-13 12:20:53,327 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-13 12:20:53,440 - INFO - PubMedCentral API: Article PMCid: 11583495: Content Found.
+
+2025-08-13 12:20:53,441 - INFO - PubMedCentral API: Article PMCid: 8272347: Looking For Article Content.
+2025-08-13 12:20:54,742 - ERROR - Main: Process Interrupted Manually.
