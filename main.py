@@ -15,8 +15,9 @@ connector = MongoAtlasConnector()
 try: #if max results is not specified, the default is 1k, the max is 10k
     all_articles = get_data_from_apis(pubmed_api, pubmedcentral_api,
                                        extract_abstracts_only=False,
-                                         max_results=10000)
+                                         max_results=200)
     connector.load_articles_to_cloud(all_articles)
 
 except KeyboardInterrupt: 
     logging.error("Main: Process Interrupted Manually.")
+    connector.load_articles_to_cloud(all_articles)
