@@ -55,54 +55,39 @@ class LoadToMongo:
         self.all_articles = []
         self.pmc_prost_articles = 0
         self.pmc_stomach_articles = 0 
-        self.relations = []
 
 
 
 
-    def get_docs_from_apis(self, max_results = 1000, ): 
+    def get_docs_from_apis(self, max_results = 10000, ): 
         for cancer in QUERIES.keys(): 
             logging.info(f"Connector: Working On: {cancer} cancer.\n") 
 
-            search_result = self.pubmed_api.search(QUERIES[cancer], max_results=max_results)
-            fetched_xml = self.pubmed_api.fetch(search_data = search_result, max_results=max_results)
-
-            articles = self.pubmed_api.get_data_from_xml(fetched_xml)
-
-            self.all_articles.extend(articles)
-            for article in articles: 
-                #adding cancer type
-                article["cancertype"] = cancer
-
-                # #nlp on abstract:
-                # abstract = article['abstract']
-                # if abstract is not None: 
-                #     abstract_relations = self.nlp.extract_entities_and_relations(abstract)['relations']
-                #     if abstract_relations != []: 
-                #         self.relations.extend(abstract_relations)
-                
-                #checking if MPC id is available for the article
-                
-                pmc_id = article["pmcid"]
-                if not self.use_abstracts_only: #only get the full article body if required.
-                    if pmc_id: 
-                        article["body"] = self.pubmedcentral_api.get_data_from_xml(pmc_id=pmc_id)
-
-                        # #nlp on body:
-                        # body = article['body']
-                        # if body is not None: 
-                        #     body_relations = self.nlp.extract_entities_and_relations(body)['relations']
-                        #     if body_relations != []: 
-                        #         self.relations.extend(body_relations)
-
-                        if cancer == "prostate":
-                            self.pmc_prost_articles+=1
-                        else:
-                            self.pmc_stomach_articles +=1
+            search_results = self.pubmed_api.search(QUERIES[cancer], max_results=max_results)
+            search_results_count = self.pubmed_api.search_results_count
+            start = 0
+            while search_results_count:
+                print("while loop: ", search_results_count)
+                fetched_xml = self.pubmed_api.fetch(search_results, start=start, max_results=max_results)
+                articles = self.pubmed_api.get_data_from_xml(fetched_xml)
+                self.all_articles.extend(articles)
+                for article in articles: 
+                    #adding cancer type
+                    article["cancertype"] = cancer
+                    #checking if MPC id is available for the article
+                    pmc_id = article["pmcid"]
+                    if not self.use_abstracts_only: #only get the full article body if required.
+                        if pmc_id: 
+                            article["body"] = self.pubmedcentral_api.get_data_from_xml(pmc_id=pmc_id)
+                            if cancer == "prostate":
+                                self.pmc_prost_articles+=1
+                            else:
+                                self.pmc_stomach_articles +=1
+                search_results_count-= max_results
+                start += max_results
 
         logging.info(f"Connector: Prostate Cancer: {self.pmc_prost_articles} Articles Content Present In PubMedCentral.")
         logging.info(f"Connector: Stomach Cancer: {self.pmc_stomach_articles} Articles Content Present In PubMedCentral.")
-        #print(self.relations)
 
         return self #to be able to chain call methods 
 

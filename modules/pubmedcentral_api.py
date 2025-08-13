@@ -25,7 +25,7 @@ class PubMedCentralAPI(PubMedAPI):
     def get_data_from_xml(self, pmc_id):
         logging.info(f"PubMedCentral API: Article PMCid: {pmc_id}: Looking For Article Content.")
         search_result = self.search(db="pmc", pmc_id= pmc_id, rettype="full")
-        response_xml =self.fetch(search_data=search_result, db="pmc", pmc_id= pmc_id, rettype="full")
+        response_xml =self.fetch(search_result, db="pmc", pmc_id= pmc_id, rettype="full")
         if response_xml: 
             root = ET.fromstring(response_xml.text)
 

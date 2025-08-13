@@ -62,8 +62,8 @@ class PubMedAPI:
                     
                     #to get the number of results the search returned
                     data = search_response.json()
-                    total_results = int(data["esearchresult"]["count"])
-                    logging.info(f"PubMed API: Search Endpoint: Total Search Results For Current Query: {total_results}")
+                    self.search_results_count = int(data["esearchresult"]["count"])
+                    logging.info(f"PubMed API: Search Endpoint: Total Search Results For Current Query: {self.search_results_count}")
                 else: 
                     logging.error(f"PubMed API: Search Endpoint: Response NOT OK: {response_code}")
             except Exception as e:
@@ -80,13 +80,17 @@ class PubMedAPI:
             return search_data                            #to enable chained calls. 
         
 
-    def fetch(self, search_data, max_results=1000, db = "pubmed", pmc_id = None, rettype = 'abstract'):
+    def fetch(self, search_data, max_results=1000, start = 0, db = "pubmed", pmc_id = None, rettype = 'abstract'):
             """ 
         for PubMed Central API:
                 db = 'pmc'
                 pmc_id = string pmc id without the PMC prefixe
                 rettype = 'full' 
-
+                start = is for retstart API param, PubMed Documentation: 
+        Sequential index of the first record to be retrieved
+        (default=0, corresponding to the first record of the entire set).
+        This parameter can be used in conjunction with retmax to download 
+        an arbitrary subset of records from the input set.
                 """
             # step2: fetching (either using history if PubMed API, or using mpc_id if PubMedCentral API) 
             fetch_url = f"{self.base_url}efetch.fcgi"
@@ -101,6 +105,7 @@ class PubMedAPI:
                 fetch_params['WebEnv'] = search_data['esearchresult']['webenv']
                 fetch_params['query_key'] = search_data['esearchresult']['querykey']
                 fetch_params['retmax'] = max_results
+                fetch_params['retstart'] = start
                 if self.api_key: fetch_params['api_key'] = self.api_key
                 if self.email: fetch_params['email'] = self.email
                 
