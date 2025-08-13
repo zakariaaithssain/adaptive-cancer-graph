@@ -11,6 +11,10 @@ import sys
 from config.mongodb_config import CONNECTION_STR, DB_STRUCTURE
 
 
+
+#TODO: ADD A METHOD THAT GETS ALL ARTICLES FROM MONGO TO BE PROCESSED USING NLP
+#TODO 2: IF I WILL STORE THE ENTITIES AND RELATIONS IN MONGO, IMPLEMENT A METHOD TO LOAD THEM TO CLOUD.
+# BUT I THINK IT'S BETTER TO STORE THEM AS TABULAR DATA OR IN CSV THEN TO NEO4J.
 """
     a cluster contains multiple databases, a database contains multiple collections,
     a collection contains multiple docs, a doc contains multiple features.
@@ -58,7 +62,7 @@ class MongoAtlasConnector:
         
 
 
-    def load_to_cloud(self, all_articles):
+    def load_articles_to_cloud(self, all_articles):
         logging.info("Connector: Inserting New Docs. Already Present Ones Will Be Ignored.")
         for article in tqdm(all_articles):
             try:
