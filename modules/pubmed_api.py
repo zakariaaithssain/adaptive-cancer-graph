@@ -56,6 +56,11 @@ class PubMedAPI:
                 response_code = search_response.status_code
                 if response_code == 200:
                     logging.info(f"PubMed API: Search Endpoint: Response OK: {response_code}")
+                    
+                    #to get the number of results the search returned
+                    data = search_response.json()
+                    total_results = int(data["esearchresult"]["count"])
+                    print("total results for query: ", total_results)
                 else: 
                     logging.error(f"PubMed API: Search Endpoint: Response NOT OK: {response_code}")
             except Exception as e:

@@ -56,7 +56,7 @@ class NLP:
 
       return {"entities": entities, "relations": relations}
 
-
-nlp = NLP()
-print(nlp.nlp_pipe.get_pipe("ner").labels)
+if __name__ == "__main__": 
+   nlp = NLP() 
+   print(nlp.nlp_pipe.get_pipe("ner").labels)
 

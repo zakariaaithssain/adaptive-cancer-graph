@@ -1,4 +1,7 @@
-2025-08-13 00:22:59,537 - INFO - Modules init: Logs File Cleaned.
+2025-08-13 00:47:19,391 - INFO - Modules init: Logs File Cleaned.
 
-2025-08-13 00:22:59,695 - INFO - PubMed API: API Key Used.
-2025-08-13 00:22:59,695 - INFO - PubMed API: Email Used.
+2025-08-13 00:47:20,985 - INFO - PubMed API: API Key Used.
+2025-08-13 00:47:20,985 - INFO - PubMed API: Email Used.
+2025-08-13 00:47:20,986 - INFO - PubMedCentral API: API Key Used.
+2025-08-13 00:47:20,986 - INFO - PubMedCentral API: Email Used.
+
