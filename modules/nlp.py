@@ -37,8 +37,12 @@ class NLP:
 #rule based and dependency based ER, so it's not that accurate like Model based ER.
    def extract_relations(self, text): 
       doc = self.nlp_pipe(text)
-      # Matcher results
+      #matcher results
       matches = self.matcher(doc)
+      # dependency matcher results
+      dep_matches = self.dep_matcher(doc)
+      relations = set() #to get rid of duplicated relations
+
       for match_id, start, end in matches:
          # get only relations related to entities recognized
          entities_in_span = [ent for ent in doc.ents if ent.start >= start and ent.end <= end]
@@ -47,18 +51,17 @@ class NLP:
                relation = self.nlp_pipe.vocab.strings[match_id]
                #print relations only if running as main
                if __name__ == "__main__": print(f"{ent1.text} -[{relation}]-> {ent2.text}\n ******* ")
-               self.relations.append({"ent1": ent1.text, "relation": relation, "ent2": ent2.text})
+               relations.add({"ent1": ent1.text, "relation": relation, "ent2": ent2.text})
 
-      # dependency matcher results
-      dep_matches = self.dep_matcher(doc)
       for match_id, token_ids in dep_matches:
          relation = self.nlp_pipe.vocab.strings[match_id]
          ent1 = doc[token_ids[0]]
          ent2 = doc[token_ids[-1]]
          #print relations only if running as main
          if __name__ == "__main__": print(f"{ent1.text} -[{relation}]-> {ent2.text}\n ******* ")
-         self.relations.append((ent1.text, relation, ent2.text))
+         relations.add({"ent1": ent1.text, "relation": relation, "ent2": ent2.text})
 
+      self.relations = list(relations)
       return self
    
 
