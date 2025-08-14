@@ -4,7 +4,7 @@ import xml.etree.ElementTree as ET
 import time
 import logging
 
-from config.apis_config import API_SLEEP_TIME
+from config.apis_config import PM_API_SLEEP_TIME
 
 # TODO : COMBINE THE RETSTART AND RETMAX PARAMS TO GET ALL ARTICLES AVAILABLE
 #FOR THE QUERIES, AND KEEP TRACK OF MPIDS TO NOT REFETCH THE SAME ARTICLES,
@@ -73,11 +73,11 @@ class PubMedAPI:
 
                 
             if self.api_key:
-                logging.info(f"Search Endpoint: Sleeping For {API_SLEEP_TIME['with_key']}s.")
-                time.sleep(API_SLEEP_TIME["with_key"])    #with an api key, we are allowed to do 10req/second
+                logging.info(f"Search Endpoint: Sleeping For {PM_API_SLEEP_TIME['with_key']}s.")
+                time.sleep(PM_API_SLEEP_TIME["with_key"])    #with an api key, we are allowed to do 10req/second
             else: 
-                logging.info(f"Search Endpoint: Sleeping For {API_SLEEP_TIME['without_key']}s.")
-                time.sleep(API_SLEEP_TIME["without_key"]) #without an api key, we only have 3req/second 
+                logging.info(f"Search Endpoint: Sleeping For {PM_API_SLEEP_TIME['without_key']}s.")
+                time.sleep(PM_API_SLEEP_TIME["without_key"]) #without an api key, we only have 3req/second 
             
             return search_response.json()                    
         
@@ -138,11 +138,11 @@ class PubMedAPI:
                 return None
                         
             if self.api_key: 
-                logging.info(f"Fetch Endpoint: Sleeping For {API_SLEEP_TIME['with_key']}s.")
-                time.sleep(API_SLEEP_TIME["with_key"])  
+                logging.info(f"Fetch Endpoint: Sleeping For {PM_API_SLEEP_TIME['with_key']}s.")
+                time.sleep(PM_API_SLEEP_TIME["with_key"])  
             else: 
-                logging.info(f"Fetch Endpoint: Sleeping For {API_SLEEP_TIME['without_key']}s.")
-                time.sleep(API_SLEEP_TIME["without_key"])   
+                logging.info(f"Fetch Endpoint: Sleeping For {PM_API_SLEEP_TIME['without_key']}s.")
+                time.sleep(PM_API_SLEEP_TIME["without_key"])   
             
             return fetch_response #xml that contains the data of searched articles
                                 #(resp. article with pmc_id)
@@ -229,9 +229,9 @@ class PubMedAPI:
             
             # Rate limiting
             if self.api_key:
-                time.sleep(API_SLEEP_TIME["with_key"])
+                time.sleep(PM_API_SLEEP_TIME["with_key"])
             else:
-                time.sleep(API_SLEEP_TIME["without_key"])
+                time.sleep(PM_API_SLEEP_TIME["without_key"])
             
             # Check if we found any results
             id_list = search_data.get('esearchresult', {}).get('idlist', [])
@@ -257,9 +257,9 @@ class PubMedAPI:
             
             # Rate limiting
             if self.api_key:
-                time.sleep(API_SLEEP_TIME["with_key"])
+                time.sleep(PM_API_SLEEP_TIME["with_key"])
             else:
-                time.sleep(API_SLEEP_TIME["without_key"])
+                time.sleep(PM_API_SLEEP_TIME["without_key"])
             
             # Parse the MeSH term
             root = ET.fromstring(fetch_response.text)

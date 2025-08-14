@@ -5,6 +5,8 @@ import logging
 
 from spacy.matcher import Matcher, DependencyMatcher
 
+from modules.umls_api import UMLSNormalizer
+
 from config.nlp_config import MATCHER_PATTERNS, DEPENDENCY_MATCHER_PATTERNS
 
 #this uses a clever pandas usage to remove duplications from entities and relations of each article.
@@ -19,6 +21,9 @@ class NLP:
       #initialize matchers with model vocab
       self.matcher = Matcher(self.nlp_pipe.vocab)
       self.dep_matcher = DependencyMatcher(self.nlp_pipe.vocab)
+      #initialize the normalizer (it's simply an API )
+      #I guess scispacy has a Linker class to UMLS but it's sooooooooo heavy.
+      self.normalizer = UMLSNormalizer()
 
       #add patterns to matchers
       for label, patterns in MATCHER_PATTERNS.items():
@@ -29,16 +34,23 @@ class NLP:
 
    
    #NER using en_ner_bionlp13cg_md scispacy model.
-   def extract_entities(self, text, article_metadata):
+   def extract_entities(self, text, article_metadata : dict):
       doc = self.nlp_pipe(text)
       entities = []
       for ent in doc.ents:
          if __name__ == "__main__": print(f"entity: {ent.text} --- label: {ent.label_}\n ******* ")
 
          #updating the entities with metadata of the article they were extracted from
-         entity_dict = {"text": ent.text,
-                         "label": ent.label_,
-                           **article_metadata}
+         text = ent.text
+         entity_dict = {
+                        "text": text,
+                        "label": ent.label_,
+                        #dict unpacking or whatever they call this **
+                        #unpacking the attrs returned from UMLS API about the text.
+                        ** self.normalizer.normalize(text), 
+                        #unpacking metadate of the article to know where the entity was found
+                        **article_metadata 
+                           }
          
          entities.append(entity_dict) 
 
@@ -68,6 +80,9 @@ class NLP:
             if __name__ == "__main__":
                 print(f"{ent1.text} -[{relation_label}]-> {ent2.text}\n*******")
             
+            #unpacking the dict of normalizer inside this will cause not knowing to which entity
+            #the normalization data belong, so I guess I'll join relations and entities tables
+            # after they become a csv in order to normalize ent1 and ent2 for each relation
             rel_dict = {
                 "ent1": ent1.text,
                 "relation": relation_label,

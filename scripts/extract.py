@@ -5,19 +5,20 @@ from modules.pubmed_api import PubMedAPI
 from modules.pubmedcentral_api import PubMedCentralAPI
 from modules.mongo_connector import MongoAtlasConnector
 
-from config.apis_config import API_KEY_EMAIL
-from config.apis_config import QUERIES
+from config.apis_config import PM_API_KEY_EMAIL
+from config.apis_config import PM_QUERIES
 
 
 
 #less max_results, less API pression, more loop iterations
 #if max results is not specified, the default is 1k, the max is 10k
 def extract_pubmed_to_mongo(extract_abstracts_only=True, max_results=1000):
-    pubmed_api = PubMedAPI(api_key = API_KEY_EMAIL["api_key"],
-                            email = API_KEY_EMAIL["email"])
+    #api key and email are optional, but if not provided, we have less requests rate. 
+    pubmed_api = PubMedAPI(api_key = PM_API_KEY_EMAIL["api_key"],
+                            email = PM_API_KEY_EMAIL["email"])
     
-    pubmedcentral_api = PubMedCentralAPI(api_key = API_KEY_EMAIL["api_key"],
-                                          email = API_KEY_EMAIL["email"])
+    pubmedcentral_api = PubMedCentralAPI(api_key = PM_API_KEY_EMAIL["api_key"],
+                                          email = PM_API_KEY_EMAIL["email"])
     connector = MongoAtlasConnector()
     try: 
         all_articles = get_data_from_apis(pubmed_api, pubmedcentral_api,
@@ -52,11 +53,11 @@ def get_data_from_apis(pubmed_api, pubmedcentral_api, extract_abstracts_only = T
         if extract_abstracts_only: logging.info(f"Helper: Extracting Abstracts Only. No Calls To PubMedCentral API.\n")
         else: logging.info(f"Helper: Extracting Abstracts And Body. PubMedCentral API Will Be Called For Each Article.\n")
         
-        for cancer in QUERIES.keys():
+        for cancer in PM_QUERIES.keys():
             logging.info(f"Helper: Working On: {cancer.capitalize()} Cancer.\n")
 
             # searching only once, and using pagination to get all articles per search
-            search_results = pubmed_api.search(QUERIES[cancer], max_results=max_results) #a json format
+            search_results = pubmed_api.search(PM_QUERIES[cancer], max_results=max_results) #a json format
             total_count = pubmed_api.search_results_count
             start = 0
             
