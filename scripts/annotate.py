@@ -8,9 +8,10 @@ from modules.nlp import NLP
 
 def annotate_mongo_articles():
     connector = MongoAtlasConnector()
-    annotator = NLP() #one for all so entities and relations could be saved in the class attr.
     try: 
         articles = connector.fetch_articles_from_cloud() #list[dict] each dict is an article
+        
+        annotator = NLP() #one for all so entities and relations could be saved in the class attr.
         logging.info("Starting Annotation Process.")
         for article in tqdm(articles):
             text = article.pop('text')
