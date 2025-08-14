@@ -2,6 +2,7 @@ import pandas as pd
 
 import uuid
 import logging
+import os
 
 def prepare_data_for_neo4j(raw_ents_path, raw_rels_path, saving_dir):
 	"""Parameters: 
@@ -83,6 +84,7 @@ def prepare_data_for_neo4j(raw_ents_path, raw_rels_path, saving_dir):
 
 	#export again:
 	try: 
+		os.makedirs(name=saving_dir, exist_ok=True)
 		entities.to_csv(f"{saving_dir}/entities4neo4j.csv", index=False)
 		relations.to_csv(f"{saving_dir}/relations4neo4j.csv", index = False)
 		logging.info(f"Cleaning & Preparation Process Completed. Repo: {saving_dir}.")
