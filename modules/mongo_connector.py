@@ -45,13 +45,13 @@ class MongoAtlasConnector:
 
         # using 'pmid' to prevent duplicates
         self.collection.create_index("pmid", unique=True)
-        logging.info("Connector: Using 'pmid' As An Index.\n")
 
         
 
 
     def load_articles_to_cloud(self, all_articles, abstract_only = True):
         logging.info("Connector: Inserting New Docs. Already Present Ones Will Be Ignored.")
+        print("inserting new docs, present and empty ones are ignored...")
         for article in tqdm(all_articles):
             try:
                 if article['abstract']: #ignoring empty articles.
@@ -72,14 +72,15 @@ class MongoAtlasConnector:
     def fetch_articles_from_cloud(self, query = {}):
         """
         query = {} to fetch all data.
-        
+
         """
         articles = []
         try: 
             cursor = self.collection.find(query) #it returns a cursor, we must iterate through it.
         except errors.PyMongoError as e: 
             logging.error(f"Connector: Unable To Fetch Docs: {e}.")
-        logging.info("Connector: Fetching Docs From Mongo Atlas.")
+        logging.info("Connector: Fetching Docs From Mongo Atlas...")
+        print("fetching docs...")
         for doc in tqdm(cursor):
             try:
                 if isinstance(doc['abstract'], str) or ('body' in doc.keys() and isinstance(doc['body'], str)):
@@ -89,23 +90,22 @@ class MongoAtlasConnector:
                     article['pmcid'] = doc['pmid'] #will be null if article not available in MPCentral.
                     article['fetching_date'] = doc['fetchingdate']
 
-                    keywords = [elt for elt in doc['keywords'] if isinstance(elt, str)]
-                    article['pm_keywords'] = ' ; '.join(keywords) #making them flat for csv
-
-                    mesh = [elt for elt in doc['medical_subject_headings'] if isinstance(elt, str)]
-                    article['mesh'] = ' ; '.join(mesh) #making them flat for csv
-
                     texts = []
+                    #add keywords and MeSH to texts.
+                    keywords = [elt for elt in doc['keywords'] if isinstance(elt, str)]
+                    mesh = [elt for elt in doc['medical_subject_headings'] if isinstance(elt, str)]
+                    texts.extend(mesh)
+                    texts.extend(keywords)
+                    #add abstract and title to text
                     if isinstance(doc.get('abstract'), str):
                         texts.append(doc['abstract'])
-
                     if isinstance(doc['title'], str): 
                         texts.append(doc['title'])
-                    #can be missing if we only fetched abstracts.
+                    #add body, it can be missing if we only fetched abstracts.
                     if 'body' in doc.keys() and isinstance(doc['body'], str):
                         texts.append(doc['body']) 
 
-                    article['text'] = ". ".join(texts)
+                    article['text'] = " ".join(texts)
 
                     articles.append(article)
             except Exception as e: 

@@ -8,8 +8,20 @@ This is to prevent having a logs file that contains all logs
  from my very first time running the script.
  configuring logs from __init__ file of the modules is the best place in my opinion."""
 
-if os.path.exists(LOG_OPTIONS["file_handler"]):
-    os.remove(LOG_OPTIONS["file_handler"])  
-    
+def initialize_logs():
+    if os.path.exists(LOG_OPTIONS["file_handler"]): 
+        os.remove(LOG_OPTIONS["file_handler"]) 
 
-logging.info("Modules init: Logs File Cleaned.\n")   
+    logging.basicConfig(level=LOG_OPTIONS["level"], format=LOG_OPTIONS["format"],
+    handlers=[
+
+                logging.FileHandler(LOG_OPTIONS["file_handler"], mode= LOG_OPTIONS["mode"])
+                                    
+                ]
+                )
+    logging.info("Logs: Logs Initialized.\n")  
+
+
+initialize_logs()
+
+ 

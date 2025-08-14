@@ -28,6 +28,7 @@ class UMLSNormalizer:
         response = rq.get(search_url, params= params)
         status_code = response.status_code
         #waiting 0.06 between calls. 
+        logging.info(f"Normalizer: UMLS API: Sleeping For {UMLS_API_SLEEP_TIME}s.")
         time.sleep(UMLS_API_SLEEP_TIME)
 
         if status_code == 200: 
@@ -36,7 +37,6 @@ class UMLSNormalizer:
             results = json_output['result']['results']
             #return None if results = [] or no CUI for the term (CUI is a universal id)
             if not results or results[0][ "ui"] == "NONE":
-                logging.info(f"Normalizer: No Data Found For: {string}.")
                 
                 return {}
             else:
@@ -46,10 +46,9 @@ class UMLSNormalizer:
                 best_match['normalized_name'] = best_match.pop('name')
                 best_match['normalization_source'] = best_match.pop('rootSource')
                 best_match['url'] = best_match.pop('uri')
-                logging.info(f"Normalizer: Normalization Found For: {string}")
                 return best_match
         else: 
-            logging.error(f"Normalizer: Response Not OK: {status_code}.")
+            logging.error(f"Normalizer: UMLS API: Response Not OK: {status_code}.")
             return {}
 
 
