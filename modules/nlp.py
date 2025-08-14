@@ -44,7 +44,7 @@ class NLP:
          #updating the entities with metadata of the article they were extracted from
          text = ent.text
          entity_dict = {
-                        "text": text.lower, #to avoid duplications due to capitalization
+                        "text": text.strip().lower(), #to avoid duplications due to capitalization
                         "label": ent.label_,
                         #dict unpacking or whatever they call this **
                         #unpacking the attrs returned from UMLS API about the text.
@@ -85,9 +85,9 @@ class NLP:
             #the normalization data belong, so I guess I'll join relations and entities tables
             # on pmid in order to normalize ent1 and ent2 for each relation
             rel_dict = {
-                "ent1": ent1.text.lower(),
+                "ent1": ent1.text.strip().lower(),
                 "relation": relation_label,
-                "ent2": ent2.text,
+                "ent2": ent2.text.strip().lower(),
                 **article_metadata
             }
             relations.append(rel_dict)
@@ -123,7 +123,7 @@ class NLP:
          df = pd.DataFrame(data = self.entities)
       
       try:
-         df.to_csv(file_path)
+         df.to_csv(file_path, index=False)
          logging.info(f"NLP: Entities Saved To {file_path}")
          print("entities saved to data/entities.csv")
       except Exception as e:
@@ -143,7 +143,7 @@ class NLP:
          df = pd.DataFrame(data = self.relations)
       
       try:
-         df.to_csv(file_path)
+         df.to_csv(file_path, index=False)
          logging.info(f"NLP: Relations Saved To {file_path}")
          print("entities saved to data/relations.csv")
       except Exception as e:
