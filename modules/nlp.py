@@ -44,7 +44,7 @@ class NLP:
          #updating the entities with metadata of the article they were extracted from
          text = ent.text
          entity_dict = {
-                        "text": text,
+                        "text": text.lower, #to avoid duplications due to capitalization
                         "label": ent.label_,
                         #dict unpacking or whatever they call this **
                         #unpacking the attrs returned from UMLS API about the text.
@@ -85,7 +85,7 @@ class NLP:
             #the normalization data belong, so I guess I'll join relations and entities tables
             # on pmid in order to normalize ent1 and ent2 for each relation
             rel_dict = {
-                "ent1": ent1.text,
+                "ent1": ent1.text.lower(),
                 "relation": relation_label,
                 "ent2": ent2.text,
                 **article_metadata
