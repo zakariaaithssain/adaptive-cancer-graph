@@ -12,12 +12,4 @@ if os.path.exists(LOG_OPTIONS["file_handler"]):
     os.remove(LOG_OPTIONS["file_handler"])  
     
 
-logging.basicConfig(level=LOG_OPTIONS["level"], format=LOG_OPTIONS["format"],
-                handlers=[
-                            logging.FileHandler(LOG_OPTIONS["file_handler"], mode= LOG_OPTIONS["mode"]),
-
-                            logging.StreamHandler()  # shows logs in terminal
-                            ]
-                )
-
 logging.info("Modules init: Logs File Cleaned.\n")   

@@ -12,9 +12,9 @@ from config.nlp_config import MATCHER_PATTERNS, DEPENDENCY_MATCHER_PATTERNS
 #this uses a clever pandas usage to remove duplications from entities and relations of each article.
 
 class NLP:
-   def __init__(self):
+   def __init__(self, normalizer : UMLSNormalizer):
+      logging.info("NLP: Loading NER Model...")
       self.nlp_pipe = spacy.load("en_ner_bionlp13cg_md") 
-      logging.info("NLP: NER Model Loaded.")
       self.nlp_pipe.add_pipe("merge_entities", after="ner")
       self.entities= []
       self.relations = []
@@ -23,7 +23,7 @@ class NLP:
       self.dep_matcher = DependencyMatcher(self.nlp_pipe.vocab)
       #initialize the normalizer (it's simply an API )
       #I guess scispacy has a Linker class to UMLS but it's sooooooooo heavy.
-      self.normalizer = UMLSNormalizer()
+      self.normalizer = normalizer
 
       #add patterns to matchers
       for label, patterns in MATCHER_PATTERNS.items():
@@ -34,7 +34,7 @@ class NLP:
 
    
    #NER using en_ner_bionlp13cg_md scispacy model.
-   def extract_entities(self, text, article_metadata : dict):
+   def extract_and_normalize_entities(self, text, article_metadata : dict):
       doc = self.nlp_pipe(text)
       entities = []
       for ent in doc.ents:

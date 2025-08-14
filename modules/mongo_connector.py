@@ -69,10 +69,14 @@ class MongoAtlasConnector:
 
 
     
-    def fetch_articles_from_cloud(self):
+    def fetch_articles_from_cloud(self, query = {}):
+        """
+        query = {} to fetch all data.
+        
+        """
         articles = []
         try: 
-            cursor = self.collection.find({}) #it returns a cursor, we must iterate through it.
+            cursor = self.collection.find(query) #it returns a cursor, we must iterate through it.
         except errors.PyMongoError as e: 
             logging.error(f"Connector: Unable To Fetch Docs: {e}.")
         logging.info("Connector: Fetching Docs From Mongo Atlas.")
