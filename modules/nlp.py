@@ -7,6 +7,7 @@ from spacy.matcher import Matcher, DependencyMatcher
 
 from config.nlp_config import MATCHER_PATTERNS, DEPENDENCY_MATCHER_PATTERNS
 
+#this uses a clever pandas usage to remove duplications from entities and relations of each article.
 
 class NLP:
    def __init__(self):
@@ -44,10 +45,7 @@ class NLP:
       
       unique_entities = pd.DataFrame(entities).drop_duplicates().to_dict('records')
       self.entities.extend(unique_entities)
-
-      if len(unique_entities):
-         print(unique_entities)
-         exit(0)
+      
       return self
 
 #rule based and dependency based ER, so it's not that accurate like Model based ER.
@@ -121,7 +119,7 @@ class NLP:
          logging.warning("NLP: No Relations In self.relations. Make Sure To Extract Them First.")
          df = pd.DataFrame(data = [{"ent1": "", "relation": "", "ent2": ""}])
       else: 
-         df = pd.DataFrame(data = self.entities)
+         df = pd.DataFrame(data = self.relations)
       
       try:
          df.to_csv(file_path)

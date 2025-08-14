@@ -8,3 +8,6 @@
 2025-08-14 01:01:02,802 - INFO - Connector: Using 'pmid' As An Index.
 
 2025-08-14 01:01:02,802 - INFO - Connector: Fetching Docs From Mongo Atlas.
+2025-08-14 01:01:45,969 - INFO - Connector: Data Fetched With No Errors.
+2025-08-14 01:02:14,749 - INFO - NLP: NER Model Loaded.
+2025-08-14 01:02:14,781 - INFO - Starting Annotation Process.
