@@ -14,6 +14,7 @@ from config.nlp_config import MATCHER_PATTERNS, DEPENDENCY_MATCHER_PATTERNS
 class NLP:
    def __init__(self, normalizer : UMLSNormalizer):
       logging.info("NLP: Loading NER Model...")
+      print("loading ner model...")
       self.nlp_pipe = spacy.load("en_ner_bionlp13cg_md") 
       self.nlp_pipe.add_pipe("merge_entities", after="ner")
       self.entities= []
@@ -82,7 +83,7 @@ class NLP:
             
             #unpacking the dict of normalizer inside this will cause not knowing to which entity
             #the normalization data belong, so I guess I'll join relations and entities tables
-            # after they become a csv in order to normalize ent1 and ent2 for each relation
+            # on pmid in order to normalize ent1 and ent2 for each relation
             rel_dict = {
                 "ent1": ent1.text,
                 "relation": relation_label,
@@ -116,6 +117,7 @@ class NLP:
    def generate_entities_csv(self, file_path = "data/extracted_entities.csv"):
       if self.entities == []:
          logging.warning("NLP: No Entities In self.entities. Make Sure To Extract Them First.")
+         print("no entities found extract first.")
          df = pd.DataFrame(data = [{"entity": "", "label": ""}])
       else: 
          df = pd.DataFrame(data = self.entities)
@@ -123,8 +125,10 @@ class NLP:
       try:
          df.to_csv(file_path)
          logging.info(f"NLP: Entities Saved To {file_path}")
+         print("entities saved to data/entities.csv")
       except Exception as e:
          logging.error(f"NLP: Failed To Save Entities As SCV: Error: {e}")
+         print("error while saving entities to scv.")
       return self
    
 
@@ -132,6 +136,8 @@ class NLP:
    def generate_relations_csv(self, file_path = "data/extracted_relations.csv"):
       if self.relations == []:
          logging.warning("NLP: No Relations In self.relations. Make Sure To Extract Them First.")
+         print("no relations found extract first.")
+
          df = pd.DataFrame(data = [{"ent1": "", "relation": "", "ent2": ""}])
       else: 
          df = pd.DataFrame(data = self.relations)
@@ -139,8 +145,10 @@ class NLP:
       try:
          df.to_csv(file_path)
          logging.info(f"NLP: Relations Saved To {file_path}")
+         print("entities saved to data/relations.csv")
       except Exception as e:
          logging.error(f"NLP: Failed To Save Relations As SCV: Error: {e}")
+         print("error while saving relations to csv.")
       return self
 
 #printing entities recognized by the model if running as main.
