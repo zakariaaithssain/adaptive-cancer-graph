@@ -1,13 +1,10 @@
-2025-08-14 00:16:02,125 - INFO - Modules init: Logs File Cleaned.
+2025-08-14 01:01:00,118 - INFO - Modules init: Logs File Cleaned.
 
-2025-08-14 00:16:04,909 - INFO - Connector: Sending A Ping To Confirm Connection.
-2025-08-14 00:16:06,104 - INFO - Connector: Deployment Pinged. Successfully Connected To MongoDB Atlas.
-2025-08-14 00:16:06,104 - INFO - Connector: Cluster: articles-cluster.
-2025-08-14 00:16:06,105 - INFO - Connector: DataBase: fetched-data-db.
-2025-08-14 00:16:06,105 - INFO - Connector: Collection: pm-pmc-data.
-2025-08-14 00:16:06,266 - INFO - Connector: Using 'pmid' As An Index.
+2025-08-14 01:01:01,699 - INFO - Connector: Sending A Ping To Confirm Connection.
+2025-08-14 01:01:02,720 - INFO - Connector: Deployment Pinged. Successfully Connected To MongoDB Atlas.
+2025-08-14 01:01:02,720 - INFO - Connector: Cluster: articles-cluster.
+2025-08-14 01:01:02,720 - INFO - Connector: DataBase: fetched-data-db.
+2025-08-14 01:01:02,720 - INFO - Connector: Collection: pm-pmc-data.
+2025-08-14 01:01:02,802 - INFO - Connector: Using 'pmid' As An Index.
 
-2025-08-14 00:16:20,512 - INFO - NLP: NER Model Loaded.
-2025-08-14 00:16:20,527 - INFO - Connector: Fetching Docs From Mongo Atlas.
-2025-08-14 00:17:16,185 - INFO - Connector: Data Fetched With No Errors.
-2025-08-14 00:17:16,186 - INFO - Starting Annotation Process.
+2025-08-14 01:01:02,802 - INFO - Connector: Fetching Docs From Mongo Atlas.

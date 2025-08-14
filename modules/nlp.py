@@ -30,17 +30,24 @@ class NLP:
    #NER using en_ner_bionlp13cg_md scispacy model.
    def extract_entities(self, text, article_metadata):
       doc = self.nlp_pipe(text)
-      entities = set() #to get rid of duplicated entities in the text
+      entities = []
       for ent in doc.ents:
          if __name__ == "__main__": print(f"entity: {ent.text} --- label: {ent.label_}\n ******* ")
 
          #updating the entities with metadata of the article they were extracted from
-         entity = {"text": ent.text, "label": ent.label_}
-         entity.update(article_metadata)
-         entities.add(frozenset(entity.items())) 
-      if len(list(entities)): print(list(entities))
-      entities_list = [dict(fs) for fs in entities]
-      self.entities.extend(entities_list)
+         entity_dict = {"text": ent.text,
+                         "label": ent.label_,
+                           **article_metadata}
+         
+         entities.append(entity_dict) 
+
+      
+      unique_entities = pd.DataFrame(entities).drop_duplicates().to_dict('records')
+      self.entities.extend(unique_entities)
+
+      if len(unique_entities):
+         print(unique_entities)
+         exit(0)
       return self
 
 #rule based and dependency based ER, so it's not that accurate like Model based ER.
@@ -50,7 +57,7 @@ class NLP:
     matches = self.matcher(doc)
     dep_matches = self.dep_matcher(doc)
     
-    relations = set()  # Deduplicate relations
+    relations = []
     
     # Matcher-based relations
     for match_id, start, end in matches:
@@ -69,7 +76,7 @@ class NLP:
                 "ent2": ent2.text,
                 **article_metadata
             }
-            relations.add(frozenset(rel_dict.items()))
+            relations.append(rel_dict)
     
     # Dependency-matcher-based relations
     for match_id, token_ids in dep_matches:
@@ -86,17 +93,11 @@ class NLP:
             "ent2": ent2.text,
             **article_metadata
         }
-        relations.add(frozenset(rel_dict.items()))
+        relations.append(rel_dict)
     
-    # Convert set of frozensets back to list of dicts
-    relations_list = [dict(fs) for fs in relations]
-
+    unique_relations = pd.DataFrame(relations).drop_duplicates().to_dict('records')
     
-    if relations_list:
-        print(relations_list)
-        exit(0)
-    
-    self.relations.extend(relations_list)
+    self.relations.extend(unique_relations)
     return self
 
    def generate_entities_csv(self, file_path = "data/extracted_entities.csv"):
