@@ -1,8 +1,9 @@
 import requests as rq
 
 import logging
+import time 
 
-from config.apis_config import UMLS_API_KEY
+from config.apis_config import UMLS_API_KEY, UMLS_API_SLEEP_TIME
 
 
 
@@ -16,7 +17,6 @@ class UMLSNormalizer:
 
 
     def normalize(self, string: str):
-
         search_url = f"{self.base_url}/search/current"
         params = {
             "apiKey" : self.key,
@@ -27,6 +27,9 @@ class UMLSNormalizer:
         
         response = rq.get(search_url, params= params)
         status_code = response.status_code
+        #waiting 0.06 between calls. 
+        time.sleep(UMLS_API_SLEEP_TIME)
+
         if status_code == 200: 
             logging.info("Normalizer: UMLS API: Response OK.")
             json_output = response.json()
@@ -34,7 +37,8 @@ class UMLSNormalizer:
             #return None if results = [] or no CUI for the term (CUI is a universal id)
             if not results or results[0][ "ui"] == "NONE":
                 logging.info(f"Normalizer: No Data Found For: {string}.")
-                return None
+                
+                return {}
             else:
                 best_match : dict = results[0]
                 #renaming the keys
@@ -46,6 +50,7 @@ class UMLSNormalizer:
                 return best_match
         else: 
             logging.error(f"Normalizer: Response Not OK: {status_code}.")
+            return {}
 
 
 

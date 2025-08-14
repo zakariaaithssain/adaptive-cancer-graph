@@ -1,0 +1,1 @@
+#this will load the graph  (last step of the ETL pipeline) after normalizing the entities and relations
