@@ -11,7 +11,7 @@ def annotate_mongo_articles():
     connector = MongoAtlasConnector()
      
     #list[dict] each dict is an article
-    articles = connector.fetch_articles_from_cloud(query={"cancertype" :"stomach"})[ : 10]
+    articles = connector.fetch_articles_from_cloud(query={})
     
     #one for all so entities and relations could be saved in the class attr.
     normalizer = UMLSNormalizer()

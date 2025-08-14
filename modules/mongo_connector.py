@@ -115,5 +115,3 @@ class MongoAtlasConnector:
         return articles
         
         
-
-            
