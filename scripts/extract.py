@@ -3,7 +3,7 @@ import logging
 
 from modules.pubmed_api import PubMedAPI
 from modules.pubmedcentral_api import PubMedCentralAPI
-from modules.mongo_connector import MongoAtlasConnector
+from modules.mongoatlas import MongoAtlasConnector
 
 from config.apis_config import PM_API_KEY_EMAIL
 from config.apis_config import PM_QUERIES
@@ -25,7 +25,7 @@ def extract_pubmed_to_mongo(extract_abstracts_only=True, max_results=1000):
                                         extract_abstracts_only,
                                             max_results) 
         
-        connector.load_articles_to_cloud(all_articles, abstract_only = True)
+        connector.load_articles_to_atlas(all_articles, abstract_only = True)
 
     except KeyboardInterrupt: 
         logging.error("Extraction Process Interrupted Manually.")
