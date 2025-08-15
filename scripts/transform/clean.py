@@ -3,7 +3,8 @@ import pandas as pd
 import uuid
 import logging
 import os
-
+#TODO: consider removing the pmid, pmcid and fetching date from entities before cleaning them
+# because of them we will have redudent entities bla fayda. (keep pmid and pmcid for relations)
 def prepare_data_for_neo4j(raw_ents_path, raw_rels_path, saving_dir):
 	"""Parameters: 
 	raw_ents_path = path to the raw extracted entities csv
