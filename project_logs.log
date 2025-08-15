@@ -1,7 +1,8 @@
-2025-08-14 22:01:56,269 - INFO - Logs: Logs Initialized.
+2025-08-15 21:56:30,167 - INFO - Logs: Logs Initialized.
 
-2025-08-14 22:01:56,867 - INFO - Connector: Sending A Ping To Confirm Connection.
-2025-08-14 22:01:57,900 - INFO - Connector: Deployment Pinged. Successfully Connected To MongoDB Atlas.
-2025-08-14 22:01:57,900 - INFO - Connector: Cluster: articles-cluster.
-2025-08-14 22:01:57,900 - INFO - Connector: DataBase: fetched-data-db.
-2025-08-14 22:01:57,900 - INFO - Connector: Collection: pm-pmc-data.
+2025-08-15 21:56:33,003 - INFO - PubMed API: API Key Used.
+2025-08-15 21:56:33,003 - INFO - PubMed API: Email Used.
+2025-08-15 21:56:33,003 - INFO - PubMedCentral API: API Key Used.
+2025-08-15 21:56:33,003 - INFO - PubMedCentral API: Email Used.
+
+2025-08-15 21:56:33,257 - INFO - Connector: Sending A Ping To Confirm Connection.

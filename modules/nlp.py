@@ -6,7 +6,7 @@ import logging
 from spacy.matcher import Matcher, DependencyMatcher
 
 from modules.umls_api import UMLSNormalizer
-
+from modules.umls_api import UMLSNormalizer
 from config.nlp_config import MATCHER_PATTERNS, DEPENDENCY_MATCHER_PATTERNS
 
 #this uses a clever pandas usage to remove duplications from entities and relations of each article.
@@ -153,7 +153,8 @@ class NLP:
 
 #printing entities recognized by the model if running as main.
 if __name__ == "__main__": 
-   nlp = NLP() 
+   normalizer = UMLSNormalizer()
+   nlp = NLP(normalizer=normalizer) 
    print("Entities recognized by ner_bionlp13cg_md model:")
    print(nlp.nlp_pipe.get_pipe("ner").labels)
    if not nlp.entities: print("no entities, make sure to extract them.")
