@@ -49,7 +49,7 @@ class MongoAtlasConnector:
         
 
 
-    def load_articles_to_cloud(self, all_articles, abstract_only = True):
+    def load_articles_to_atlas(self, all_articles, abstract_only = True):
         logging.info("Connector: Inserting New Docs. Already Present Ones Will Be Ignored.")
         print("inserting new docs, present and empty ones are ignored...")
         for article in tqdm(all_articles):
@@ -69,7 +69,7 @@ class MongoAtlasConnector:
 
 
     
-    def fetch_articles_from_cloud(self, query = {}):
+    def fetch_articles_from_atlas(self, query = {}):
         """
         query = {} to fetch all data.
 

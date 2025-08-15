@@ -2,7 +2,7 @@ import logging
 
 from tqdm import tqdm
 
-from modules.mongo_connector import MongoAtlasConnector
+from modules.mongoatlas import MongoAtlasConnector
 from modules.umls_api import UMLSNormalizer
 from modules.nlp import NLP
 
@@ -11,7 +11,7 @@ def annotate_mongo_articles():
     connector = MongoAtlasConnector()
      
     #list[dict] each dict is an article
-    articles = connector.fetch_articles_from_cloud(query={})
+    articles = connector.fetch_articles_from_atlas(query={})
     
     #one for all so entities and relations could be saved in the class attr.
     normalizer = UMLSNormalizer()
