@@ -7,7 +7,7 @@ from neo4j import GraphDatabase, Transaction
 from neo4j.exceptions import Neo4jError
 from typing import List, Dict
 
-import tqdm
+from tqdm import tqdm
 import logging
 
 from config.neo4jdb_config import NEO4J_LABELS, NEO4J_REL_TYPES
@@ -45,48 +45,59 @@ class Neo4jAuraConnector:
                 logging.info("AuraConnector: Successfully Connected To Neo4j Aura.")
         except Exception as e: 
                 logging.error(f"AuraConnector: Connection Failed: {e}")
-        finally:
-            self.driver.close()
+                raise
         return self
     
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        if self.driver: self.driver.close()
-        return False #meaning that we allow exceptions propagation, True suppresses them I guess
+    def __exit__(self, exception_type, exception_value, traceback):
+        if self.driver: 
+            self.driver.close()
+            logging.info("AuraConnector: Connector's Driver Closed Successfully.")
+        if exception_type: 
+            logging.error(f"AuraConnector: {exception_value}")
+        return False #don't supress errors
 
 
-
-    def load_ents_to_aura(self, labels_to_load : list[str], clean_csv: str):
-        assert all(label in NEO4J_LABELS for label in labels_to_load), f"labels_to_load passed contains label(s) that are not among {NEO4J_LABELS}"
+    def load_ents_to_aura(self, labels_to_load : list[str], ents_clean_csv: str):
+        assert all(label in NEO4J_LABELS for label in labels_to_load), f"{labels_to_load} contains invalid label(s), valid: {NEO4J_LABELS}"
         """Load entities from the cleaned ents csv to Neo4j Aura. 
         Parameters:
             labels_to_load = list of the entities recognized by the NER model
             that we want to load. (exp: 'GENE')
-            clean_csv = path of the cleaned ents csv."""
+            ents_clean_csv = path of the cleaned ents csv."""
+        failed_to_load = [] #will contain labels that weren't able to be loaded.
         #one session for more efficiency
         with self.driver.session() as session:
-                for label in labels_to_load: 
-                    #one transaction per entity
-                    with session.begin_transaction() as transaction: 
-                        nodes_with_label = self._get_nodes_with_label(label,clean_csv)
-                        self._ents_batch_load(label, nodes_list=nodes_with_label, transaction= transaction)
-            
+                for label in tqdm(labels_to_load, desc=f"loading nodes..."): 
+                    logging.info(f"AuraConnector: Loading {label} Nodes...")
+                    #one transaction per entity to ensure ACID propreties.
+                    try:
+                        with session.begin_transaction() as transaction: 
+                            nodes_with_label = self._get_nodes_with_label(label,ents_clean_csv)
+                            self._ents_batch_load(label, nodes_list=nodes_with_label, transaction= transaction)
+                    except Exception as e:
+                        failed_to_load.append({"failed_label" : label, "error" : str(e)})
+                    
+                if failed_to_load: logging.error(f"AuraConnector: {failed_to_load}")
+                else: logging.info("AuraConnector:Loaded Successfull")
 
     
-    def load_rels_to_aura(self, reltypes_to_load : list[str], clean_csv: str):
+    def load_rels_to_aura(self, reltypes_to_load : list[str], rels_clean_csv: str):
         """Load entities from the cleaned rels csv to Neo4j Aura. 
         Parameters:
             labels_to_load = list of the entities recognized by the NER model
             that we want to load. (exp: 'GENE')
-            clean_csv = path of the cleaned rels csv."""
+            rels_clean_csv = path of the cleaned rels csv."""
         
-        assert all(reltype in NEO4J_REL_TYPES for reltype in reltypes_to_load), f" reltypes_to_load passed contains relation type(s) that are not among {NEO4J_REL_TYPES}"
+        assert all(reltype in NEO4J_REL_TYPES for reltype in reltypes_to_load), f" {reltypes_to_load} contains invalid relation type(s), valid: {NEO4J_REL_TYPES}"
         with self.driver.session() as session:
-            for reltype in reltypes_to_load: 
+            for reltype in tqdm(reltypes_to_load, desc=f"loading relations..."): 
+                logging.info(f"AuraConnector: Loading {reltype} Relations...")
                 with session.begin_transaction() as transaction: 
-                    relations_with_reltype = self._get_relations_with_type(reltype, clean_csv)
+                    relations_with_reltype = self._get_relations_with_type(reltype, rels_clean_csv)
                     self._rels_batch_load(reltype,relations_list=relations_with_reltype, transaction = transaction)
 
-
+            else: 
+                logging.info(f"AuraConnector: {reltypes_to_load} Relations Loaded To Aura.") 
 
 
 
@@ -111,14 +122,15 @@ class Neo4jAuraConnector:
             }}
             """
         try: 
-            for i in range(0, len(nodes_list), self.load_batch_size):
+            for i in tqdm(range(0, len(nodes_list), self.load_batch_size), desc=f"loading batch {i//self.load_batch_size}..."):
+                logging.info(f"AuraConnector: Loading Batch {i//self.load_batch_size} ...")
                 batch = nodes_list[i:i + self.load_batch_size]
                 transaction.run(query, {"batch":batch})
         except Neo4jError as ne:
-            print(f"Neo4j error in batch {i//self.load_batch_size}: {ne}")
+            logging.error(f"AuraConnector: Neo4jError: Batch {i//self.load_batch_size}: {ne}")
             raise
         except Exception as e:
-            print(f"Unexpected error in batch {i//self.load_batch_size}: {e}")
+            logging.error(f"AuraConnector: Batch {i//self.load_batch_size}: {e}")
             raise
         
     def _rels_batch_load(self, relation_type: str, relations_list: List[Dict], transaction : Transaction):
@@ -142,19 +154,20 @@ class Neo4jAuraConnector:
         """
 
         try: 
-            for i in range(0, len(relations_list), self.load_batch_size):
+            for i in tqdm(range(0, len(relations_list), self.load_batch_size), desc=f"loading batch {i//self.load_batch_size}..."):
+                logging.info(f"AuraConnector: Loading Batch {i//self.load_batch_size}...")
                 batch = relations_list[i:i + self.load_batch_size]
                 transaction.run(query, {"batch":batch})
         except Neo4jError as ne:
-            print(f"Neo4j error in batch {i//self.load_batch_size}: {ne}")
+            logging.error(f"AuraConnector: Neo4j Error: Batch: {i//self.load_batch_size}: {ne}")
             raise
         except Exception as e:
-            print(f"Unexpected error in batch {i//self.load_batch_size}: {e}")
+            logging.error(f"AuraConnector: Batch: {i//self.load_batch_size}: {e}")
             raise
             
 
     
-    def _get_nodes_with_label(self, label : str, clean_csv : str):
+    def _get_nodes_with_label(self, label : str, ents_clean_csv : str):
         """ return list[dict] containing rows with 
         the same label specified in the label argument, from the global cleaned
         csv that contains all extracted entities.
@@ -163,18 +176,19 @@ class Neo4jAuraConnector:
         # Read and preprocess data
         assert label in NEO4J_LABELS, f"label argument got {label}, not one of {NEO4J_LABELS}."
         try: 
-            df = pd.read_csv(clean_csv)
-        except FileNotFoundError:
-            print(f"the global cleaned csv not found in {clean_csv}")
+            df = pd.read_csv(ents_clean_csv)
+        except FileNotFoundError as e:
+            logging.error(f"AuraConnector: {e}")
             raise
         
         try:
             entities = df[df[":LABEL"] == label].copy()
-        except KeyError:
-            print("':LABEL' not found in columns, perhaps you renamed it or specified another name during cleaning or extraction. " )
+        except KeyError as e:
+            logging.error(f"AuraConnector: {e}. Perhaps You Changed ':LABEL' To Something Else During Cleaning?" )
             raise
 
         if not entities.empty: 
+            logging.info(f"AuraConnector: Found {len(entities)} {label} Nodes In {ents_clean_csv}.")
             #format for Neo4j
             entities.rename(columns={":ID": "id"}, inplace=True, errors='ignore')
             #those will just create redundancy in the graph if kept
@@ -183,31 +197,33 @@ class Neo4jAuraConnector:
             entities_dict = entities.to_dict("records")  #convert to list of dicts
             return entities_dict
         else:
-            print(f"No {label} nodes found in {clean_csv}.")
+            logging.warning(f"AuraConnector: No {label} Nodes In {ents_clean_csv}.")
             return []
         
-    def _get_relations_with_type(self, type : str, clean_csv : str):
+    def _get_relations_with_type(self, type : str, rels_clean_csv : str):
         """ return list[dict] containing relations with 
         the same type specified in the type argument, from the global cleaned
         csv that contains all extracted relations.
         Parameters: 
                 type = the type of the relations we wish to extract (exp. 'AFFECTS')
-                 clean_csv = the csv containing the cleaned relations."""
+                 rels_clean_csv = the csv containing the cleaned relations."""
         
         assert type in NEO4J_REL_TYPES, f"type argument got {type}, not one of {NEO4J_REL_TYPES}."
         try: 
-            df = pd.read_csv(clean_csv)
-        except FileNotFoundError:
-            print(f"the global cleaned csv not found in {clean_csv}")
+            df = pd.read_csv(rels_clean_csv)
+        except FileNotFoundError as e:
+            logging.error(f"AuraConnector: {e}")
             raise
         
         try:
             relations = df[df[":TYPE"] == type].copy()
-        except KeyError:
-            print("':TYPE' not found in columns, perhaps you renamed it or specified another name during cleaning or extraction. " )
+        except KeyError as e:
+            logging.error(f"AuraConnector: {e}. Perhaps You Changed ':TYPE' To Something Else During Cleaning?" )
             raise
 
         if not relations.empty: 
+            logging.info(f"AuraConnector: Found {len(relations)} {type} Relations In {rels_clean_csv}.")
+
             #format for Neo4j
             relations.rename(columns={":ID": "id"}, inplace=True, errors='ignore')
             #those will just create redundancy in the graph if kept
@@ -216,7 +232,7 @@ class Neo4jAuraConnector:
             relations_dict = relations.to_dict("records")  #convert to list of dicts
             return relations_dict
         else:
-            print(f"No {type} relations found in {clean_csv}.")
+            logging.warning(f"AuraConnector: No {type} Relations In {rels_clean_csv}.")
             return []
         
         
