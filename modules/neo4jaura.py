@@ -3,10 +3,12 @@
 
 import pandas as pd
 
-from neo4j import GraphDatabase
+from neo4j import GraphDatabase, Transaction
 from neo4j.exceptions import Neo4jError
 from typing import List, Dict
 
+import tqdm
+import logging
 
 from config.neo4jdb_config import NEO4J_LABELS, NEO4J_REL_TYPES
 
@@ -31,9 +33,27 @@ from config.neo4jdb_config import NEO4J_LABELS, NEO4J_REL_TYPES
 class Neo4jAuraConnector:
     def __init__(self, uri: str, auth: tuple, load_batch_size = 1000):
         """I am using Neo4j Aura Free, so I cannot create databases, 
-            it uses the default one (database = None is the default)"""
-        self.driver = GraphDatabase.driver(uri, auth=auth)
+            it uses the default one"""
+        self.driver = GraphDatabase.driver(uri, auth=auth, database='neo4j')
         self.load_batch_size = load_batch_size
+
+    #dunder methods for context management
+    def __enter__(self):
+        try: 
+            with self.driver.session() as session: 
+                result = session.run("RETURN 1 AS test")
+                logging.info("AuraConnector: Successfully Connected To Neo4j Aura.")
+        except Exception as e: 
+                logging.error(f"AuraConnector: Connection Failed: {e}")
+        finally:
+            self.driver.close()
+        return self
+    
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        if self.driver: self.driver.close()
+        return False #meaning that we allow exceptions propagation, True suppresses them I guess
+
+
 
     def load_ents_to_aura(self, labels_to_load : list[str], clean_csv: str):
         assert all(label in NEO4J_LABELS for label in labels_to_load), f"labels_to_load passed contains label(s) that are not among {NEO4J_LABELS}"
@@ -42,11 +62,14 @@ class Neo4jAuraConnector:
             labels_to_load = list of the entities recognized by the NER model
             that we want to load. (exp: 'GENE')
             clean_csv = path of the cleaned ents csv."""
-        with self.driver as driver:
-            for label in labels_to_load: 
-                nodes_with_label = self._get_nodes_with_label(label,clean_csv)
-                self._ents_batch_load(label, nodes_list=nodes_with_label, driver= driver)
-        
+        #one session for more efficiency
+        with self.driver.session() as session:
+                for label in labels_to_load: 
+                    #one transaction per entity
+                    with session.begin_transaction() as transaction: 
+                        nodes_with_label = self._get_nodes_with_label(label,clean_csv)
+                        self._ents_batch_load(label, nodes_list=nodes_with_label, transaction= transaction)
+            
 
     
     def load_rels_to_aura(self, reltypes_to_load : list[str], clean_csv: str):
@@ -57,21 +80,22 @@ class Neo4jAuraConnector:
             clean_csv = path of the cleaned rels csv."""
         
         assert all(reltype in NEO4J_REL_TYPES for reltype in reltypes_to_load), f" reltypes_to_load passed contains relation type(s) that are not among {NEO4J_REL_TYPES}"
-        with self.driver as driver:
+        with self.driver.session() as session:
             for reltype in reltypes_to_load: 
-                relations_with_reltype = self._get_relations_with_type(reltype, clean_csv)
-                self._rels_batch_load(reltype,relations_list=relations_with_reltype, driver = driver)
+                with session.begin_transaction() as transaction: 
+                    relations_with_reltype = self._get_relations_with_type(reltype, clean_csv)
+                    self._rels_batch_load(reltype,relations_list=relations_with_reltype, transaction = transaction)
 
 
 
 
 
-    def _ents_batch_load(self, label: str, nodes_list: List[Dict], driver):
+    def _ents_batch_load(self, label: str, nodes_list: List[Dict], transaction : Transaction):
         """Entities (nodes) Batch load using UNWIND for optimal performance
         Parameters:
         label = "the label for the nodes to load. (exp 'GENE')
-        nodes_list: list containing nodes to load, each is a dict.
-        batch_size: how much nodes to load per query.
+        nodes_list = list containing nodes to load, each is a dict.
+        transaction = neo4j transaction instance
 
         """
         
@@ -89,7 +113,7 @@ class Neo4jAuraConnector:
         try: 
             for i in range(0, len(nodes_list), self.load_batch_size):
                 batch = nodes_list[i:i + self.load_batch_size]
-                driver.execute_query(query_=query, parameters_={"batch":batch})
+                transaction.run(query, {"batch":batch})
         except Neo4jError as ne:
             print(f"Neo4j error in batch {i//self.load_batch_size}: {ne}")
             raise
@@ -97,12 +121,12 @@ class Neo4jAuraConnector:
             print(f"Unexpected error in batch {i//self.load_batch_size}: {e}")
             raise
         
-    def _rels_batch_load(self, relation_type: str, relations_list: List[Dict], driver):
+    def _rels_batch_load(self, relation_type: str, relations_list: List[Dict], transaction : Transaction):
         """Relations Batch load using UNWIND for optimal performance
         Parameters:
         relation_type = "the relation_type for the relations to load. (exp 'GENE')
         relations_list: list containing relations to load, each is a dict.
-        batch_size: how much relations to load per query.
+        transaction: neo4j transaction instance
 
         """
         
@@ -120,7 +144,7 @@ class Neo4jAuraConnector:
         try: 
             for i in range(0, len(relations_list), self.load_batch_size):
                 batch = relations_list[i:i + self.load_batch_size]
-                driver.execute_query(query_=query, parameters_={"batch":batch})
+                transaction.run(query, {"batch":batch})
         except Neo4jError as ne:
             print(f"Neo4j error in batch {i//self.load_batch_size}: {ne}")
             raise

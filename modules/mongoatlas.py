@@ -8,7 +8,7 @@ import logging
 import datetime
 import sys
 
-from config.mongodb_config import CONNECTION_STR, DB_STRUCTURE
+from config.mongodb_config import DB_STRUCTURE
 
 
 #TODO: clean the database from old data before running the fetching script
@@ -21,27 +21,26 @@ from config.mongodb_config import CONNECTION_STR, DB_STRUCTURE
     """
 
 class MongoAtlasConnector:
-    def __init__(self):
+    def __init__(self, connection_str):
         #create a new client and connect to the server
-        self.cluster = MongoClient(host= CONNECTION_STR, server_api=ServerApi('1'))
+        self.cluster = MongoClient(host= connection_str, server_api=ServerApi('1'))
 
         #send a ping to confirm a successful connection
         try:
-            logging.info("Connector: Sending A Ping To Confirm Connection.")
             self.cluster.admin.command('ping')
-            logging.info("Connector: Deployment Pinged. Successfully Connected To MongoDB Atlas.")
+            logging.info("AtlasConnector: Deployment Pinged. Successfully Connected To MongoDB Atlas.")
         except Exception as e:
-            logging.error(f"Connector: Error: {e}")
+            logging.error(f"AtlasConnector: Connection Failed: {e}")
             #no need to continue the execution if connection failed
-            sys.exit(1)
+            raise
 
 
         self.db = self.cluster[DB_STRUCTURE['database']]
         self.collection = self.db[DB_STRUCTURE['collection']]
 
-        logging.info(f"Connector: Cluster: {DB_STRUCTURE['cluster']}.")
-        logging.info(f"Connector: DataBase: {DB_STRUCTURE['database']}.")
-        logging.info(f"Connector: Collection: {DB_STRUCTURE['collection']}.")
+        logging.info(f"AtlasConnector: Cluster: {DB_STRUCTURE['cluster']}.")
+        logging.info(f"AtlasConnector: DataBase: {DB_STRUCTURE['database']}.")
+        logging.info(f"AtlasConnector: Collection: {DB_STRUCTURE['collection']}.")
 
         # using 'pmid' to prevent duplicates
         self.collection.create_index("pmid", unique=True)
@@ -50,7 +49,7 @@ class MongoAtlasConnector:
 
 
     def load_articles_to_atlas(self, all_articles, abstract_only = True):
-        logging.info("Connector: Inserting New Docs. Already Present Ones Will Be Ignored.")
+        logging.info("AtlasConnector: Inserting New Docs. Already Present Ones Will Be Ignored.")
         print("inserting new docs, present and empty ones are ignored...")
         for article in tqdm(all_articles):
             try:
@@ -63,9 +62,9 @@ class MongoAtlasConnector:
                         upsert=True                    #insert if no doc with that pmid is already there
                     )
             except errors.PyMongoError as e:
-                logging.error(f"Connector: Unable To Store Article PMID{article.get('pmid')}: {e}.")
+                logging.error(f"AtlasConnector: Unable To Store Article PMID{article.get('pmid')}: {e}.")
         else: 
-            logging.info("Connector: Data Inserted With No Errors.")
+            logging.info("AtlasConnector: Data Inserted With No Errors.")
 
 
     
@@ -78,8 +77,8 @@ class MongoAtlasConnector:
         try: 
             cursor = self.collection.find(query) #it returns a cursor, we must iterate through it.
         except errors.PyMongoError as e: 
-            logging.error(f"Connector: Unable To Fetch Docs: {e}.")
-        logging.info("Connector: Fetching Docs From Mongo Atlas...")
+            logging.error(f"AtlasConnector: Unable To Fetch Docs: {e}.")
+        logging.info("AtlasConnector: Fetching Docs From Mongo Atlas...")
         print("fetching docs...")
         for doc in tqdm(cursor):
             try:
@@ -109,9 +108,9 @@ class MongoAtlasConnector:
 
                     articles.append(article)
             except Exception as e: 
-                logging.error(f"Connector: Unable To Fetch Article PMID{article.get('pmid')}: {e}.")
+                logging.error(f"AtlasConnector: Unable To Fetch Article PMID{article.get('pmid')}: {e}.")
         else: 
-            logging.info("Connector: Data Fetched With No Errors.")
+            logging.info("AtlasConnector: Data Fetched With No Errors.")
         return articles
         
         

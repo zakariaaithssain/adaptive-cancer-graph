@@ -7,7 +7,7 @@ from modules.mongoatlas import MongoAtlasConnector
 
 from config.apis_config import PM_API_KEY_EMAIL
 from config.apis_config import PM_QUERIES
-
+from config.mongodb_config import CONNECTION_STR
 
 
 #less max_results, less API pression, more loop iterations
@@ -19,7 +19,7 @@ def extract_pubmed_to_mongo(extract_abstracts_only=True, max_results=1000):
     
     pubmedcentral_api = PubMedCentralAPI(api_key = PM_API_KEY_EMAIL["api_key"],
                                           email = PM_API_KEY_EMAIL["email"])
-    connector = MongoAtlasConnector()
+    connector = MongoAtlasConnector(connection_str=CONNECTION_STR)
     try: 
         all_articles = _get_data_from_apis(pubmed_api, pubmedcentral_api,
                                         extract_abstracts_only,
