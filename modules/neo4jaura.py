@@ -1,3 +1,6 @@
+#TODO: add logs, tqdms with desc argument, and use Google Docstring format for documentation 
+# or maybe let the documentation till I finish the whole project and document for once. 
+
 import pandas as pd
 
 from neo4j import GraphDatabase
@@ -26,11 +29,13 @@ from config.neo4jdb_config import NEO4J_LABELS, NEO4J_REL_TYPES
 
 
 class Neo4jAuraConnector:
-    def __init__(self, uri: str, auth: tuple):
+    def __init__(self, uri: str, auth: tuple, load_batch_size = 1000):
+        """I am using Neo4j Aura Free, so I cannot create databases, 
+            it uses the default one (database = None is the default)"""
         self.driver = GraphDatabase.driver(uri, auth=auth)
+        self.load_batch_size = load_batch_size
 
-
-    def load_ents_to_aura(self, labels_to_load : list[str], clean_csv: str, batch_size = 1000):
+    def load_ents_to_aura(self, labels_to_load : list[str], clean_csv: str):
         assert all(label in NEO4J_LABELS for label in labels_to_load), f"labels_to_load passed contains label(s) that are not among {NEO4J_LABELS}"
         """Load entities from the cleaned ents csv to Neo4j Aura. 
         Parameters:
@@ -40,11 +45,11 @@ class Neo4jAuraConnector:
         with self.driver as driver:
             for label in labels_to_load: 
                 nodes_with_label = self._get_nodes_with_label(label,clean_csv)
-                self._ents_batch_load(label, nodes_list=nodes_with_label, driver= driver, batch_size=batch_size)
+                self._ents_batch_load(label, nodes_list=nodes_with_label, driver= driver)
         
 
     
-    def load_rels_to_aura(self, reltypes_to_load : list[str], clean_csv: str, batch_size = 1000):
+    def load_rels_to_aura(self, reltypes_to_load : list[str], clean_csv: str):
         """Load entities from the cleaned rels csv to Neo4j Aura. 
         Parameters:
             labels_to_load = list of the entities recognized by the NER model
@@ -55,13 +60,13 @@ class Neo4jAuraConnector:
         with self.driver as driver:
             for reltype in reltypes_to_load: 
                 relations_with_reltype = self._get_relations_with_type(reltype, clean_csv)
-                self._rels_batch_load(reltype,relations_list=relations_with_reltype, driver = driver, batch_size=batch_size)
+                self._rels_batch_load(reltype,relations_list=relations_with_reltype, driver = driver)
 
 
 
 
 
-    def _ents_batch_load(self, label: str, nodes_list: List[Dict], driver, batch_size: int = 1000):
+    def _ents_batch_load(self, label: str, nodes_list: List[Dict], driver):
         """Entities (nodes) Batch load using UNWIND for optimal performance
         Parameters:
         label = "the label for the nodes to load. (exp 'GENE')
@@ -82,17 +87,17 @@ class Neo4jAuraConnector:
             }}
             """
         try: 
-            for i in range(0, len(nodes_list), batch_size):
-                batch = nodes_list[i:i + batch_size]
+            for i in range(0, len(nodes_list), self.load_batch_size):
+                batch = nodes_list[i:i + self.load_batch_size]
                 driver.execute_query(query_=query, parameters_={"batch":batch})
         except Neo4jError as ne:
-            print(f"Neo4j error in batch {i//batch_size}: {ne}")
+            print(f"Neo4j error in batch {i//self.load_batch_size}: {ne}")
             raise
         except Exception as e:
-            print(f"Unexpected error in batch {i//batch_size}: {e}")
+            print(f"Unexpected error in batch {i//self.load_batch_size}: {e}")
             raise
         
-    def _rels_batch_load(self, relation_type: str, relations_list: List[Dict], driver, batch_size: int = 1000):
+    def _rels_batch_load(self, relation_type: str, relations_list: List[Dict], driver):
         """Relations Batch load using UNWIND for optimal performance
         Parameters:
         relation_type = "the relation_type for the relations to load. (exp 'GENE')
@@ -113,14 +118,14 @@ class Neo4jAuraConnector:
         """
 
         try: 
-            for i in range(0, len(relations_list), batch_size):
-                batch = relations_list[i:i + batch_size]
+            for i in range(0, len(relations_list), self.load_batch_size):
+                batch = relations_list[i:i + self.load_batch_size]
                 driver.execute_query(query_=query, parameters_={"batch":batch})
         except Neo4jError as ne:
-            print(f"Neo4j error in batch {i//batch_size}: {ne}")
+            print(f"Neo4j error in batch {i//self.load_batch_size}: {ne}")
             raise
         except Exception as e:
-            print(f"Unexpected error in batch {i//batch_size}: {e}")
+            print(f"Unexpected error in batch {i//self.load_batch_size}: {e}")
             raise
             
 

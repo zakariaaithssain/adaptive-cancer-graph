@@ -31,6 +31,3 @@ def annotate_mongo_articles():
     finally: 
         annotator.generate_entities_csv().generate_relations_csv()
 
-
-if __name__ == "__main__": 
-    annotate_mongo_articles()
