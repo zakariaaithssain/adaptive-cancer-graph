@@ -86,8 +86,12 @@ def prepare_data_for_neo4j(raw_ents_path, raw_rels_path, saving_dir):
 	#export again:
 	try: 
 		os.makedirs(name=saving_dir, exist_ok=True)
-		entities.to_csv(f"{saving_dir}/entities4neo4j.csv", index=False)
-		relations.to_csv(f"{saving_dir}/relations4neo4j.csv", index = False)
+		ents_path = f"{saving_dir}/entities4neo4j.csv"
+		rels_path = f"{saving_dir}/relations4neo4j.csv"
+		entities.to_csv(ents_path, index=False)
+		relations.to_csv(rels_path, index = False)
 		logging.info(f"Cleaning & Preparation Process Completed. Repo: {saving_dir}.")
 	except Exception as e: 
 		logging.error(f"Cleaning & Preparation Process Failed: {e}")
+
+	return ents_path, rels_path
