@@ -114,7 +114,7 @@ class NLP:
     self.relations.extend(unique_relations)
     return self
 
-   def generate_entities_csv(self, file_path = "data/extracted_entities.csv"):
+   def generate_entities_csv(self, file_path):
       if self.entities == []:
          logging.warning("NLP: No Entities In self.entities. Make Sure To Extract Them First.")
          print("no entities found extract first.")
@@ -133,7 +133,7 @@ class NLP:
    
 
 
-   def generate_relations_csv(self, file_path = "data/extracted_relations.csv"):
+   def generate_relations_csv(self, file_path):
       if self.relations == []:
          logging.warning("NLP: No Relations In self.relations. Make Sure To Extract Them First.")
          print("no relations found extract first.")

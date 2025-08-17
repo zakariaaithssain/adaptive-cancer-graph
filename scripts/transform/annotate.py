@@ -8,7 +8,7 @@ from modules.nlp import NLP
 
 from config.mongodb_config import CONNECTION_STR
 
-def annotate_mongo_articles():
+def annotate_mongo_articles(ents_path ="data/extracted_entities.csv", rels_path = "data/extracted_relations.csv"):
     connector = MongoAtlasConnector(connection_str=CONNECTION_STR)
      
     #list[dict] each dict is an article
@@ -30,5 +30,5 @@ def annotate_mongo_articles():
         logging.error("Annotation Process Interrupted Manually.")
 
     finally: 
-        annotator.generate_entities_csv().generate_relations_csv()
+        annotator.generate_entities_csv(file_path=ents_path).generate_relations_csv(file_path=rels_path)
 

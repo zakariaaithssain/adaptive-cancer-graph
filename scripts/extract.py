@@ -94,7 +94,7 @@ def _get_data_from_apis(pubmed_api, pubmedcentral_api, extract_abstracts_only = 
         if not extract_abstracts_only:
             logging.info(f"Extraction Process: Prostate Cancer: {pmc_prost_articles} Articles Content Present In PubMedCentral.")
             logging.info(f"Extraction Process: Stomach Cancer: {pmc_stomach_articles} Articles Content Present In PubMedCentral.")
-        else: logging.info(f"Extraction Process Finished Collecting Articles Abstracts.")
+        else: logging.info(f"Extraction Process: Finished Collecting Articles Abstracts.")
 
         return all_articles 
 
