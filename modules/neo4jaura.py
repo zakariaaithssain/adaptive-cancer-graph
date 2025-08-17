@@ -44,7 +44,7 @@ class Neo4jAuraConnector:
                 result = session.run("RETURN 1 AS test")
                 logging.info("AuraConnector: Successfully Connected To Neo4j Aura.")
         except Exception as e: 
-                logging.error(f"AuraConnector: Connection Failed: {e}")
+                logging.critical(f"AuraConnector: Connection Failed: {e}")
                 raise
         return self
     
@@ -75,10 +75,10 @@ class Neo4jAuraConnector:
                             nodes_with_label = self._get_nodes_with_label(label,ents_clean_csv)
                             self._ents_batch_load(label, nodes_list=nodes_with_label, transaction= transaction)
                     except Exception as e:
-                        failed_to_load.append({"failed_label" : label, "error" : str(e)})
+                        failed_to_load.append({"label" : label, "error" : str(e)})
                     
-                if failed_to_load: logging.error(f"AuraConnector: {failed_to_load}")
-                else: logging.info("AuraConnector:Loaded Successfull")
+                if failed_to_load: logging.error(f"AuraConnector: Failed To Load: {failed_to_load}")
+                else: logging.info("AuraConnector:Loaded Successfully")
 
     
     def load_rels_to_aura(self, reltypes_to_load : list[str], rels_clean_csv: str):
@@ -89,15 +89,20 @@ class Neo4jAuraConnector:
             rels_clean_csv = path of the cleaned rels csv."""
         
         assert all(reltype in NEO4J_REL_TYPES for reltype in reltypes_to_load), f" {reltypes_to_load} contains invalid relation type(s), valid: {NEO4J_REL_TYPES}"
+        failed_to_load = []
         with self.driver.session() as session:
             for reltype in tqdm(reltypes_to_load, desc=f"loading relations..."): 
                 logging.info(f"AuraConnector: Loading {reltype} Relations...")
-                with session.begin_transaction() as transaction: 
-                    relations_with_reltype = self._get_relations_with_type(reltype, rels_clean_csv)
-                    self._rels_batch_load(reltype,relations_list=relations_with_reltype, transaction = transaction)
-
+                try:
+                    with session.begin_transaction() as transaction: 
+                        relations_with_reltype = self._get_relations_with_type(reltype, rels_clean_csv)
+                        self._rels_batch_load(reltype,relations_list=relations_with_reltype, transaction = transaction)
+                except Exception as e: 
+                    failed_to_load.append({"reltype":reltype, "error": str(e)})
+            if failed_to_load: 
+                logging.error(f"AuraConnector: Failed To Load: {failed_to_load}")
             else: 
-                logging.info(f"AuraConnector: {reltypes_to_load} Relations Loaded To Aura.") 
+                logging.info(f"AuraConnector: Loaded Successfully.")
 
 
 
