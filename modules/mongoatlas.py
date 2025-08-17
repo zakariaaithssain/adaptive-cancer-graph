@@ -78,6 +78,7 @@ class MongoAtlasConnector:
             cursor = self.collection.find(query) #it returns a cursor, we must iterate through it.
         except errors.PyMongoError as e: 
             logging.error(f"AtlasConnector: Unable To Fetch Docs: {e}.")
+            raise
         logging.info("AtlasConnector: Fetching Docs From Mongo Atlas...")
         print("fetching docs...")
         for doc in tqdm(cursor):

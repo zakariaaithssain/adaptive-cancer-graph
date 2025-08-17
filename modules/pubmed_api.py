@@ -6,10 +6,8 @@ import logging
 
 from config.apis_config import PM_API_SLEEP_TIME
 
-# TODO : COMBINE THE RETSTART AND RETMAX PARAMS TO GET ALL ARTICLES AVAILABLE
-#FOR THE QUERIES, AND KEEP TRACK OF MPIDS TO NOT REFETCH THE SAME ARTICLES,
-#FOR THIS CONSIDER THE DATE PARAMS TO SPECIFY ONLY GETTING NEW ARTICLES. 
-#TODO 2: FIND THE BEST WAY TO STORE ENTITIES AND RELATIONS, GHALIBAN CSV LI BLAN.
+# TODO CONSIDER THE DATE PARAMS TO SPECIFY ONLY GETTING NEW ARTICLES. 
+
 class PubMedAPI:
     def __init__(self, api_key=None, email=None):
         self.base_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
@@ -171,7 +169,7 @@ class PubMedAPI:
                     id_type = article_id.get('IdType')
                     if id_type == 'pmc':
                         article_pmcid = article_id
-                    if article_pmcid: break
+                    if article_pmcid is not None: break
                 
                 # get mesh terms (medical subject headings for additional entities or labels in neo4j)
                 medical_subject_headings  = []

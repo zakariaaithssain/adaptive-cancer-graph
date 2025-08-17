@@ -125,16 +125,18 @@ class Neo4jAuraConnector:
                 url: row.url
             }}
             """
+        batch_n = 0
         try: 
-            for i in tqdm(range(0, len(nodes_list), self.load_batch_size), desc=f"loading batch {i//self.load_batch_size}..."):
+            for i in tqdm(range(0, len(nodes_list), self.load_batch_size), desc=f"loading batch {batch_n//self.load_batch_size}..."):
+                batch_n = i
                 logging.info(f"AuraConnector: Loading Batch {i//self.load_batch_size} ...")
                 batch = nodes_list[i:i + self.load_batch_size]
                 transaction.run(query, {"batch":batch})
         except Neo4jError as ne:
-            logging.error(f"AuraConnector: Neo4jError: Batch {i//self.load_batch_size}: {ne}")
+            logging.error(f"AuraConnector: Neo4jError: Batch {batch_n//self.load_batch_size}: {ne}")
             raise
         except Exception as e:
-            logging.error(f"AuraConnector: Batch {i//self.load_batch_size}: {e}")
+            logging.error(f"AuraConnector: Batch {batch_n//self.load_batch_size}: {e}")
             raise
         
     def _rels_batch_load(self, relation_type: str, relations_list: list[dict], transaction : Transaction):
@@ -156,17 +158,18 @@ class Neo4jAuraConnector:
         pmcid: row.pmcid,
                  }}
         """
-
+        batch_n = 0
         try: 
-            for i in tqdm(range(0, len(relations_list), self.load_batch_size), desc=f"loading batch {i//self.load_batch_size}..."):
+            for i in tqdm(range(0, len(relations_list), self.load_batch_size), desc=f"loading batch {batch_n//self.load_batch_size}..."):
+                batch_n = i
                 logging.info(f"AuraConnector: Loading Batch {i//self.load_batch_size}...")
                 batch = relations_list[i:i + self.load_batch_size]
                 transaction.run(query, {"batch":batch})
         except Neo4jError as ne:
-            logging.error(f"AuraConnector: Neo4j Error: Batch: {i//self.load_batch_size}: {ne}")
+            logging.error(f"AuraConnector: Neo4j Error: Batch: {batch_n//self.load_batch_size}: {ne}")
             raise
         except Exception as e:
-            logging.error(f"AuraConnector: Batch: {i//self.load_batch_size}: {e}")
+            logging.error(f"AuraConnector: Batch: {batch_n//self.load_batch_size}: {e}")
             raise
             
 

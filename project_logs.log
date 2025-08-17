@@ -1,8 +1,0 @@
-2025-08-15 21:56:30,167 - INFO - Logs: Logs Initialized.
-
-2025-08-15 21:56:33,003 - INFO - PubMed API: API Key Used.
-2025-08-15 21:56:33,003 - INFO - PubMed API: Email Used.
-2025-08-15 21:56:33,003 - INFO - PubMedCentral API: API Key Used.
-2025-08-15 21:56:33,003 - INFO - PubMedCentral API: Email Used.
-
-2025-08-15 21:56:33,257 - INFO - Connector: Sending A Ping To Confirm Connection.
