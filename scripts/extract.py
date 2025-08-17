@@ -1,4 +1,4 @@
-""""this will contain helper functions for the project"""
+""""this will contain Extraction Process functions for the project"""
 import logging 
 
 from modules.pubmed_api import PubMedAPI
@@ -10,22 +10,26 @@ from config.apis_config import PM_QUERIES
 from config.mongodb_config import CONNECTION_STR
 
 
+
+#api key and email are optional, but if not provided, we have less requests rate. 
+pubmed_api = PubMedAPI(api_key = PM_API_KEY_EMAIL["api_key"],
+                        email = PM_API_KEY_EMAIL["email"])
+
+pubmedcentral_api = PubMedCentralAPI(api_key = PM_API_KEY_EMAIL["api_key"],
+                                        email = PM_API_KEY_EMAIL["email"])
+
+mongo_connector = MongoAtlasConnector(connection_str=CONNECTION_STR)
+
+
 #less max_results, less API pression, more loop iterations
 #if max results is not specified, the default is 1k, the max is 10k
 def extract_pubmed_to_mongo(extract_abstracts_only=True, max_results=1000):
-    #api key and email are optional, but if not provided, we have less requests rate. 
-    pubmed_api = PubMedAPI(api_key = PM_API_KEY_EMAIL["api_key"],
-                            email = PM_API_KEY_EMAIL["email"])
-    
-    pubmedcentral_api = PubMedCentralAPI(api_key = PM_API_KEY_EMAIL["api_key"],
-                                          email = PM_API_KEY_EMAIL["email"])
-    connector = MongoAtlasConnector(connection_str=CONNECTION_STR)
     try: 
         all_articles = _get_data_from_apis(pubmed_api, pubmedcentral_api,
                                         extract_abstracts_only,
                                             max_results) 
         
-        connector.load_articles_to_atlas(all_articles, abstract_only = True)
+        mongo_connector.load_articles_to_atlas(all_articles, abstract_only = True)
 
     except KeyboardInterrupt: 
         logging.error("Extraction Process Interrupted Manually.")
@@ -50,11 +54,11 @@ def _get_data_from_apis(pubmed_api, pubmedcentral_api, extract_abstracts_only = 
         pmc_prost_articles = 0
         pmc_stomach_articles = 0 
 
-        if extract_abstracts_only: logging.info(f"Helper: Extracting Abstracts Only. No Calls To PubMedCentral API.\n")
-        else: logging.info(f"Helper: Extracting Abstracts And Body. PubMedCentral API Will Be Called For Each Article.\n")
+        if extract_abstracts_only: logging.info(f"Extraction Process: Extracting Abstracts Only. No Calls To PubMedCentral API.\n")
+        else: logging.info(f"Extraction Process: Extracting Abstracts And Body. PubMedCentral API Will Be Called For Each Article.\n")
         
         for cancer in PM_QUERIES.keys():
-            logging.info(f"Helper: Working On: {cancer.capitalize()} Cancer.\n")
+            logging.info(f"Extraction Process: Working On: {cancer.capitalize()} Cancer.\n")
 
             # searching only once, and using pagination to get all articles per search
             search_results = pubmed_api.search(PM_QUERIES[cancer], max_results=max_results) #a json format
@@ -65,7 +69,7 @@ def _get_data_from_apis(pubmed_api, pubmedcentral_api, extract_abstracts_only = 
             while start < total_count and start < 10000:  
                 remaining = min(total_count - start, 10000 - start) 
                 current_max = min(max_results, remaining)
-                logging.info(f"Helper: {remaining} Articles To Get.")
+                logging.info(f"Extraction Process: {remaining} Articles To Get.")
 
                 current_max = min(max_results, remaining)
                 fetched_xml = pubmed_api.fetch(search_results, start=start, max_results=current_max)
@@ -88,9 +92,9 @@ def _get_data_from_apis(pubmed_api, pubmedcentral_api, extract_abstracts_only = 
 
 
         if not extract_abstracts_only:
-            logging.info(f"Helper: Prostate Cancer: {pmc_prost_articles} Articles Content Present In PubMedCentral.")
-            logging.info(f"Helper: Stomach Cancer: {pmc_stomach_articles} Articles Content Present In PubMedCentral.")
-        else: logging.info(f"Helper: Finished Collecting Articles Abstracts.")
+            logging.info(f"Extraction Process: Prostate Cancer: {pmc_prost_articles} Articles Content Present In PubMedCentral.")
+            logging.info(f"Extraction Process: Stomach Cancer: {pmc_stomach_articles} Articles Content Present In PubMedCentral.")
+        else: logging.info(f"Extraction Process Finished Collecting Articles Abstracts.")
 
         return all_articles 
 

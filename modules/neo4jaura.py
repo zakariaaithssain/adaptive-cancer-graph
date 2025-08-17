@@ -5,7 +5,6 @@ import pandas as pd
 
 from neo4j import GraphDatabase, Transaction
 from neo4j.exceptions import Neo4jError
-from typing import List, Dict
 
 from tqdm import tqdm
 import logging
@@ -106,7 +105,7 @@ class Neo4jAuraConnector:
 
 
 
-    def _ents_batch_load(self, label: str, nodes_list: List[Dict], transaction : Transaction):
+    def _ents_batch_load(self, label: str, nodes_list: list[dict], transaction : Transaction):
         """Entities (nodes) Batch load using UNWIND for optimal performance
         Parameters:
         label = "the label for the nodes to load. (exp 'GENE')
@@ -138,7 +137,7 @@ class Neo4jAuraConnector:
             logging.error(f"AuraConnector: Batch {i//self.load_batch_size}: {e}")
             raise
         
-    def _rels_batch_load(self, relation_type: str, relations_list: List[Dict], transaction : Transaction):
+    def _rels_batch_load(self, relation_type: str, relations_list: list[dict], transaction : Transaction):
         """Relations Batch load using UNWIND for optimal performance
         Parameters:
         relation_type = "the relation_type for the relations to load. (exp 'GENE')
