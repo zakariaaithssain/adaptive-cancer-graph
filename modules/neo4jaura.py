@@ -125,18 +125,15 @@ class Neo4jAuraConnector:
                 url: row.url
             }}
             """
-        batch_n = 0
         try: 
             for i in range(0, len(nodes_list), self.load_batch_size):
-                batch_n = i
-                logging.info(f"AuraConnector: Loading Batch {i//self.load_batch_size} ...")
                 batch = nodes_list[i:i + self.load_batch_size]
                 transaction.run(query, {"batch":batch})
         except Neo4jError as ne:
-            logging.error(f"AuraConnector: Neo4jError: Batch {batch_n//self.load_batch_size}: {ne}")
+            logging.error(f"AuraConnector: Neo4jError: {ne}")
             raise
         except Exception as e:
-            logging.error(f"AuraConnector: Batch {batch_n//self.load_batch_size}: {e}")
+            logging.error(f"AuraConnector: {e}")
             raise
         
     def _rels_batch_load(self, relation_type: str, relations_list: list[dict], transaction : Transaction):
@@ -158,18 +155,15 @@ class Neo4jAuraConnector:
         pmcid: row.pmcid
                  }}
         """
-        batch_n = 0
         try: 
             for i in range(0, len(relations_list), self.load_batch_size):
-                batch_n = i
-                logging.info(f"AuraConnector: Loading Batch {i//self.load_batch_size}...")
                 batch = relations_list[i:i + self.load_batch_size]
                 transaction.run(query, {"batch":batch})
         except Neo4jError as ne:
-            logging.error(f"AuraConnector: Neo4j Error: Batch: {batch_n//self.load_batch_size}: {ne}")
+            logging.error(f"AuraConnector: Neo4j Error: {ne}")
             raise
         except Exception as e:
-            logging.error(f"AuraConnector: Batch: {batch_n//self.load_batch_size}: {e}")
+            logging.error(f"AuraConnector: {e}")
             raise
             
 
@@ -232,7 +226,7 @@ class Neo4jAuraConnector:
             logging.info(f"AuraConnector: Found {len(relations)} {type} Relations In {rels_clean_csv}.")
 
             #format for Neo4j
-            relations.rename(columns={":ID": "id"}, inplace=True, errors='ignore')
+            relations.rename(columns={":ID": "id", ":START_ID": "start_id",":END_ID": "end_id"}, inplace=True, errors='ignore')
             #those will just create redundancy in the graph if kept
             to_drop = [col for col in [":TYPE", "pmid", "pmcid", "fetching_date"] if col in relations.columns]
             relations.drop(columns=to_drop, inplace=True)
