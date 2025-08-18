@@ -4,3 +4,4 @@ config/
 .coverage
 .pytest_cache/
 htmlcov/
+normalization_cache.pkl
