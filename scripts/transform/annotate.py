@@ -4,7 +4,7 @@ from tqdm import tqdm
 
 from modules.mongoatlas import MongoAtlasConnector
 from modules.umls_api import UMLSNormalizer
-from modules.nlp import NLP
+from modules.nlp import OptimizedNLP as NLP
 
 from config.mongodb_config import CONNECTION_STR
 
@@ -24,7 +24,7 @@ def annotate_mongo_articles(ents_path ="data/extracted_entities.csv", rels_path 
 
     logging.info("Annotation Process Started.")
     try:
-        for article in tqdm(articles):
+        for article in tqdm(articles, desc="Applying NLP over Mongo docs:"):
             text = article.pop('text')
             #we are able to chain methods as we return self from each one
             (annotator.extract_and_normalize_entities(text, article_metadata= article)

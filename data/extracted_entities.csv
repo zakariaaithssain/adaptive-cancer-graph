@@ -37,7 +37,7 @@ atm,GENE_OR_GENE_PRODUCT,40785690,40785690,2025-08-18 15:46:55.403,C0919524,ATM 
 snu-1 cell,CELL,40785690,40785690,2025-08-18 15:46:55.403,,,,
 tos,CANCER,40785690,40785690,2025-08-18 15:46:55.403,C4287700,TOS-80T,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4287700
 h2ax,GENE_OR_GENE_PRODUCT,40785690,40785690,2025-08-18 15:46:55.403,C1415406,H2AX gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1415406
-ci,SIMPLE_CHEMICAL,40785690,40785690,2025-08-18 15:46:55.403,C0021610,Inspiratory Capacity,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0021610
+ci,SIMPLE_CHEMICAL,40785690,40785690,2025-08-18 15:46:55.403,,,,
 snu-1 gastric cancer cells,CANCER,40785690,40785690,2025-08-18 15:46:55.403,,,,
 gastric cancer,CANCER,40785690,40785690,2025-08-18 15:46:55.403,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
 gastric carcinoma cells,CANCER,40785690,40785690,2025-08-18 15:46:55.403,C2010505,carcinoma of stomach with osteoclast-like giant cells,MEDCIN,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C2010505
@@ -88,7 +88,7 @@ membrane,CELLULAR_COMPONENT,40775711,40775711,2025-08-18 15:46:55.880,C0025255,M
 humans,ORGANISM,40775711,40775711,2025-08-18 15:46:55.880,C0086418,Homo sapiens,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0086418
 gastric cancer,CANCER,40775711,40775711,2025-08-18 15:46:55.880,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
 cancers,CANCER,40775711,40775711,2025-08-18 15:46:55.880,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
-gc,CANCER,40775711,40775711,2025-08-18 15:46:55.880,C1367452,GC gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1367452
+gc,CANCER,40775711,40775711,2025-08-18 15:46:55.880,,,,
 cellular processes-including,CELL,40775711,40775711,2025-08-18 15:46:55.880,,,,
 humans stomach neoplasms,ORGANISM,40775648,40775648,2025-08-18 15:46:55.980,,,,
 neoplastic platinum kruppel-like,GENE_OR_GENE_PRODUCT,40775648,40775648,2025-08-18 15:46:55.980,,,,
@@ -141,7 +141,7 @@ tumor,CANCER,40775258,40775258,2025-08-18 15:46:56.262,C0027651,Neoplasms,MTH,ht
 metastases,CANCER,40775258,40775258,2025-08-18 15:46:56.262,C2939419,Metastatic malignant neoplasm,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C2939419
 biopsies,CANCER,40775258,40775258,2025-08-18 15:46:56.262,C0005558,Biopsy,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0005558
 patients,ORGANISM,40775258,40775258,2025-08-18 15:46:56.262,C0030705,Patients,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0030705
-a.,ORGANISM,40775258,40775258,2025-08-18 15:46:56.262,C0042839,vitamin A,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0042839
+a.,ORGANISM,40775258,40775258,2025-08-18 15:46:56.262,,,,
 gac,GENE_OR_GENE_PRODUCT,40775258,40775258,2025-08-18 15:46:56.262,C1415112,GLS gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1415112
 lymph node,MULTI_TISSUE_STRUCTURE,40775258,40775258,2025-08-18 15:46:56.262,C0024204,lymph nodes,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024204
 biopsy,PATHOLOGICAL_FORMATION,40775258,40775258,2025-08-18 15:46:56.262,C0005558,Biopsy,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0005558
@@ -168,7 +168,7 @@ mouse,ORGANISM,40775202,40775202,2025-08-18 15:46:56.361,C1331371,Mouse (rodent)
 gc cell lines,CELL,40775202,40775202,2025-08-18 15:46:56.361,,,,
 anti-pd-1,SIMPLE_CHEMICAL,40775202,40775202,2025-08-18 15:46:56.361,C5205393,Anti-PD-1/Anti-PD-L1 Bispecific Antibody LY3434172,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5205393
 pdx mouse,SIMPLE_CHEMICAL,40775202,40775202,2025-08-18 15:46:56.361,C1528564,"Pdx1 protein, mouse",MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1528564
-gc,CANCER,40775202,40775202,2025-08-18 15:46:56.361,C1367452,GC gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1367452
+gc,CANCER,40775202,40775202,2025-08-18 15:46:56.361,,,,
 t cell,CELL,40775202,40775202,2025-08-18 15:46:56.361,C0039194,T-Lymphocyte,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0039194
 ulbp2 car-t cells,CELL,40775202,40775202,2025-08-18 15:46:56.361,,,,
 caf,CANCER,40775202,40775202,2025-08-18 15:46:56.361,C0006644,caffeine,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006644
@@ -567,7 +567,7 @@ mir-3615,ORGANISM,40715337,40715337,2025-08-18 15:46:59.856,C3147897,MIR3615 gen
 gastric cancer cells,CANCER,40715337,40715337,2025-08-18 15:46:59.856,C4076910,GMBP1 peptide,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4076910
 lentiviral,ORGANISM,40715337,40715337,2025-08-18 15:46:59.856,C5206832,Lentiviral Vector Recipient,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5206832
 cck-8,SIMPLE_CHEMICAL,40715337,40715337,2025-08-18 15:46:59.856,C0037167,sincalide,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0037167
-87,CELL,40715337,40715337,2025-08-18 15:46:59.856,C4517895,Eighty Seven,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4517895
+87,CELL,40715337,40715337,2025-08-18 15:46:59.856,,,,
 ags cells,CELL,40715337,40715337,2025-08-18 15:46:59.856,C2703094,AGS-003,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C2703094
 akt2,GENE_OR_GENE_PRODUCT,40715337,40715337,2025-08-18 15:46:59.856,C0812230,AKT2 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0812230
 cytoplasm,ORGANISM_SUBSTANCE,40715337,40715337,2025-08-18 15:46:59.856,C0010834,Cytoplasm,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0010834
@@ -583,7 +583,7 @@ gastric cancer tumor,CANCER,40713854,40713854,2025-08-18 15:46:59.959,C4524765,G
 gastric cancer,CANCER,40713854,40713854,2025-08-18 15:46:59.959,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
 cancers,CANCER,40713854,40713854,2025-08-18 15:46:59.959,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
 serum pandar,ORGANISM_SUBSTANCE,40713854,40713854,2025-08-18 15:46:59.959,,,,
-gc,CANCER,40713854,40713854,2025-08-18 15:46:59.959,C1367452,GC gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1367452
+gc,CANCER,40713854,40713854,2025-08-18 15:46:59.959,,,,
 humans stomach neoplasms galectins,ORGANISM,40710343,40710343,2025-08-18 15:47:00.049,,,,
 tumor,CANCER,40710343,40710343,2025-08-18 15:47:00.049,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
 epithelial,CELL,40710343,40710343,2025-08-18 15:47:00.049,C0221908,Epithelial,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0221908
@@ -608,7 +608,7 @@ nitric oxide,SIMPLE_CHEMICAL,40709427,40709427,2025-08-18 15:47:00.142,C0028128,
 tumor necrosis factor-alpha gastric mucosa catalase vascular endothelial growth factor a interleukin-1beta interleukin-6,CANCER,40709427,40709427,2025-08-18 15:47:00.142,,,,
 annua cyclooxygenase gastric,SIMPLE_CHEMICAL,40709427,40709427,2025-08-18 15:47:00.142,,,,
 prostaglandin,SIMPLE_CHEMICAL,40709427,40709427,2025-08-18 15:47:00.142,C0033554,Prostaglandins,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0033554
-pg,SIMPLE_CHEMICAL,40709427,40709427,2025-08-18 15:47:00.142,C0030827,penicillin G,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0030827
+pg,SIMPLE_CHEMICAL,40709427,40709427,2025-08-18 15:47:00.142,,,,
 gastric,ORGAN,40709427,40709427,2025-08-18 15:47:00.142,C1704242,Gastric (qualifier value),MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1704242
 rats,ORGANISM,40709427,40709427,2025-08-18 15:47:00.142,C0034693,Rattus norvegicus,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0034693
 its,GENE_OR_GENE_PRODUCT,40709427,40709427,2025-08-18 15:47:00.142,C0036916,Sexually Transmitted Diseases,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0036916
@@ -718,7 +718,7 @@ gc cell,CELL,40702064,40702064,2025-08-18 15:47:00.708,C1333296,Activated B-cell
 cck-8,SIMPLE_CHEMICAL,40702064,40702064,2025-08-18 15:47:00.708,C0037167,sincalide,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0037167
 edu,SIMPLE_CHEMICAL,40702064,40702064,2025-08-18 15:47:00.708,C0115521,EdU-MP,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0115521
 wound,PATHOLOGICAL_FORMATION,40702064,40702064,2025-08-18 15:47:00.708,C0043250,Traumatic Wound,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0043250
-if,GENE_OR_GENE_PRODUCT,40702064,40702064,2025-08-18 15:47:00.708,C0750557,If,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0750557
+if,GENE_OR_GENE_PRODUCT,40702064,40702064,2025-08-18 15:47:00.708,,,,
 mt1jp/mir-103a-3p,GENE_OR_GENE_PRODUCT,40702064,40702064,2025-08-18 15:47:00.708,,,,
 mir-103a-3p,CANCER,40702064,40702064,2025-08-18 15:47:00.708,C4742321,"miR-103a-3p, human",MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4742321
 mpdz,GENE_OR_GENE_PRODUCT,40702064,40702064,2025-08-18 15:47:00.708,C1417236,MPDZ gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1417236
@@ -754,7 +754,7 @@ tag,GENE_OR_GENE_PRODUCT,40701960,40701960,2025-08-18 15:47:01.106,C5886749,Tag 
 tmt,GENE_OR_GENE_PRODUCT,40701960,40701960,2025-08-18 15:47:01.106,C0040604,Trail Making Test,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0040604
 fat,CELL,40701960,40701960,2025-08-18 15:47:01.106,C0001527,Adipose tissue,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0001527
 fat4,GENE_OR_GENE_PRODUCT,40701960,40701960,2025-08-18 15:47:01.106,C1427920,FAT4 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1427920
-gc,CANCER,40701960,40701960,2025-08-18 15:47:01.106,C1367452,GC gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1367452
+gc,CANCER,40701960,40701960,2025-08-18 15:47:01.106,,,,
 stomach neoplasms dendritic cells,CANCER,40700119,40700119,2025-08-18 15:47:01.204,,,,
 cancer vaccines,CANCER,40700119,40700119,2025-08-18 15:47:01.204,C0376659,Cancer Vaccines,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0376659
 antigens,CELL,40700119,40700119,2025-08-18 15:47:01.204,C0003320,Antigens,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0003320
@@ -814,7 +814,7 @@ cisplatin,SIMPLE_CHEMICAL,40696490,40696490,2025-08-18 15:47:01.500,C0008838,cis
 gastric cancer,CANCER,40696490,40696490,2025-08-18 15:47:01.500,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
 ddp,SIMPLE_CHEMICAL,40696490,40696490,2025-08-18 15:47:01.500,C0008838,cisplatin,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0008838
 anti-cancer,CANCER,40696490,40696490,2025-08-18 15:47:01.500,C1121049,anti-cancer number one,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1121049
-gc,CANCER,40696490,40696490,2025-08-18 15:47:01.500,C1367452,GC gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1367452
+gc,CANCER,40696490,40696490,2025-08-18 15:47:01.500,,,,
 stomach neoplasms chloride,CANCER,40696397,40696397,2025-08-18 15:47:01.588,,,,
 humans macrophages cell,ORGANISM,40696397,40696397,2025-08-18 15:47:01.588,,,,
 gastric cancer gastric microenvironment macrophages signaling tumor,CANCER,40696397,40696397,2025-08-18 15:47:01.588,,,,
@@ -1161,13 +1161,13 @@ aged,GENE_OR_GENE_PRODUCT,40656957,40656957,2025-08-18 15:47:03.842,C1999167,Old
 lymph node,MULTI_TISSUE_STRUCTURE,40656957,40656957,2025-08-18 15:47:03.842,C0024204,lymph nodes,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024204
 gastric cancer,CANCER,40656957,40656957,2025-08-18 15:47:03.842,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
 d2 dissection,SIMPLE_CHEMICAL,40656957,40656957,2025-08-18 15:47:03.842,C2960517,D2 lymph node dissection,SNOMEDCT_US,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C2960517
-d2,SIMPLE_CHEMICAL,40656957,40656957,2025-08-18 15:47:03.842,C1960606,Measles virus genotype D2,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1960606
+d2,SIMPLE_CHEMICAL,40656957,40656957,2025-08-18 15:47:03.842,,,,
 lymph nodes,MULTI_TISSUE_STRUCTURE,40656957,40656957,2025-08-18 15:47:03.842,C0024204,lymph nodes,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024204
 patient,ORGANISM,40656957,40656957,2025-08-18 15:47:03.842,C1705908,Veterinary Patient,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1705908
 patients,ORGANISM,40656957,40656957,2025-08-18 15:47:03.842,C0030705,Patients,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0030705
 cancer,CANCER,40656957,40656957,2025-08-18 15:47:03.842,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
 crt,CANCER,40656957,40656957,2025-08-18 15:47:03.842,C0436307,Chemoradiotherapy,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0436307
-ct,CANCER,40656957,40656957,2025-08-18 15:47:03.842,C0040405,X-Ray Computed Tomography,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0040405
+ct,CANCER,40656957,40656957,2025-08-18 15:47:03.842,,,,
 humans adenocarcinoma,ORGANISM,40655149,40655149,2025-08-18 15:47:03.940,C5548495,Human papillomavirus-independent adenocarcinoma,SNOMEDCT_US,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5548495
 stomach neoplasms,CANCER,40655149,40655149,2025-08-18 15:47:03.940,C0038356,Stomach Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0038356
 tumor,CANCER,40655149,40655149,2025-08-18 15:47:03.940,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
@@ -1316,7 +1316,7 @@ gastric cancer,CANCER,40650581,40650581,2025-08-18 15:47:04.699,C0024623,Maligna
 patients,ORGANISM,40650581,40650581,2025-08-18 15:47:04.699,C0030705,Patients,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0030705
 peripheral lymphocyte,CELL,40650581,40650581,2025-08-18 15:47:04.699,C1518997,Peripheral Blood Lymphocyte,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1518997
 gastric cancer patients,CANCER,40650581,40650581,2025-08-18 15:47:04.699,C3533302,Functional assessment of cancer therapy for patients with gastric cancer questionnaire - version 4,LNC,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C3533302
-d2,SIMPLE_CHEMICAL,40650581,40650581,2025-08-18 15:47:04.699,C1960606,Measles virus genotype D2,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1960606
+d2,SIMPLE_CHEMICAL,40650581,40650581,2025-08-18 15:47:04.699,,,,
 humans machine,ORGANISM,40649716,40649716,2025-08-18 15:47:04.787,C0024678,Man-Machine Systems,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024678
 gastrointestinal neoplasms immunotherapy,CANCER,40649716,40649716,2025-08-18 15:47:04.787,,,,
 tumor immune,CANCER,40649716,40649716,2025-08-18 15:47:04.787,C4727342,Tumor-Infiltrating Immune Cell,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4727342
@@ -1594,7 +1594,7 @@ vimentin,GENE_OR_GENE_PRODUCT,40615435,40615435,2025-08-18 15:47:07.008,C0042666
 cancer,CANCER,40615435,40615435,2025-08-18 15:47:07.008,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
 tissue,TISSUE,40615435,40615435,2025-08-18 15:47:07.008,C0040300,Body tissue,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0040300
 groups a,SIMPLE_CHEMICAL,40615435,40615435,2025-08-18 15:47:07.008,C1552839,Table Rules - groups,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1552839
-b,GENE_OR_GENE_PRODUCT,40615435,40615435,2025-08-18 15:47:07.008,C0368721,Blood group antigen B,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0368721
+b,GENE_OR_GENE_PRODUCT,40615435,40615435,2025-08-18 15:47:07.008,,,,
 emt-related,GENE_OR_GENE_PRODUCT,40615435,40615435,2025-08-18 15:47:07.008,C4320654,LINC01705 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4320654
 tissue her2,CANCER,40615435,40615435,2025-08-18 15:47:07.008,C5189164,HER2 in tissue by immunoassay,MEDCIN,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5189164
 humans neuroendocrine tumors pancreatic neoplasms intestinal neoplasms stomach neoplasms somatostatin disease,ORGANISM,40615151,40615151,2025-08-18 15:47:07.154,,,,
@@ -1794,7 +1794,7 @@ gastrointestinal,PATHOLOGICAL_FORMATION,40598208,40598208,2025-08-18 15:47:08.62
 helicobacter pylori,ORGANISM,40598208,40598208,2025-08-18 15:47:08.626,C0079488,Helicobacter pylori,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0079488
 gastric cancer,CANCER,40598208,40598208,2025-08-18 15:47:08.626,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
 gut,ORGANISM_SUBDIVISION,40598208,40598208,2025-08-18 15:47:08.626,C0699819,Gut,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0699819
-3r,SIMPLE_CHEMICAL,40598208,40598208,2025-08-18 15:47:08.626,C1436110,3R-(3R-(3R-hydroxybutyryloxy)butyryloxy)butyric acid,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1436110
+3r,SIMPLE_CHEMICAL,40598208,40598208,2025-08-18 15:47:08.626,,,,
 gastric mucosa,MULTI_TISSUE_STRUCTURE,40598208,40598208,2025-08-18 15:47:08.626,C0017136,Gastric mucosa,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0017136
 nanoparticles,CELLULAR_COMPONENT,40598208,40598208,2025-08-18 15:47:08.626,C1450054,Artificial nanoparticles,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1450054
 ros,SIMPLE_CHEMICAL,40598208,40598208,2025-08-18 15:47:08.626,C0289313,rosiglitazone,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0289313
@@ -1930,7 +1930,7 @@ network,MULTI_TISSUE_STRUCTURE,40595924,40595924,2025-08-18 15:47:09.582,C188207
 ac010333.1,GENE_OR_GENE_PRODUCT,40595924,40595924,2025-08-18 15:47:09.582,,,,
 linc00922,CELLULAR_COMPONENT,40595924,40595924,2025-08-18 15:47:09.582,C3816403,LINC00922 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C3816403
 al121772.1,CANCER,40595924,40595924,2025-08-18 15:47:09.582,,,,
-t,CANCER,40595924,40595924,2025-08-18 15:47:09.582,C1552647,ProbabilityDistributionType - T,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1552647
+t,CANCER,40595924,40595924,2025-08-18 15:47:09.582,,,,
 cells,CELL,40595924,40595924,2025-08-18 15:47:09.582,C0007634,Cells,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007634
 mir-144-3p,GENE_OR_GENE_PRODUCT,40595924,40595924,2025-08-18 15:47:09.582,C2976603,"MIRN144 microRNA, rat",MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C2976603
 cdh11,GENE_OR_GENE_PRODUCT,40595924,40595924,2025-08-18 15:47:09.582,C1413269,CDH11 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1413269
@@ -2090,7 +2090,7 @@ cellular,CELL,40594240,40594240,2025-08-18 15:47:10.284,C0178539,Cellular,MTH,ht
 mnng,SIMPLE_CHEMICAL,40594240,40594240,2025-08-18 15:47:10.284,C0025800,Methylnitronitrosoguanidine,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0025800
 epithelial-mesenchymal,CELLULAR_COMPONENT,40594240,40594240,2025-08-18 15:47:10.284,C1523298,epithelial to mesenchymal transition,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1523298
 cell,CELL,40594240,40594240,2025-08-18 15:47:10.284,C0007634,Cells,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007634
-mc,CELL,40594240,40594240,2025-08-18 15:47:10.284,C3642431,MC-Glucan,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C3642431
+mc,CELL,40594240,40594240,2025-08-18 15:47:10.284,,,,
 factor-kappa b,GENE_OR_GENE_PRODUCT,40594240,40594240,2025-08-18 15:47:10.284,C0961340,Receptor Activator of Nuclear Factor-kappa B,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0961340
 nlrp3,GENE_OR_GENE_PRODUCT,40594240,40594240,2025-08-18 15:47:10.284,C1424250,NLRP3 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1424250
 pi3k/akt,GENE_OR_GENE_PRODUCT,40594240,40594240,2025-08-18 15:47:10.284,C1518770,PI3K-AKT Pathway Deregulation,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1518770
@@ -2110,9 +2110,9 @@ women,ORGANISM,40593877,40593877,2025-08-18 15:47:10.387,C0043210,Woman,MTH,http
 participants,ORGANISM,40593877,40593877,2025-08-18 15:47:10.387,C0679646,Participant,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0679646
 serum anti-h. pylori igg,ORGANISM_SUBSTANCE,40593877,40593877,2025-08-18 15:47:10.387,,,,
 pepsinogen,GENE_OR_GENE_PRODUCT,40593877,40593877,2025-08-18 15:47:10.387,C0077923,Pepsinogen A,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0077923
-pg,SIMPLE_CHEMICAL,40593877,40593877,2025-08-18 15:47:10.387,C0030827,penicillin G,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0030827
+pg,SIMPLE_CHEMICAL,40593877,40593877,2025-08-18 15:47:10.387,,,,
 h. pylori-positive,ORGANISM,40593877,40593877,2025-08-18 15:47:10.387,C5205187,Helicobacter pylori Positive,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5205187
-hr,CANCER,40593877,40593877,2025-08-18 15:47:10.387,C1415713,HR gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1415713
+hr,CANCER,40593877,40593877,2025-08-18 15:47:10.387,,,,
 humans,ORGANISM,40593094,40593094,2025-08-18 15:47:10.486,C0086418,Homo sapiens,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0086418
 esophageal neoplasms gastrointestinal,CANCER,40593094,40593094,2025-08-18 15:47:10.486,,,,
 gastrointestinal,PATHOLOGICAL_FORMATION,40593094,40593094,2025-08-18 15:47:10.486,C0521362,gastrointestinal,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0521362
@@ -2211,7 +2211,7 @@ neoplasms,CANCER,40574483,40574483,2025-08-18 15:47:11.219,C0027651,Neoplasms,MT
 stomach neoplasms thyroid neoplasms liver neoplasms,CANCER,40574483,40574483,2025-08-18 15:47:11.219,,,,
 alcohol,SIMPLE_CHEMICAL,40574483,40574483,2025-08-18 15:47:11.219,C0001962,ethanol,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0001962
 cancer,CANCER,40574483,40574483,2025-08-18 15:47:11.219,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
-uk,GENE_OR_GENE_PRODUCT,40574483,40574483,2025-08-18 15:47:11.219,C0449550,Serotype (UK),SNOMEDCT_US,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0449550
+uk,GENE_OR_GENE_PRODUCT,40574483,40574483,2025-08-18 15:47:11.219,,,,
 humans stomach neoplasms female male middle aged,ORGANISM,40574291,40574291,2025-08-18 15:47:11.307,,,,
 muscle,ORGAN,40574291,40574291,2025-08-18 15:47:11.307,C4083049,Muscle (organ),MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4083049
 gastric cancer,CANCER,40574291,40574291,2025-08-18 15:47:11.307,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
@@ -2384,7 +2384,7 @@ neoplasms,CANCER,40562705,40562705,2025-08-18 15:47:12.257,C0027651,Neoplasms,MT
 helicobacter infections gastroscopy china,ORGANISM,40562705,40562705,2025-08-18 15:47:12.257,,,,
 metachronous gastric lesions,CANCER,40562705,40562705,2025-08-18 15:47:12.257,,,,
 gastric cancer,CANCER,40562705,40562705,2025-08-18 15:47:12.257,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
-er,GENE_OR_GENE_PRODUCT,40562705,40562705,2025-08-18 15:47:12.257,C5703066,ER BLOOD GROUP SYSTEM,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5703066
+er,GENE_OR_GENE_PRODUCT,40562705,40562705,2025-08-18 15:47:12.257,,,,
 precancerous lesions,CANCER,40562705,40562705,2025-08-18 15:47:12.257,C0940937,Precancerous lesion,MDR,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0940937
 gastric cancers,CANCER,40562705,40562705,2025-08-18 15:47:12.257,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
 egcs,CANCER,40562705,40562705,2025-08-18 15:47:12.257,C5198774,EGC-M5,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5198774
@@ -2677,7 +2677,7 @@ malignant tumors,CANCER,40532817,40532817,2025-08-18 15:47:14.251,C0006826,Malig
 receptor tyrosine kinase,GENE_OR_GENE_PRODUCT,40532817,40532817,2025-08-18 15:47:14.251,C0206364,Receptor Protein-Tyrosine Kinases,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0206364
 nantais,GENE_OR_GENE_PRODUCT,40532817,40532817,2025-08-18 15:47:14.251,C1622994,RON receptor protein tyrosine kinase,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1622994
 ron,GENE_OR_GENE_PRODUCT,40532817,40532817,2025-08-18 15:47:14.251,C0035827,Rumanian language,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0035827
-gc,CANCER,40532817,40532817,2025-08-18 15:47:14.251,C1367452,GC gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1367452
+gc,CANCER,40532817,40532817,2025-08-18 15:47:14.251,,,,
 srpk1,GENE_OR_GENE_PRODUCT,40532817,40532817,2025-08-18 15:47:14.251,C1420412,SRPK1 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1420412
 srpk1-derived circular,MULTI_TISSUE_STRUCTURE,40532817,40532817,2025-08-18 15:47:14.251,,,,
 circinteractome,CANCER,40532817,40532817,2025-08-18 15:47:14.251,,,,
@@ -2959,7 +2959,7 @@ humans female male,ORGANISM,40515562,40515562,2025-08-18 15:47:16.206,C0511186,E
 stomach neoplasms,CANCER,40515562,40515562,2025-08-18 15:47:16.206,C0038356,Stomach Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0038356
 gastroscopy,ORGANISM,40515562,40515562,2025-08-18 15:47:16.206,C0017195,Endoscopy of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0017195
 subepithelial tumours,CANCER,40515562,40515562,2025-08-18 15:47:16.206,,,,
-er,GENE_OR_GENE_PRODUCT,40515562,40515562,2025-08-18 15:47:16.206,C5703066,ER BLOOD GROUP SYSTEM,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5703066
+er,GENE_OR_GENE_PRODUCT,40515562,40515562,2025-08-18 15:47:16.206,,,,
 gastric subepithelial tumours,CANCER,40515562,40515562,2025-08-18 15:47:16.206,,,,
 sets,CANCER,40515562,40515562,2025-08-18 15:47:16.206,C0150598,Sets goals,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0150598
 patients,ORGANISM,40515562,40515562,2025-08-18 15:47:16.206,C0030705,Patients,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0030705
@@ -3029,7 +3029,7 @@ lymph node,MULTI_TISSUE_STRUCTURE,40504549,40504549,2025-08-18 15:47:16.954,C002
 s-1,SIMPLE_CHEMICAL,40504549,40504549,2025-08-18 15:47:16.954,C0879262,S-1 Antimetabolite agent,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0879262
 capecitabine/oxaliplatin,SIMPLE_CHEMICAL,40504549,40504549,2025-08-18 15:47:16.954,C0879259,Capecitabine/Oxaliplatin,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0879259
 capox,SIMPLE_CHEMICAL,40504549,40504549,2025-08-18 15:47:16.954,C1879915,CAPOX Regimen,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1879915
-ac,CANCER,40504549,40504549,2025-08-18 15:47:16.954,C1550738,ante cibum,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1550738
+ac,CANCER,40504549,40504549,2025-08-18 15:47:16.954,,,,
 patients,ORGANISM,40504549,40504549,2025-08-18 15:47:16.954,C0030705,Patients,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0030705
 humans colorectal neoplasms glucose trans-activators glucose transporter type 4,ORGANISM,40501119,40501119,2025-08-18 15:47:17.046,,,,
 cell,CELL,40501119,40501119,2025-08-18 15:47:17.046,C0007634,Cells,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007634
@@ -3081,7 +3081,7 @@ lymph nodes,MULTI_TISSUE_STRUCTURE,40498647,40498647,2025-08-18 15:47:17.326,C00
 gastric cancer lymph node,CANCER,40498647,40498647,2025-08-18 15:47:17.326,C4524777,Gastric Cancer Pathologic Regional Lymph Nodes TNM Finding v8,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4524777
 gastric cancer,CANCER,40498647,40498647,2025-08-18 15:47:17.326,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
 d2 lymphadenectomy,SIMPLE_CHEMICAL,40498647,40498647,2025-08-18 15:47:17.326,,,,
-ln,CANCER,40498647,40498647,2025-08-18 15:47:17.326,C5700380,LN-144,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5700380
+ln,CANCER,40498647,40498647,2025-08-18 15:47:17.326,,,,
 stomach neoplasms humans b7-h1,CANCER,40498284,40498284,2025-08-18 15:47:17.425,,,,
 tumor,CANCER,40498284,40498284,2025-08-18 15:47:17.425,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
 wnt,GENE_OR_GENE_PRODUCT,40498284,40498284,2025-08-18 15:47:17.425,C3661165,Wnt-C59,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C3661165
@@ -3102,7 +3102,7 @@ bapx1,GENE_OR_GENE_PRODUCT,40497941,40497941,2025-08-18 15:47:17.512,C1412734,NK
 cancer cell,CELL,40497941,40497941,2025-08-18 15:47:17.512,C0334227,"Tumor cells, malignant",SNOMEDCT_US,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0334227
 ovarian cancer p53,CANCER,40497941,40497941,2025-08-18 15:47:17.512,,,,
 nkx3-2,GENE_OR_GENE_PRODUCT,40497941,40497941,2025-08-18 15:47:17.512,C1412734,NKX3-2 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1412734
-nk,CELL,40497941,40497941,2025-08-18 15:47:17.512,C0666497,NK 104,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0666497
+nk,CELL,40497941,40497941,2025-08-18 15:47:17.512,,,,
 ovarian tumors,CANCER,40497941,40497941,2025-08-18 15:47:17.512,C0919267,ovarian neoplasm,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0919267
 gastric cancer cells,CELL,40497941,40497941,2025-08-18 15:47:17.512,C4076910,GMBP1 peptide,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4076910
 cancer cell,CANCER,40497941,40497941,2025-08-18 15:47:17.512,C0334227,"Tumor cells, malignant",SNOMEDCT_US,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0334227
@@ -3176,7 +3176,7 @@ humans synovial fluid,ORGANISM,40494845,40494845,2025-08-18 15:47:18.064,C053667
 tumor necrosis factor-alpha janus kinase,GENE_OR_GENE_PRODUCT,40494845,40494845,2025-08-18 15:47:18.064,,,,
 adalimumab,SIMPLE_CHEMICAL,40494845,40494845,2025-08-18 15:47:18.064,C1122087,adalimumab,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1122087
 rna single-cell gene,GENE_OR_GENE_PRODUCT,40494845,40494845,2025-08-18 15:47:18.064,C5944723,"Digital PCR RNA analysis of 9 genes (EGFR, KRAS, BRAF, ALK, ROS1, RET, NTRK 1/2/3, ERBB2, and MET), interrogation for single-nucleotide variants, insertions/deletions, gene rearrangements in formalin-fixed paraffin-embedded (FFPE) tissue. reported as actionable detected variants for therapy selection in non-small cell lung cancer",CPT,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5944723
-ra,CANCER,40494845,40494845,2025-08-18 15:47:18.064,C0003873,Rheumatoid Arthritis,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0003873
+ra,CANCER,40494845,40494845,2025-08-18 15:47:18.064,,,,
 synovial tissue,TISSUE,40494845,40494845,2025-08-18 15:47:18.064,C1267208,Synovial tissue of joint OR tendon sheath OR aponeurosis,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1267208
 single-cell,CELL,40494845,40494845,2025-08-18 15:47:18.064,C5554878,Single Cell Specimen,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5554878
 tnf-α,GENE_OR_GENE_PRODUCT,40494845,40494845,2025-08-18 15:47:18.064,C1456820,Tumor Necrosis Factor-alpha,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1456820
@@ -3266,7 +3266,7 @@ gastric cancer,CANCER,40481489,40481489,2025-08-18 15:47:18.530,C0024623,Maligna
 hnrnpk tenm3-as1,GENE_OR_GENE_PRODUCT,40481489,40481489,2025-08-18 15:47:18.530,,,,
 tumor,CANCER,40481489,40481489,2025-08-18 15:47:18.530,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
 fatty acid,SIMPLE_CHEMICAL,40481489,40481489,2025-08-18 15:47:18.530,C0015684,Fatty Acids,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0015684
-fa,SIMPLE_CHEMICAL,40481489,40481489,2025-08-18 15:47:18.530,C0016410,folic acid,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0016410
+fa,SIMPLE_CHEMICAL,40481489,40481489,2025-08-18 15:47:18.530,,,,
 stomach neoplasms humans peritoneal neoplasms bevacizumab male,CANCER,40481442,40481442,2025-08-18 15:47:18.620,,,,
 paclitaxel,SIMPLE_CHEMICAL,40481442,40481442,2025-08-18 15:47:18.620,C0144576,paclitaxel,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0144576
 immune checkpoint,GENE_OR_GENE_PRODUCT,40481442,40481442,2025-08-18 15:47:18.620,C4684977,Immune Checkpoint Inhibitors,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4684977
@@ -3415,14 +3415,14 @@ cancer,CANCER,40472683,40472683,2025-08-18 15:47:19.400,C0006826,Malignant Neopl
 gastroesophageal cancers,CANCER,40472683,40472683,2025-08-18 15:47:19.400,C5400195,Gastroesophageal junction cancer,MDR,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5400195
 gec,CANCER,40472683,40472683,2025-08-18 15:47:19.400,C4054896,Global Executive Composite,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4054896
 squamous cell carcinoma,CANCER,40472683,40472683,2025-08-18 15:47:19.400,C0007137,Squamous cell carcinoma,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007137
-ai,CELL,40472683,40472683,2025-08-18 15:47:19.400,C0003504,Aortic Valve Insufficiency,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0003504
+ai,CELL,40472683,40472683,2025-08-18 15:47:19.400,,,,
 pd-l1,GENE_OR_GENE_PRODUCT,40472683,40472683,2025-08-18 15:47:19.400,C4284303,PD-L1 Positive,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4284303
 her2,GENE_OR_GENE_PRODUCT,40472683,40472683,2025-08-18 15:47:19.400,C0242957,ERBB2 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0242957
 gec,CELL,40472683,40472683,2025-08-18 15:47:19.400,C4054896,Global Executive Composite,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4054896
-ai,SIMPLE_CHEMICAL,40472683,40472683,2025-08-18 15:47:19.400,C0003504,Aortic Valve Insufficiency,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0003504
+ai,SIMPLE_CHEMICAL,40472683,40472683,2025-08-18 15:47:19.400,,,,
 humans esophageal neoplasms stomach neoplasms netherlands male female aged middle aged,ORGANISM,40470592,40470592,2025-08-18 15:47:19.499,,,,
 esophageal cancer gastric cancer,CANCER,40470592,40470592,2025-08-18 15:47:19.499,C4763619,First Degree Family History of Esophageal or Gastric Esophageal Cancer,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4763619
-ec,CELL,40470592,40470592,2025-08-18 15:47:19.499,C0939526,Videx EC,RXNORM,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0939526
+ec,CELL,40470592,40470592,2025-08-18 15:47:19.499,,,,
 gastric cancer,CANCER,40470592,40470592,2025-08-18 15:47:19.499,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
 cancer,CANCER,40470592,40470592,2025-08-18 15:47:19.499,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
 patients,ORGANISM,40470592,40470592,2025-08-18 15:47:19.499,C0030705,Patients,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0030705
@@ -3446,7 +3446,7 @@ tace,CANCER,40468032,40468032,2025-08-18 15:47:19.700,C0723595,Tace,MTH,https://
 gastric cancer,CANCER,40468032,40468032,2025-08-18 15:47:19.700,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
 arterial,MULTI_TISSUE_STRUCTURE,40468032,40468032,2025-08-18 15:47:19.700,C0221464,Arterial,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0221464
 tace,GENE_OR_GENE_PRODUCT,40468032,40468032,2025-08-18 15:47:19.700,C0723595,Tace,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0723595
-be,CANCER,40468032,40468032,2025-08-18 15:47:19.700,C0014121,Bacterial Endocarditis,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0014121
+be,CANCER,40468032,40468032,2025-08-18 15:47:19.700,,,,
 lipiodol,ORGANISM_SUBDIVISION,40468032,40468032,2025-08-18 15:47:19.700,C0947677,Lipiodol,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0947677
 humans stomach neoplasms withanolides mitochondria,ORGANISM,40467837,40467837,2025-08-18 15:47:19.791,,,,
 cell line,CELL,40467837,40467837,2025-08-18 15:47:19.791,C0007600,Cultured Cell Line,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007600
@@ -3977,7 +3977,7 @@ patient,ORGANISM,40433880,40433880,2025-08-18 15:47:23.211,C1705908,Veterinary P
 mouse,ORGANISM,40433880,40433880,2025-08-18 15:47:23.211,C1331371,Mouse (rodent),MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1331371
 stromal cell,CELL,40433880,40433880,2025-08-18 15:47:23.211,C0162597,Stromal Cells,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0162597
 cell,CELL,40433880,40433880,2025-08-18 15:47:23.211,C0007634,Cells,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007634
-ia,GENE_OR_GENE_PRODUCT,40433880,40433880,2025-08-18 15:47:23.211,C0444974,Serotype Ia,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0444974
+ia,GENE_OR_GENE_PRODUCT,40433880,40433880,2025-08-18 15:47:23.211,,,,
 t-cell,CELL,40433880,40433880,2025-08-18 15:47:23.211,C0039194,T-Lymphocyte,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0039194
 tme cellular,CELL,40433880,40433880,2025-08-18 15:47:23.211,,,,
 il-1,GENE_OR_GENE_PRODUCT,40433880,40433880,2025-08-18 15:47:23.211,C0021755,Interleukin-1,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0021755
@@ -4010,7 +4010,7 @@ ptc,CANCER,40430098,40430098,2025-08-18 15:47:23.503,C4048712,factor IX complex,
 mesenchymal stem/stromal cells,CELL,40430098,40430098,2025-08-18 15:47:23.503,C5419456,Allogeneic Adipose-derived Mesenchymal Stem Cells,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5419456
 mscs,CELL,40430098,40430098,2025-08-18 15:47:23.503,C2248778,cyclic nucleotide-gated mechanosensitive ion channel activity,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C2248778
 thyroid,ORGAN,40430098,40430098,2025-08-18 15:47:23.503,C0040132,Thyroid Gland,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0040132
-nt,CANCER,40430098,40430098,2025-08-18 15:47:23.503,C4726558,NT-I7,DRUGBANK,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4726558
+nt,CANCER,40430098,40430098,2025-08-18 15:47:23.503,,,,
 ptc-derived mscs,CELL,40430098,40430098,2025-08-18 15:47:23.503,,,,
 msc,CELL,40430098,40430098,2025-08-18 15:47:23.503,C1334531,MSC gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1334531
 thyroid msc populations,CELL,40430098,40430098,2025-08-18 15:47:23.503,,,,
@@ -4055,7 +4055,7 @@ trastuzumab,SIMPLE_CHEMICAL,40426308,40426308,2025-08-18 15:47:23.697,C0728747,t
 human epidermal growth factor receptor 2,ORGANISM,40426308,40426308,2025-08-18 15:47:23.697,C3496586,"epidermal growth factor receptor 2, human",MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C3496586
 her2-positive gc,CANCER,40426308,40426308,2025-08-18 15:47:23.697,,,,
 hedgehog,GENE_OR_GENE_PRODUCT,40426308,40426308,2025-08-18 15:47:23.697,C0018866,Erinaceidae,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0018866
-hh,GENE_OR_GENE_PRODUCT,40426308,40426308,2025-08-18 15:47:23.697,C4554369,HH genotype,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4554369
+hh,GENE_OR_GENE_PRODUCT,40426308,40426308,2025-08-18 15:47:23.697,,,,
 her2-positive gastric cancer,CANCER,40426308,40426308,2025-08-18 15:47:23.697,C1868895,HER2-positive gastric cancer,SNOMEDCT_US,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1868895
 humans male helicobacter infections female stomach neoplasms,ORGANISM,40426075,40426075,2025-08-18 15:47:23.786,,,,
 helicobacter pylori precancerous,ORGANISM,40426075,40426075,2025-08-18 15:47:23.786,,,,
@@ -5162,7 +5162,7 @@ nac,SIMPLE_CHEMICAL,40329193,40329193,2025-08-18 15:47:31.671,C1622105,NAC Subst
 patients,ORGANISM,40329193,40329193,2025-08-18 15:47:31.671,C0030705,Patients,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0030705
 gastric cancer,CANCER,40329193,40329193,2025-08-18 15:47:31.671,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
 lagc,CANCER,40329193,40329193,2025-08-18 15:47:31.671,C1437862,"LagC protein, Dictyostelium discoideum",MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1437862
-ct,SIMPLE_CHEMICAL,40329193,40329193,2025-08-18 15:47:31.671,C0040405,X-Ray Computed Tomography,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0040405
+ct,SIMPLE_CHEMICAL,40329193,40329193,2025-08-18 15:47:31.671,,,,
 gastric cancer patients,CANCER,40329193,40329193,2025-08-18 15:47:31.671,C3533302,Functional assessment of cancer therapy for patients with gastric cancer questionnaire - version 4,LNC,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C3533302
 humans stomach neoplasms extracellular matrix liver neoplasms animals tumor microenvironment cell line,ORGANISM,40327295,40327295,2025-08-18 15:47:31.762,,,,
 tumor,CANCER,40327295,40327295,2025-08-18 15:47:31.762,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
@@ -5859,7 +5859,7 @@ b-cell lymphoma,CANCER,40276842,40276842,2025-08-18 16:17:04.060,C0079731,B-Cell
 pg-dlbcl,CANCER,40276842,40276842,2025-08-18 16:17:04.060,,,,
 tumor,CANCER,40276842,40276842,2025-08-18 16:17:04.060,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
 lymphoma,CANCER,40276842,40276842,2025-08-18 16:17:04.060,C0024299,Lymphoma,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024299
-sr,GENE_OR_GENE_PRODUCT,40276842,40276842,2025-08-18 16:17:04.060,C3891546,SR cell line,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C3891546
+sr,GENE_OR_GENE_PRODUCT,40276842,40276842,2025-08-18 16:17:04.060,,,,
 gastric diffuse large b cell lymphoma,CANCER,40276842,40276842,2025-08-18 16:17:04.060,C1335483,Gastric Diffuse Large B-Cell Lymphoma,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1335483
 humans stomach neoplasms male,ORGANISM,40275469,40275469,2025-08-18 16:17:04.183,,,,
 f18 oxaliplatin,CANCER,40275469,40275469,2025-08-18 16:17:04.183,,,,
@@ -6160,7 +6160,7 @@ act,SIMPLE_CHEMICAL,40251306,40251306,2025-08-18 16:17:07.454,C1551336,Act Class
 cea,GENE_OR_GENE_PRODUCT,40251306,40251306,2025-08-18 16:17:07.454,C3463961,Cea <Ceinae>,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C3463961
 nlr,GENE_OR_GENE_PRODUCT,40251306,40251306,2025-08-18 16:17:07.454,C4277661,NLR Proteins,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4277661
 plr,GENE_OR_GENE_PRODUCT,40251306,40251306,2025-08-18 16:17:07.454,C0484790,Cholest Plr-mCnc,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0484790
-cs,CELL,40251306,40251306,2025-08-18 16:17:07.454,C1413745,CS gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1413745
+cs,CELL,40251306,40251306,2025-08-18 16:17:07.454,,,,
 slovakia,ORGANISM,40251306,40251306,2025-08-18 16:17:07.454,C0206579,Slovakia,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0206579
 stomach neoplasms animals humans cell line,CANCER,40250508,40250508,2025-08-18 16:17:07.552,,,,
 tumor,CANCER,40250508,40250508,2025-08-18 16:17:07.552,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
@@ -6457,7 +6457,7 @@ cancer,CANCER,40240417,40240417,2025-08-18 16:17:09.234,C0006826,Malignant Neopl
 stomach cancer,CANCER,40240417,40240417,2025-08-18 16:17:09.234,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
 gastric cancer,CANCER,40240417,40240417,2025-08-18 16:17:09.234,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
 helicobacter pylori,ORGANISM,40240417,40240417,2025-08-18 16:17:09.234,C0079488,Helicobacter pylori,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0079488
-or,ORGANISM,40240417,40240417,2025-08-18 16:17:09.234,C1518602,or - article,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1518602
+or,ORGANISM,40240417,40240417,2025-08-18 16:17:09.234,,,,
 decitabine killer cells,CELL,40240368,40240368,2025-08-18 16:17:09.329,,,,
 humans stomach neoplasms animals cell,ORGANISM,40240368,40240368,2025-08-18 16:17:09.329,,,,
 cell line,CELL,40240368,40240368,2025-08-18 16:17:09.329,C0007600,Cultured Cell Line,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007600
@@ -6555,7 +6555,6 @@ humans stomach neoplasms,ORGANISM,40234884,40234884,2025-08-18 16:17:09.894,,,,
 esophageal neoplasms middle aged,CANCER,40234884,40234884,2025-08-18 16:17:09.894,,,,
 aged,GENE_OR_GENE_PRODUCT,40234884,40234884,2025-08-18 16:17:09.894,C1999167,Old age,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1999167
 gastric cancer,CANCER,40234884,40234884,2025-08-18 16:17:09.894,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
-gastric cancer,CANCER,40234884,40234884,2025-08-18 16:17:09.894,,,,
 cancer,CANCER,40234884,40234884,2025-08-18 16:17:09.894,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
 gastroesophageal junction cancer,PATHOLOGICAL_FORMATION,40234884,40234884,2025-08-18 16:17:09.894,C5400195,Gastroesophageal junction cancer,MDR,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5400195
 exosomes stomach neoplasms humans micrornas,CANCER,40234641,40234641,2025-08-18 16:17:09.980,,,,
@@ -6735,12 +6734,623 @@ tumor,CANCER,40220876,40220876,2025-08-18 16:17:11.683,C0027651,Neoplasms,MTH,ht
 p53 helicobacter,GENE_OR_GENE_PRODUCT,40220876,40220876,2025-08-18 16:17:11.683,,,,
 gastric cancer intestinal metaplasia organoids wnt,CANCER,40220876,40220876,2025-08-18 16:17:11.683,,,,
 helicobacter pylori,ORGANISM,40220876,40220876,2025-08-18 16:17:11.683,C0079488,Helicobacter pylori,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0079488
-ag,GENE_OR_GENE_PRODUCT,40220876,40220876,2025-08-18 16:17:11.683,C0002555,aminoglutethimide,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0002555
+ag,GENE_OR_GENE_PRODUCT,40220876,40220876,2025-08-18 16:17:11.683,,,,
 intestinal metaplasia,CANCER,40220876,40220876,2025-08-18 16:17:11.683,C0334037,Intestinal metaplasia,SNOMEDCT_US,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0334037
 gastric cancer,CANCER,40220876,40220876,2025-08-18 16:17:11.683,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
-ag,CELL,40220876,40220876,2025-08-18 16:17:11.683,C0002555,aminoglutethimide,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0002555
-im,GENE_OR_GENE_PRODUCT,40220876,40220876,2025-08-18 16:17:11.683,C0718791,Baci-IM,RXNORM,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0718791
+ag,CELL,40220876,40220876,2025-08-18 16:17:11.683,,,,
+im,GENE_OR_GENE_PRODUCT,40220876,40220876,2025-08-18 16:17:11.683,,,,
 mouse,ORGANISM,40220876,40220876,2025-08-18 16:17:11.683,C1331371,Mouse (rodent),MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1331371
 human,ORGANISM,40220876,40220876,2025-08-18 16:17:11.683,C0086418,Homo sapiens,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0086418
 human gastric organoids,ORGANISM,40220876,40220876,2025-08-18 16:17:11.683,,,,
 human gastric epithelial cells,ORGANISM,40220876,40220876,2025-08-18 16:17:11.683,,,,
+humans neuroendocrine tumors pancreatic neoplasms stomach neoplasms intestinal neoplasms alpha particles,ORGANISM,40220045,40220045,2025-08-18 16:17:11.795,,,,
+somatostatin radiopharmaceuticals,GENE_OR_GENE_PRODUCT,40220045,40220045,2025-08-18 16:17:11.795,,,,
+gastrointestinal neoplasms gastroenteropancreatic neuroendocrine neoplasm peptide receptor radionuclide,CANCER,40220045,40220045,2025-08-18 16:17:11.795,,,,
+gastroenteropancreatic neuroendocrine neoplasms,CANCER,40220045,40220045,2025-08-18 16:17:11.795,C1333799,Digestive System Neuroendocrine Neoplasm,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1333799
+gep-nens,CANCER,40220045,40220045,2025-08-18 16:17:11.795,C1333799,Digestive System Neuroendocrine Neoplasm,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1333799
+patients,ORGANISM,40220045,40220045,2025-08-18 16:17:11.795,C0030705,Patients,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0030705
+somatostatin receptor,GENE_OR_GENE_PRODUCT,40220045,40220045,2025-08-18 16:17:11.795,C0074830,Somatostatin Receptor,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0074830
+tumors,CANCER,40220045,40220045,2025-08-18 16:17:11.795,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+somatostatin,GENE_OR_GENE_PRODUCT,40220045,40220045,2025-08-18 16:17:11.795,C0037659,somatostatin,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0037659
+well-differentiated,CANCER,40220045,40220045,2025-08-18 16:17:11.795,C0205615,Well Differentiated,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0205615
+slow-growing gep-nens,CANCER,40220045,40220045,2025-08-18 16:17:11.795,,,,
+gep-nens patients,CANCER,40220045,40220045,2025-08-18 16:17:11.795,,,,
+tat,GENE_OR_GENE_PRODUCT,40220045,40220045,2025-08-18 16:17:11.795,C0017375,tat Genes,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0017375
+humans stomach neoplasms membrane,ORGANISM,40219804,40219804,2025-08-18 16:17:11.892,,,,
+adenocarcinoma tumor,CANCER,40219804,40219804,2025-08-18 16:17:11.892,C5909443,Pancreatic Mixed Ductal Adenocarcinoma-Neuroendocrine Tumor,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5909443
+tumor,CANCER,40219804,40219804,2025-08-18 16:17:11.892,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+neoplastic middle,PATHOLOGICAL_FORMATION,40219804,40219804,2025-08-18 16:17:11.892,C5420535,Non-Neoplastic Middle Ear Disorder,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5420535
+lymphocytes,CELL,40219804,40219804,2025-08-18 16:17:11.892,C1550651,Specimen Type - Lymphocytes,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1550651
+tumor-infiltrating,CELL,40219804,40219804,2025-08-18 16:17:11.892,C0079722,"Lymphocytes, Tumor-Infiltrating",MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0079722
+objectiveto,GENE_OR_GENE_PRODUCT,40219804,40219804,2025-08-18 16:17:11.892,,,,
+transmembrane protein 119,GENE_OR_GENE_PRODUCT,40219804,40219804,2025-08-18 16:17:11.892,C1823380,TMEM119 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1823380
+stomach adenocarcinoma,CANCER,40219804,40219804,2025-08-18 16:17:11.892,C0278701,Gastric Adenocarcinoma,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0278701
+cancer,CANCER,40219804,40219804,2025-08-18 16:17:11.892,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
+tcga,CANCER,40219804,40219804,2025-08-18 16:17:11.892,C5669547,TCGA Data Coordinating Center Archive,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5669547
+omnibus,GENE_OR_GENE_PRODUCT,40219804,40219804,2025-08-18 16:17:11.892,C0683456,omnibus personality test,CHV,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0683456
+geo,GENE_OR_GENE_PRODUCT,40219804,40219804,2025-08-18 16:17:11.892,C5813441,Arlamol geo,DRUGBANK,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5813441
+tmem119,GENE_OR_GENE_PRODUCT,40219804,40219804,2025-08-18 16:17:11.892,C1823380,TMEM119 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1823380
+gastric adenocarcinoma,CANCER,40219804,40219804,2025-08-18 16:17:11.892,C0278701,Gastric Adenocarcinoma,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0278701
+humans stomach neoplasms isoflavones stat3 transcription factor cell,ORGANISM,40217305,40217305,2025-08-18 16:17:11.980,,,,
+cell line,CELL,40217305,40217305,2025-08-18 16:17:11.980,C0007600,Cultured Cell Line,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007600
+tumor,CANCER,40217305,40217305,2025-08-18 16:17:11.980,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+focal adhesion kinase 1,GENE_OR_GENE_PRODUCT,40217305,40217305,2025-08-18 16:17:11.980,C0059239,Focal Adhesion Kinase 1,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0059239
+cell,CELL,40217305,40217305,2025-08-18 16:17:11.980,C0007634,Cells,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007634
+gastric cancer puerarin,CANCER,40217305,40217305,2025-08-18 16:17:11.980,,,,
+gastric cancer,CANCER,40217305,40217305,2025-08-18 16:17:11.980,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+malignant tumor,CANCER,40217305,40217305,2025-08-18 16:17:11.980,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
+daidzein,SIMPLE_CHEMICAL,40217305,40217305,2025-08-18 16:17:11.980,C0057090,daidzein,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0057090
+puerarin,SIMPLE_CHEMICAL,40217305,40217305,2025-08-18 16:17:11.980,C0072591,puerarin,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0072591
+humans stomach neoplasms stearoyl-coa desaturase,ORGANISM,40214825,40214825,2025-08-18 16:17:12.065,,,,
+mice,ORGANISM,40214825,40214825,2025-08-18 16:17:12.065,C0025914,House mice,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0025914
+nude cell line,ORGANISM,40214825,40214825,2025-08-18 16:17:12.065,,,,
+tumor female cell,CELL,40214825,40214825,2025-08-18 16:17:12.065,C1402884,"tumor; Leydig cell, unspecified site, female",ICPC2ICD10ENG,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1402884
+neoplastic disease,CANCER,40214825,40214825,2025-08-18 16:17:12.065,C1882062,Neoplastic disease,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1882062
+inbred balb c,CELL,40214825,40214825,2025-08-18 16:17:12.065,C0025919,"Mice, Inbred BALB C",MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0025919
+gastric cancer,CANCER,40214825,40214825,2025-08-18 16:17:12.065,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+disease,CANCER,40214825,40214825,2025-08-18 16:17:12.065,C0012634,Disease,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0012634
+tpm4,GENE_OR_GENE_PRODUCT,40214825,40214825,2025-08-18 16:17:12.065,C1420875,TPM4 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1420875
+cytoskeleton,CELLULAR_COMPONENT,40214825,40214825,2025-08-18 16:17:12.065,C0010853,Cytoskeleton,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0010853
+cells,CELL,40214825,40214825,2025-08-18 16:17:12.065,C0007634,Cells,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007634
+gc cells,CELL,40214825,40214825,2025-08-18 16:17:12.065,C1333296,Activated B-cell type diffuse large B-cell lymphoma,MDR,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1333296
+xenograft,CANCER,40214825,40214825,2025-08-18 16:17:12.065,C0522537,Xenograft type of graft,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0522537
+nude mice,ORGANISM,40214825,40214825,2025-08-18 16:17:12.065,C0025932,"Mice, Nude",MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0025932
+stearoyl-coa desaturase 1,GENE_OR_GENE_PRODUCT,40214825,40214825,2025-08-18 16:17:12.065,C4042734,"stearoyl-CoA desaturase SCD-1, rat",MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4042734
+scd1,GENE_OR_GENE_PRODUCT,40214825,40214825,2025-08-18 16:17:12.065,C1419846,SCD gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1419846
+tissues,TISSUE,40214825,40214825,2025-08-18 16:17:12.065,C0040300,Body tissue,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0040300
+gc cell,CELL,40214825,40214825,2025-08-18 16:17:12.065,C1333296,Activated B-cell type diffuse large B-cell lymphoma,MDR,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1333296
+tumor,CANCER,40214825,40214825,2025-08-18 16:17:12.065,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+humans helicobacter pylori stomach neoplasms,ORGANISM,40214252,40214252,2025-08-18 16:17:12.163,,,,
+helicobacter pylori,ORGANISM,40214252,40214252,2025-08-18 16:17:12.163,C0079488,Helicobacter pylori,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0079488
+gastric cancer,CANCER,40214252,40214252,2025-08-18 16:17:12.163,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+humans,ORGANISM,40213543,40213543,2025-08-18 16:17:12.247,C0086418,Homo sapiens,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0086418
+tumor,CANCER,40213543,40213543,2025-08-18 16:17:12.247,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+mice neoplasms cell line,ORGANISM,40213543,40213543,2025-08-18 16:17:12.247,,,,
+tumor stomach neoplasms,CANCER,40213543,40213543,2025-08-18 16:17:12.247,C4066638,biopsy stomach benign vascular neoplasm glomus tumor,MEDCIN,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4066638
+neoplastic mttp gastric cancer,CANCER,40213543,40213543,2025-08-18 16:17:12.247,,,,
+mttp,GENE_OR_GENE_PRODUCT,40213543,40213543,2025-08-18 16:17:12.247,C1826328,MTTP gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1826328
+vldl,SIMPLE_CHEMICAL,40213543,40213543,2025-08-18 16:17:12.247,C0523560,VLDL cholesterol measurement,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0523560
+hepatocytes,CELL,40213543,40213543,2025-08-18 16:17:12.247,C0227525,Hepatocyte,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0227525
+chylomicrons,ORGANISM_SUBSTANCE,40213543,40213543,2025-08-18 16:17:12.247,C0008731,Chylomicrons,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0008731
+intestinal cells,CELL,40213543,40213543,2025-08-18 16:17:12.247,C5690737,"M Cells, Intestinal",MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5690737
+tissues,TISSUE,40213543,40213543,2025-08-18 16:17:12.247,C0040300,Body tissue,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0040300
+liver,ORGAN,40213543,40213543,2025-08-18 16:17:12.247,C0023884,Liver,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0023884
+intestine,ORGAN,40213543,40213543,2025-08-18 16:17:12.247,C0021853,Intestines,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0021853
+heart,ORGAN,40213543,40213543,2025-08-18 16:17:12.247,C0018787,Heart,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0018787
+neural tissues,TISSUE,40213543,40213543,2025-08-18 16:17:12.247,C0027757,Nerve Tissue,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027757
+antigen-presenting cells,CELL,40213543,40213543,2025-08-18 16:17:12.247,C0003315,Antigen-Presenting Cells,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0003315
+lipid,SIMPLE_CHEMICAL,40213543,40213543,2025-08-18 16:17:12.247,C0023779,Lipids,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0023779
+insulin,GENE_OR_GENE_PRODUCT,40213543,40213543,2025-08-18 16:17:12.247,C0021641,Insulin,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0021641
+cardiovascular,ANATOMICAL_SYSTEM,40213543,40213543,2025-08-18 16:17:12.247,C0007226,Cardiovascular system,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007226
+cancer,CANCER,40213543,40213543,2025-08-18 16:17:12.247,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
+pan-cancer,CANCER,40213543,40213543,2025-08-18 16:17:12.247,C5225362,targeted mrna sequence analysis panel hereditary pan cancer,MEDCIN,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5225362
+human tumors,ORGANISM,40213543,40213543,2025-08-18 16:17:12.247,C4730212,"IVD Panels, Human Genetics, Cancer, Somatic, Gastrointestinal Stromal Tumors",UMD,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4730212
+stomach neoplasms humans single-cell,CANCER,40209679,40209679,2025-08-18 16:17:12.337,,,,
+neoplastic,ANATOMICAL_SYSTEM,40209679,40209679,2025-08-18 16:17:12.337,C1709160,Neoplastic,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1709160
+cell-type-specific,GENE_OR_GENE_PRODUCT,40209679,40209679,2025-08-18 16:17:12.337,C0301932,"Autoimmune reaction, specific organ or cell type",SNOMEDCT_US,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0301932
+gastric cancer,CANCER,40209679,40209679,2025-08-18 16:17:12.337,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+disease,CANCER,40209679,40209679,2025-08-18 16:17:12.337,C0012634,Disease,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0012634
+single-cell,CELL,40209679,40209679,2025-08-18 16:17:12.337,C5554878,Single Cell Specimen,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5554878
+gastric tissues,CANCER,40209679,40209679,2025-08-18 16:17:12.337,C1517454,Gastric Tissue,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1517454
+bian,CELL,40209679,40209679,2025-08-18 16:17:12.337,C3988385,Vittatus bian,NCBI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C3988385
+humans,ORGANISM,40208307,40208307,2025-08-18 16:17:12.420,C0086418,Homo sapiens,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0086418
+ubiquitins,GENE_OR_GENE_PRODUCT,40208307,40208307,2025-08-18 16:17:12.420,C0994452,Ubiquitins,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0994452
+tumor,CANCER,40208307,40208307,2025-08-18 16:17:12.420,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+neoplasms,CANCER,40208307,40208307,2025-08-18 16:17:12.420,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+b7-h1 antigen,GENE_OR_GENE_PRODUCT,40208307,40208307,2025-08-18 16:17:12.420,C3203086,"Antigens, CD274",MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C3203086
+interferon-stimulated,GENE_OR_GENE_PRODUCT,40208307,40208307,2025-08-18 16:17:12.420,C2599876,Mitogen stimulated gamma interferon,LNC,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C2599876
+isg15,GENE_OR_GENE_PRODUCT,40208307,40208307,2025-08-18 16:17:12.420,C1825621,ISG15 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1825621
+ubiquitin-like,GENE_OR_GENE_PRODUCT,40208307,40208307,2025-08-18 16:17:12.420,C0949455,Ubiquitin-Like Proteins,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0949455
+tcga,CANCER,40208307,40208307,2025-08-18 16:17:12.420,C5669547,TCGA Data Coordinating Center Archive,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5669547
+geo,GENE_OR_GENE_PRODUCT,40208307,40208307,2025-08-18 16:17:12.420,C5813441,Arlamol geo,DRUGBANK,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5813441
+cancers,CANCER,40208307,40208307,2025-08-18 16:17:12.420,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
+pd-l1,GENE_OR_GENE_PRODUCT,40208307,40208307,2025-08-18 16:17:12.420,C4284303,PD-L1 Positive,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4284303
+m2-like tumor-associated macrophages,GENE_OR_GENE_PRODUCT,40208307,40208307,2025-08-18 16:17:12.420,,,,
+m2-tam,CELL,40208307,40208307,2025-08-18 16:17:12.420,,,,
+lung,ORGAN,40208307,40208307,2025-08-18 16:17:12.420,C0024109,Lung,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024109
+gastric cancer,CANCER,40208307,40208307,2025-08-18 16:17:12.420,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+single-cell,CELL,40208307,40208307,2025-08-18 16:17:12.420,C5554878,Single Cell Specimen,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5554878
+tumors,CANCER,40208307,40208307,2025-08-18 16:17:12.420,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+ctla-4,GENE_OR_GENE_PRODUCT,40208307,40208307,2025-08-18 16:17:12.420,C1691227,MDX-CTLA-4,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1691227
+lung cancer patients,CANCER,40208307,40208307,2025-08-18 16:17:12.420,C3533299,Functional assessment of cancer therapy for patients with lung cancer questionnaire - version 4,LNC,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C3533299
+anti-pd-1,SIMPLE_CHEMICAL,40208307,40208307,2025-08-18 16:17:12.420,C5205393,Anti-PD-1/Anti-PD-L1 Bispecific Antibody LY3434172,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5205393
+tumor immune,CANCER,40208307,40208307,2025-08-18 16:17:12.420,C4727342,Tumor-Infiltrating Immune Cell,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4727342
+cancer,CANCER,40208307,40208307,2025-08-18 16:17:12.420,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
+humans stomach neoplasms male,ORGANISM,40208029,40208029,2025-08-18 16:17:12.520,,,,
+lymphocytes,CELL,40208029,40208029,2025-08-18 16:17:12.520,C1550651,Specimen Type - Lymphocytes,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1550651
+tumor-infiltrating,CELL,40208029,40208029,2025-08-18 16:17:12.520,C0079722,"Lymphocytes, Tumor-Infiltrating",MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0079722
+neoplasm,CANCER,40208029,40208029,2025-08-18 16:17:12.520,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+gastric cancer,CANCER,40208029,40208029,2025-08-18 16:17:12.520,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+immune cells gastric cancer,CELL,40208029,40208029,2025-08-18 16:17:12.520,,,,
+disease,CANCER,40208029,40208029,2025-08-18 16:17:12.520,C0012634,Disease,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0012634
+patients,ORGANISM,40208029,40208029,2025-08-18 16:17:12.520,C0030705,Patients,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0030705
+tumour-infiltrating immune cell,GENE_OR_GENE_PRODUCT,40208029,40208029,2025-08-18 16:17:12.520,,,,
+stomach neoplasms naloxone,CANCER,40207224,40207224,2025-08-18 16:17:12.608,,,,
+humans mice tumor,ORGANISM,40207224,40207224,2025-08-18 16:17:12.608,,,,
+cell line,CELL,40207224,40207224,2025-08-18 16:17:12.608,C0007600,Cultured Cell Line,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007600
+tumor,CANCER,40207224,40207224,2025-08-18 16:17:12.608,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+cd8+t cells,CELL,40207224,40207224,2025-08-18 16:17:12.608,C5543545,Differentiated CD8 T cells,OMIM,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5543545
+low-dose,SIMPLE_CHEMICAL,40207224,40207224,2025-08-18 16:17:12.608,C1708745,Low-Dose Treatment,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1708745
+gastric cancer,CANCER,40207224,40207224,2025-08-18 16:17:12.608,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+cancers,CANCER,40207224,40207224,2025-08-18 16:17:12.608,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
+digestive tract,PATHOLOGICAL_FORMATION,40207224,40207224,2025-08-18 16:17:12.608,C0017189,Gastrointestinal tract structure,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0017189
+autonomic nervous system,ANATOMICAL_SYSTEM,40207224,40207224,2025-08-18 16:17:12.608,C0004388,Autonomic nervous system,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0004388
+tumor cells,CELL,40207224,40207224,2025-08-18 16:17:12.608,C5551176,Tumor cells,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5551176
+bloodstream,PATHOLOGICAL_FORMATION,40207224,40207224,2025-08-18 16:17:12.608,C0005775,Blood Circulation,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0005775
+patients,ORGANISM,40207224,40207224,2025-08-18 16:17:12.608,C0030705,Patients,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0030705
+immune cells,CELL,40207224,40207224,2025-08-18 16:17:12.608,C5543550,Cytokine hypersensitivity of immune cells,OMIM,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5543550
+immune cell,CELL,40207224,40207224,2025-08-18 16:17:12.608,C4330475,Immune Cell,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4330475
+opioid antagonists,GENE_OR_GENE_PRODUCT,40207224,40207224,2025-08-18 16:17:12.608,C2756979,Opioid Antagonists [MoA],MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C2756979
+opioid receptor antagonists,GENE_OR_GENE_PRODUCT,40207224,40207224,2025-08-18 16:17:12.608,C3653546,Peripheral opioid receptor antagonists,ATC,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C3653546
+low-dose naloxone,SIMPLE_CHEMICAL,40207224,40207224,2025-08-18 16:17:12.608,,,,
+gastric cancer tumors,CANCER,40207224,40207224,2025-08-18 16:17:12.608,C4524765,Gastric Cancer Pathologic Primary Tumor TNM Finding v8,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4524765
+humans stomach neoplasms immune checkpoint,ORGANISM,40207218,40207218,2025-08-18 16:17:12.702,,,,
+esophagogastric,PATHOLOGICAL_FORMATION,40207218,40207218,2025-08-18 16:17:12.702,C0475468,Esophagogastric,SNOMEDCT_US,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0475468
+erbb-2,GENE_OR_GENE_PRODUCT,40207218,40207218,2025-08-18 16:17:12.702,C0069515,erbB-2 Receptor,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0069515
+esophageal neoplasms antineoplastic,CANCER,40207218,40207218,2025-08-18 16:17:12.702,,,,
+cell,CELL,40207218,40207218,2025-08-18 16:17:12.702,C0007634,Cells,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007634
+b7-h1,GENE_OR_GENE_PRODUCT,40207218,40207218,2025-08-18 16:17:12.702,C1540292,CD274 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1540292
+pd-1/pd-l1,GENE_OR_GENE_PRODUCT,40207218,40207218,2025-08-18 16:17:12.702,C5392807,PD-1-PD-L1 Blockade,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5392807
+gastroesophageal cancer,CANCER,40207218,40207218,2025-08-18 16:17:12.702,C0346619,Malignant neoplasm of cardioesophageal junction of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0346619
+gastric adenocarcinoma gastroesophageal adenocarcinoma,CANCER,40207218,40207218,2025-08-18 16:17:12.702,,,,
+icis,CANCER,40207218,40207218,2025-08-18 16:17:12.702,C2829906,MTUS2 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C2829906
+fluorouracil-based,SIMPLE_CHEMICAL,40207218,40207218,2025-08-18 16:17:12.702,C3871791,Fluorouracil;Salicylic Acid;Cream Base NA Multiple Routes Kit,MMX,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C3871791
+chemo,SIMPLE_CHEMICAL,40207218,40207218,2025-08-18 16:17:12.702,C3665472,Chemotherapy,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C3665472
+human epidermal growth factor receptor 2,ORGANISM,40207218,40207218,2025-08-18 16:17:12.702,C3496586,"epidermal growth factor receptor 2, human",MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C3496586
+gastric cancer,CANCER,40207218,40207218,2025-08-18 16:17:12.702,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+gastroesophageal junction,PATHOLOGICAL_FORMATION,40207218,40207218,2025-08-18 16:17:12.702,C0014871,Esophagogastric Junction,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0014871
+cancer,CANCER,40207218,40207218,2025-08-18 16:17:12.702,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
+gejc,CANCER,40207218,40207218,2025-08-18 16:17:12.702,,,,
+protein-1,GENE_OR_GENE_PRODUCT,40207218,40207218,2025-08-18 16:17:12.702,C1609943,syndecan 1 protein,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1609943
+pd-1,GENE_OR_GENE_PRODUCT,40207218,40207218,2025-08-18 16:17:12.702,C5392807,PD-1-PD-L1 Blockade,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5392807
+pd-l1,GENE_OR_GENE_PRODUCT,40207218,40207218,2025-08-18 16:17:12.702,C4284303,PD-L1 Positive,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4284303
+tumors,CANCER,40207218,40207218,2025-08-18 16:17:12.702,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+unresectable,CANCER,40207218,40207218,2025-08-18 16:17:12.702,C1519810,Unresectable,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1519810
+gastric,ORGAN,40207218,40207218,2025-08-18 16:17:12.702,C1704242,Gastric (qualifier value),MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1704242
+humans stomach neoplasms cell,ORGANISM,40206492,40206492,2025-08-18 16:17:12.797,,,,
+saponins network,ORGANISM,40206492,40206492,2025-08-18 16:17:12.797,,,,
+antitumor mice,CANCER,40206492,40206492,2025-08-18 16:17:12.797,,,,
+cell,CELL,40206492,40206492,2025-08-18 16:17:12.797,C0007634,Cells,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007634
+mice,ORGANISM,40206492,40206492,2025-08-18 16:17:12.797,C0025914,House mice,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0025914
+inbred balb c mice,CELL,40206492,40206492,2025-08-18 16:17:12.797,C0025919,"Mice, Inbred BALB C",MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0025919
+nude tumor cells,ORGANISM,40206492,40206492,2025-08-18 16:17:12.797,,,,
+neoplasms,CANCER,40206492,40206492,2025-08-18 16:17:12.797,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+cell line,CELL,40206492,40206492,2025-08-18 16:17:12.797,C0007600,Cultured Cell Line,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007600
+tumor,CANCER,40206492,40206492,2025-08-18 16:17:12.797,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+xenograft,CANCER,40206492,40206492,2025-08-18 16:17:12.797,C0522537,Xenograft type of graft,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0522537
+hsp90aa1,GENE_OR_GENE_PRODUCT,40206492,40206492,2025-08-18 16:17:12.797,C1825534,HSP90AA1 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1825534
+gastric cancer network,CANCER,40206492,40206492,2025-08-18 16:17:12.797,,,,
+gastric cancer,CANCER,40206492,40206492,2025-08-18 16:17:12.797,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+cancer-related,CANCER,40206492,40206492,2025-08-18 16:17:12.797,C2826292,Related to Cancer,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C2826292
+saponin,SIMPLE_CHEMICAL,40206492,40206492,2025-08-18 16:17:12.797,C0520481,Saponin,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0520481
+cancers,CANCER,40206492,40206492,2025-08-18 16:17:12.797,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
+digitonin,SIMPLE_CHEMICAL,40206492,40206492,2025-08-18 16:17:12.797,C0012256,Digitonin,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0012256
+humans stomach neoplasms computational,ORGANISM,40205350,40205350,2025-08-18 16:17:12.889,,,,
+lysine,SIMPLE_CHEMICAL,40205350,40205350,2025-08-18 16:17:12.889,C0024337,lysine,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024337
+neoplastic,ANATOMICAL_SYSTEM,40205350,40205350,2025-08-18 16:17:12.889,C1709160,Neoplastic,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1709160
+vimentin,GENE_OR_GENE_PRODUCT,40205350,40205350,2025-08-18 16:17:12.889,C0042666,Vimentin,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0042666
+cell line,CELL,40205350,40205350,2025-08-18 16:17:12.889,C0007600,Cultured Cell Line,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007600
+tumor,CANCER,40205350,40205350,2025-08-18 16:17:12.889,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+cell,CELL,40205350,40205350,2025-08-18 16:17:12.889,C0007634,Cells,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007634
+gastric cancer immune,CANCER,40205350,40205350,2025-08-18 16:17:12.889,,,,
+lysine,AMINO_ACID,40205350,40205350,2025-08-18 16:17:12.889,C0024337,lysine,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024337
+scrna-seq gastric cancer,ORGANISM,40205350,40205350,2025-08-18 16:17:12.889,,,,
+cancer,CANCER,40205350,40205350,2025-08-18 16:17:12.889,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
+human cancer,ORGANISM,40205350,40205350,2025-08-18 16:17:12.889,C1512506,Human Cancer Pathology,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1512506
+gastric,ORGAN,40205350,40205350,2025-08-18 16:17:12.889,C1704242,Gastric (qualifier value),MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1704242
+scrna-seq,CANCER,40205350,40205350,2025-08-18 16:17:12.889,C5417695,Single-Cell RNA-Seq,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5417695
+humans biomarkers,ORGANISM,40205072,40205072,2025-08-18 16:17:12.982,C5944676,"Oncology (cervix), mRNA gene expression profiling of 14 biomarkers (E6 and E7 of the highest-risk human papillomavirus [HPV] types 16, 18, 31, 33, 45, 52, 58), by real-time nucleic acid sequence-based amplification (NASBA), exo- or endocervical epithelial cells, algorithm reported as positive or negative for increased risk of cervical dysplasia or cancer for each biomarker",CPT,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5944676
+tumor stomach neoplasms,CANCER,40205072,40205072,2025-08-18 16:17:12.982,C4066638,biopsy stomach benign vascular neoplasm glomus tumor,MEDCIN,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4066638
+esophagogastric,PATHOLOGICAL_FORMATION,40205072,40205072,2025-08-18 16:17:12.982,C0475468,Esophagogastric,SNOMEDCT_US,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0475468
+peritoneal neoplasms aged,MULTI_TISSUE_STRUCTURE,40205072,40205072,2025-08-18 16:17:12.982,,,,
+erbb-2 b7-h1,GENE_OR_GENE_PRODUCT,40205072,40205072,2025-08-18 16:17:12.982,,,,
+esophageal neoplasms follow-up,CANCER,40205072,40205072,2025-08-18 16:17:12.982,,,,
+claudins,GENE_OR_GENE_PRODUCT,40205072,40205072,2025-08-18 16:17:12.982,C2718006,Claudins,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C2718006
+cancer,CANCER,40205072,40205072,2025-08-18 16:17:12.982,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
+gastric,CANCER,40205072,40205072,2025-08-18 16:17:12.982,C1704242,Gastric (qualifier value),MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1704242
+esophagogastric junction,PATHOLOGICAL_FORMATION,40205072,40205072,2025-08-18 16:17:12.982,C0014871,Esophagogastric Junction,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0014871
+carcinoma,CANCER,40205072,40205072,2025-08-18 16:17:12.982,C0007097,Carcinoma,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007097
+peritoneal,MULTI_TISSUE_STRUCTURE,40205072,40205072,2025-08-18 16:17:12.982,C0442034,peritoneal,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0442034
+esophago-gastric junction carcinoma,PATHOLOGICAL_FORMATION,40205072,40205072,2025-08-18 16:17:12.982,,,,
+humans,ORGANISM,40203956,40203956,2025-08-18 16:17:13.071,C0086418,Homo sapiens,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0086418
+neoplasm inflammation stomach neoplasms tumor,CANCER,40203956,40203956,2025-08-18 16:17:13.071,,,,
+gastric cancer immune cells,CANCER,40203956,40203956,2025-08-18 16:17:13.071,,,,
+tumor,CANCER,40203956,40203956,2025-08-18 16:17:13.071,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+gastric cancer,CANCER,40203956,40203956,2025-08-18 16:17:13.071,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+gastric,ORGAN,40203956,40203956,2025-08-18 16:17:13.071,C1704242,Gastric (qualifier value),MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1704242
+immune cells,CELL,40203956,40203956,2025-08-18 16:17:13.071,C5543550,Cytokine hypersensitivity of immune cells,OMIM,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5543550
+cancer cells,CELL,40203956,40203956,2025-08-18 16:17:13.071,C0334227,"Tumor cells, malignant",SNOMEDCT_US,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0334227
+tams,GENE_OR_GENE_PRODUCT,40203956,40203956,2025-08-18 16:17:13.071,C0755473,Tams1 antigen,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0755473
+humans,ORGANISM,40203812,40203812,2025-08-18 16:17:13.161,C0086418,Homo sapiens,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0086418
+stomach neoplasms,CANCER,40203812,40203812,2025-08-18 16:17:13.161,C0038356,Stomach Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0038356
+leucovorin,SIMPLE_CHEMICAL,40203812,40203812,2025-08-18 16:17:13.161,C0023413,leucovorin,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0023413
+docetaxel oxaliplatin,SIMPLE_CHEMICAL,40203812,40203812,2025-08-18 16:17:13.161,C0879411,Docetaxel/Oxaliplatin,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0879411
+esophageal neoplasms acute kidney injury kidney,CANCER,40203812,40203812,2025-08-18 16:17:13.161,,,,
+kidney,ORGAN,40203812,40203812,2025-08-18 16:17:13.161,C0022646,Kidney,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0022646
+acute kidney disease,CANCER,40203812,40203812,2025-08-18 16:17:13.161,C1408247,acute renal disease,MEDCIN,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1408247
+oxaliplatin,SIMPLE_CHEMICAL,40203812,40203812,2025-08-18 16:17:13.161,C0069717,oxaliplatin,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0069717
+flot,SIMPLE_CHEMICAL,40203812,40203812,2025-08-18 16:17:13.161,C5205360,FLOT Regimen,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5205360
+fluorouracil,SIMPLE_CHEMICAL,40203812,40203812,2025-08-18 16:17:13.161,C0016360,fluorouracil,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0016360
+docetaxel,SIMPLE_CHEMICAL,40203812,40203812,2025-08-18 16:17:13.161,C0246415,docetaxel,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0246415
+gastric,CANCER,40203812,40203812,2025-08-18 16:17:13.161,C1704242,Gastric (qualifier value),MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1704242
+esophagogastric junction,PATHOLOGICAL_FORMATION,40203812,40203812,2025-08-18 16:17:13.161,C0014871,Esophagogastric Junction,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0014871
+cancers,CANCER,40203812,40203812,2025-08-18 16:17:13.161,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
+renal,CANCER,40203812,40203812,2025-08-18 16:17:13.161,C0022646,Kidney,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0022646
+renal,ANATOMICAL_SYSTEM,40203812,40203812,2025-08-18 16:17:13.161,C0022646,Kidney,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0022646
+cancer,CANCER,40203812,40203812,2025-08-18 16:17:13.161,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
+renal,MULTI_TISSUE_STRUCTURE,40203812,40203812,2025-08-18 16:17:13.161,C0022646,Kidney,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0022646
+humans stomach neoplasms b7-h1 antigen,ORGANISM,40202155,40202155,2025-08-18 16:17:13.250,,,,
+tumor,CANCER,40202155,40202155,2025-08-18 16:17:13.250,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+acrg,GENE_OR_GENE_PRODUCT,40202155,40202155,2025-08-18 16:17:13.250,C1428336,COMMD6 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1428336
+gastric cancer,CANCER,40202155,40202155,2025-08-18 16:17:13.250,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+cancer,CANCER,40202155,40202155,2025-08-18 16:17:13.250,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
+pd-l1,GENE_OR_GENE_PRODUCT,40202155,40202155,2025-08-18 16:17:13.250,C4284303,PD-L1 Positive,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4284303
+patient,ORGANISM,40202155,40202155,2025-08-18 16:17:13.250,C1705908,Veterinary Patient,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1705908
+humans gastrointestinal neoplasms male,ORGANISM,40201179,40201179,2025-08-18 16:17:13.339,,,,
+blood,ORGANISM_SUBSTANCE,40201179,40201179,2025-08-18 16:17:13.339,C0005767,Blood,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0005767
+teg,GENE_OR_GENE_PRODUCT,40201179,40201179,2025-08-18 16:17:13.339,C4740292,Rotational TEG,LNC,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4740292
+colorectal cancer gastric cancer,CANCER,40201179,40201179,2025-08-18 16:17:13.339,,,,
+gastrointestinal tumor malignancy,CANCER,40201179,40201179,2025-08-18 16:17:13.339,C0685938,Malignant neoplasm of gastrointestinal tract,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0685938
+malignancy,CANCER,40201179,40201179,2025-08-18 16:17:13.339,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
+gastrointestinal tumors,CANCER,40201179,40201179,2025-08-18 16:17:13.339,C0017185,Gastrointestinal Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0017185
+tumor,CANCER,40201179,40201179,2025-08-18 16:17:13.339,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+gastrointestinal tumor malignancy based,CANCER,40201179,40201179,2025-08-18 16:17:13.339,,,,
+teg,CELL,40201179,40201179,2025-08-18 16:17:13.339,C4740292,Rotational TEG,LNC,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4740292
+neural networks,MULTI_TISSUE_STRUCTURE,40201179,40201179,2025-08-18 16:17:13.339,C0870951,Neural Network Simulation,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0870951
+humans stomach neoplasms endoscopic,ORGANISM,40200879,40200879,2025-08-18 16:17:13.429,,,,
+lymphatic,MULTI_TISSUE_STRUCTURE,40200879,40200879,2025-08-18 16:17:13.429,C0229889,Lymphatic vessel,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0229889
+stomach neoplasms,CANCER,40200879,40200879,2025-08-18 16:17:13.429,C0038356,Stomach Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0038356
+patients,ORGANISM,40200879,40200879,2025-08-18 16:17:13.429,C0030705,Patients,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0030705
+lymph node,MULTI_TISSUE_STRUCTURE,40200879,40200879,2025-08-18 16:17:13.429,C0024204,lymph nodes,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024204
+lnm,CANCER,40200879,40200879,2025-08-18 16:17:13.429,C0493365,"AGENT, BULKING, INJECTABLE FOR GASTRO-UROLOGY USE",SPN,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0493365
+submucosal,MULTI_TISSUE_STRUCTURE,40200879,40200879,2025-08-18 16:17:13.429,C1515025,Submucosal Route of Administration,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1515025
+gastric cancer,CANCER,40200879,40200879,2025-08-18 16:17:13.429,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+egc,CANCER,40200879,40200879,2025-08-18 16:17:13.429,C5198774,EGC-M5,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5198774
+el,CELL,40200879,40200879,2025-08-18 16:17:13.429,,,,
+humans stomach neoplasms male,ORGANISM,40200878,40200878,2025-08-18 16:17:13.517,,,,
+aged,GENE_OR_GENE_PRODUCT,40200878,40200878,2025-08-18 16:17:13.517,C1999167,Old age,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1999167
+alcohol,SIMPLE_CHEMICAL,40200878,40200878,2025-08-18 16:17:13.517,C0001962,ethanol,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0001962
+gastric cancer,CANCER,40200878,40200878,2025-08-18 16:17:13.517,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+gastric remnant cancer,PATHOLOGICAL_FORMATION,40200878,40200878,2025-08-18 16:17:13.517,,,,
+body,ANATOMICAL_SYSTEM,40200878,40200878,2025-08-18 16:17:13.517,C0444584,Whole body,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0444584
+humans stomach neoplasms male female,ORGANISM,40200877,40200877,2025-08-18 16:17:13.609,,,,
+aged body,MULTI_TISSUE_STRUCTURE,40200877,40200877,2025-08-18 16:17:13.609,C5827251,Mederma AG Hand and Body,MMSL,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5827251
+stomach cancer,CANCER,40200877,40200877,2025-08-18 16:17:13.609,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+pa,GENE_OR_GENE_PRODUCT,40200877,40200877,2025-08-18 16:17:13.609,,,,
+gastric cancer,CANCER,40200877,40200877,2025-08-18 16:17:13.609,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+humans epstein-barr virus,ORGANISM,40200873,40200873,2025-08-18 16:17:13.695,C0014644,Epstein-Barr virus,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0014644
+helicobacter infections helicobacter pylori,ORGANISM,40200873,40200873,2025-08-18 16:17:13.695,C0850666,Infection caused by Helicobacter pylori,SNOMEDCT_US,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0850666
+stomach neoplasms,CANCER,40200873,40200873,2025-08-18 16:17:13.695,C0038356,Stomach Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0038356
+gastric cancer,CANCER,40200873,40200873,2025-08-18 16:17:13.695,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+stomach cancer,CANCER,40200873,40200873,2025-08-18 16:17:13.695,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+gc-associated,GENE_OR_GENE_PRODUCT,40200873,40200873,2025-08-18 16:17:13.695,C5689574,Volatile Organic Compounds associated with SARS-CoV-2 infection:PrThr:Pt:Exhl gas:Ord:GC-MS,LNC,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5689574
+humans stomach neoplasms thrombotic microangiopathies,ORGANISM,40200872,40200872,2025-08-18 16:17:13.779,,,,
+lung neoplasms adenocarcinoma,CANCER,40200872,40200872,2025-08-18 16:17:13.779,C4028770,lung biopsy malignant neoplasm adenocarcinoma hepatoid,MEDCIN,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4028770
+carcinoma,CANCER,40200872,40200872,2025-08-18 16:17:13.779,C0007097,Carcinoma,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007097
+signet ring cell,ORGANISM,40200872,40200872,2025-08-18 16:17:13.779,C0333727,Signet ring cell,SNOMEDCT_US,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0333727
+gastric cancer,CANCER,40200872,40200872,2025-08-18 16:17:13.779,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+pulmonary tumor thrombotic microangiopathy pulmonary tumor thrombotic microangiopathy,CANCER,40200872,40200872,2025-08-18 16:17:13.779,C4524050,Pulmonary tumour thrombotic microangiopathy,MDR,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4524050
+patients,ORGANISM,40200872,40200872,2025-08-18 16:17:13.779,C0030705,Patients,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0030705
+pulmonary tumor thrombotic microangiopathy,CANCER,40200872,40200872,2025-08-18 16:17:13.779,C4524050,Pulmonary tumour thrombotic microangiopathy,MDR,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4524050
+humans stomach neoplasms female male middle aged,ORGANISM,40200871,40200871,2025-08-18 16:17:13.865,,,,
+erbb-2,GENE_OR_GENE_PRODUCT,40200871,40200871,2025-08-18 16:17:13.865,C0069515,erbB-2 Receptor,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0069515
+neoplasm immune checkpoint,CANCER,40200871,40200871,2025-08-18 16:17:13.865,,,,
+neutrophils,CELL,40200871,40200871,2025-08-18 16:17:13.865,C0027950,neutrophil,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027950
+gastric cancer immune checkpoint,CANCER,40200871,40200871,2025-08-18 16:17:13.865,,,,
+icis,CANCER,40200871,40200871,2025-08-18 16:17:13.865,C2829906,MTUS2 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C2829906
+human epidermal growth factor receptor 2,ORGANISM,40200871,40200871,2025-08-18 16:17:13.865,C3496586,"epidermal growth factor receptor 2, human",MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C3496586
+gastric cancer,CANCER,40200871,40200871,2025-08-18 16:17:13.865,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+icis,SIMPLE_CHEMICAL,40200871,40200871,2025-08-18 16:17:13.865,C2829906,MTUS2 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C2829906
+patients,ORGANISM,40200871,40200871,2025-08-18 16:17:13.865,C0030705,Patients,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0030705
+humans male,ORGANISM,40200573,40200573,2025-08-18 16:17:13.954,C0086582,Males,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0086582
+adenocarcinoma,CANCER,40200573,40200573,2025-08-18 16:17:13.954,C0001418,Adenocarcinoma,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0001418
+tumor dna,CANCER,40200573,40200573,2025-08-18 16:17:13.954,C4331441,Tumor DNA,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4331441
+esophageal neoplasms esophagogastric,CANCER,40200573,40200573,2025-08-18 16:17:13.954,C5566230,Site of excised primary malignant neoplasm of esophagus relative to esophagogastric junction in esophageal resection specimen,SNOMEDCT_US,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5566230
+oxaliplatin,SIMPLE_CHEMICAL,40200573,40200573,2025-08-18 16:17:13.954,C0069717,oxaliplatin,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0069717
+trifluridine,SIMPLE_CHEMICAL,40200573,40200573,2025-08-18 16:17:13.954,C0040987,trifluridine,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0040987
+tumor dna esophageal cancer,CANCER,40200573,40200573,2025-08-18 16:17:13.954,,,,
+esophageal,CANCER,40200573,40200573,2025-08-18 16:17:13.954,C0014852,Esophageal Diseases,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0014852
+gastroesophageal junction,PATHOLOGICAL_FORMATION,40200573,40200573,2025-08-18 16:17:13.954,C0014871,Esophagogastric Junction,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0014871
+resectable esophageal,CANCER,40200573,40200573,2025-08-18 16:17:13.954,C5959001,Resectable Esophageal Carcinoma,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5959001
+gastroesophageal,SIMPLE_CHEMICAL,40200573,40200573,2025-08-18 16:17:13.954,C0744316,gastroesophageal,CHV,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0744316
+humans male adenocarcinoma antineoplastic,ORGANISM,40200187,40200187,2025-08-18 16:17:14.042,,,,
+circulating tumor dna,CANCER,40200187,40200187,2025-08-18 16:17:14.042,C3827014,Circulating Tumor DNA,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C3827014
+phase ii,GENE_OR_GENE_PRODUCT,40200187,40200187,2025-08-18 16:17:14.042,C0282460,"Clinical Trials, Phase II",MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0282460
+esophageal neoplasms esophagogastric,CANCER,40200187,40200187,2025-08-18 16:17:14.042,C5566230,Site of excised primary malignant neoplasm of esophagus relative to esophagogastric junction in esophageal resection specimen,SNOMEDCT_US,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5566230
+fluorouracil,SIMPLE_CHEMICAL,40200187,40200187,2025-08-18 16:17:14.042,C0016360,fluorouracil,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0016360
+neoplasm,CANCER,40200187,40200187,2025-08-18 16:17:14.042,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+erbb-2,GENE_OR_GENE_PRODUCT,40200187,40200187,2025-08-18 16:17:14.042,C0069515,erbB-2 Receptor,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0069515
+neoplasms trastuzumab esophageal cancer gastric cancer her2,CANCER,40200187,40200187,2025-08-18 16:17:14.042,,,,
+gastroesophageal adenocarcinoma,CANCER,40200187,40200187,2025-08-18 16:17:14.042,C4721207,Metastatic gastroesophageal adenocarcinoma,SNOMEDCT_US,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4721207
+gea,ANATOMICAL_SYSTEM,40200187,40200187,2025-08-18 16:17:14.042,C1039079,Gea,NCBI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1039079
+flot,SIMPLE_CHEMICAL,40200187,40200187,2025-08-18 16:17:14.042,C5205360,FLOT Regimen,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5205360
+5-fluorouracil,SIMPLE_CHEMICAL,40200187,40200187,2025-08-18 16:17:14.042,C0016360,fluorouracil,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0016360
+leucovorin,SIMPLE_CHEMICAL,40200187,40200187,2025-08-18 16:17:14.042,C0023413,leucovorin,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0023413
+oxaliplatin,SIMPLE_CHEMICAL,40200187,40200187,2025-08-18 16:17:14.042,C0069717,oxaliplatin,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0069717
+docetaxel,SIMPLE_CHEMICAL,40200187,40200187,2025-08-18 16:17:14.042,C0246415,docetaxel,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0246415
+patients,ORGANISM,40200187,40200187,2025-08-18 16:17:14.042,C0030705,Patients,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0030705
+disease,CANCER,40200187,40200187,2025-08-18 16:17:14.042,C0012634,Disease,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0012634
+gastrointestinal cancers,CANCER,40200187,40200187,2025-08-18 16:17:14.042,C0685938,Malignant neoplasm of gastrointestinal tract,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0685938
+tumor dna,CANCER,40200187,40200187,2025-08-18 16:17:14.042,C4331441,Tumor DNA,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4331441
+ctdna,CELLULAR_COMPONENT,40200187,40200187,2025-08-18 16:17:14.042,C5447681,cfDNA or ctDNA Measurement,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5447681
+micrometastatic disease,CANCER,40200187,40200187,2025-08-18 16:17:14.042,,,,
+trastuzumab,SIMPLE_CHEMICAL,40200187,40200187,2025-08-18 16:17:14.042,C0728747,trastuzumab,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0728747
+t-dxd,CANCER,40200187,40200187,2025-08-18 16:17:14.042,C4726900,trastuzumab deruxtecan,RXNORM,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4726900
+gastric,ORGAN,40200187,40200187,2025-08-18 16:17:14.042,C1704242,Gastric (qualifier value),MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1704242
+t-dxd,GENE_OR_GENE_PRODUCT,40200187,40200187,2025-08-18 16:17:14.042,C4726900,trastuzumab deruxtecan,RXNORM,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4726900
+early-stage disease,CANCER,40200187,40200187,2025-08-18 16:17:14.042,C4699609,Early disease stage,LNC,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4699609
+fluoropyrimidine,SIMPLE_CHEMICAL,40200187,40200187,2025-08-18 16:17:14.042,C0596581,Fluoropyrimidine,SNOMEDCT_US,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0596581
+trastuzumab,ORGANISM_SUBSTANCE,40200187,40200187,2025-08-18 16:17:14.042,C0728747,trastuzumab,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0728747
+gastroesophageal cancer patients,CANCER,40200187,40200187,2025-08-18 16:17:14.042,,,,
+humans male,ORGANISM,40200145,40200145,2025-08-18 16:17:14.141,C0086582,Males,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0086582
+gastrointestinal neoplasms middle aged,CANCER,40200145,40200145,2025-08-18 16:17:14.141,,,,
+stomach neoplasms,CANCER,40200145,40200145,2025-08-18 16:17:14.141,C0038356,Stomach Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0038356
+disease pancreatic neoplasms liver neoplasms esophageal neoplasms asia,CANCER,40200145,40200145,2025-08-18 16:17:14.141,,,,
+gastrointestinal cancer,CANCER,40200145,40200145,2025-08-18 16:17:14.141,C0685938,Malignant neoplasm of gastrointestinal tract,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0685938
+disease,CANCER,40200145,40200145,2025-08-18 16:17:14.141,C0012634,Disease,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0012634
+cancers,CANCER,40200145,40200145,2025-08-18 16:17:14.141,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
+gi cancers,CANCER,40200145,40200145,2025-08-18 16:17:14.141,C0685938,Malignant neoplasm of gastrointestinal tract,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0685938
+gastrointestinal cancers,CANCER,40200145,40200145,2025-08-18 16:17:14.141,C0685938,Malignant neoplasm of gastrointestinal tract,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0685938
+humans adenocarcinoma,ORGANISM,40199600,40199600,2025-08-18 16:17:14.225,C5548495,Human papillomavirus-independent adenocarcinoma,SNOMEDCT_US,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5548495
+colonic neoplasms neoplasms,CANCER,40199600,40199600,2025-08-18 16:17:14.225,C0009375,Colonic Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0009375
+esophageal neoplasms stomach neoplasms liver neoplasms colectomy cancer,CANCER,40199600,40199600,2025-08-18 16:17:14.225,,,,
+colon cancer oesophageal cancer,CANCER,40199600,40199600,2025-08-18 16:17:14.225,,,,
+colon cancer,CANCER,40199600,40199600,2025-08-18 16:17:14.225,C0007102,Malignant tumor of colon,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007102
+colon adenocarcinoma,CANCER,40199600,40199600,2025-08-18 16:17:14.225,C0338106,Adenocarcinoma of colon,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0338106
+hepatic,ORGAN,40199600,40199600,2025-08-18 16:17:14.225,C0205054,Hepatic,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0205054
+gastro-oesophageal,CANCER,40199600,40199600,2025-08-18 16:17:14.225,C0017168,Gastroesophageal reflux disease,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0017168
+gastro-oesophageal adenocarcinoma,CANCER,40199600,40199600,2025-08-18 16:17:14.225,,,,
+patients,ORGANISM,40199600,40199600,2025-08-18 16:17:14.225,C0030705,Patients,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0030705
+metachronous cancers,CANCER,40199600,40199600,2025-08-18 16:17:14.225,,,,
+colorectal cancer,CANCER,40199600,40199600,2025-08-18 16:17:14.225,C0009402,Colorectal Carcinoma,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0009402
+cancers,CANCER,40199600,40199600,2025-08-18 16:17:14.225,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
+metachronous gastro-oesophageal adenocarcinoma,CANCER,40199600,40199600,2025-08-18 16:17:14.225,,,,
+patient,ORGANISM,40199600,40199600,2025-08-18 16:17:14.225,C1705908,Veterinary Patient,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1705908
+humans stomach neoplasms male fibrin fibrinogen,ORGANISM,40198649,40198649,2025-08-18 16:17:14.316,,,,
+tumor aged,CANCER,40198649,40198649,2025-08-18 16:17:14.316,C1545609,Tumor Ag 90,LNC,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1545609
+gastric cancer,CANCER,40198649,40198649,2025-08-18 16:17:14.316,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+malignant tumor,CANCER,40198649,40198649,2025-08-18 16:17:14.316,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
+epithelial cells,CELL,40198649,40198649,2025-08-18 16:17:14.316,C0014597,Epithelial Cells,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0014597
+gastric mucosa,MULTI_TISSUE_STRUCTURE,40198649,40198649,2025-08-18 16:17:14.316,C0017136,Gastric mucosa,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0017136
+patient,ORGANISM,40198649,40198649,2025-08-18 16:17:14.316,C1705908,Veterinary Patient,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1705908
+d-dimer,GENE_OR_GENE_PRODUCT,40198649,40198649,2025-08-18 16:17:14.316,C1114118,Deprecated Fibrin D-dimer,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1114118
+ca724,GENE_OR_GENE_PRODUCT,40198649,40198649,2025-08-18 16:17:14.316,C0248054,CA-72-4 antigen,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0248054
+humans ppar gamma lung neoplasms lipid,ORGANISM,40198404,40198404,2025-08-18 16:17:14.415,,,,
+cell,CELL,40198404,40198404,2025-08-18 16:17:14.415,C0007634,Cells,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007634
+oxidoreductases cell line,CELL,40198404,40198404,2025-08-18 16:17:14.415,,,,
+tumor,CANCER,40198404,40198404,2025-08-18 16:17:14.415,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+neoplastic pioglitazone aldh1a3,CELL,40198404,40198404,2025-08-18 16:17:14.415,,,,
+lipid,SIMPLE_CHEMICAL,40198404,40198404,2025-08-18 16:17:14.415,C0023779,Lipids,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0023779
+lung cancer,CANCER,40198404,40198404,2025-08-18 16:17:14.415,C0242379,Malignant neoplasm of lung,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0242379
+ppar,GENE_OR_GENE_PRODUCT,40198404,40198404,2025-08-18 16:17:14.415,C0166418,Peroxisome Proliferator-Activated Receptors,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0166418
+tissues,TISSUE,40198404,40198404,2025-08-18 16:17:14.415,C0040300,Body tissue,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0040300
+tumors,CANCER,40198404,40198404,2025-08-18 16:17:14.415,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+prostate cancer,CANCER,40198404,40198404,2025-08-18 16:17:14.415,C0376358,Malignant neoplasm of prostate,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0376358
+gastric cancer,CANCER,40198404,40198404,2025-08-18 16:17:14.415,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+ppar γ,GENE_OR_GENE_PRODUCT,40198404,40198404,2025-08-18 16:17:14.415,C5574863,PPAR-gamma Agonists,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5574863
+lung cancer cell,CELL,40198404,40198404,2025-08-18 16:17:14.415,C0279557,Adenosquamous cell lung cancer,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0279557
+aldh1a3,GENE_OR_GENE_PRODUCT,40198404,40198404,2025-08-18 16:17:14.415,C1412340,ALDH1A3 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1412340
+ppar γ activator,GENE_OR_GENE_PRODUCT,40198404,40198404,2025-08-18 16:17:14.415,,,,
+pioglitazone,SIMPLE_CHEMICAL,40198404,40198404,2025-08-18 16:17:14.415,C0071097,pioglitazone,RXNORM,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0071097
+pio,SIMPLE_CHEMICAL,40198404,40198404,2025-08-18 16:17:14.415,C0030800,pemoline,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0030800
+diethylaminobenzaldehyde,SIMPLE_CHEMICAL,40198404,40198404,2025-08-18 16:17:14.415,,,,
+deab,SIMPLE_CHEMICAL,40198404,40198404,2025-08-18 16:17:14.415,C0054395,C.I. Solvent Yellow 56,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0054395
+lung cancer cells,CELL,40198404,40198404,2025-08-18 16:17:14.415,C0149782,Squamous cell carcinoma of lung,SNOMEDCT_US,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0149782
+lung tissues,TISSUE,40198404,40198404,2025-08-18 16:17:14.415,C0819757,Structure of parenchyma of lung,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0819757
+ppar γ receptors,GENE_OR_GENE_PRODUCT,40198404,40198404,2025-08-18 16:17:14.415,,,,
+cck-8,SIMPLE_CHEMICAL,40198404,40198404,2025-08-18 16:17:14.415,C0037167,sincalide,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0037167
+lung cancer cells a549,CELL,40198404,40198404,2025-08-18 16:17:14.415,,,,
+h1299,CELL,40198404,40198404,2025-08-18 16:17:14.415,C3829914,H1299 Tumor Cell Lysate Vaccine,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C3829914
+glycerophospholipid,SIMPLE_CHEMICAL,40198404,40198404,2025-08-18 16:17:14.415,C0162448,Glycerophospholipids,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0162448
+cholesterol,SIMPLE_CHEMICAL,40198404,40198404,2025-08-18 16:17:14.415,C0008377,cholesterol,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0008377
+arachidonic acid,SIMPLE_CHEMICAL,40198404,40198404,2025-08-18 16:17:14.415,C0003695,arachidonic acid,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0003695
+fat,TISSUE,40198404,40198404,2025-08-18 16:17:14.415,C0001527,Adipose tissue,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0001527
+humans,ORGANISM,40196130,40196130,2025-08-18 16:17:14.524,C0086418,Homo sapiens,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0086418
+stomach neoplasms cytokines,CANCER,40196130,40196130,2025-08-18 16:17:14.524,,,,
+il-6,GENE_OR_GENE_PRODUCT,40196130,40196130,2025-08-18 16:17:14.524,C3278574,Increased IL-6,OMIM,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C3278574
+tnf-α,GENE_OR_GENE_PRODUCT,40196130,40196130,2025-08-18 16:17:14.524,C1456820,Tumor Necrosis Factor-alpha,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1456820
+abdominal,ORGANISM_SUBDIVISION,40196130,40196130,2025-08-18 16:17:14.524,C5200941,Abdominal (qualifier value),MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5200941
+patients,ORGANISM,40196130,40196130,2025-08-18 16:17:14.524,C0030705,Patients,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0030705
+gastric cancer,CANCER,40196130,40196130,2025-08-18 16:17:14.524,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+humans gastrectomy stomach neoplasms omentum male female,ORGANISM,40195786,40195786,2025-08-18 16:17:14.611,,,,
+lymph node,MULTI_TISSUE_STRUCTURE,40195786,40195786,2025-08-18 16:17:14.611,C0024204,lymph nodes,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024204
+gastric cancer,CANCER,40195786,40195786,2025-08-18 16:17:14.611,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+omental,MULTI_TISSUE_STRUCTURE,40195786,40195786,2025-08-18 16:17:14.611,C0028977,Omentum,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0028977
+omental,TISSUE,40195786,40195786,2025-08-18 16:17:14.611,C0028977,Omentum,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0028977
+humans stomach neoplasms adenocarcinoma immunotherapy receptor,ORGANISM,40193680,40193680,2025-08-18 16:17:14.697,,,,
+anaphylatoxin c5a,GENE_OR_GENE_PRODUCT,40193680,40193680,2025-08-18 16:17:14.697,C3890045,"C5a Anaphylatoxin, human",MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C3890045
+cellular,CELL,40193680,40193680,2025-08-18 16:17:14.697,C0178539,Cellular,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0178539
+adcp,CANCER,40193680,40193680,2025-08-18 16:17:14.697,C0915936,4-ADCP,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0915936
+tumor cells,CELL,40193680,40193680,2025-08-18 16:17:14.697,C5551176,Tumor cells,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5551176
+stomach adenocarcinoma,CANCER,40193680,40193680,2025-08-18 16:17:14.697,C0278701,Gastric Adenocarcinoma,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0278701
+c5a receptor,GENE_OR_GENE_PRODUCT,40193680,40193680,2025-08-18 16:17:14.697,C0056196,C5a anaphylatoxin receptor,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0056196
+tumor,CANCER,40193680,40193680,2025-08-18 16:17:14.697,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+adjacent-normal tissues,TISSUE,40193680,40193680,2025-08-18 16:17:14.697,,,,
+tumors,CANCER,40193680,40193680,2025-08-18 16:17:14.697,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+adjacent-normal samples,CANCER,40193680,40193680,2025-08-18 16:17:14.697,C5235912,Tumor-Adjacent Normal Post Neoadjuvant Therapy Sample,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5235912
+cancer,CANCER,40193680,40193680,2025-08-18 16:17:14.697,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
+humans stomach neoplasms myocardial,ORGANISM,40191191,40191191,2025-08-18 16:17:14.798,,,,
+gastric cancer,CANCER,40191191,40191191,2025-08-18 16:17:14.798,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+myocardial,MULTI_TISSUE_STRUCTURE,40191191,40191191,2025-08-18 16:17:14.798,C1522564,Myocardial,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1522564
+stomach neoplasms humans methyltransferases network,CANCER,40190808,40190808,2025-08-18 16:17:14.884,,,,
+mice cell,ORGANISM,40190808,40190808,2025-08-18 16:17:14.884,,,,
+antitumor cell,CELL,40190808,40190808,2025-08-18 16:17:14.884,,,,
+cell line,CELL,40190808,40190808,2025-08-18 16:17:14.884,C0007600,Cultured Cell Line,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007600
+tumor tumor cells,CELL,40190808,40190808,2025-08-18 16:17:14.884,C5551176,Tumor cells,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5551176
+mice,ORGANISM,40190808,40190808,2025-08-18 16:17:14.884,C0025914,House mice,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0025914
+nude mice,ORGANISM,40190808,40190808,2025-08-18 16:17:14.884,C0025932,"Mice, Nude",MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0025932
+inbred balb c,CELL,40190808,40190808,2025-08-18 16:17:14.884,C0025919,"Mice, Inbred BALB C",MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0025919
+neoplasms,CANCER,40190808,40190808,2025-08-18 16:17:14.884,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+adenosine,SIMPLE_CHEMICAL,40190808,40190808,2025-08-18 16:17:14.884,C0001443,adenosine,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0001443
+sijunzi,ORGANISM_SUBDIVISION,40190808,40190808,2025-08-18 16:17:14.884,C4743423,Sijunzi decoction,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4743423
+gastric cancer network,CANCER,40190808,40190808,2025-08-18 16:17:14.884,,,,
+fortify,SIMPLE_CHEMICAL,40190808,40190808,2025-08-18 16:17:14.884,C0381900,Fortify sealant,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0381900
+spleen,ORGAN,40190808,40190808,2025-08-18 16:17:14.884,C0037993,Spleen,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0037993
+gastric cancer,CANCER,40190808,40190808,2025-08-18 16:17:14.884,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+m6a methyltransferase,GENE_OR_GENE_PRODUCT,40190808,40190808,2025-08-18 16:17:14.884,C4689971,m6A methyltransferase complex,GO,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4689971
+humans lactones,ORGANISM,40190805,40190805,2025-08-18 16:17:14.976,,,,
+tor serine-threonine,GENE_OR_GENE_PRODUCT,40190805,40190805,2025-08-18 16:17:14.976,C0293060,FKBP12-rapamycin associated protein,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0293060
+cell,CELL,40190805,40190805,2025-08-18 16:17:14.976,C0007634,Cells,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007634
+mice mice,ORGANISM,40190805,40190805,2025-08-18 16:17:14.976,C0025914,House mice,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0025914
+nude,ORGANISM,40190805,40190805,2025-08-18 16:17:14.976,C0025932,"Mice, Nude",MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0025932
+antitumor,CANCER,40190805,40190805,2025-08-18 16:17:14.976,C2986475,Antitumor,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C2986475
+neoplasms,CANCER,40190805,40190805,2025-08-18 16:17:14.976,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+tumor cells,CELL,40190805,40190805,2025-08-18 16:17:14.976,C5551176,Tumor cells,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5551176
+mice,ORGANISM,40190805,40190805,2025-08-18 16:17:14.976,C0025914,House mice,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0025914
+inbred balb c,CELL,40190805,40190805,2025-08-18 16:17:14.976,C0025919,"Mice, Inbred BALB C",MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0025919
+xenograft,CANCER,40190805,40190805,2025-08-18 16:17:14.976,C0522537,Xenograft type of graft,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0522537
+ginkgolide b,GENE_OR_GENE_PRODUCT,40190805,40190805,2025-08-18 16:17:14.976,C0061268,ginkgolide B,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0061268
+gastric cancer,CANCER,40190805,40190805,2025-08-18 16:17:14.976,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+patient,ORGANISM,40190805,40190805,2025-08-18 16:17:14.976,C1705908,Veterinary Patient,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1705908
+anti-cancer,CANCER,40190805,40190805,2025-08-18 16:17:14.976,C1121049,anti-cancer number one,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1121049
+ginkgo biloba,ORGANISM_SUBSTANCE,40190805,40190805,2025-08-18 16:17:14.976,C0330206,Ginkgo biloba,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0330206
+akt/mtor,GENE_OR_GENE_PRODUCT,40190805,40190805,2025-08-18 16:17:14.976,,,,
+humans stomach neoplasms,ORGANISM,40189585,40189585,2025-08-18 16:17:15.067,,,,
+female,ORGANISM,40189585,40189585,2025-08-18 16:17:15.067,C1705498,Female Phenotype,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1705498
+immune checkpoint,CELL,40189585,40189585,2025-08-18 16:17:15.067,C4684977,Immune Checkpoint Inhibitors,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4684977
+gastric cancer,CANCER,40189585,40189585,2025-08-18 16:17:15.067,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+lagc,CANCER,40189585,40189585,2025-08-18 16:17:15.067,C1437862,"LagC protein, Dictyostelium discoideum",MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1437862
+lagc patients,CANCER,40189585,40189585,2025-08-18 16:17:15.067,,,,
+humans stomach neoplasms yap-signaling proteins animals tripartite motif-containing protein 28 adenocarcinoma mice,ORGANISM,40189014,40189014,2025-08-18 16:17:15.154,,,,
+signal transducing cell line,CELL,40189014,40189014,2025-08-18 16:17:15.154,,,,
+tumor,CANCER,40189014,40189014,2025-08-18 16:17:15.154,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+hippo signaling,GENE_OR_GENE_PRODUCT,40189014,40189014,2025-08-18 16:17:15.154,C3158583,Hippo Signaling Pathway,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C3158583
+neoplastic protein serine-threonine kinases,GENE_OR_GENE_PRODUCT,40189014,40189014,2025-08-18 16:17:15.154,,,,
+cell,CELL,40189014,40189014,2025-08-18 16:17:15.154,C0007634,Cells,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007634
+mice,ORGANISM,40189014,40189014,2025-08-18 16:17:15.154,C0025914,House mice,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0025914
+nude,ORGANISM,40189014,40189014,2025-08-18 16:17:15.154,C0025932,"Mice, Nude",MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0025932
+cdh1 h3k27ac,GENE_OR_GENE_PRODUCT,40189014,40189014,2025-08-18 16:17:15.154,,,,
+gastric adenocarcinoma,CANCER,40189014,40189014,2025-08-18 16:17:15.154,C0278701,Gastric Adenocarcinoma,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0278701
+gac,SIMPLE_CHEMICAL,40189014,40189014,2025-08-18 16:17:15.154,C1415112,GLS gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1415112
+peritoneal,MULTI_TISSUE_STRUCTURE,40189014,40189014,2025-08-18 16:17:15.154,C0442034,peritoneal,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0442034
+pc,CANCER,40189014,40189014,2025-08-18 16:17:15.154,,,,
+kap1,GENE_OR_GENE_PRODUCT,40189014,40189014,2025-08-18 16:17:15.154,C1424235,TRIM28 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1424235
+gac,GENE_OR_GENE_PRODUCT,40189014,40189014,2025-08-18 16:17:15.154,C1415112,GLS gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1415112
+yap1,GENE_OR_GENE_PRODUCT,40189014,40189014,2025-08-18 16:17:15.154,C1424135,YAP1 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1424135
+cancer,CANCER,40189014,40189014,2025-08-18 16:17:15.154,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
+gacs,SIMPLE_CHEMICAL,40189014,40189014,2025-08-18 16:17:15.154,C1141646,"gacS protein, Pseudomonas syringae",MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1141646
+gac cells,CELL,40189014,40189014,2025-08-18 16:17:15.154,,,,
+h3k27ac,GENE_OR_GENE_PRODUCT,40189014,40189014,2025-08-18 16:17:15.154,C3898882,Histone H3 Acetyl Lys28,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C3898882
+hnrnpab,GENE_OR_GENE_PRODUCT,40189014,40189014,2025-08-18 16:17:15.154,C1333921,HNRNPAB gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1333921
+zfp568,GENE_OR_GENE_PRODUCT,40189014,40189014,2025-08-18 16:17:15.154,C1428479,ZNF568 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1428479
+mouse tumor,ORGANISM,40189014,40189014,2025-08-18 16:17:15.154,C1522027,Mouse Carcinoid Tumor,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1522027
+humans nomograms carcinoma,ORGANISM,40188504,40188504,2025-08-18 16:17:15.253,,,,
+signet ring cell stomach neoplasms male,ORGANISM,40188504,40188504,2025-08-18 16:17:15.253,,,,
+aged,GENE_OR_GENE_PRODUCT,40188504,40188504,2025-08-18 16:17:15.253,C1999167,Old age,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1999167
+neoplasm,CANCER,40188504,40188504,2025-08-18 16:17:15.253,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+gastric cancer,CANCER,40188504,40188504,2025-08-18 16:17:15.253,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+signet ring cell carcinoma signet ring cell,ORGANISM,40188504,40188504,2025-08-18 16:17:15.253,C0206696,"Carcinoma, Signet Ring Cell",MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0206696
+src,GENE_OR_GENE_PRODUCT,40188504,40188504,2025-08-18 16:17:15.253,C0080298,SRC gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0080298
+carcinoma,CANCER,40188504,40188504,2025-08-18 16:17:15.253,C0007097,Carcinoma,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007097
+patients,ORGANISM,40188504,40188504,2025-08-18 16:17:15.253,C0030705,Patients,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0030705
+gastric cancer patients,CANCER,40188504,40188504,2025-08-18 16:17:15.253,C3533302,Functional assessment of cancer therapy for patients with gastric cancer questionnaire - version 4,LNC,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C3533302
+gsrcc,CANCER,40188504,40188504,2025-08-18 16:17:15.253,,,,
+gastric signet,CANCER,40188504,40188504,2025-08-18 16:17:15.253,C1335965,Signet-ring cell adenocarcinoma gastric,MDR,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1335965
+cell,CELL,40188504,40188504,2025-08-18 16:17:15.253,C0007634,Cells,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007634
+humans stomach neoplasms peritoneal neoplasms male female,ORGANISM,40188022,40188022,2025-08-18 16:17:15.343,,,,
+gastric cancer,CANCER,40188022,40188022,2025-08-18 16:17:15.343,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+crs,CANCER,40188022,40188022,2025-08-18 16:17:15.343,C0010278,Craniosynostosis,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0010278
+hipec,SIMPLE_CHEMICAL,40188022,40188022,2025-08-18 16:17:15.343,C1868801,Hyperthermic Intraperitoneal Chemotherapy,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1868801
+patients,ORGANISM,40188022,40188022,2025-08-18 16:17:15.343,C0030705,Patients,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0030705
+peritoneal,MULTI_TISSUE_STRUCTURE,40188022,40188022,2025-08-18 16:17:15.343,C0442034,peritoneal,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0442034
+humans stomach neoplasms placenta growth factor,ORGANISM,40187723,40187723,2025-08-18 16:17:15.441,,,,
+tumor,CANCER,40187723,40187723,2025-08-18 16:17:15.441,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+cell line,CELL,40187723,40187723,2025-08-18 16:17:15.441,C0007600,Cultured Cell Line,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007600
+antineoplastic,SIMPLE_CHEMICAL,40187723,40187723,2025-08-18 16:17:15.441,C0003392,Antineoplastic Agents,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0003392
+cell,CELL,40187723,40187723,2025-08-18 16:17:15.441,C0007634,Cells,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007634
+cisplatin,SIMPLE_CHEMICAL,40187723,40187723,2025-08-18 16:17:15.441,C0008838,cisplatin,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0008838
+adenocarcinoma biomarker gastric neoplasm,CANCER,40187723,40187723,2025-08-18 16:17:15.441,,,,
+patients,ORGANISM,40187723,40187723,2025-08-18 16:17:15.441,C0030705,Patients,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0030705
+resectable gastric cancer,CANCER,40187723,40187723,2025-08-18 16:17:15.441,C0744285,GASTRIC CANCER ADENOCARCINOMA RESECTION,CCPSS,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0744285
+cancer,CANCER,40187723,40187723,2025-08-18 16:17:15.441,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
+plgf,GENE_OR_GENE_PRODUCT,40187723,40187723,2025-08-18 16:17:15.441,C1335207,PGF gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1335207
+humans neoplasms protein-tyrosine kinases cell,ORGANISM,40187712,40187712,2025-08-18 16:17:15.535,,,,
+proteins protein kinase,GENE_OR_GENE_PRODUCT,40187712,40187712,2025-08-18 16:17:15.535,C0872014,A Kinase Anchor Proteins,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0872014
+dna,CELLULAR_COMPONENT,40187712,40187712,2025-08-18 16:17:15.535,C0012854,DNA,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0012854
+wee1,GENE_OR_GENE_PRODUCT,40187712,40187712,2025-08-18 16:17:15.535,C1421500,WEE1 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1421500
+cdk1,GENE_OR_GENE_PRODUCT,40187712,40187712,2025-08-18 16:17:15.535,C1332721,CDK1 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1332721
+cancers,CANCER,40187712,40187712,2025-08-18 16:17:15.535,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
+tp53,GENE_OR_GENE_PRODUCT,40187712,40187712,2025-08-18 16:17:15.535,C0079419,TP53 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0079419
+azd1775,CANCER,40187712,40187712,2025-08-18 16:17:15.535,C4053677,AZD-1775,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4053677
+ovarian,CANCER,40187712,40187712,2025-08-18 16:17:15.535,C0205065,Ovarian,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0205065
+breast,CANCER,40187712,40187712,2025-08-18 16:17:15.535,C0006141,Breast,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006141
+gastrointestinal,PATHOLOGICAL_FORMATION,40187712,40187712,2025-08-18 16:17:15.535,C0521362,gastrointestinal,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0521362
+head and neck cancers,CANCER,40187712,40187712,2025-08-18 16:17:15.535,C5225768,Head and neck cancers - pharyngeal,CCSR_ICD10CM,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5225768
+chemotherapies,SIMPLE_CHEMICAL,40187712,40187712,2025-08-18 16:17:15.535,C3665472,Chemotherapy,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C3665472
+platinum-based,CANCER,40187712,40187712,2025-08-18 16:17:15.535,C1514162,Platinum-Based,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1514162
+antimetabolites,SIMPLE_CHEMICAL,40187712,40187712,2025-08-18 16:17:15.535,C0003376,Antimetabolites,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0003376
+parp,GENE_OR_GENE_PRODUCT,40187712,40187712,2025-08-18 16:17:15.535,C0032405,Poly(ADP-ribose) Polymerases,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0032405
+tumors,CANCER,40187712,40187712,2025-08-18 16:17:15.535,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+patient,ORGANISM,40187712,40187712,2025-08-18 16:17:15.535,C1705908,Veterinary Patient,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1705908
+cancer,CANCER,40187712,40187712,2025-08-18 16:17:15.535,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
+kinesins stomach neoplasms humans,ORGANISM,40187619,40187619,2025-08-18 16:17:15.633,,,,
+mice cell line,ORGANISM,40187619,40187619,2025-08-18 16:17:15.633,,,,
+tumor,CELL,40187619,40187619,2025-08-18 16:17:15.633,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+cell,CELL,40187619,40187619,2025-08-18 16:17:15.633,C0007634,Cells,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0007634
+xenograft,CANCER,40187619,40187619,2025-08-18 16:17:15.633,C0522537,Xenograft type of graft,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0522537
+spindle apparatus cell,CANCER,40187619,40187619,2025-08-18 16:17:15.633,,,,
+neoplastic male oncogene,CANCER,40187619,40187619,2025-08-18 16:17:15.633,,,,
+mice,ORGANISM,40187619,40187619,2025-08-18 16:17:15.633,C0025914,House mice,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0025914
+nude eg5,GENE_OR_GENE_PRODUCT,40187619,40187619,2025-08-18 16:17:15.633,,,,
+gastric cancer mitotic kinesin,CANCER,40187619,40187619,2025-08-18 16:17:15.633,,,,
+kif11,GENE_OR_GENE_PRODUCT,40187619,40187619,2025-08-18 16:17:15.633,C1416693,KIF11 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1416693
+spindle,CANCER,40187619,40187619,2025-08-18 16:17:15.633,C1166795,Spindle,FMA,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1166795
+chromosome,CELLULAR_COMPONENT,40187619,40187619,2025-08-18 16:17:15.633,C0008633,Chromosomes,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0008633
+human cancers,ORGANISM,40187619,40187619,2025-08-18 16:17:15.633,C1514299,Preclinical Models for Human Cancers Working Group,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1514299
+tumour,CANCER,40187619,40187619,2025-08-18 16:17:15.633,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+eg5,GENE_OR_GENE_PRODUCT,40187619,40187619,2025-08-18 16:17:15.633,C1416693,KIF11 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1416693
+gastric cancer,CANCER,40187619,40187619,2025-08-18 16:17:15.633,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+gastric cancer tissues,CANCER,40187619,40187619,2025-08-18 16:17:15.633,,,,
+patient,ORGANISM,40187619,40187619,2025-08-18 16:17:15.633,C1705908,Veterinary Patient,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1705908
+gastric cancer cells,CELL,40187619,40187619,2025-08-18 16:17:15.633,C4076910,GMBP1 peptide,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4076910
+xenograft mice,CANCER,40187619,40187619,2025-08-18 16:17:15.633,,,,
+eg5,CELLULAR_COMPONENT,40187619,40187619,2025-08-18 16:17:15.633,C1416693,KIF11 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1416693
+monopolar spindle,PATHOLOGICAL_FORMATION,40187619,40187619,2025-08-18 16:17:15.633,C1336688,TTK gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1336688
+arry520,GENE_OR_GENE_PRODUCT,40187619,40187619,2025-08-18 16:17:15.633,,,,
+cell monopolar spindle,CELL,40187619,40187619,2025-08-18 16:17:15.633,,,,
+tumour organoid,CANCER,40187619,40187619,2025-08-18 16:17:15.633,,,,
+xenografts,CANCER,40187619,40187619,2025-08-18 16:17:15.633,C0522537,Xenograft type of graft,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0522537
+patient-derived xenografts,CANCER,40187619,40187619,2025-08-18 16:17:15.633,C4050317,Patient Derived Xenograft,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4050317
+pdx,SIMPLE_CHEMICAL,40187619,40187619,2025-08-18 16:17:15.633,C1721300,pralatrexate,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1721300
+monopolar spindles,PATHOLOGICAL_FORMATION,40187619,40187619,2025-08-18 16:17:15.633,C1336688,TTK gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1336688
+stomach neoplasms humans micrornas,CANCER,40186852,40186852,2025-08-18 16:17:15.878,,,,
+cancer,CANCER,40186852,40186852,2025-08-18 16:17:15.878,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
+gastric cancer,CANCER,40186852,40186852,2025-08-18 16:17:15.878,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+patients,ORGANISM,40186852,40186852,2025-08-18 16:17:15.878,C0030705,Patients,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0030705
+tcga,CANCER,40186852,40186852,2025-08-18 16:17:15.878,C5669547,TCGA Data Coordinating Center Archive,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5669547
+tumour,CANCER,40186852,40186852,2025-08-18 16:17:15.878,C0027651,Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0027651
+normal tissues,TISSUE,40186852,40186852,2025-08-18 16:17:15.878,C1856434,Some tissues may have normal levels of 3-hydroxyacyl-CoA dehydrogenase activity,OMIM,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1856434
+hsa-mir-34a,GENE_OR_GENE_PRODUCT,40186852,40186852,2025-08-18 16:17:15.878,C1537745,MIR34A gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1537745
+hsa-mir-182,ORGANISM,40186852,40186852,2025-08-18 16:17:15.878,C1537816,MIR182 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1537816
+immune cell,CELL,40186852,40186852,2025-08-18 16:17:15.878,C4330475,Immune Cell,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4330475
+cd4 t,GENE_OR_GENE_PRODUCT,40186852,40186852,2025-08-18 16:17:15.878,C0039215,CD4 Positive T Lymphocytes,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0039215
+mast cells,CELL,40186852,40186852,2025-08-18 16:17:15.878,C0024880,mast cell,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024880
+activate/inhibit,GENE_OR_GENE_PRODUCT,40186852,40186852,2025-08-18 16:17:15.878,C1512494,Hormone Activity Inhibition,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1512494
+cxcr4,GENE_OR_GENE_PRODUCT,40186852,40186852,2025-08-18 16:17:15.878,C1332823,CXCR4 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1332823
+stomach neoplasms animals humans cell line,CANCER,40185259,40185259,2025-08-18 16:17:15.973,,,,
+tumor mice,CANCER,40185259,40185259,2025-08-18 16:17:15.973,C1519679,Tumor Formation in Athymic Mice,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1519679
+nude antineoplastic,ORGANISM,40185259,40185259,2025-08-18 16:17:15.973,,,,
+mice cell,ORGANISM,40185259,40185259,2025-08-18 16:17:15.973,,,,
+xenograft,CANCER,40185259,40185259,2025-08-18 16:17:15.973,C0522537,Xenograft type of graft,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0522537
+antitumor,CANCER,40185259,40185259,2025-08-18 16:17:15.973,C2986475,Antitumor,NCI,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C2986475
+mice,ORGANISM,40185259,40185259,2025-08-18 16:17:15.973,C0025914,House mice,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0025914
+inbred balb c cell,CELL,40185259,40185259,2025-08-18 16:17:15.973,,,,
+gastric cancer,CANCER,40185259,40185259,2025-08-18 16:17:15.973,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+wnt/β-catenin,GENE_OR_GENE_PRODUCT,40185259,40185259,2025-08-18 16:17:15.973,,,,
+malignant tumor,CANCER,40185259,40185259,2025-08-18 16:17:15.973,C0006826,Malignant Neoplasms,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0006826
+digestive tract,PATHOLOGICAL_FORMATION,40185259,40185259,2025-08-18 16:17:15.973,C0017189,Gastrointestinal tract structure,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0017189
+human,ORGANISM,40185259,40185259,2025-08-18 16:17:15.973,C0086418,Homo sapiens,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0086418
+fufang she-she-cao,CELL,40185259,40185259,2025-08-18 16:17:15.973,,,,
+precancerous lesions,CANCER,40185259,40185259,2025-08-18 16:17:15.973,C0940937,Precancerous lesion,MDR,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0940937
+humans stomach neoplasms male,ORGANISM,40184134,40184134,2025-08-18 16:17:16.066,,,,
+immune checkpoint,GENE_OR_GENE_PRODUCT,40184134,40184134,2025-08-18 16:17:16.066,C4684977,Immune Checkpoint Inhibitors,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C4684977
+b7-h1,GENE_OR_GENE_PRODUCT,40184134,40184134,2025-08-18 16:17:16.066,C1540292,CD274 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C1540292
+individuals,ORGANISM,40184134,40184134,2025-08-18 16:17:16.066,C0204525,Individual psychotherapy,SNOMEDCT_US,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0204525
+gastric cancer patients,CANCER,40184134,40184134,2025-08-18 16:17:16.066,C3533302,Functional assessment of cancer therapy for patients with gastric cancer questionnaire - version 4,LNC,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C3533302
+icis,CANCER,40184134,40184134,2025-08-18 16:17:16.066,C2829906,MTUS2 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C2829906
+gastric cancer,CANCER,40184134,40184134,2025-08-18 16:17:16.066,C0024623,Malignant neoplasm of stomach,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0024623
+pd-1/pd-l1,GENE_OR_GENE_PRODUCT,40184134,40184134,2025-08-18 16:17:16.066,C5392807,PD-1-PD-L1 Blockade,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C5392807
+patients,ORGANISM,40184134,40184134,2025-08-18 16:17:16.066,C0030705,Patients,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0030705
+platelets,CELL,40184134,40184134,2025-08-18 16:17:16.066,C0005821,Blood Platelets,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0005821
+nri,CANCER,40184134,40184134,2025-08-18 16:17:16.066,C0295421,NRI 757,MSH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C0295421
+icis,GENE_OR_GENE_PRODUCT,40184134,40184134,2025-08-18 16:17:16.066,C2829906,MTUS2 gene,MTH,https://uts-ws.nlm.nih.gov/rest/content/2025AA/CUI/C2829906

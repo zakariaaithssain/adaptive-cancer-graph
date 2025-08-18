@@ -29,7 +29,7 @@ def annotate_stage(ents_path="data/extracted_entities.csv",
     logging.info(f"Annotation stage completed. Entities: {ents_path}, Relations: {rels_path}")
     print("Annotation stage completed.")
 
-def transform_stage(raw_ents_path="data/extracted_entities.csv",
+def clean_stage(raw_ents_path="data/extracted_entities.csv",
                 raw_rels_path="data/extracted_relations.csv",
                 saving_dir="data/ready_for_neo4j"):
     """Step 3: Prepare data for Neo4j and return cleaned CSV paths."""
@@ -68,7 +68,7 @@ def run_etl(max_results=1000,
     try:
         extract_stage(max_results=max_results, extract_abstracts_only=extract_abstracts_only)
         annotate_stage()
-        ents_path, rels_path = transform_stage()
+        ents_path, rels_path = clean_stage()
         load_stage(ents_clean_csv=ents_path, rels_clean_csv=rels_path,
                    load_batch_size=load_batch_size)
         logging.info("ETL pipeline completed successfully.")
@@ -83,17 +83,19 @@ def run_etl(max_results=1000,
 #transform into CLI
 ######### in terminal #########
 # python main.py calls the run_etl()
-# python main.py step (with step in ["extract", "transform", "load"]) calls step_stage()
+# python main.py step (with step in ["extract", "clean", "annotate", "load"]) calls step_stage()
 # exp: python main.py extract --> calls extract_stage() 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("step", nargs="?", choices=["extract", "transform", "load"])
+    parser.add_argument("step", nargs="?", choices=["extract", "annotate", "clean", "load"])
     args = parser.parse_args()
 
     if args.step == "extract":
         extract_stage()
-    elif args.step == "transform":
-        transform_stage()
+    elif args.step == "clean":
+        clean_stage()
+    elif args.step == "annotate":
+        annotate_stage()
     elif args.step == "load":
         load_stage()
     else: 
