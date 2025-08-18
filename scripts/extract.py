@@ -33,7 +33,7 @@ def extract_pubmed_to_mongo(extract_abstracts_only=True, max_results=1000):
 
     except KeyboardInterrupt: 
         logging.error("Extraction Process Interrupted Manually.")
-        
+        raise
 
 
 

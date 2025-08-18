@@ -34,7 +34,7 @@ def load_to_aura(labels_to_load:Optional[list[str]] = None,
         
         except KeyboardInterrupt:
             logging.error("Load Process Interrupted Manually.")
-            
+            raise
         except Exception as e:
             logging.error(f"Load Process Failed To Load To Aura. {e}")
     

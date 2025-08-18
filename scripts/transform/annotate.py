@@ -32,7 +32,7 @@ def annotate_mongo_articles(ents_path ="data/extracted_entities.csv", rels_path 
         
     except KeyboardInterrupt: 
         logging.error("Annotation Process Interrupted Manually.")
-
+        raise
     finally: 
         annotator.generate_entities_csv(file_path=ents_path).generate_relations_csv(file_path=rels_path)
 
