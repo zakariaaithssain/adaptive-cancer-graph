@@ -1,4 +1,5 @@
 import logging
+import argparse 
 
 from scripts.extract import extract_pubmed_to_mongo
 from scripts.transform.annotate import annotate_mongo_articles
@@ -28,23 +29,23 @@ def annotate_stage(ents_path="data/extracted_entities.csv",
     logging.info(f"Annotation stage completed. Entities: {ents_path}, Relations: {rels_path}")
     print("Annotation stage completed.")
 
-def clean_stage(raw_ents_path="data/extracted_entities.csv",
+def transform_stage(raw_ents_path="data/extracted_entities.csv",
                 raw_rels_path="data/extracted_relations.csv",
                 saving_dir="data/ready_for_neo4j"):
     """Step 3: Prepare data for Neo4j and return cleaned CSV paths."""
-    logging.info("Starting cleaning stage.")
-    print("Starting cleaning stage...")
+    logging.info("Starting transforming stage.")
+    print("Starting transforming stage...")
     ents_path, rels_path = prepare_data_for_neo4j(
         raw_ents_path=raw_ents_path,
         raw_rels_path=raw_rels_path,
         saving_dir=saving_dir
     )
-    logging.info(f"Cleaning stage completed. Cleaned files: {ents_path}, {rels_path}")
-    print("Cleaning stage completed.")
+    logging.info(f"Transforming stage completed. Cleaned files: {ents_path}, {rels_path}")
+    print("Transforming stage completed.")
     return ents_path, rels_path
 
 
-def load_stage(ents_clean_csv, rels_clean_csv,
+def load_stage(ents_clean_csv = 'data/ready_for_neo4j/entities4neo4j.csv', rels_clean_csv = 'data/ready_for_neo4j/relations4neo4j.csv',
                labels=NEO4J_LABELS, reltypes=NEO4J_REL_TYPES,
                load_batch_size=1000):
     """Step 4: Load entities and relations into Neo4j Aura."""
@@ -67,7 +68,7 @@ def run_etl(max_results=1000,
     try:
         extract_stage(max_results=max_results, extract_abstracts_only=extract_abstracts_only)
         annotate_stage()
-        ents_path, rels_path = clean_stage()
+        ents_path, rels_path = transform_stage()
         load_stage(ents_clean_csv=ents_path, rels_clean_csv=rels_path,
                    load_batch_size=load_batch_size)
         logging.info("ETL pipeline completed successfully.")
@@ -79,5 +80,21 @@ def run_etl(max_results=1000,
         raise
 
 
+#transform into CLI
+######### in terminal #########
+# python main.py calls the run_etl()
+# python main.py step (with step in ["extract", "transform", "load"]) calls step_stage()
+# exp: python main.py extract --> calls extract_stage() 
 if __name__ == "__main__":
-    run_etl()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("step", nargs="?", choices=["extract", "transform", "load"])
+    args = parser.parse_args()
+
+    if args.step == "extract":
+        extract_stage()
+    elif args.step == "transform":
+        transform_stage()
+    elif args.step == "load":
+        load_stage()
+    else: 
+        run_etl()

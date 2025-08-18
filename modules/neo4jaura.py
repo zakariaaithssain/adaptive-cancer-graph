@@ -66,8 +66,8 @@ class Neo4jAuraConnector:
         failed_to_load = [] #will contain labels that weren't able to be loaded.
         #one session for more efficiency
         with self.driver.session() as session:
-                for label in tqdm(labels_to_load, desc=f"loading nodes..."): 
-                    logging.info(f"AuraConnector: Loading {label} Nodes...")
+                for label in tqdm(labels_to_load, desc=f"loading nodes"): 
+                    logging.info(f"AuraConnector: Loading {label} Nodes")
                     #one transaction per entity to ensure ACID propreties.
                     try:
                         with session.begin_transaction() as transaction: 
@@ -90,8 +90,8 @@ class Neo4jAuraConnector:
         assert all(reltype in NEO4J_REL_TYPES for reltype in reltypes_to_load), f" {reltypes_to_load} contains invalid relation type(s), valid: {NEO4J_REL_TYPES}"
         failed_to_load = []
         with self.driver.session() as session:
-            for reltype in tqdm(reltypes_to_load, desc=f"loading relations..."): 
-                logging.info(f"AuraConnector: Loading {reltype} Relations...")
+            for reltype in tqdm(reltypes_to_load, desc=f"loading relations"): 
+                logging.info(f"AuraConnector: Loading {reltype} Relations")
                 try:
                     with session.begin_transaction() as transaction: 
                         relations_with_reltype = self._get_relations_with_type(reltype, rels_clean_csv)
@@ -127,7 +127,7 @@ class Neo4jAuraConnector:
             """
         batch_n = 0
         try: 
-            for i in tqdm(range(0, len(nodes_list), self.load_batch_size), desc=f"loading batch {batch_n//self.load_batch_size}..."):
+            for i in range(0, len(nodes_list), self.load_batch_size):
                 batch_n = i
                 logging.info(f"AuraConnector: Loading Batch {i//self.load_batch_size} ...")
                 batch = nodes_list[i:i + self.load_batch_size]
@@ -155,12 +155,12 @@ class Neo4jAuraConnector:
         MERGE (start)-[r:{relation_type}]->(end)
         SET r += {{
         pmid: row.pmid,
-        pmcid: row.pmcid,
+        pmcid: row.pmcid
                  }}
         """
         batch_n = 0
         try: 
-            for i in tqdm(range(0, len(relations_list), self.load_batch_size), desc=f"loading batch {batch_n//self.load_batch_size}..."):
+            for i in range(0, len(relations_list), self.load_batch_size):
                 batch_n = i
                 logging.info(f"AuraConnector: Loading Batch {i//self.load_batch_size}...")
                 batch = relations_list[i:i + self.load_batch_size]

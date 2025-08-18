@@ -50,7 +50,7 @@ class MongoAtlasConnector:
 
     def load_articles_to_atlas(self, all_articles, abstract_only = True):
         logging.info("AtlasConnector: Inserting New Docs. Already Present Ones Will Be Ignored.")
-        for article in tqdm(all_articles, desc="inserting new docs, present and empty ones are ignored..."):
+        for article in tqdm(all_articles, desc="inserting new docs, present and empty ones are ignored"):
             try:
                 if article['abstract']: #ignoring empty articles.
                     # adding the date of fetching the article (utc: coordinated universal time)
@@ -79,7 +79,7 @@ class MongoAtlasConnector:
             logging.error(f"AtlasConnector: Unable To Fetch Docs: {e}.")
             raise
         logging.info("AtlasConnector: Fetching Docs From Mongo Atlas...")
-        for doc in tqdm(cursor, desc="fetching docs from MongoAtlas..."):
+        for doc in tqdm(cursor, desc="fetching docs from MongoAtlas"):
             try:
                 if isinstance(doc['abstract'], str) or ('body' in doc.keys() and isinstance(doc['body'], str)):
                     article = {}
