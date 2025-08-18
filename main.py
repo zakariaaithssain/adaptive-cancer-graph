@@ -71,14 +71,13 @@ def run_etl(max_results=1000,
         load_stage(ents_clean_csv=ents_path, rels_clean_csv=rels_path,
                    load_batch_size=load_batch_size)
         logging.info("ETL pipeline completed successfully.")
+    except KeyboardInterrupt as k:
+        print("ETL interrupted manually.")
+        logging.exception(f"ETL pipeline failed: {k}")
     except Exception as e:
         logging.exception(f"ETL pipeline failed: {e}")
         raise
 
 
 if __name__ == "__main__":
-    try:
-        run_etl()
-    except KeyboardInterrupt : 
-        exit(1)
-        print("ETL interrupted manually.")
+    run_etl()
