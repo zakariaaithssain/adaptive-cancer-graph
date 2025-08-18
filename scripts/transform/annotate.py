@@ -8,15 +8,19 @@ from modules.nlp import NLP
 
 from config.mongodb_config import CONNECTION_STR
 
+
+
+
 def annotate_mongo_articles(ents_path ="data/extracted_entities.csv", rels_path = "data/extracted_relations.csv"):
+    
     connector = MongoAtlasConnector(connection_str=CONNECTION_STR)
-     
     #list[dict] each dict is an article
     articles = connector.fetch_articles_from_atlas(query={})
-    
+        
     #one for all so entities and relations could be saved in the class attr.
     normalizer = UMLSNormalizer()
     annotator = NLP(normalizer) 
+
 
     logging.info("Annotation Process Started.")
     try:

@@ -19,7 +19,7 @@ def prepare_data_for_neo4j(raw_ents_path, raw_rels_path, saving_dir):
 
 	#entities cleaning
 	print("entities records before:", entities.shape[0])
-	logging(f"Entities: Before Cleaning: {len(entities)}")
+	logging.info(f"Entities: Before Cleaning: {len(entities)}")
 	#separate rows without CUI, because we will be deduplicating using CUI column as subset,
 	#  which will cause to lose them as pandas will consider them duplicates.
 	rows_with_cui_missing = entities[entities['cui'].isna()]
@@ -36,17 +36,17 @@ def prepare_data_for_neo4j(raw_ents_path, raw_rels_path, saving_dir):
 	entities.drop_duplicates(subset=['text', 'label'], inplace=True, ignore_index=True)
 	logging.info("Entities: Drop ['text', 'label'] Duplicates.")
 	print("entities records after:", entities.shape[0])
-	logging(f"Entities: After Cleaning: {len(entities)}")
+	logging.info(f"Entities: After Cleaning: {len(entities)}")
 	#relations cleaning
 	print("relations records before:", relations.shape[0])
-	logging(f"Relations: Before Cleaning: {len(relations)}")
+	logging.info(f"Relations: Before Cleaning: {len(relations)}")
 	#drop duplicates by ent1 & ent2, I assume here that two entities can only have one relation per direction
 	relations['ent1'] = relations['ent1'].str.lower()
 	relations['ent2'] = relations['ent2'].str.lower()
 	relations.drop_duplicates(subset=['ent1', 'ent2'], inplace=True, ignore_index=True)
 	logging.info("Relations: Drop ['ent1', 'ent2'] Duplicates.")
 	print("relations records after:", relations.shape[0])
-	logging(f"Relations: After Cleaning: {len(relations)}")
+	logging.info(f"Relations: After Cleaning: {len(relations)}")
 
 
 	#renaming columns for Neo4j
