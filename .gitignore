@@ -2,3 +2,5 @@
 __pycache__/
 config/
 .coverage
+.pytest_cache/
+htmlcov/
