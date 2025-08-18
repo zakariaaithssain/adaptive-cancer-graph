@@ -38,7 +38,7 @@ def tmp_csv_files():
 
 def test_prepare_data_creates_files(tmp_csv_files):
     ents_path, rels_path, tmpdir = tmp_csv_files
-    out_ents, out_rels = prepare_data_for_neo4j(ents_path, rels_path, tmpdir)
+    out_ents, out_rels = prepare_data_for_neo4j(ents_path, rels_path, saving_dir=tmpdir)
     
     # Files should exist
     assert os.path.exists(out_ents)
@@ -56,7 +56,7 @@ def test_prepare_data_creates_files(tmp_csv_files):
 
 def test_deduplication_preserves_missing_cui(tmp_csv_files):
     ents_path, rels_path, tmpdir = tmp_csv_files
-    out_ents, _ = prepare_data_for_neo4j(ents_path, rels_path, tmpdir)
+    out_ents, _ = prepare_data_for_neo4j(ents_path, rels_path, saving_dir=tmpdir)
     
     df_ents = pd.read_csv(out_ents)
     # Missing CUI row should still exist
@@ -66,7 +66,7 @@ def test_deduplication_preserves_missing_cui(tmp_csv_files):
 
 def test_text_lowercased(tmp_csv_files):
     ents_path, rels_path, tmpdir = tmp_csv_files
-    out_ents, _ = prepare_data_for_neo4j(ents_path, rels_path, tmpdir)
+    out_ents, _ = prepare_data_for_neo4j(ents_path, rels_path, saving_dir=tmpdir)
     df_ents = pd.read_csv(out_ents)
     
     # Text should be lowercase
