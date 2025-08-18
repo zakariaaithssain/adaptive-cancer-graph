@@ -117,7 +117,7 @@ class NLP:
    def generate_entities_csv(self, file_path):
       if self.entities == []:
          logging.warning("NLP: No Entities In self.entities. Make Sure To Extract Them First.")
-         print("no entities found extract first.")
+         print("no entities found, extract first.")
          df = pd.DataFrame(data = [{"entity": "", "label": ""}])
       else: 
          df = pd.DataFrame(data = self.entities)
@@ -125,10 +125,10 @@ class NLP:
       try:
          df.to_csv(file_path, index=False)
          logging.info(f"NLP: Entities Saved To {file_path}")
-         print("entities saved to data/entities.csv")
+         print(f"entities saved to {file_path}")
       except Exception as e:
          logging.error(f"NLP: Failed To Save Entities As SCV: Error: {e}")
-         print("error while saving entities to scv.")
+         print("error saving entities to scv.")
       return self
    
 
@@ -136,7 +136,7 @@ class NLP:
    def generate_relations_csv(self, file_path):
       if self.relations == []:
          logging.warning("NLP: No Relations In self.relations. Make Sure To Extract Them First.")
-         print("no relations found extract first.")
+         print("no relations found, extract first.")
 
          df = pd.DataFrame(data = [{"ent1": "", "relation": "", "ent2": ""}])
       else: 
@@ -145,10 +145,10 @@ class NLP:
       try:
          df.to_csv(file_path, index=False)
          logging.info(f"NLP: Relations Saved To {file_path}")
-         print("entities saved to data/relations.csv")
+         print(f"entities saved to {file_path}")
       except Exception as e:
          logging.error(f"NLP: Failed To Save Relations As SCV: Error: {e}")
-         print("error while saving relations to csv.")
+         print("error saving relations to csv.")
       return self
 
 #printing entities recognized by the model if running as main.

@@ -195,78 +195,10 @@ class PubMedAPI:
 
                     'keywords': keywords       # keywords provided by author
                 })
-                logging.info(f"PubMed API: PMid: {article_pmid.text}: Metadata Found.")
             
             return articles #list of dicts, each dict is an article's metadata containing the keys above.
         else: 
             return []
     
-
-    def normalize_term(self, term):
-    
-        search_url = f"{self.base_url}esearch.fcgi"
-        search_params = {
-            'db': 'mesh',
-            'term': term,
-            'retmax': 1,  # Only get the best match
-            'retmode': 'json'
-        }
-        
-        if self.api_key:
-            search_params['api_key'] = self.api_key
-        if self.email:
-            search_params['email'] = self.email
-        
-        try:
-            # Search MeSH database
-            search_response = rq.get(search_url, params=search_params, headers=self.headers)
-            if search_response.status_code != 200:
-                return None
-                
-            search_data = search_response.json()
-            
-            # Rate limiting
-            if self.api_key:
-                time.sleep(PM_API_SLEEP_TIME["with_key"])
-            else:
-                time.sleep(PM_API_SLEEP_TIME["without_key"])
-            
-            # Check if we found any results
-            id_list = search_data.get('esearchresult', {}).get('idlist', [])
-            if not id_list:
-                return None
-            
-            # Fetch the MeSH term details
-            fetch_url = f"{self.base_url}efetch.fcgi"
-            fetch_post_data = {
-                'db': 'mesh',
-                'id': id_list[0],  # Get the first (best) match
-                'retmode': 'xml'
-            }
-            
-            if self.api_key:
-                fetch_post_data['api_key'] = self.api_key
-            if self.email:
-                fetch_post_data['email'] = self.email
-            
-            fetch_response = rq.get(fetch_url, params=fetch_post_data, headers=self.headers)
-            if fetch_response.status_code != 200:
-                return None
-            
-            # Rate limiting
-            if self.api_key:
-                time.sleep(PM_API_SLEEP_TIME["with_key"])
-            else:
-                time.sleep(PM_API_SLEEP_TIME["without_key"])
-            
-            # Parse the MeSH term
-            root = ET.fromstring(fetch_response.text)
-            mesh_term = root.find('.//DescriptorName/String')
-            
-            return mesh_term.text if mesh_term is not None else None
-            
-        except Exception as e:
-            logging.error(f"Normalization failed for '{term}': {e}")
-            return None
 
 

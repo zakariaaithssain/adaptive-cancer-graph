@@ -22,7 +22,6 @@ class PubMedCentralAPI(PubMedAPI):
 
     @override             
     def get_data_from_xml(self, pmc_id):
-        logging.info(f"PubMedCentral API: Article PMCid: {pmc_id}: Looking For Article Content.")
         search_result = self.search(db="pmc", pmc_id= pmc_id, rettype="full")
         response_xml =self.fetch(search_result, db="pmc", pmc_id= pmc_id, rettype="full")
         if response_xml: 
@@ -30,7 +29,6 @@ class PubMedCentralAPI(PubMedAPI):
 
             article_body = root.find(".//body")
             if article_body is None:
-                logging.warning(f"PubMedCentral API: Article PMCid: {pmc_id}: Content Not Found.\n")
                 return None
 
             paragraphs = []
@@ -38,8 +36,7 @@ class PubMedCentralAPI(PubMedAPI):
                 if p.text: 
                     paragraphs.append(p.text.strip())
             
-            if paragraphs: 
-                logging.info(f"PubMedCentral API: Article PMCid: {pmc_id}: Content Found.\n")
+            
             return "\n\n".join(paragraphs)
 
         else: 
