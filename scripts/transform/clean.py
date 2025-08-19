@@ -31,10 +31,10 @@ def prepare_data_for_neo4j(raw_ents_path, raw_rels_path, saving_dir):
 	#combine back unique CUI rows with all missing CUI rows
 	entities = pd.concat([unique_cui_rows, rows_with_cui_missing], ignore_index=True)
 
-	#drop duplicates by text & label
+	#drop duplicates by text
 	entities['text'] = entities['text'].str.lower()
-	entities.drop_duplicates(subset=['text', 'label'], inplace=True, ignore_index=True)
-	logging.info("Entities: Drop ['text', 'label'] Duplicates.")
+	entities.drop_duplicates(subset=['text'],inplace=True, ignore_index=True)
+	logging.info("Entities: Drop ['text'] Duplicates.")
 	print("entities records after:", entities.shape[0])
 	logging.info(f"Entities: After Cleaning: {len(entities)}")
 	#relations cleaning

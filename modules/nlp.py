@@ -1,16 +1,11 @@
 import pandas as pd
 import spacy
 import logging
-import asyncio
-import aiohttp
-from concurrent.futures import ThreadPoolExecutor, as_completed
-from functools import lru_cache
 import pickle
 import hashlib
-from typing import List, Dict, Set, Optional
 import time
-from collections import defaultdict
 
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from spacy.matcher import Matcher, DependencyMatcher
 
 from modules.umls_api import UMLSNormalizer
@@ -81,7 +76,7 @@ class OptimizedNLP:
         skip_patterns = {'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by'}
         return len(text) > 2 and text not in skip_patterns
     
-    def _batch_normalize_entities(self, entity_texts: List[str]) -> Dict[str, Dict]:
+    def _batch_normalize_entities(self, entity_texts: list[str]) -> dict[str, dict]:
         """Normalize entities in batches to reduce API calls."""
         results = {}
         to_normalize = []
@@ -148,12 +143,12 @@ class OptimizedNLP:
         # Collect unique entity texts first (deduplication before expensive normalization)
         entity_texts_to_normalize = set()
         extracted_entities = []
-        
+        #use lemmas instead of text to get rid of things like cancer, cancers, etc.
         for ent in doc.ents:
             if __name__ == "__main__": 
-                print(f"entity: {ent.text} --- label: {ent.label_}\n ******* ")
+                print(f"entity: {ent.lemma_} --- label: {ent.label_}\n ******* ")
             
-            text_normalized = ent.text.strip().lower()
+            text_normalized = ent.lemma_.strip().lower()
             
             # Create entity dict without normalization first
             entity_dict = {
@@ -163,7 +158,7 @@ class OptimizedNLP:
             }
             
             extracted_entities.append(entity_dict)
-            entity_texts_to_normalize.add(ent.text.strip())
+            entity_texts_to_normalize.add(ent.lemma_.strip())
         
         # Batch normalize all unique entity texts
         normalization_results = self._batch_normalize_entities(list(entity_texts_to_normalize))
@@ -174,8 +169,8 @@ class OptimizedNLP:
             original_text = None
             # Find the original text (case-sensitive) for this entity
             for ent in doc.ents:
-                if ent.text.strip().lower() == entity_dict["text"]:
-                    original_text = ent.text.strip()
+                if ent.lemma_.strip().lower() == entity_dict["text"]:
+                    original_text = ent.lemma_.strip()
                     break
             
             if original_text and original_text in normalization_results:
@@ -217,12 +212,12 @@ class OptimizedNLP:
                 relation_label = self.nlp_pipe.vocab.strings[match_id]
                 
                 if __name__ == "__main__":
-                    print(f"{ent1.text} -[{relation_label}]-> {ent2.text}\n*******")
+                    print(f"{ent1.lemma_} -[{relation_label}]-> {ent2.lemma_}\n*******")
                 
                 rel_dict = {
-                    "ent1": ent1.text.strip().lower(),
+                    "ent1": ent1.lemma_.strip().lower(),
                     "relation": relation_label,
-                    "ent2": ent2.text.strip().lower(),
+                    "ent2": ent2.lemma_.strip().lower(),
                     **article_metadata
                 }
                 
@@ -246,12 +241,12 @@ class OptimizedNLP:
             ent2 = doc[token_ids[-1]]
             
             if __name__ == "__main__":
-                print(f"{ent1.text} -[{relation_label}]-> {ent2.text}\n*******")
+                print(f"{ent1.lemma_} -[{relation_label}]-> {ent2.lemma_}\n*******")
             
             rel_dict = {
-                "ent1": ent1.text.strip().lower(),
+                "ent1": ent1.lemma_.strip().lower(),
                 "relation": relation_label,
-                "ent2": ent2.text.strip().lower(),
+                "ent2": ent2.lemma_.strip().lower(),
                 **article_metadata
             }
             
@@ -272,7 +267,7 @@ class OptimizedNLP:
         
         return self
     
-    def process_articles_batch(self, articles: List[Dict]) -> 'OptimizedNLP':
+    def process_articles_batch(self, articles: list[dict]) -> 'OptimizedNLP':
         """Process multiple articles efficiently."""
         logging.info(f"NLP: Processing batch of {len(articles)} articles")
         
@@ -324,7 +319,7 @@ class OptimizedNLP:
         
         return self
     
-    def get_statistics(self) -> Dict:
+    def get_statistics(self) -> dict:
         """Get processing statistics."""
         return {
             "total_entities": len(self.entities),
