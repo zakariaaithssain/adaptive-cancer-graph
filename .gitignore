@@ -5,3 +5,4 @@ config/
 .pytest_cache/
 htmlcov/
 normalization_cache.pkl
+.vscode/
