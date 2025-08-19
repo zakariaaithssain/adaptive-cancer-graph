@@ -16,8 +16,8 @@ from config.generic_entities import generic_names
 
 class StreamingOptimizedNLP:
     def __init__(self, normalizer: UMLSNormalizer, 
-                 entities_output_path: str = None,
-                 relations_output_path: str = None,
+                 entities_output_path: str,
+                 relations_output_path: str,
                  cache_size: int = 10000, 
                  batch_size: int = 50, 
                  max_workers: int = 4,
@@ -74,21 +74,19 @@ class StreamingOptimizedNLP:
     
     def _initialize_streaming_files(self):
         """Initialize CSV files for streaming output."""
-        if self.entities_output_path:
-            # Ensure directory exists
-            Path(self.entities_output_path).parent.mkdir(parents=True, exist_ok=True)
-            # Create/truncate the file
-            with open(self.entities_output_path, 'w', newline='', encoding='utf-8'):
-                pass  # Just create/truncate the file
+        # Ensure directory exists
+        Path(self.entities_output_path).parent.mkdir(parents=True, exist_ok=True)
+        # Create/truncate the file
+        with open(self.entities_output_path, 'w', newline='', encoding='utf-8'):
+            pass  # Just create/truncate the file
         
-        if self.relations_output_path:
-            Path(self.relations_output_path).parent.mkdir(parents=True, exist_ok=True)
-            with open(self.relations_output_path, 'w', newline='', encoding='utf-8'):
-                pass
+        Path(self.relations_output_path).parent.mkdir(parents=True, exist_ok=True)
+        with open(self.relations_output_path, 'w', newline='', encoding='utf-8'):
+            pass
     
     def _stream_entities_to_csv(self, entities_batch: list[dict]):
         """Stream a batch of entities directly to CSV."""
-        if not self.entities_output_path or not entities_batch:
+        if not entities_batch:
             return
         
         try:
@@ -111,7 +109,7 @@ class StreamingOptimizedNLP:
     
     def _stream_relations_to_csv(self, relations_batch: list[dict]):
         """Stream a batch of relations directly to CSV."""
-        if not self.relations_output_path or not relations_batch:
+        if not relations_batch:
             return
         
         try:

@@ -23,7 +23,6 @@ def annotate_mongo_articles(ents_path ="data/extracted_entities.csv", rels_path 
         normalizer=normalizer,
         entities_output_path=ents_path,
         relations_output_path=rels_path,
-        streaming_mode=True,
     )
 
 
