@@ -92,10 +92,10 @@ if __name__ == "__main__":
 
     if args.step == "extract":
         extract_stage()
-    elif args.step == "clean":
-        clean_stage()
     elif args.step == "annotate":
         annotate_stage()
+    elif args.step == "clean":
+        clean_stage()
     elif args.step == "load":
         load_stage()
     else: 

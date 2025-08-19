@@ -4,7 +4,7 @@ from tqdm import tqdm
 
 from modules.mongoatlas import MongoAtlasConnector
 from modules.umls_api import UMLSNormalizer
-from modules.nlp import OptimizedNLP as NLP
+from modules.nlp import StreamingOptimizedNLP
 
 from config.mongodb_config import CONNECTION_STR
 
@@ -19,7 +19,12 @@ def annotate_mongo_articles(ents_path ="data/extracted_entities.csv", rels_path 
         
     #one for all so entities and relations could be saved in the class attr.
     normalizer = UMLSNormalizer()
-    annotator = NLP(normalizer) 
+    annotator = StreamingOptimizedNLP(
+        normalizer=normalizer,
+        entities_output_path=ents_path,
+        relations_output_path=rels_path,
+        streaming_mode=True,
+    )
 
 
     logging.info("Annotation Process Started.")
@@ -33,6 +38,4 @@ def annotate_mongo_articles(ents_path ="data/extracted_entities.csv", rels_path 
     except KeyboardInterrupt: 
         logging.error("Annotation Process Interrupted Manually.")
         raise
-    finally: 
-        annotator.generate_entities_csv(file_path=ents_path).generate_relations_csv(file_path=rels_path)
-
+    

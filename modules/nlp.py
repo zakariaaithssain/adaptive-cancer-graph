@@ -4,23 +4,29 @@ import logging
 import pickle
 import hashlib
 import time
+import shutil
 
+from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from spacy.matcher import Matcher, DependencyMatcher
 
 from modules.umls_api import UMLSNormalizer
 from config.nlp_config import MATCHER_PATTERNS, DEPENDENCY_MATCHER_PATTERNS
+from config.generic_entities import generic_names
 
-class OptimizedNLP:
-    def __init__(self, normalizer: UMLSNormalizer, cache_size: int = 10000, batch_size: int = 50, max_workers: int = 4):
+class StreamingOptimizedNLP:
+    def __init__(self, normalizer: UMLSNormalizer, 
+                 entities_output_path: str = None,
+                 relations_output_path: str = None,
+                 cache_size: int = 10000, 
+                 batch_size: int = 50, 
+                 max_workers: int = 4,
+                 buffer_size: int = 1000):
+        
         logging.info("NLP: Loading NER Model...")
         print("loading ner model...")
         self.nlp_pipe = spacy.load("en_ner_bionlp13cg_md") 
         self.nlp_pipe.add_pipe("merge_entities", after="ner")
-        
-        # Initialize storage
-        self.entities = []
-        self.relations = []
         
         # Initialize matchers with model vocab
         self.matcher = Matcher(self.nlp_pipe.vocab)
@@ -33,12 +39,31 @@ class OptimizedNLP:
         self.cache_size = cache_size
         self.batch_size = batch_size
         self.max_workers = max_workers
+        self.buffer_size = buffer_size
+        
+        # Output paths for streaming
+        self.entities_output_path = entities_output_path
+        self.relations_output_path = relations_output_path
+        
+
+        
+        # Streaming buffers
+        self._entities_buffer = []
+        self._relations_buffer = []
+        
+        # Track if CSV headers have been written
+        self._entities_header_written = False
+        self._relations_header_written = False
         
         # Caching and deduplication
         self._normalization_cache = {}
-        self._entity_cache = set()  # For fast duplicate checking
-        self._relation_cache = set()  # For fast duplicate checking
+        self._entity_cache = set()
+        self._relation_cache = set()
         self._load_cache()
+        
+        # Initialize streaming CSV files
+
+        self._initialize_streaming_files()
         
         # Add patterns to matchers
         for label, patterns in MATCHER_PATTERNS.items():
@@ -47,8 +72,80 @@ class OptimizedNLP:
         for label, patterns in DEPENDENCY_MATCHER_PATTERNS.items():
             self.dep_matcher.add(label, patterns)
     
+    def _initialize_streaming_files(self):
+        """Initialize CSV files for streaming output."""
+        if self.entities_output_path:
+            # Ensure directory exists
+            Path(self.entities_output_path).parent.mkdir(parents=True, exist_ok=True)
+            # Create/truncate the file
+            with open(self.entities_output_path, 'w', newline='', encoding='utf-8'):
+                pass  # Just create/truncate the file
+        
+        if self.relations_output_path:
+            Path(self.relations_output_path).parent.mkdir(parents=True, exist_ok=True)
+            with open(self.relations_output_path, 'w', newline='', encoding='utf-8'):
+                pass
+    
+    def _stream_entities_to_csv(self, entities_batch: list[dict]):
+        """Stream a batch of entities directly to CSV."""
+        if not self.entities_output_path or not entities_batch:
+            return
+        
+        try:
+            # Convert to DataFrame for easy CSV writing
+            df = pd.DataFrame(entities_batch)
+            
+            # Write header only once
+            write_header = not self._entities_header_written
+            mode = 'w' if write_header else 'a'
+            
+            df.to_csv(self.entities_output_path, mode=mode, header=write_header, index=False)
+            
+            if write_header:
+                self._entities_header_written = True
+            
+            logging.debug(f"NLP: Streamed {len(entities_batch)} entities to CSV")
+            
+        except Exception as e:
+            logging.error(f"NLP: Failed to stream entities to CSV: {e}")
+    
+    def _stream_relations_to_csv(self, relations_batch: list[dict]):
+        """Stream a batch of relations directly to CSV."""
+        if not self.relations_output_path or not relations_batch:
+            return
+        
+        try:
+            df = pd.DataFrame(relations_batch)
+            
+            write_header = not self._relations_header_written
+            mode = 'w' if write_header else 'a'
+            
+            df.to_csv(self.relations_output_path, mode=mode, header=write_header, index=False)
+            
+            if write_header:
+                self._relations_header_written = True
+            
+            logging.debug(f"NLP: Streamed {len(relations_batch)} relations to CSV")
+            
+        except Exception as e:
+            logging.error(f"NLP: Failed to stream relations to CSV: {e}")
+    
+    def _flush_entities_buffer(self, force: bool = False):
+        """Flush entities buffer to CSV when it reaches buffer_size or force=True."""
+        if (len(self._entities_buffer) >= self.buffer_size or force) and self._entities_buffer:
+            self._stream_entities_to_csv(self._entities_buffer)
+            
+            self._entities_buffer.clear()
+    
+    def _flush_relations_buffer(self, force: bool = False):
+        """Flush relations buffer to CSV when it reaches buffer_size or force=True."""
+        if (len(self._relations_buffer) >= self.buffer_size or force) and self._relations_buffer:
+            self._stream_relations_to_csv(self._relations_buffer)
+            
+            self._relations_buffer.clear()
+    
     def _generate_cache_key(self, text: str) -> str:
-        """Generate a hash key for caching normalized entities."""
+        """Generate a MD5 hash key (id) for caching normalized entities."""
         return hashlib.md5(text.lower().strip().encode()).hexdigest()
     
     def _load_cache(self):
@@ -72,9 +169,8 @@ class OptimizedNLP:
     def _should_normalize(self, text: str) -> bool:
         """Determine if entity should be normalized (skip very short/common ones)."""
         text = text.strip().lower()
-        # Skip very short entities or common stop-words
-        skip_patterns = {'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by'}
-        return len(text) > 2 and text not in skip_patterns
+        skip_patterns = generic_names | {'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by'}
+        return len(text) >= 1 and text not in skip_patterns
     
     def _batch_normalize_entities(self, entity_texts: list[str]) -> dict[str, dict]:
         """Normalize entities in batches to reduce API calls."""
@@ -89,8 +185,7 @@ class OptimizedNLP:
             elif self._should_normalize(text):
                 to_normalize.append(text)
             else:
-                # Return empty normalization for skipped entities
-                results[text] = {"cui": "", "normalized_name": "", "normalization_source": "", "url": ""}
+                results[text] = {"cui": "", "normalized_name": "", "normalization_source": ""}
         
         if not to_normalize:
             return results
@@ -101,7 +196,6 @@ class OptimizedNLP:
         for i in range(0, len(to_normalize), self.batch_size):
             batch = to_normalize[i:i + self.batch_size]
             
-            # Use ThreadPoolExecutor for concurrent API calls
             with ThreadPoolExecutor(max_workers=self.max_workers) as executor:
                 future_to_text = {
                     executor.submit(self.normalizer.normalize, text): text 
@@ -114,51 +208,47 @@ class OptimizedNLP:
                         normalization_result = future.result()
                         cache_key = self._generate_cache_key(text)
                         
-                        # Cache the result
                         self._normalization_cache[cache_key] = normalization_result
                         results[text] = normalization_result
                         
                     except Exception as e:
-                        logging.error(f"NLP: Failed to normalize '{text}': {e}")
-                        # Provide empty normalization on failure
-                        results[text] = {"cui": "", "normalized_name": "", "normalization_source": "", "url": ""}
+                        results[text] = {"cui": "", "normalized_name": "", "normalization_source": ""}
             
-            # Small delay between batches to be respectful to the API
             if i + self.batch_size < len(to_normalize):
                 time.sleep(0.5)
         
-        # Save cache periodically
         if len(self._normalization_cache) % 100 == 0:
             self._save_cache()
         
         return results
     
     def extract_and_normalize_entities(self, text: str, article_metadata: dict):
-        """Extract entities with optimized normalization."""
+        """Extract recognized entities from text with 
+        optimized normalization and streaming."""
         doc = self.nlp_pipe(text)
         
         if not doc.ents:
             return self
         
-        # Collect unique entity texts first (deduplication before expensive normalization)
         entity_texts_to_normalize = set()
         extracted_entities = []
-        #use lemmas instead of text to get rid of things like cancer, cancers, etc.
+        
         for ent in doc.ents:
-            if __name__ == "__main__": 
-                print(f"entity: {ent.lemma_} --- label: {ent.label_}\n ******* ")
-            
-            text_normalized = ent.lemma_.strip().lower()
-            
-            # Create entity dict without normalization first
-            entity_dict = {
-                "text": text_normalized,
-                "label": ent.label_,
-                **article_metadata
-            }
-            
-            extracted_entities.append(entity_dict)
-            entity_texts_to_normalize.add(ent.lemma_.strip())
+            lemma = ent.lemma_.strip().lower()
+            #we have nothing to do with generic entities (e.g. cancer, tumor...)
+            if lemma not in generic_names:
+                if __name__ == "__main__": 
+                    print(f"entity: {lemma} --- label: {ent.label_}\n ******* ")
+                
+                
+                entity_dict = {
+                    "text": lemma,
+                    "label": ent.label_,
+                    **article_metadata
+                }
+                
+                extracted_entities.append(entity_dict)
+                entity_texts_to_normalize.add(lemma)
         
         # Batch normalize all unique entity texts
         normalization_results = self._batch_normalize_entities(list(entity_texts_to_normalize))
@@ -167,7 +257,6 @@ class OptimizedNLP:
         final_entities = []
         for entity_dict in extracted_entities:
             original_text = None
-            # Find the original text (case-sensitive) for this entity
             for ent in doc.ents:
                 if ent.lemma_.strip().lower() == entity_dict["text"]:
                     original_text = ent.lemma_.strip()
@@ -176,7 +265,6 @@ class OptimizedNLP:
             if original_text and original_text in normalization_results:
                 entity_dict.update(normalization_results[original_text])
             
-            # Create a hashable key for deduplication
             entity_key = (
                 entity_dict["text"], 
                 entity_dict["label"], 
@@ -184,18 +272,22 @@ class OptimizedNLP:
                 entity_dict.get("pmcid", "")
             )
             
-            # Only add if not already seen
             if entity_key not in self._entity_cache:
                 self._entity_cache.add(entity_key)
                 final_entities.append(entity_dict)
         
-        self.entities.extend(final_entities)
-        logging.info(f"NLP: Added {len(final_entities)} new unique entities")
+        # Add to buffer instead of directly to entities list
+        self._entities_buffer.extend(final_entities)
+        
+        # Flush buffer if it's full
+        self._flush_entities_buffer()
+        
+        logging.info(f"NLP: Added {len(final_entities)} new unique entities to buffer")
         
         return self
     
     def extract_relations(self, text: str, article_metadata: dict):
-        """Extract relations with optimized deduplication."""
+        """Extract relations with optimized deduplication and streaming."""
         doc = self.nlp_pipe(text)
         
         matches = self.matcher(doc)
@@ -221,7 +313,6 @@ class OptimizedNLP:
                     **article_metadata
                 }
                 
-                # Create hashable key for deduplication
                 relation_key = (
                     rel_dict["ent1"],
                     rel_dict["relation"],
@@ -262,13 +353,18 @@ class OptimizedNLP:
                 self._relation_cache.add(relation_key)
                 new_relations.append(rel_dict)
         
-        self.relations.extend(new_relations)
-        logging.info(f"NLP: Added {len(new_relations)} new unique relations")
+        # Add to buffer instead of directly to relations list
+        self._relations_buffer.extend(new_relations)
+        
+        # Flush buffer if it's full
+        self._flush_relations_buffer()
+        
+        logging.info(f"NLP: Added {len(new_relations)} new unique relations to buffer")
         
         return self
     
-    def process_articles_batch(self, articles: list[dict]) -> 'OptimizedNLP':
-        """Process multiple articles efficiently."""
+    def process_articles_batch(self, articles: list[dict]) -> 'StreamingOptimizedNLP':
+        """Process multiple articles efficiently with streaming."""
         logging.info(f"NLP: Processing batch of {len(articles)} articles")
         
         for article in articles:
@@ -279,79 +375,36 @@ class OptimizedNLP:
                 self.extract_and_normalize_entities(text, metadata)
                 self.extract_relations(text, metadata)
         
-        return self
-    
-    def generate_entities_csv(self, file_path: str):
-        """Generate entities CSV with optimized DataFrame creation."""
-        if not self.entities:
-            logging.warning("NLP: No Entities In self.entities. Make Sure To Extract Them First.")
-            print("no entities found, extract first.")
-            df = pd.DataFrame(data=[{"entity": "", "label": ""}])
-        else: 
-            df = pd.DataFrame(data=self.entities)
-        
-        try:
-            df.to_csv(file_path, index=False)
-            logging.info(f"NLP: Entities Saved To {file_path}")
-            print(f"entities saved to {file_path}")
-        except Exception as e:
-            logging.error(f"NLP: Failed To Save Entities As CSV: Error: {e}")
-            print("error saving entities to csv.")
+        # Force flush buffers after processing batch
+        self.flush_all_buffers()
         
         return self
     
-    def generate_relations_csv(self, file_path: str):
-        """Generate relations CSV with optimized DataFrame creation."""
-        if not self.relations:
-            logging.warning("NLP: No Relations In self.relations. Make Sure To Extract Them First.")
-            print("no relations found, extract first.")
-            df = pd.DataFrame(data=[{"ent1": "", "relation": "", "ent2": ""}])
-        else: 
-            df = pd.DataFrame(data=self.relations)
-        
-        try:
-            df.to_csv(file_path, index=False)
-            logging.info(f"NLP: Relations Saved To {file_path}")
-            print(f"relations saved to {file_path}")
-        except Exception as e:
-            logging.error(f"NLP: Failed To Save Relations As CSV: Error: {e}")
-            print("error saving relations to csv.")
-        
-        return self
+    def flush_all_buffers(self):
+        """Force flush all buffers to CSV files."""
+        self._flush_entities_buffer(force=True)
+        self._flush_relations_buffer(force=True)
+        logging.info("NLP: Flushed all buffers to CSV files")
     
-    def get_statistics(self) -> dict:
+
+    def get_info(self) -> dict:
         """Get processing statistics."""
         return {
-            "total_entities": len(self.entities),
-            "total_relations": len(self.relations),
+            "total_entities": len(self.entities) + len(self._entities_buffer),
+            "total_relations": len(self.relations) + len(self._relations_buffer),
             "cached_normalizations": len(self._normalization_cache),
             "unique_entity_texts": len(self._entity_cache),
-            "unique_relations": len(self._relation_cache)
+            "unique_relations": len(self._relation_cache),
+            "entities_in_buffer": len(self._entities_buffer),
+            "relations_in_buffer": len(self._relations_buffer),
         }
     
     def __del__(self):
-        """Save cache when object is destroyed."""
+        """Save cache and flush buffers when object is destroyed."""
         if hasattr(self, '_normalization_cache') and self._normalization_cache:
             self._save_cache()
+        
+        if hasattr(self, '_entities_buffer') or hasattr(self, '_relations_buffer'):
+            self.flush_all_buffers()
 
 
-# Maintain backward compatibility
-NLP = OptimizedNLP
-
-# Keep the original main block for testing
-if __name__ == "__main__": 
-    normalizer = UMLSNormalizer()
-    nlp = OptimizedNLP(normalizer=normalizer, max_workers=2, batch_size=10) 
-    print("Entities recognized by ner_bionlp13cg_md model:")
-    print(nlp.nlp_pipe.get_pipe("ner").labels)
-    
-    if not nlp.entities: 
-        print("no entities, make sure to extract them.")
-    elif not nlp.relations: 
-        print("no relations, make sure to extract them.")
-    else: 
-        print(nlp.entities, nlp.relations, sep="\n *** \n")
-    
-    # Print statistics
-    stats = nlp.get_statistics()
-    print(f"Statistics: {stats}")
