@@ -121,7 +121,7 @@ class Neo4jAuraConnector:
                 name: row.name,
                 cui: row.cui,
                 normalized_name: row.normalized_name,
-                normalization_source: row.normalization_source,
+                normalization_source: row.normalization_source
             }}
             """
         try: 

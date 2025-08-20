@@ -11,7 +11,7 @@ from config.mongodb_config import CONNECTION_STR
 
 
 
-def annotate_mongo_articles(ents_path ="data/extracted_entities.csv", rels_path = "data/extracted_relations.csv"):
+def annotate_mongo_articles(raw_ents_path ="data/extracted_entities.csv", raw_rels_path = "data/extracted_relations.csv"):
     
     connector = MongoAtlasConnector(connection_str=CONNECTION_STR)
     #list[dict] each dict is an article
@@ -21,8 +21,8 @@ def annotate_mongo_articles(ents_path ="data/extracted_entities.csv", rels_path 
     normalizer = UMLSNormalizer()
     annotator = StreamingOptimizedNLP(
         normalizer=normalizer,
-        entities_output_path=ents_path,
-        relations_output_path=rels_path,
+        entities_output_path=raw_ents_path,
+        relations_output_path=raw_rels_path,
     )
 
 

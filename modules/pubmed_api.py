@@ -3,6 +3,8 @@ import xml.etree.ElementTree as ET
 
 import time
 import logging
+import pickle
+import os 
 
 from config.apis_config import PM_API_SLEEP_TIME
 
@@ -25,8 +27,10 @@ class PubMedAPI:
         if self.email: logging.info("PubMed API: Email Used.")
         else: logging.warning("PubMed API: Email Absent.")
     
+        #ids cache
+        self.pmids_cache = set()
 
-    
+        self._load_cache()    
     def search(self, query = None, max_results=1000, db = "pubmed", pmc_id = None, rettype = 'abstract'): 
         """ 
         for PubMed Central API:
@@ -180,8 +184,11 @@ class PubMedAPI:
                 keywords = []
                 for keyword in article.findall('.//Keyword'):
                     keywords.append(keyword.text)
-                    
-                articles.append({
+
+                #add ids to cache
+                if article_pmid is not None and article_pmid.text not in self.pmids_cache: 
+                    self.pmids_cache.add(article_pmid.text) 
+                    articles.append({
 
                     'pmid': article_pmid.text if article_pmid is not None else None, 
                     #remove the PMC prefixe from the pmc ids.
@@ -196,9 +203,29 @@ class PubMedAPI:
                     'keywords': keywords       # keywords provided by author
                 })
             
+            self._save_cache()
             return articles #list of dicts, each dict is an article's metadata containing the keys above.
         else: 
             return []
     
 
 
+    def _load_cache(self):
+        """Load PMids cache from disk if it exists."""
+        try:
+            with open('cache/pmids_cache.pkl', 'rb') as f:
+                self.pmids_cache = pickle.load(f)
+            logging.info(f"PubMed API: Loaded {len(self.pmids_cache)} cached pmids")
+        except FileNotFoundError:
+            logging.info("PubMed API: No existing cache found, starting fresh")
+    
+    def _save_cache(self):
+        """Save PMids cache to disk."""
+        try:
+            os.makedirs("cache", exist_ok=True)
+            with open('cache/pmids_cache.pkl', 'wb') as f:
+                pickle.dump(self.pmids_cache, f)
+            logging.info(f"PubMed API: Saved {len(self.pmids_cache)} pmids to cache")
+        except Exception as e:
+            logging.error(f"PubMed API: Failed to save cache: {e}")
+    

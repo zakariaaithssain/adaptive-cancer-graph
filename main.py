@@ -9,7 +9,7 @@ from config.neo4jdb_config import NEO4J_LABELS, NEO4J_REL_TYPES
 
 
 #exit with KeyboardInterrupt, raise other exceptions
-def extract_stage(max_results=1000, extract_abstracts_only=True):
+def extract_stage(max_results=1000, extract_abstracts_only=False):
     """Step 1: Extract articles from PubMed to MongoDB."""
     try:
         logging.info("Starting extraction stage.")
@@ -18,7 +18,7 @@ def extract_stage(max_results=1000, extract_abstracts_only=True):
             extract_abstracts_only=extract_abstracts_only,
             max_results=max_results
         )
-        logging.info("Extraction stage completed.")
+        logging.info("Extraction stage completed. Data loaded to Mongo Atlas.")
         print("Extraction stage completed.")
     except KeyboardInterrupt as k:
         print("Extraction stage interrupted manually.")
@@ -36,9 +36,9 @@ def annotate_stage(ents_path="data/extracted_entities.csv",
     try:
         logging.info("Starting annotation stage.")
         print("Starting annotation stage...")
-        annotate_mongo_articles(ents_path=ents_path, rels_path=rels_path)
+        annotate_mongo_articles(raw_ents_path=ents_path, raw_rels_path=rels_path)
         logging.info(f"Annotation stage completed. Entities: {ents_path}, Relations: {rels_path}")
-        print("Annotation stage completed.")
+        print(f"Annotation stage completed. entities: {ents_path} relations: {rels_path}")
     except KeyboardInterrupt as k:
         print("Annotation stage interrupted manually.")
         logging.exception(f"Annotation stage failed: {k}")
@@ -61,7 +61,7 @@ def clean_stage(raw_ents_path="data/extracted_entities.csv",
             saving_dir=saving_dir
         )
         logging.info(f"Cleaning stage completed. Cleaned files: {ents_path}, {rels_path}")
-        print("Cleaning stage completed.")
+        print(f"Cleaning stage completed. clean entities: {ents_path} clean relations: {rels_path}")
         return ents_path, rels_path
     except KeyboardInterrupt as k:
         print("Cleaning stage interrupted manually.")
@@ -88,7 +88,7 @@ def load_stage(ents_clean_csv = 'data/ready_for_neo4j/entities4neo4j.csv', rels_
             load_batch_size=load_batch_size
         )
         logging.info("Loading stage completed.")
-        print("Loading stage completed.")
+        print("Loading stage completed. Data loaded to Noe4j Aura.")
     except KeyboardInterrupt as k:
         print("Loading stage interrupted manually.")
         logging.exception(f"Loading stage failed: {k}")
@@ -99,7 +99,7 @@ def load_stage(ents_clean_csv = 'data/ready_for_neo4j/entities4neo4j.csv', rels_
 
 
 def run_etl(max_results=1000,
-            extract_abstracts_only=True,
+            extract_abstracts_only=False,
             load_batch_size=1000):
     """Full ETL pipeline orchestrator."""
     try:
@@ -109,7 +109,7 @@ def run_etl(max_results=1000,
         load_stage(ents_clean_csv=ents_path, rels_clean_csv=rels_path,
                    load_batch_size=load_batch_size)
         logging.info("ETL pipeline completed successfully.")
-    
+
     except Exception as e:
         logging.exception(f"ETL pipeline failed: {e}")
         raise 
