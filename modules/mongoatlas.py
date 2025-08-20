@@ -112,4 +112,11 @@ class MongoAtlasConnector:
             logging.info("AtlasConnector: Data Fetched With No Errors.")
         return articles
         
+
+    def delete_collection_content(self):
+        """WARNING: this will delete all Mongo Atlas content, however, it will keep the structure."""
+        # delete all documents from collection
+        result = self.collection.delete_many({})
+        print(f"AtlasConnector: Deleted {result.deleted_count} documents.")
+        logging.warning(f"AtlasConnector: Deleted {result.deleted_count} documents.")
         

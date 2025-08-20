@@ -1,11 +1,16 @@
 import logging
 import argparse 
 
+from modules.mongoatlas import MongoAtlasConnector
+from modules.neo4jaura import Neo4jAuraConnector
+
 from scripts.extract import extract_pubmed_to_mongo
 from scripts.transform.annotate import annotate_mongo_articles
 from scripts.transform.clean import prepare_data_for_neo4j
 from scripts.load import load_to_aura
-from config.neo4jdb_config import NEO4J_LABELS, NEO4J_REL_TYPES
+
+from config.neo4jdb_config import NEO4J_LABELS, NEO4J_REL_TYPES, NEO4J_AUTH, NEO4J_URI
+from config.mongodb_config import CONNECTION_STR
 
 
 #exit with KeyboardInterrupt, raise other exceptions
@@ -98,9 +103,19 @@ def load_stage(ents_clean_csv = 'data/ready_for_neo4j/entities4neo4j.csv', rels_
         raise
 
 
-def run_etl(max_results=1000,
+
+def run_etl(clean_dbs = False, max_results=1000,
             extract_abstracts_only=False,
             load_batch_size=1000):
+    """WARNING: calling this with clean_dbs = True will delete ALL Mongo Atlas docs 
+                and ALL Neo4j Aura nodes and relationships"""
+    if clean_dbs:
+        mongo_connector = MongoAtlasConnector(CONNECTION_STR)
+        mongo_connector.delete_collection_content()
+        with Neo4jAuraConnector(uri=NEO4J_URI,auth=NEO4J_AUTH) as connector:
+            connector.delete_graph_content()
+
+
     """Full ETL pipeline orchestrator."""
     try:
         extract_stage(max_results=max_results, extract_abstracts_only=extract_abstracts_only)

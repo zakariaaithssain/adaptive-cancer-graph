@@ -234,5 +234,14 @@ class Neo4jAuraConnector:
         else:
             logging.warning(f"AuraConnector: No {type} Relations In {rels_clean_csv}.")
             return []
+    
+    
+
+    def delete_graph_content(self):
+        """WARNING: this will delete all nodes and relationships from Neo4j Aura."""
+        with self.driver.session() as session:
+            session.run("MATCH (n) DETACH DELETE n")
+        print("AuraConnector: Deleted Neo4j Aura content.")
+        logging.warning("AuraConnector: Deleted Neo4j Aura content.")
         
         

@@ -1,16 +1,14 @@
 """"this will contain Extraction Process functions for the project"""
 import logging 
-import pickle
-from tqdm import tqdm
 
 from modules.pubmed_api import PubMedAPI
 from modules.pubmedcentral_api import PubMedCentralAPI
 from modules.mongoatlas import MongoAtlasConnector
+from modules.neo4jaura import Neo4jAuraConnector
 
 from config.apis_config import PM_API_KEY_EMAIL
 from config.apis_config import PM_QUERIES
-from config.mongodb_config import CONNECTION_STR
-
+from config.mongodb_config import CONNECTION_STR 
 
 
 #api key and email are optional, but if not provided, we have less requests rate. 
@@ -26,6 +24,7 @@ mongo_connector = MongoAtlasConnector(connection_str=CONNECTION_STR)
 #less max_results, less API pression, more loop iterations
 #if max results is not specified, the default is 1k, the max is 10k
 def extract_pubmed_to_mongo(extract_abstracts_only=True, max_results=1000):
+
     try: 
         all_articles = _get_data_from_apis(pubmed_api, pubmedcentral_api,
                                         extract_abstracts_only,

@@ -1,106 +1,96 @@
-2025-08-20 01:01:40,857 - INFO - Logs: Logs Initialized.
+2025-08-20 01:28:55,910 - INFO - Logs: Logs Initialized.
 
-2025-08-20 01:01:41,169 - INFO - PubMed API: API Key Used.
-2025-08-20 01:01:41,169 - INFO - PubMed API: Email Used.
-2025-08-20 01:01:41,170 - INFO - PubMed API: No existing cache found, starting fresh
-2025-08-20 01:01:41,170 - INFO - PubMedCentral API: API Key Used.
-2025-08-20 01:01:41,170 - INFO - PubMedCentral API: Email Used.
+2025-08-20 01:28:57,992 - INFO - PubMed API: API Key Used.
+2025-08-20 01:28:57,992 - INFO - PubMed API: Email Used.
+2025-08-20 01:28:57,995 - INFO - PubMed API: Loaded 4403 cached pmids
+2025-08-20 01:28:57,995 - INFO - PubMedCentral API: API Key Used.
+2025-08-20 01:28:57,995 - INFO - PubMedCentral API: Email Used.
 
-2025-08-20 01:01:41,170 - INFO - PubMed API: No existing cache found, starting fresh
-2025-08-20 01:01:42,444 - INFO - AtlasConnector: Deployment Pinged. Successfully Connected To MongoDB Atlas.
-2025-08-20 01:01:42,444 - INFO - AtlasConnector: Cluster: articles-cluster.
-2025-08-20 01:01:42,444 - INFO - AtlasConnector: DataBase: fetched-data-db.
-2025-08-20 01:01:42,444 - INFO - AtlasConnector: Collection: pm-pmc-data.
-2025-08-20 01:01:44,566 - INFO - Starting extraction stage.
-2025-08-20 01:01:44,567 - INFO - Extraction Process: Extracting Abstracts And Body. PubMedCentral API Will Be Called For Each Article.
+2025-08-20 01:28:57,997 - INFO - PubMed API: Loaded 3609 cached pmcids
+2025-08-20 01:28:59,480 - INFO - AtlasConnector: Deployment Pinged. Successfully Connected To MongoDB Atlas.
+2025-08-20 01:28:59,480 - INFO - AtlasConnector: Cluster: articles-cluster.
+2025-08-20 01:28:59,480 - INFO - AtlasConnector: DataBase: fetched-data-db.
+2025-08-20 01:28:59,480 - INFO - AtlasConnector: Collection: pm-pmc-data.
+2025-08-20 01:29:01,927 - INFO - AtlasConnector: Deployment Pinged. Successfully Connected To MongoDB Atlas.
+2025-08-20 01:29:01,927 - INFO - AtlasConnector: Cluster: articles-cluster.
+2025-08-20 01:29:01,927 - INFO - AtlasConnector: DataBase: fetched-data-db.
+2025-08-20 01:29:01,927 - INFO - AtlasConnector: Collection: pm-pmc-data.
+2025-08-20 01:29:02,485 - WARNING - AtlasConnector: Deleted 4272 documents.
+2025-08-20 01:29:03,673 - INFO - AuraConnector: Successfully Connected To Neo4j Aura.
+2025-08-20 01:29:05,370 - WARNING - AuraConnector: Deleted Neo4j Aura content.
+2025-08-20 01:29:05,371 - INFO - AuraConnector: Connector's Driver Closed Successfully.
+2025-08-20 01:29:05,371 - INFO - Starting extraction stage.
+2025-08-20 01:29:05,371 - INFO - Extraction Process: Extracting Abstracts And Body. PubMedCentral API Will Be Called For Each Article.
 
-2025-08-20 01:01:44,567 - INFO - Extraction Process: Working On: Cancer_gene_regulation Query.
+2025-08-20 01:29:05,371 - INFO - Extraction Process: Working On: Cancer_gene_regulation Query.
 
-2025-08-20 01:01:45,400 - INFO - PubMed API: Search Endpoint: Response OK: 200
-2025-08-20 01:01:45,401 - INFO - PubMed API: Search Endpoint: Total Search Results For Current Query: 106526
-2025-08-20 01:01:45,401 - INFO - Search Endpoint: Sleeping For 0.11s.
-2025-08-20 01:01:45,512 - INFO - Extraction Process: 1000 Articles To Get.
-2025-08-20 01:01:54,751 - INFO - PubMed API: Fetch Endpoint: Response OK: 200
-2025-08-20 01:01:54,751 - INFO - Fetch Endpoint: Sleeping For 0.11s.
-2025-08-20 01:01:55,821 - INFO - PubMed API: Found 1000 Articles In Fetched XML Root.
-2025-08-20 01:01:55,952 - INFO - PubMed API: Saved 1000 pmids to cache
-2025-08-20 01:01:55,991 - INFO - PubMed API: Saved 857 pmcids to cache
-2025-08-20 01:01:55,991 - INFO - Extraction Process: Working On: Cancer_cell_signaling Query.
+2025-08-20 01:29:06,233 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-20 01:29:06,234 - INFO - PubMed API: Search Endpoint: Total Search Results For Current Query: 106526
+2025-08-20 01:29:06,234 - INFO - Search Endpoint: Sleeping For 0.11s.
+2025-08-20 01:29:06,345 - INFO - Extraction Process: 1000 Articles To Get.
+2025-08-20 01:29:16,034 - INFO - PubMed API: Fetch Endpoint: Response OK: 200
+2025-08-20 01:29:16,035 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-20 01:29:58,744 - INFO - PubMed API: Found 1000 Articles In Fetched XML Root.
+2025-08-20 01:29:59,378 - INFO - PubMed API: Saved 4403 pmids to cache
+2025-08-20 01:29:59,520 - INFO - PubMed API: Saved 3609 pmcids to cache
+2025-08-20 01:29:59,520 - INFO - Extraction Process: Working On: Cancer_cell_signaling Query.
 
-2025-08-20 01:01:56,800 - INFO - PubMed API: Search Endpoint: Response OK: 200
-2025-08-20 01:01:56,800 - INFO - PubMed API: Search Endpoint: Total Search Results For Current Query: 84958
-2025-08-20 01:01:56,800 - INFO - Search Endpoint: Sleeping For 0.11s.
-2025-08-20 01:01:56,911 - INFO - Extraction Process: 1000 Articles To Get.
-2025-08-20 01:02:06,614 - INFO - PubMed API: Fetch Endpoint: Response OK: 200
-2025-08-20 01:02:06,615 - INFO - Fetch Endpoint: Sleeping For 0.11s.
-2025-08-20 01:02:07,549 - INFO - PubMed API: Found 1000 Articles In Fetched XML Root.
-2025-08-20 01:02:07,671 - INFO - PubMed API: Saved 1639 pmids to cache
-2025-08-20 01:02:07,733 - INFO - PubMed API: Saved 1382 pmcids to cache
-2025-08-20 01:02:07,733 - INFO - Extraction Process: Working On: Cancer_microenvironment Query.
+2025-08-20 01:30:00,464 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-20 01:30:00,464 - INFO - PubMed API: Search Endpoint: Total Search Results For Current Query: 84958
+2025-08-20 01:30:00,464 - INFO - Search Endpoint: Sleeping For 0.11s.
+2025-08-20 01:30:00,576 - INFO - Extraction Process: 1000 Articles To Get.
+2025-08-20 01:30:10,089 - INFO - PubMed API: Fetch Endpoint: Response OK: 200
+2025-08-20 01:30:10,090 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-20 01:30:11,464 - INFO - PubMed API: Found 1000 Articles In Fetched XML Root.
+2025-08-20 01:30:11,524 - INFO - PubMed API: Saved 4403 pmids to cache
+2025-08-20 01:30:11,582 - INFO - PubMed API: Saved 3609 pmcids to cache
+2025-08-20 01:30:11,582 - INFO - Extraction Process: Working On: Cancer_microenvironment Query.
 
-2025-08-20 01:02:08,821 - INFO - PubMed API: Search Endpoint: Response OK: 200
-2025-08-20 01:02:08,822 - INFO - PubMed API: Search Endpoint: Total Search Results For Current Query: 135886
-2025-08-20 01:02:08,822 - INFO - Search Endpoint: Sleeping For 0.11s.
-2025-08-20 01:02:08,932 - INFO - Extraction Process: 1000 Articles To Get.
-2025-08-20 01:02:17,703 - INFO - PubMed API: Fetch Endpoint: Response OK: 200
-2025-08-20 01:02:17,703 - INFO - Fetch Endpoint: Sleeping For 0.11s.
-2025-08-20 01:02:18,632 - INFO - PubMed API: Found 1000 Articles In Fetched XML Root.
-2025-08-20 01:02:19,157 - INFO - PubMed API: Saved 2187 pmids to cache
-2025-08-20 01:02:19,205 - INFO - PubMed API: Saved 1824 pmcids to cache
-2025-08-20 01:02:19,205 - INFO - Extraction Process: Working On: Cancer_metabolism Query.
+2025-08-20 01:30:12,470 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-20 01:30:12,471 - INFO - PubMed API: Search Endpoint: Total Search Results For Current Query: 135886
+2025-08-20 01:30:12,471 - INFO - Search Endpoint: Sleeping For 0.11s.
+2025-08-20 01:30:12,582 - INFO - Extraction Process: 1000 Articles To Get.
+2025-08-20 01:30:21,956 - INFO - PubMed API: Fetch Endpoint: Response OK: 200
+2025-08-20 01:30:21,957 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-20 01:30:23,866 - INFO - PubMed API: Found 1000 Articles In Fetched XML Root.
+2025-08-20 01:30:23,942 - INFO - PubMed API: Saved 4403 pmids to cache
+2025-08-20 01:30:24,069 - INFO - PubMed API: Saved 3609 pmcids to cache
+2025-08-20 01:30:24,069 - INFO - Extraction Process: Working On: Cancer_metabolism Query.
 
-2025-08-20 01:02:20,084 - INFO - PubMed API: Search Endpoint: Response OK: 200
-2025-08-20 01:02:20,084 - INFO - PubMed API: Search Endpoint: Total Search Results For Current Query: 31100
-2025-08-20 01:02:20,085 - INFO - Search Endpoint: Sleeping For 0.11s.
-2025-08-20 01:02:20,197 - INFO - Extraction Process: 1000 Articles To Get.
-2025-08-20 01:02:29,070 - INFO - PubMed API: Fetch Endpoint: Response OK: 200
-2025-08-20 01:02:29,071 - INFO - Fetch Endpoint: Sleeping For 0.11s.
-2025-08-20 01:02:30,329 - INFO - PubMed API: Found 1000 Articles In Fetched XML Root.
-2025-08-20 01:02:30,467 - INFO - PubMed API: Saved 2967 pmids to cache
-2025-08-20 01:02:30,524 - INFO - PubMed API: Saved 2469 pmcids to cache
-2025-08-20 01:02:30,524 - INFO - Extraction Process: Working On: Cancer_biomarkers Query.
+2025-08-20 01:30:24,933 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-20 01:30:24,933 - INFO - PubMed API: Search Endpoint: Total Search Results For Current Query: 31100
+2025-08-20 01:30:24,933 - INFO - Search Endpoint: Sleeping For 0.11s.
+2025-08-20 01:30:25,044 - INFO - Extraction Process: 1000 Articles To Get.
+2025-08-20 01:30:33,887 - INFO - PubMed API: Fetch Endpoint: Response OK: 200
+2025-08-20 01:30:33,887 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-20 01:30:35,317 - INFO - PubMed API: Found 1000 Articles In Fetched XML Root.
+2025-08-20 01:30:35,417 - INFO - PubMed API: Saved 4403 pmids to cache
+2025-08-20 01:30:35,536 - INFO - PubMed API: Saved 3609 pmcids to cache
+2025-08-20 01:30:35,536 - INFO - Extraction Process: Working On: Cancer_biomarkers Query.
 
-2025-08-20 01:02:31,584 - INFO - PubMed API: Search Endpoint: Response OK: 200
-2025-08-20 01:02:31,585 - INFO - PubMed API: Search Endpoint: Total Search Results For Current Query: 249570
-2025-08-20 01:02:31,585 - INFO - Search Endpoint: Sleeping For 0.11s.
-2025-08-20 01:02:31,696 - INFO - Extraction Process: 1000 Articles To Get.
-2025-08-20 01:02:42,563 - INFO - PubMed API: Fetch Endpoint: Response OK: 200
-2025-08-20 01:02:42,563 - INFO - Fetch Endpoint: Sleeping For 0.11s.
-2025-08-20 01:02:43,449 - INFO - PubMed API: Found 1000 Articles In Fetched XML Root.
-2025-08-20 01:02:43,524 - INFO - PubMed API: Saved 3440 pmids to cache
-2025-08-20 01:02:43,603 - INFO - PubMed API: Saved 2820 pmcids to cache
-2025-08-20 01:02:43,603 - INFO - Extraction Process: Working On: Cancer_drug_therapy Query.
+2025-08-20 01:30:36,383 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-20 01:30:36,383 - INFO - PubMed API: Search Endpoint: Total Search Results For Current Query: 249570
+2025-08-20 01:30:36,383 - INFO - Search Endpoint: Sleeping For 0.11s.
+2025-08-20 01:30:36,495 - INFO - Extraction Process: 1000 Articles To Get.
+2025-08-20 01:30:44,392 - INFO - PubMed API: Fetch Endpoint: Response OK: 200
+2025-08-20 01:30:44,392 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-20 01:30:45,379 - INFO - PubMed API: Found 1000 Articles In Fetched XML Root.
+2025-08-20 01:30:45,471 - INFO - PubMed API: Saved 4403 pmids to cache
+2025-08-20 01:30:45,578 - INFO - PubMed API: Saved 3609 pmcids to cache
+2025-08-20 01:30:45,579 - INFO - Extraction Process: Working On: Cancer_drug_therapy Query.
 
-2025-08-20 01:02:44,516 - INFO - PubMed API: Search Endpoint: Response OK: 200
-2025-08-20 01:02:44,516 - INFO - PubMed API: Search Endpoint: Total Search Results For Current Query: 188616
-2025-08-20 01:02:44,516 - INFO - Search Endpoint: Sleeping For 0.11s.
-2025-08-20 01:02:44,628 - INFO - Extraction Process: 1000 Articles To Get.
-2025-08-20 01:02:52,869 - INFO - PubMed API: Fetch Endpoint: Response OK: 200
-2025-08-20 01:02:52,869 - INFO - Fetch Endpoint: Sleeping For 0.11s.
-2025-08-20 01:02:53,766 - INFO - PubMed API: Found 1000 Articles In Fetched XML Root.
-2025-08-20 01:02:53,869 - INFO - PubMed API: Saved 3683 pmids to cache
-2025-08-20 01:02:53,935 - INFO - PubMed API: Saved 3000 pmcids to cache
-2025-08-20 01:02:53,935 - INFO - Extraction Process: Working On: Cancer_mutations Query.
+2025-08-20 01:30:46,469 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-20 01:30:46,470 - INFO - PubMed API: Search Endpoint: Total Search Results For Current Query: 188616
+2025-08-20 01:30:46,470 - INFO - Search Endpoint: Sleeping For 0.11s.
+2025-08-20 01:30:46,581 - INFO - Extraction Process: 1000 Articles To Get.
+2025-08-20 01:30:54,524 - INFO - PubMed API: Fetch Endpoint: Response OK: 200
+2025-08-20 01:30:54,524 - INFO - Fetch Endpoint: Sleeping For 0.11s.
+2025-08-20 01:30:55,599 - INFO - PubMed API: Found 1000 Articles In Fetched XML Root.
+2025-08-20 01:30:55,674 - INFO - PubMed API: Saved 4403 pmids to cache
+2025-08-20 01:30:55,769 - INFO - PubMed API: Saved 3609 pmcids to cache
+2025-08-20 01:30:55,769 - INFO - Extraction Process: Working On: Cancer_mutations Query.
 
-2025-08-20 01:02:54,713 - INFO - PubMed API: Search Endpoint: Response OK: 200
-2025-08-20 01:02:54,714 - INFO - PubMed API: Search Endpoint: Total Search Results For Current Query: 56266
-2025-08-20 01:02:54,714 - INFO - Search Endpoint: Sleeping For 0.11s.
-2025-08-20 01:02:54,824 - INFO - Extraction Process: 1000 Articles To Get.
-2025-08-20 01:03:02,830 - INFO - PubMed API: Fetch Endpoint: Response OK: 200
-2025-08-20 01:03:02,830 - INFO - Fetch Endpoint: Sleeping For 0.11s.
-2025-08-20 01:03:03,749 - INFO - PubMed API: Found 1000 Articles In Fetched XML Root.
-2025-08-20 01:03:03,860 - INFO - PubMed API: Saved 4270 pmids to cache
-2025-08-20 01:03:03,936 - INFO - PubMed API: Saved 3506 pmcids to cache
-2025-08-20 01:03:03,936 - INFO - Extraction Process: Working On: Cancer_development Query.
-
-2025-08-20 01:03:04,911 - INFO - PubMed API: Search Endpoint: Response OK: 200
-2025-08-20 01:03:04,912 - INFO - PubMed API: Search Endpoint: Total Search Results For Current Query: 203461
-2025-08-20 01:03:04,912 - INFO - Search Endpoint: Sleeping For 0.11s.
-2025-08-20 01:03:05,025 - INFO - Extraction Process: 1000 Articles To Get.
-2025-08-20 01:03:13,431 - INFO - PubMed API: Fetch Endpoint: Response OK: 200
-2025-08-20 01:03:13,432 - INFO - Fetch Endpoint: Sleeping For 0.11s.
-2025-08-20 01:03:14,354 - INFO - PubMed API: Found 1000 Articles In Fetched XML Root.
-2025-08-20 01:03:14,482 - INFO - PubMed API: Saved 4403 pmids to cache
-2025-08-20 01:03:14,549 - INFO - PubMed API: Saved 3609 pmcids to cache
-2025-08-20 01:03:14,549 - INFO - Extraction Process: Finished Collecting Articles Abstracts.
-2025-08-20 01:03:14,558 - INFO - AtlasConnector: Inserting New Docs. Already Present Ones Will Be Ignored.
+2025-08-20 01:30:56,654 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-20 01:30:56,655 - INFO - PubMed API: Search Endpoint: Total Search Results For Current Query: 56266
+2025-08-20 01:30:56,655 - INFO - Search Endpoint: Sleeping For 0.11s.
+2025-08-20 01:30:56,766 - INFO - Extraction Process: 1000 Articles To Get.
