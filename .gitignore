@@ -1,7 +1,7 @@
 .graph/
 __pycache__/
-config/
 .coverage
 .pytest_cache/
 htmlcov/
 .vscode/
+config/secrets.py

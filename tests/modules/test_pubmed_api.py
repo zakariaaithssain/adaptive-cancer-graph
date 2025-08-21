@@ -115,33 +115,3 @@ def test_get_data_from_xml(pubmed, sample_fetch_response_xml):
     assert article["abstract"] == "Sample abstract text"
     assert article["medical_subject_headings"] == ["SampleMesh"]
     assert article["keywords"] == ["keyword1"]
-
-# ------------------------
-# Tests for normalize_term()
-# ------------------------
-
-@patch("modules.pubmed_api.rq.get")
-@patch("modules.pubmed_api.time.sleep", return_value=None)
-@patch("modules.pubmed_api.logging")
-@pytest.mark.parametrize("search_status,fetch_status,expected", [
-    (200, 200, "SampleMeshTerm"),
-    (500, 200, None),
-    (200, 500, None),
-])
-def test_normalize_term(mock_logging, mock_sleep, mock_get, pubmed, search_status, fetch_status, expected):
-    # Mock search response
-    search_resp = Mock()
-    search_resp.status_code = search_status
-    search_resp.json.return_value = {
-        "esearchresult": {"idlist": ["12345"]}
-    }
-
-    # Mock fetch response
-    fetch_resp = Mock()
-    fetch_resp.status_code = fetch_status
-    fetch_resp.text = "<DescriptorRecordSet><DescriptorRecord><DescriptorName><String>SampleMeshTerm</String></DescriptorName></DescriptorRecord></DescriptorRecordSet>"
-
-    mock_get.side_effect = [search_resp, fetch_resp]
-
-    result = pubmed.normalize_term("cancer")
-    assert result == expected

@@ -6,14 +6,14 @@ from modules.mongoatlas import MongoAtlasConnector
 from modules.umls_api import UMLSNormalizer
 from modules.nlp import StreamingOptimizedNLP
 
-from config.mongodb_config import CONNECTION_STR
+from config.secrets import MONGO_CONNECTION_STR
 
 
 
 
 def annotate_mongo_articles(ents_path ="data/extracted_entities.csv", rels_path = "data/extracted_relations.csv"):
     
-    connector = MongoAtlasConnector(connection_str=CONNECTION_STR)
+    connector = MongoAtlasConnector(connection_str=MONGO_CONNECTION_STR)
     #list[dict] each dict is an article
     articles = connector.fetch_articles_from_atlas(query={})
         

@@ -3,7 +3,6 @@ from unittest.mock import MagicMock, patch
 import pandas as pd
 from neo4j.exceptions import Neo4jError
 from modules.neo4jaura import Neo4jAuraConnector
-from config.neo4jdb_config import NEO4J_LABELS, NEO4J_REL_TYPES
 
 # ---------------- Fixtures ----------------
 

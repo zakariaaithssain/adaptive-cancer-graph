@@ -12,7 +12,7 @@ from spacy.matcher import Matcher, DependencyMatcher
 
 from modules.umls_api import UMLSNormalizer
 from config.nlp_config import MATCHER_PATTERNS, DEPENDENCY_MATCHER_PATTERNS
-from config.generic_entities import generic_names
+from config.nlp_config import GENERIC_ENTITIES
 
 class StreamingOptimizedNLP:
     def __init__(self, normalizer: UMLSNormalizer, 
@@ -167,7 +167,7 @@ class StreamingOptimizedNLP:
     def _should_normalize(self, text: str) -> bool:
         """Determine if entity should be normalized (skip very short/common ones)."""
         text = text.strip().lower()
-        skip_patterns = generic_names | {'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by'}
+        skip_patterns = GENERIC_ENTITIES | {'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by'}
         return len(text) >= 1 and text not in skip_patterns
     
     def _batch_normalize_entities(self, entity_texts: list[str]) -> dict[str, dict]:
@@ -234,7 +234,7 @@ class StreamingOptimizedNLP:
         for ent in doc.ents:
             lemma = ent.lemma_.strip().lower()
             #we have nothing to do with generic entities (e.g. cancer, tumor...)
-            if lemma not in generic_names:
+            if lemma not in GENERIC_ENTITIES:
                 if __name__ == "__main__": 
                     print(f"entity: {lemma} --- label: {ent.label_}\n ******* ")
                 

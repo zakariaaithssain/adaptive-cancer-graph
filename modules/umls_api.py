@@ -3,7 +3,8 @@ import requests as rq
 import logging
 import time 
 
-from config.apis_config import UMLS_API_KEY, UMLS_API_SLEEP_TIME
+from config.apis_config import UMLS_API_SLEEP_TIME
+from config.secrets import UMLS_API_KEY
 
 
 

@@ -5,10 +5,9 @@ from modules.pubmed_api import PubMedAPI
 from modules.pubmedcentral_api import PubMedCentralAPI
 from modules.mongoatlas import MongoAtlasConnector
 
-from config.apis_config import PM_API_KEY_EMAIL
+from config.secrets import PM_API_KEY_EMAIL
 from config.apis_config import PM_QUERIES
-from config.mongodb_config import CONNECTION_STR
-
+from config.secrets import MONGO_CONNECTION_STR
 
 
 #api key and email are optional, but if not provided, we have less requests rate. 
@@ -18,7 +17,7 @@ pubmed_api = PubMedAPI(api_key = PM_API_KEY_EMAIL["api_key"],
 pubmedcentral_api = PubMedCentralAPI(api_key = PM_API_KEY_EMAIL["api_key"],
                                         email = PM_API_KEY_EMAIL["email"])
 
-mongo_connector = MongoAtlasConnector(connection_str=CONNECTION_STR)
+mongo_connector = MongoAtlasConnector(connection_str=MONGO_CONNECTION_STR)
 
 
 #less max_results, less API pression, more loop iterations

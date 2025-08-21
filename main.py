@@ -30,6 +30,8 @@ def extract_stage(max_results=1000, extract_abstracts_only=True):
         logging.exception(f"Extraction stage failed: {e}")
         return False
 
+
+
 def annotate_stage(ents_path="data/extracted_entities.csv", rels_path="data/extracted_relations.csv"):
     """Step 2: Annotate articles (NER, RE, Linking)."""
     try:
@@ -47,6 +49,8 @@ def annotate_stage(ents_path="data/extracted_entities.csv", rels_path="data/extr
         print(f"Annotation stage failed: {e}")
         logging.exception(f"Annotation stage failed: {e}")
         return False
+
+
 
 def clean_stage(raw_ents_path="data/extracted_entities.csv", 
                 raw_rels_path="data/extracted_relations.csv", 
@@ -71,6 +75,8 @@ def clean_stage(raw_ents_path="data/extracted_entities.csv",
         print(f"Cleaning stage failed: {e}")
         logging.exception(f"Cleaning stage failed: {e}")
         return None, None
+
+
 
 def load_stage(ents_clean_csv='data/ready_for_neo4j/entities4neo4j.csv',
                rels_clean_csv='data/ready_for_neo4j/relations4neo4j.csv',
@@ -99,6 +105,8 @@ def load_stage(ents_clean_csv='data/ready_for_neo4j/entities4neo4j.csv',
         print(f"Loading stage failed: {e}")
         logging.exception(f"Loading stage failed: {e}")
         return False
+
+
 
 def run_etl(max_results=1000, extract_abstracts_only=True, load_batch_size=1000):
     """Full ETL pipeline orchestrator."""
@@ -146,6 +154,8 @@ def run_etl(max_results=1000, extract_abstracts_only=True, load_batch_size=1000)
         print(f"ETL pipeline failed with unexpected error: {e}")
         logging.exception(f"ETL pipeline failed: {e}")
         return False
+
+
 
 def main():
     """Main entry point with CLI argument parsing."""
@@ -225,6 +235,8 @@ Examples:
     
     # Exit with appropriate code
     sys.exit(0 if success else 1)
+
+
 
 if __name__ == "__main__":
     main()
