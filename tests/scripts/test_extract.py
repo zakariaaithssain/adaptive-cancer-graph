@@ -41,7 +41,7 @@ def test_get_data_from_apis_handles_results(
         pubmed_api=mock_pubmed_api,
         pubmedcentral_api=mock_pubmedcentral_api,
         extract_abstracts_only=abstracts_only,
-        max_per_call=2
+        max_results=2
     )
 
     assert isinstance(articles, list)
@@ -57,7 +57,7 @@ def test_get_data_from_apis_handles_results(
 def test_get_data_from_apis_respects_max_results(mock_pubmed_api, mock_pubmedcentral_api):
     mock_pubmed_api.search_results_count = 5
     articles = extraction._get_data_from_apis(
-        mock_pubmed_api, mock_pubmedcentral_api, max_per_call=1
+        mock_pubmed_api, mock_pubmedcentral_api, max_results=1
     )
     # Should paginate until all articles fetched
     assert len(articles) > 0
@@ -101,7 +101,7 @@ def test_get_data_from_apis_returns_empty_if_no_results(mock_pubmed_api, mock_pu
     mock_pubmed_api.search_results_count = 0
 
     articles = extraction._get_data_from_apis(
-        mock_pubmed_api, mock_pubmedcentral_api, max_per_call=1
+        mock_pubmed_api, mock_pubmedcentral_api, max_results=1
     )
 
     assert articles == []

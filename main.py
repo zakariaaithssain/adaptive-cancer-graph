@@ -1,20 +1,15 @@
 import logging
 import argparse 
 
-from modules.mongoatlas import MongoAtlasConnector
-from modules.neo4jaura import Neo4jAuraConnector
-
 from scripts.extract import extract_pubmed_to_mongo
 from scripts.transform.annotate import annotate_mongo_articles
 from scripts.transform.clean import prepare_data_for_neo4j
 from scripts.load import load_to_aura
-
-from config.neo4jdb_config import NEO4J_LABELS, NEO4J_REL_TYPES, NEO4J_AUTH, NEO4J_URI
-from config.mongodb_config import CONNECTION_STR
+from config.neo4jdb_config import NEO4J_LABELS, NEO4J_REL_TYPES
 
 
 #exit with KeyboardInterrupt, raise other exceptions
-def extract_stage(max_results=1000, extract_abstracts_only=False):
+def extract_stage(max_results=1000, extract_abstracts_only=True):
     """Step 1: Extract articles from PubMed to MongoDB."""
     try:
         logging.info("Starting extraction stage.")
@@ -23,7 +18,7 @@ def extract_stage(max_results=1000, extract_abstracts_only=False):
             extract_abstracts_only=extract_abstracts_only,
             max_results=max_results
         )
-        logging.info("Extraction stage completed. Data loaded to Mongo Atlas.")
+        logging.info("Extraction stage completed.")
         print("Extraction stage completed.")
     except KeyboardInterrupt as k:
         print("Extraction stage interrupted manually.")
@@ -41,9 +36,9 @@ def annotate_stage(ents_path="data/extracted_entities.csv",
     try:
         logging.info("Starting annotation stage.")
         print("Starting annotation stage...")
-        annotate_mongo_articles(raw_ents_path=ents_path, raw_rels_path=rels_path)
+        annotate_mongo_articles(ents_path=ents_path, rels_path=rels_path)
         logging.info(f"Annotation stage completed. Entities: {ents_path}, Relations: {rels_path}")
-        print(f"Annotation stage completed. entities: {ents_path} relations: {rels_path}")
+        print("Annotation stage completed.")
     except KeyboardInterrupt as k:
         print("Annotation stage interrupted manually.")
         logging.exception(f"Annotation stage failed: {k}")
@@ -66,7 +61,7 @@ def clean_stage(raw_ents_path="data/extracted_entities.csv",
             saving_dir=saving_dir
         )
         logging.info(f"Cleaning stage completed. Cleaned files: {ents_path}, {rels_path}")
-        print(f"Cleaning stage completed. clean entities: {ents_path} clean relations: {rels_path}")
+        print("Cleaning stage completed.")
         return ents_path, rels_path
     except KeyboardInterrupt as k:
         print("Cleaning stage interrupted manually.")
@@ -93,7 +88,7 @@ def load_stage(ents_clean_csv = 'data/ready_for_neo4j/entities4neo4j.csv', rels_
             load_batch_size=load_batch_size
         )
         logging.info("Loading stage completed.")
-        print("Loading stage completed. Data loaded to Noe4j Aura.")
+        print("Loading stage completed.")
     except KeyboardInterrupt as k:
         print("Loading stage interrupted manually.")
         logging.exception(f"Loading stage failed: {k}")
@@ -103,19 +98,9 @@ def load_stage(ents_clean_csv = 'data/ready_for_neo4j/entities4neo4j.csv', rels_
         raise
 
 
-
-def run_etl(clean_dbs = False, max_results=1000,
-            extract_abstracts_only=False,
+def run_etl(max_results=1000,
+            extract_abstracts_only=True,
             load_batch_size=1000):
-    """WARNING: calling this with clean_dbs = True will delete ALL Mongo Atlas docs 
-                and ALL Neo4j Aura nodes and relationships"""
-    if clean_dbs:
-        mongo_connector = MongoAtlasConnector(CONNECTION_STR)
-        mongo_connector.delete_collection_content()
-        with Neo4jAuraConnector(uri=NEO4J_URI,auth=NEO4J_AUTH) as connector:
-            connector.delete_graph_content()
-
-
     """Full ETL pipeline orchestrator."""
     try:
         extract_stage(max_results=max_results, extract_abstracts_only=extract_abstracts_only)
@@ -124,7 +109,7 @@ def run_etl(clean_dbs = False, max_results=1000,
         load_stage(ents_clean_csv=ents_path, rels_clean_csv=rels_path,
                    load_batch_size=load_batch_size)
         logging.info("ETL pipeline completed successfully.")
-
+    
     except Exception as e:
         logging.exception(f"ETL pipeline failed: {e}")
         raise 

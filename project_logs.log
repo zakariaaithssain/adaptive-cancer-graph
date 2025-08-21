@@ -1,96 +1,215 @@
-2025-08-20 01:28:55,910 - INFO - Logs: Logs Initialized.
+2025-08-19 20:07:23,150 - INFO - Logs: Logs Initialized.
 
-2025-08-20 01:28:57,992 - INFO - PubMed API: API Key Used.
-2025-08-20 01:28:57,992 - INFO - PubMed API: Email Used.
-2025-08-20 01:28:57,995 - INFO - PubMed API: Loaded 4403 cached pmids
-2025-08-20 01:28:57,995 - INFO - PubMedCentral API: API Key Used.
-2025-08-20 01:28:57,995 - INFO - PubMedCentral API: Email Used.
+2025-08-19 20:07:23,488 - INFO - PubMed API: API Key Used.
+2025-08-19 20:07:23,488 - INFO - PubMed API: Email Used.
+2025-08-19 20:07:23,488 - INFO - PubMedCentral API: API Key Used.
+2025-08-19 20:07:23,488 - INFO - PubMedCentral API: Email Used.
 
-2025-08-20 01:28:57,997 - INFO - PubMed API: Loaded 3609 cached pmcids
-2025-08-20 01:28:59,480 - INFO - AtlasConnector: Deployment Pinged. Successfully Connected To MongoDB Atlas.
-2025-08-20 01:28:59,480 - INFO - AtlasConnector: Cluster: articles-cluster.
-2025-08-20 01:28:59,480 - INFO - AtlasConnector: DataBase: fetched-data-db.
-2025-08-20 01:28:59,480 - INFO - AtlasConnector: Collection: pm-pmc-data.
-2025-08-20 01:29:01,927 - INFO - AtlasConnector: Deployment Pinged. Successfully Connected To MongoDB Atlas.
-2025-08-20 01:29:01,927 - INFO - AtlasConnector: Cluster: articles-cluster.
-2025-08-20 01:29:01,927 - INFO - AtlasConnector: DataBase: fetched-data-db.
-2025-08-20 01:29:01,927 - INFO - AtlasConnector: Collection: pm-pmc-data.
-2025-08-20 01:29:02,485 - WARNING - AtlasConnector: Deleted 4272 documents.
-2025-08-20 01:29:03,673 - INFO - AuraConnector: Successfully Connected To Neo4j Aura.
-2025-08-20 01:29:05,370 - WARNING - AuraConnector: Deleted Neo4j Aura content.
-2025-08-20 01:29:05,371 - INFO - AuraConnector: Connector's Driver Closed Successfully.
-2025-08-20 01:29:05,371 - INFO - Starting extraction stage.
-2025-08-20 01:29:05,371 - INFO - Extraction Process: Extracting Abstracts And Body. PubMedCentral API Will Be Called For Each Article.
+2025-08-19 20:07:24,621 - INFO - AtlasConnector: Deployment Pinged. Successfully Connected To MongoDB Atlas.
+2025-08-19 20:07:24,621 - INFO - AtlasConnector: Cluster: articles-cluster.
+2025-08-19 20:07:24,621 - INFO - AtlasConnector: DataBase: fetched-data-db.
+2025-08-19 20:07:24,621 - INFO - AtlasConnector: Collection: pm-pmc-data.
+2025-08-19 20:07:26,265 - INFO - Starting extraction stage.
+2025-08-19 20:07:26,265 - INFO - Extraction Process: Extracting Abstracts Only. No Calls To PubMedCentral API.
 
-2025-08-20 01:29:05,371 - INFO - Extraction Process: Working On: Cancer_gene_regulation Query.
+2025-08-19 20:07:26,266 - INFO - Extraction Process: Working On: Stomach Cancer.
 
-2025-08-20 01:29:06,233 - INFO - PubMed API: Search Endpoint: Response OK: 200
-2025-08-20 01:29:06,234 - INFO - PubMed API: Search Endpoint: Total Search Results For Current Query: 106526
-2025-08-20 01:29:06,234 - INFO - Search Endpoint: Sleeping For 0.11s.
-2025-08-20 01:29:06,345 - INFO - Extraction Process: 1000 Articles To Get.
-2025-08-20 01:29:16,034 - INFO - PubMed API: Fetch Endpoint: Response OK: 200
-2025-08-20 01:29:16,035 - INFO - Fetch Endpoint: Sleeping For 0.11s.
-2025-08-20 01:29:58,744 - INFO - PubMed API: Found 1000 Articles In Fetched XML Root.
-2025-08-20 01:29:59,378 - INFO - PubMed API: Saved 4403 pmids to cache
-2025-08-20 01:29:59,520 - INFO - PubMed API: Saved 3609 pmcids to cache
-2025-08-20 01:29:59,520 - INFO - Extraction Process: Working On: Cancer_cell_signaling Query.
-
-2025-08-20 01:30:00,464 - INFO - PubMed API: Search Endpoint: Response OK: 200
-2025-08-20 01:30:00,464 - INFO - PubMed API: Search Endpoint: Total Search Results For Current Query: 84958
-2025-08-20 01:30:00,464 - INFO - Search Endpoint: Sleeping For 0.11s.
-2025-08-20 01:30:00,576 - INFO - Extraction Process: 1000 Articles To Get.
-2025-08-20 01:30:10,089 - INFO - PubMed API: Fetch Endpoint: Response OK: 200
-2025-08-20 01:30:10,090 - INFO - Fetch Endpoint: Sleeping For 0.11s.
-2025-08-20 01:30:11,464 - INFO - PubMed API: Found 1000 Articles In Fetched XML Root.
-2025-08-20 01:30:11,524 - INFO - PubMed API: Saved 4403 pmids to cache
-2025-08-20 01:30:11,582 - INFO - PubMed API: Saved 3609 pmcids to cache
-2025-08-20 01:30:11,582 - INFO - Extraction Process: Working On: Cancer_microenvironment Query.
-
-2025-08-20 01:30:12,470 - INFO - PubMed API: Search Endpoint: Response OK: 200
-2025-08-20 01:30:12,471 - INFO - PubMed API: Search Endpoint: Total Search Results For Current Query: 135886
-2025-08-20 01:30:12,471 - INFO - Search Endpoint: Sleeping For 0.11s.
-2025-08-20 01:30:12,582 - INFO - Extraction Process: 1000 Articles To Get.
-2025-08-20 01:30:21,956 - INFO - PubMed API: Fetch Endpoint: Response OK: 200
-2025-08-20 01:30:21,957 - INFO - Fetch Endpoint: Sleeping For 0.11s.
-2025-08-20 01:30:23,866 - INFO - PubMed API: Found 1000 Articles In Fetched XML Root.
-2025-08-20 01:30:23,942 - INFO - PubMed API: Saved 4403 pmids to cache
-2025-08-20 01:30:24,069 - INFO - PubMed API: Saved 3609 pmcids to cache
-2025-08-20 01:30:24,069 - INFO - Extraction Process: Working On: Cancer_metabolism Query.
-
-2025-08-20 01:30:24,933 - INFO - PubMed API: Search Endpoint: Response OK: 200
-2025-08-20 01:30:24,933 - INFO - PubMed API: Search Endpoint: Total Search Results For Current Query: 31100
-2025-08-20 01:30:24,933 - INFO - Search Endpoint: Sleeping For 0.11s.
-2025-08-20 01:30:25,044 - INFO - Extraction Process: 1000 Articles To Get.
-2025-08-20 01:30:33,887 - INFO - PubMed API: Fetch Endpoint: Response OK: 200
-2025-08-20 01:30:33,887 - INFO - Fetch Endpoint: Sleeping For 0.11s.
-2025-08-20 01:30:35,317 - INFO - PubMed API: Found 1000 Articles In Fetched XML Root.
-2025-08-20 01:30:35,417 - INFO - PubMed API: Saved 4403 pmids to cache
-2025-08-20 01:30:35,536 - INFO - PubMed API: Saved 3609 pmcids to cache
-2025-08-20 01:30:35,536 - INFO - Extraction Process: Working On: Cancer_biomarkers Query.
-
-2025-08-20 01:30:36,383 - INFO - PubMed API: Search Endpoint: Response OK: 200
-2025-08-20 01:30:36,383 - INFO - PubMed API: Search Endpoint: Total Search Results For Current Query: 249570
-2025-08-20 01:30:36,383 - INFO - Search Endpoint: Sleeping For 0.11s.
-2025-08-20 01:30:36,495 - INFO - Extraction Process: 1000 Articles To Get.
-2025-08-20 01:30:44,392 - INFO - PubMed API: Fetch Endpoint: Response OK: 200
-2025-08-20 01:30:44,392 - INFO - Fetch Endpoint: Sleeping For 0.11s.
-2025-08-20 01:30:45,379 - INFO - PubMed API: Found 1000 Articles In Fetched XML Root.
-2025-08-20 01:30:45,471 - INFO - PubMed API: Saved 4403 pmids to cache
-2025-08-20 01:30:45,578 - INFO - PubMed API: Saved 3609 pmcids to cache
-2025-08-20 01:30:45,579 - INFO - Extraction Process: Working On: Cancer_drug_therapy Query.
-
-2025-08-20 01:30:46,469 - INFO - PubMed API: Search Endpoint: Response OK: 200
-2025-08-20 01:30:46,470 - INFO - PubMed API: Search Endpoint: Total Search Results For Current Query: 188616
-2025-08-20 01:30:46,470 - INFO - Search Endpoint: Sleeping For 0.11s.
-2025-08-20 01:30:46,581 - INFO - Extraction Process: 1000 Articles To Get.
-2025-08-20 01:30:54,524 - INFO - PubMed API: Fetch Endpoint: Response OK: 200
-2025-08-20 01:30:54,524 - INFO - Fetch Endpoint: Sleeping For 0.11s.
-2025-08-20 01:30:55,599 - INFO - PubMed API: Found 1000 Articles In Fetched XML Root.
-2025-08-20 01:30:55,674 - INFO - PubMed API: Saved 4403 pmids to cache
-2025-08-20 01:30:55,769 - INFO - PubMed API: Saved 3609 pmcids to cache
-2025-08-20 01:30:55,769 - INFO - Extraction Process: Working On: Cancer_mutations Query.
-
-2025-08-20 01:30:56,654 - INFO - PubMed API: Search Endpoint: Response OK: 200
-2025-08-20 01:30:56,655 - INFO - PubMed API: Search Endpoint: Total Search Results For Current Query: 56266
-2025-08-20 01:30:56,655 - INFO - Search Endpoint: Sleeping For 0.11s.
-2025-08-20 01:30:56,766 - INFO - Extraction Process: 1000 Articles To Get.
+2025-08-19 20:07:27,340 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-19 20:07:27,340 - INFO - PubMed API: Search Endpoint: Total Search Results For Current Query: 22255
+2025-08-19 20:07:27,341 - INFO - Search Endpoint: Sleeping For 0.11s.
+2025-08-19 20:07:27,452 - INFO - Extraction Process: 10000 Articles To Get.
+2025-08-19 20:07:28,403 - ERROR - Extraction Process Interrupted Manually.
+2025-08-19 20:07:28,403 - ERROR - Extraction stage failed: 
+Traceback (most recent call last):
+  File "/home/zeco/projects/medical-graph/local-repo/main.py", line 17, in extract_stage
+    extract_pubmed_to_mongo(
+  File "/home/zeco/projects/medical-graph/local-repo/scripts/extract.py", line 28, in extract_pubmed_to_mongo
+    all_articles = _get_data_from_apis(pubmed_api, pubmedcentral_api,
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/scripts/extract.py", line 75, in _get_data_from_apis
+    fetched_xml = pubmed_api.fetch(search_results, start=start, max_results=current_max)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/modules/pubmed_api.py", line 122, in fetch
+    fetch_response = rq.post(fetch_url, data=fetch_post_data, headers=self.headers)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/urllib3/connection.py", line 565, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 1428, in getresponse
+    response.begin()
+  File "/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 707, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ssl.py", line 1252, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ssl.py", line 1104, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-08-19 20:07:28,424 - INFO - Starting annotation stage.
+2025-08-19 20:07:29,196 - INFO - AtlasConnector: Deployment Pinged. Successfully Connected To MongoDB Atlas.
+2025-08-19 20:07:29,197 - INFO - AtlasConnector: Cluster: articles-cluster.
+2025-08-19 20:07:29,197 - INFO - AtlasConnector: DataBase: fetched-data-db.
+2025-08-19 20:07:29,197 - INFO - AtlasConnector: Collection: pm-pmc-data.
+2025-08-19 20:07:29,274 - INFO - AtlasConnector: Fetching Docs From Mongo Atlas...
+2025-08-19 20:07:31,820 - ERROR - Annotation stage failed: 
+Traceback (most recent call last):
+  File "/home/zeco/projects/medical-graph/local-repo/main.py", line 38, in annotate_stage
+    annotate_mongo_articles(ents_path=ents_path, rels_path=rels_path)
+  File "/home/zeco/projects/medical-graph/local-repo/scripts/transform/annotate.py", line 18, in annotate_mongo_articles
+    articles = connector.fetch_articles_from_atlas(query={})
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/modules/mongoatlas.py", line 82, in fetch_articles_from_atlas
+    for doc in tqdm(cursor, desc="fetching docs from MongoAtlas"):
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/pymongo/synchronous/cursor.py", line 1285, in __next__
+    return self.next()
+           ^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/pymongo/synchronous/cursor.py", line 1261, in next
+    if len(self._data) or self._refresh():
+                          ^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/pymongo/synchronous/cursor.py", line 1232, in _refresh
+    self._send_message(g)
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/pymongo/synchronous/cursor.py", line 1104, in _send_message
+    response = client._run_operation(
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/pymongo/_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/pymongo/synchronous/mongo_client.py", line 1932, in _run_operation
+    return self._retryable_read(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/pymongo/synchronous/mongo_client.py", line 2041, in _retryable_read
+    return self._retry_internal(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/pymongo/_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/pymongo/synchronous/mongo_client.py", line 2008, in _retry_internal
+    ).run()
+      ^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/pymongo/synchronous/mongo_client.py", line 2745, in run
+    return self._read() if self._is_read else self._write()
+           ^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/pymongo/synchronous/mongo_client.py", line 2906, in _read
+    return self._func(self._session, self._server, conn, read_pref)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/pymongo/synchronous/mongo_client.py", line 1923, in _cmd
+    return server.run_operation(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/pymongo/synchronous/helpers.py", line 47, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/pymongo/synchronous/server.py", line 208, in run_operation
+    reply = conn.receive_message(request_id)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/pymongo/synchronous/pool.py", line 470, in receive_message
+    self._raise_connection_failure(error)
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/pymongo/synchronous/pool.py", line 467, in receive_message
+    return receive_message(self, request_id, self.max_message_size)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/pymongo/network_layer.py", line 777, in receive_message
+    data = receive_data(conn, length - 16, deadline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/pymongo/network_layer.py", line 353, in receive_data
+    chunk_length = conn.conn.recv_into(mv[bytes_read:])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/pymongo/network_layer.py", line 469, in recv_into
+    return self.conn.recv_into(buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ssl.py", line 1252, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ssl.py", line 1104, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-08-19 20:07:31,834 - INFO - Starting cleaning stage.
+2025-08-19 20:07:31,862 - INFO - Entities: Before Cleaning: 3349
+2025-08-19 20:07:31,880 - INFO - Entities: Drop CUI duplicates.
+2025-08-19 20:07:31,883 - INFO - Entities: Drop ['text'] Duplicates.
+2025-08-19 20:07:31,884 - INFO - Entities: After Cleaning: 1867
+2025-08-19 20:07:31,885 - INFO - Relations: Before Cleaning: 10
+2025-08-19 20:07:31,890 - INFO - Relations: Drop ['ent1', 'ent2'] Duplicates.
+2025-08-19 20:07:31,890 - INFO - Relations: After Cleaning: 10
+2025-08-19 20:07:31,905 - INFO - Entities: Rename Columns & Add UUID.
+2025-08-19 20:07:31,919 - INFO - Relations: Map To Entities & Rename Columns.
+2025-08-19 20:07:31,942 - INFO - Cleaning & Preparation Process Completed. Repo: data/ready_for_neo4j.
+2025-08-19 20:07:31,943 - INFO - Cleaning stage completed. Cleaned files: data/ready_for_neo4j/entities4neo4j.csv, data/ready_for_neo4j/relations4neo4j.csv
+2025-08-19 20:07:31,943 - INFO - Starting loading stage.
+2025-08-19 20:07:32,847 - ERROR - Load Process Interrupted Manually.
+2025-08-19 20:07:32,848 - ERROR - Loading stage failed: 
+Traceback (most recent call last):
+  File "/home/zeco/projects/medical-graph/local-repo/main.py", line 82, in load_stage
+    load_to_aura(
+  File "/home/zeco/projects/medical-graph/local-repo/scripts/load.py", line 26, in load_to_aura
+    with Neo4jAuraConnector(uri=NEO4J_URI,
+  File "/home/zeco/projects/medical-graph/local-repo/modules/neo4jaura.py", line 43, in __enter__
+    result = session.run("RETURN 1 AS test")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/neo4j/_sync/work/session.py", line 315, in run
+    self._connect(self._config.default_access_mode)
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/neo4j/_sync/work/session.py", line 136, in _connect
+    super()._connect(
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/neo4j/_sync/work/workspace.py", line 199, in _connect
+    self._connection = self._pool.acquire(**acquire_kwargs_)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/neo4j/_sync/io/_pool.py", line 1211, in acquire
+    connection = self._acquire(
+                 ^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/neo4j/_sync/io/_pool.py", line 417, in _acquire
+    return connection_creator()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/neo4j/_sync/io/_pool.py", line 230, in connection_creator
+    connection = self.opener(
+                 ^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/neo4j/_sync/io/_pool.py", line 709, in opener
+    return Bolt.open(
+           ^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/neo4j/_sync/io/_bolt.py", line 368, in open
+    s, protocol_version, handshake, data = BoltSocket.connect(
+                                           ^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/neo4j/_sync/io/_bolt_socket.py", line 328, in connect
+    s = cls._connect_secure(
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeco/projects/medical-graph/local-repo/.graph/lib/python3.12/site-packages/neo4j/_async_compat/network/_bolt_socket.py", line 439, in _connect_secure
+    s = ssl_context.wrap_socket(s, server_hostname=sni_host)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ssl.py", line 1042, in _create
+    self.do_handshake()
+  File "/usr/lib/python3.12/ssl.py", line 1320, in do_handshake
+    self._sslobj.do_handshake()
+KeyboardInterrupt
+2025-08-19 20:07:32,865 - INFO - ETL pipeline completed successfully.

@@ -44,7 +44,7 @@ def test_annotate_mongo_articles_calls_all_steps(mock_connector, mock_normalizer
          patch("scripts.transform.annotate.NLP", return_value=mock_nlp), \
          patch("tqdm.tqdm", lambda x: x):
         
-        annotate_module.annotate_mongo_articles(raw_ents_path="fake_extracted_ents.csv", raw_rels_path="fake_extracted_rels.csv")
+        annotate_module.annotate_mongo_articles(ents_path="fake_extracted_ents.csv", rels_path="fake_extracted_rels.csv")
     
     # check that fetch_articles_from_atlas was called
     mock_connector.fetch_articles_from_atlas.assert_called_once_with(query={})
@@ -68,7 +68,7 @@ def test_annotate_mongo_articles_keyboard_interrupt(mock_connector, mock_normali
          patch("tqdm.tqdm", lambda x: x), \
          caplog.at_level(logging.ERROR):
 
-        annotate_module.annotate_mongo_articles(raw_ents_path="fake_extracted_ents.csv", raw_rels_path="fake_extracted_rels.csv")
+        annotate_module.annotate_mongo_articles(ents_path="fake_extracted_ents.csv", rels_path="fake_extracted_rels.csv")
 
     # error log must contain the interruption message
     assert any("Annotation Process Interrupted Manually." in record.message for record in caplog.records)
@@ -86,7 +86,7 @@ def test_annotate_mongo_articles_empty_articles(mock_connector, mock_normalizer,
          patch("scripts.transform.annotate.NLP", return_value=mock_nlp), \
          patch("tqdm.tqdm", lambda x: x):
         
-        annotate_module.annotate_mongo_articles(raw_ents_path="fake_extracted_ents.csv", raw_rels_path="fake_extracted_rels.csv")
+        annotate_module.annotate_mongo_articles(ents_path="fake_extracted_ents.csv", rels_path="fake_extracted_rels.csv")
 
     # no processing methods should be called
     mock_nlp.extract_and_normalize_entities.assert_not_called()
