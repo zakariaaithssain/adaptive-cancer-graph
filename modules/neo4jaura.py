@@ -121,7 +121,7 @@ class Neo4jAuraConnector:
                 name: row.name,
                 cui: row.cui,
                 normalized_name: row.normalized_name,
-                normalization_source: row.normalization_source,
+                normalization_source: row.normalization_source
             }}
             """
         try: 
@@ -176,7 +176,8 @@ class Neo4jAuraConnector:
         # Read and preprocess data
         assert label in NEO4J_LABELS, f"label argument got {label}, not one of {NEO4J_LABELS}."
         try: 
-            df = pd.read_csv(ents_clean_csv)
+            df = pd.read_csv(ents_clean_csv,
+                              dtype = {6:str, 7:str, 8:str, 9:str}) #to fix a DtypeWarning 
         except FileNotFoundError as e:
             logging.error(f"AuraConnector: {e}")
             raise

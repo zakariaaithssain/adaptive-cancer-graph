@@ -149,7 +149,7 @@ class StreamingOptimizedNLP:
     def _load_cache(self):
         """Load normalization cache from disk if it exists."""
         try:
-            with open('normalization_cache.pkl', 'rb') as f:
+            with open('cache/normalization_cache.pkl', 'rb') as f:
                 self._normalization_cache = pickle.load(f)
             logging.info(f"NLP: Loaded {len(self._normalization_cache)} cached normalizations")
         except FileNotFoundError:
@@ -158,7 +158,7 @@ class StreamingOptimizedNLP:
     def _save_cache(self):
         """Save normalization cache to disk."""
         try:
-            with open('normalization_cache.pkl', 'wb') as f:
+            with open('cache/normalization_cache.pkl', 'wb') as f:
                 pickle.dump(self._normalization_cache, f)
             logging.info(f"NLP: Saved {len(self._normalization_cache)} normalizations to cache")
         except Exception as e:
