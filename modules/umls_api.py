@@ -61,4 +61,4 @@ class UMLSNormalizer:
 if __name__ == "__main__":
     normalizer = UMLSNormalizer()
     #example wssf
-    print("this is an example: ", normalizer.normalize("human "))
+    print("this is an example, normalization of 'human': ", normalizer.normalize("human "))

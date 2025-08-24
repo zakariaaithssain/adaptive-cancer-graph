@@ -3,8 +3,6 @@ import spacy
 import logging
 import pickle
 import hashlib
-import time
-import shutil
 
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -20,7 +18,7 @@ class StreamingOptimizedNLP:
                  relations_output_path: str,
                  cache_size: int = 10000, 
                  batch_size: int = 50, 
-                 max_workers: int = 4,
+                 max_workers: int = 8,
                  buffer_size: int = 1000):
         
         logging.info("NLP: Loading NER Model...")
@@ -71,6 +69,9 @@ class StreamingOptimizedNLP:
 
         for label, patterns in DEPENDENCY_MATCHER_PATTERNS.items():
             self.dep_matcher.add(label, patterns)
+
+
+
     
     def _initialize_streaming_files(self):
         """Initialize CSV files for streaming output."""
@@ -78,12 +79,15 @@ class StreamingOptimizedNLP:
         Path(self.entities_output_path).parent.mkdir(parents=True, exist_ok=True)
         # Create/truncate the file
         with open(self.entities_output_path, 'w', newline='', encoding='utf-8'):
-            pass  # Just create/truncate the file
+            pass  # Just create/truncate the file to 0 (empty it)
         
         Path(self.relations_output_path).parent.mkdir(parents=True, exist_ok=True)
         with open(self.relations_output_path, 'w', newline='', encoding='utf-8'):
             pass
     
+
+
+
     def _stream_entities_to_csv(self, entities_batch: list[dict]):
         """Stream a batch of entities directly to CSV."""
         if not entities_batch:
@@ -106,6 +110,9 @@ class StreamingOptimizedNLP:
             
         except Exception as e:
             logging.error(f"NLP: Failed to stream entities to CSV: {e}")
+
+
+
     
     def _stream_relations_to_csv(self, relations_batch: list[dict]):
         """Stream a batch of relations directly to CSV."""
@@ -127,20 +134,29 @@ class StreamingOptimizedNLP:
             
         except Exception as e:
             logging.error(f"NLP: Failed to stream relations to CSV: {e}")
+
+
+
     
     def _flush_entities_buffer(self, force: bool = False):
-        """Flush entities buffer to CSV when it reaches buffer_size or force=True."""
+        """Flush entities buffer to CSV when it reaches buffer_size or when force=True."""
         if (len(self._entities_buffer) >= self.buffer_size or force) and self._entities_buffer:
             self._stream_entities_to_csv(self._entities_buffer)
             
             self._entities_buffer.clear()
     
+
+
+
     def _flush_relations_buffer(self, force: bool = False):
-        """Flush relations buffer to CSV when it reaches buffer_size or force=True."""
+        """Flush relations buffer to CSV when it reaches buffer_size or when force=True."""
         if (len(self._relations_buffer) >= self.buffer_size or force) and self._relations_buffer:
             self._stream_relations_to_csv(self._relations_buffer)
             
             self._relations_buffer.clear()
+
+
+
     
     def _generate_cache_key(self, text: str) -> str:
         """Generate a MD5 hash key (id) for caching normalized entities."""
@@ -188,19 +204,20 @@ class StreamingOptimizedNLP:
         if not to_normalize:
             return results
         
+        #now we use the API to normalize entities that aren't in cache
         logging.info(f"NLP: Normalizing {len(to_normalize)} new entities via UMLS API")
-        
-        # Process in smaller batches to avoid overwhelming the API
+
         for i in range(0, len(to_normalize), self.batch_size):
             batch = to_normalize[i:i + self.batch_size]
-            
             with ThreadPoolExecutor(max_workers=self.max_workers) as executor:
-                future_to_text = {
-                    executor.submit(self.normalizer.normalize, text): text 
-                    for text in batch
+                future_to_text : dict = {
+                    executor.submit(self.normalizer.normalize, text) #key (a Future obj)
+                    :
+                    text for text in batch # value (text)
                 }
                 
-                for future in as_completed(future_to_text):
+#get the normalization as soon as it's done (in the order they finish, not in submission order)
+                for future in as_completed(future_to_text.keys()): 
                     text = future_to_text[future]
                     try:
                         normalization_result = future.result()
@@ -209,16 +226,17 @@ class StreamingOptimizedNLP:
                         self._normalization_cache[cache_key] = normalization_result
                         results[text] = normalization_result
                         
-                    except Exception as e:
+                    except Exception:
                         results[text] = {"cui": "", "normalized_name": "", "normalization_source": ""}
             
-            if i + self.batch_size < len(to_normalize):
-                time.sleep(0.5)
-        
+        #save cache to disk after each new 100 normalizations 
         if len(self._normalization_cache) % 100 == 0:
             self._save_cache()
         
         return results
+    
+
+
     
     def extract_and_normalize_entities(self, text: str, article_metadata: dict):
         """Extract recognized entities from text with 
@@ -283,6 +301,9 @@ class StreamingOptimizedNLP:
         logging.info(f"NLP: Added {len(final_entities)} new unique entities to buffer")
         
         return self
+    
+
+
     
     def extract_relations(self, text: str, article_metadata: dict):
         """Extract relations with optimized deduplication and streaming."""
@@ -361,6 +382,9 @@ class StreamingOptimizedNLP:
         
         return self
     
+
+
+    
     def process_articles_batch(self, articles: list[dict]) -> 'StreamingOptimizedNLP':
         """Process multiple articles efficiently with streaming."""
         logging.info(f"NLP: Processing batch of {len(articles)} articles")
@@ -378,12 +402,18 @@ class StreamingOptimizedNLP:
         
         return self
     
+
+
+
     def flush_all_buffers(self):
         """Force flush all buffers to CSV files."""
         self._flush_entities_buffer(force=True)
         self._flush_relations_buffer(force=True)
         logging.info("NLP: Flushed all buffers to CSV files")
     
+
+
+
 
     def get_info(self) -> dict:
         """Get processing statistics."""
@@ -397,6 +427,9 @@ class StreamingOptimizedNLP:
             "relations_in_buffer": len(self._relations_buffer),
         }
     
+
+
+
     def __del__(self):
         """Save cache and flush buffers when object is destroyed."""
         if hasattr(self, '_normalization_cache') and self._normalization_cache:
