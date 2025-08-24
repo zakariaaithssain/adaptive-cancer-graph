@@ -33,18 +33,67 @@ class NewPubMedAPI:
         else: logging.warning("PubMed API: Email Absent.")
 
         #the hard coded limit of how much results can PubMed API return per call (10^4)
-        self.hard_limit = 1e4 
+        self.hard_limit = int(1e4)
         #cache: 
         self.pmids_cache = set()
 
 
 
+
+    def get_pmids(self, query:str, max_results:int = None):
+        """Add all pmids that are returned by a query to self.cache
+            Params: 
+                    query: a query like the one we would write in the search bar
+                    max_results: the number of pmids we wanna get per query, 
+                                if not specified, we get everything available """
         
+        post_data = {
+            'db': 'pubmed',        #database to use (pubmed is default)
+            'term': query,  
+            'retmode': 'json',     #json is available as a return type for esearch endpoint
+        }
+            
+        #set API key and email if used
+        if self.api_key:
+            post_data['api_key'] = self.api_key
+        if self.email:
+            post_data['email'] = self.email
 
+        #how many results to get
+        if isinstance(max_results, int) and max_results <= self.hard_limit:
+            # add 'retmax' to HTTP POST data
+            post_data['retmax'] = max_results
 
-
+            response = self._send_post_request(post_data)
+            if response:
+                ids : list = response.json()['esearchresult']['idlist']
+                self.pmids_cache.update(set(ids))
         
-    def _send_post_request(self, data_to_post):
+        else: #either None or greater than hard_limit
+            post_data['retmax'] = self.hard_limit
+            
+            #if max_results is not specified, we will get everything available by setting it to count.
+            if max_results is None:
+                temp_response = self._send_post_request(post_data)
+                count = int(temp_response['esearchresult']['count'])
+                max_results = count
+
+            # + 1 for an additional iteration to get the remaining if max_results % hard_limit != 0
+            for _ in range((max_results // self.hard_limit) + 1): 
+                response = self._send_post_request(post_data)
+                if response:
+                    ids : list = response.json()['esearchresult']['idlist']
+                    self.pmids_cache.update(set(ids))
+
+                    # default: 'retstart' = 0 corresponds to the first result in the search list
+                    post_data['retstart'] = self.hard_limit
+    
+        
+        
+    def _send_post_request(self, data_to_post: dict):
+        """Send a HTTP POST request to PubMed API esearch endpoint.
+           Params: 
+           data_to_post: data to post (passed to requests.post() data argument)"""
         search_url = f"{self.base_url}esearch.fcgi"
         try: #get recieves params, post recieves data
             search_response = rq.post(search_url, data_to_post, headers=self.headers)
@@ -282,3 +331,5 @@ if __name__ == "__main__":
     api = PubMedAPI()
     response = api.search("human")
     ids = response['esearchresult']['idlist']
+    count = response['esearchresult']['count']
+    print(count, type(count))
