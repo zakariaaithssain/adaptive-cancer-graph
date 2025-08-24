@@ -6,11 +6,81 @@ import logging
 
 from config.apis_config import PM_API_SLEEP_TIME
 
-#TODO: CHANGE EVERYTHING: the logic will now be: 
+#TODO: CHANGE EVERYTHING: 
+# keep the old class while creating the new one
+#  make sure you are on new-extraction-logic branch.
+#  the logic will now be: 
 """1 - get all pmids per query from esearch endpoint
    2 - store them in cache
    3 - fetch articles that correspond to mpids that are not in cache
 I guess that using this new logic, using the date API param will be useless."""
+
+class NewPubMedAPI:
+    def __init__(self, api_key=None, email=None):
+        self.base_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
+        self.api_key = api_key
+        self.email = email
+        #this header is specific for POST HTTP method, consider changing it for GET method.
+        self.headers = { 
+    "User-Agent": "MedicalGraphBot/1.0 (zakaria04aithssain@gmail.com)",
+    "Content-Type": "application/x-www-form-urlencoded"
+}
+
+        if api_key: logging.info("PubMed API: API Key Used.")
+        else: logging.warning("PubMed API: API Key Absent.")
+
+        if self.email: logging.info("PubMed API: Email Used.")
+        else: logging.warning("PubMed API: Email Absent.")
+
+        #the hard coded limit of how much results can PubMed API return per call (10^4)
+        self.hard_limit = 1e4 
+        #cache: 
+        self.pmids_cache = set()
+
+
+
+        
+
+
+
+        
+    def _send_post_request(self, data_to_post):
+        search_url = f"{self.base_url}esearch.fcgi"
+        try: #get recieves params, post recieves data
+            search_response = rq.post(search_url, data_to_post, headers=self.headers)
+            response_code = search_response.status_code
+            if response_code == 200:
+                logging.info(f"PubMed API: Search Endpoint: Response OK: {response_code}")
+                
+            else: 
+                logging.error(f"PubMed API: Search Endpoint: Response NOT OK: {response_code}")
+                return
+        except Exception as e:
+            logging.error(f"Search Endpoint: Likely Not Related To Endpoint: {e}")
+            return
+
+        if self.api_key:
+            logging.info(f"Search Endpoint: Sleeping For {PM_API_SLEEP_TIME['with_key']}s.")
+            time.sleep(PM_API_SLEEP_TIME["with_key"])    #with an api key, we are allowed to do 10req/second
+        else: 
+            logging.info(f"Search Endpoint: Sleeping For {PM_API_SLEEP_TIME['without_key']}s.")
+            time.sleep(PM_API_SLEEP_TIME["without_key"]) #without an api key, we only have 3req/second 
+        
+        return search_response                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class PubMedAPI:
     def __init__(self, api_key=None, email=None):
@@ -29,16 +99,14 @@ class PubMedAPI:
         if self.email: logging.info("PubMed API: Email Used.")
         else: logging.warning("PubMed API: Email Absent.")
     
-        #cache: 
-        self.pmids_cache = set()
+
     
-    def search(self, query = None, max_results=1000, db = "pubmed", pmc_id = None): 
+    def search(self, query = None, max_results=1000, db = "pubmed", pmc_id = None, retstart = 0): 
         """ 
         for PubMed Central API:
                 db = 'pmc'
                 pmc_id = string pmc id without the PMC prefixe
                 rettype = 'full' 
-
                 """
         
         # step1: search, only when using the pubmed API, not for PMC API (we already have an id)
@@ -48,7 +116,8 @@ class PubMedAPI:
                 'db': db,              #database
                 'term': query,         #the query like the one we write in the search bar
                 'retmax': max_results, #ret: return
-                'retmode': 'json',     #json is available as a return type for search endpoint
+                'retstart': retstart,
+                'retmode': 'json',    #json is available as a return type for search endpoint
                 'usehistory': 'y'      #whether to use the history or not
             }
             if self.api_key:
@@ -207,3 +276,9 @@ class PubMedAPI:
     
 
 
+
+
+if __name__ == "__main__":
+    api = PubMedAPI()
+    response = api.search("human")
+    ids = response['esearchresult']['idlist']
