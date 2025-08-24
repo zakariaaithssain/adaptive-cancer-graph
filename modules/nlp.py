@@ -3,6 +3,7 @@ import spacy
 import logging
 import pickle
 import hashlib
+import warnings
 
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -20,7 +21,9 @@ class StreamingOptimizedNLP:
                  batch_size: int = 50, 
                  max_workers: int = 8,
                  buffer_size: int = 1000):
-        
+
+       #supressing a future warning coming from inside spacy load 
+        warnings.filterwarnings("ignore", category=FutureWarning, module="spacy")
         logging.info("NLP: Loading NER Model...")
         print("loading ner model...")
         self.nlp_pipe = spacy.load("en_ner_bionlp13cg_md") 
@@ -172,7 +175,8 @@ class StreamingOptimizedNLP:
             logging.info("NLP: No existing cache found, starting fresh")
     
     def _save_cache(self):
-        """Save normalization cache to disk."""
+        """Save normalization cache to disk. Cache grows each time we run the pipeline,
+        because in __init__ we call _load_cache to re-add old cache to the new one"""
         try:
             with open('cache/normalization_cache.pkl', 'wb') as f:
                 pickle.dump(self._normalization_cache, f)
