@@ -17,7 +17,6 @@ class StreamingOptimizedNLP:
     def __init__(self, normalizer: UMLSNormalizer, 
                  entities_output_path: str,
                  relations_output_path: str,
-                 cache_size: int = 10000, 
                  batch_size: int = 50, 
                  max_workers: int = 8,
                  buffer_size: int = 1000):
@@ -37,7 +36,6 @@ class StreamingOptimizedNLP:
         self.normalizer = normalizer
         
         # Performance optimization settings
-        self.cache_size = cache_size
         self.batch_size = batch_size
         self.max_workers = max_workers
         self.buffer_size = buffer_size
@@ -60,6 +58,8 @@ class StreamingOptimizedNLP:
         self._normalization_cache = {}
         self._entity_cache = set()
         self._relation_cache = set()
+
+        # Load old cache to make sure we build cache each time we run the ETL and not losing old one.
         self._load_cache()
         
         # Initialize streaming CSV files

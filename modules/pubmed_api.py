@@ -6,7 +6,11 @@ import logging
 
 from config.apis_config import PM_API_SLEEP_TIME
 
-# TODO CONSIDER THE DATE PARAMS TO SPECIFY ONLY GETTING NEW ARTICLES. 
+#TODO: CHANGE EVERYTHING: the logic will now be: 
+"""1 - get all pmids per query from esearch endpoint
+   2 - store them in cache
+   3 - fetch articles that correspond to mpids that are not in cache
+I guess that using this new logic, using the date API param will be useless."""
 
 class PubMedAPI:
     def __init__(self, api_key=None, email=None):
@@ -25,9 +29,10 @@ class PubMedAPI:
         if self.email: logging.info("PubMed API: Email Used.")
         else: logging.warning("PubMed API: Email Absent.")
     
-
+        #cache: 
+        self.pmids_cache = set()
     
-    def search(self, query = None, max_results=1000, db = "pubmed", pmc_id = None, rettype = 'abstract'): 
+    def search(self, query = None, max_results=1000, db = "pubmed", pmc_id = None): 
         """ 
         for PubMed Central API:
                 db = 'pmc'

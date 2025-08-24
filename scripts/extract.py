@@ -37,7 +37,10 @@ def extract_pubmed_to_mongo(extract_abstracts_only=True, max_results=1000):
 
 
 
-def _get_data_from_apis(pubmed_api, pubmedcentral_api, extract_abstracts_only = True, max_results = 1000): 
+def _get_data_from_apis(pubmed_api: PubMedAPI,
+                         pubmedcentral_api: PubMedCentralAPI,
+                           extract_abstracts_only = True,
+                             max_results = 1000): 
         """ 
         #arguments:
                 pubmed_api (resp. pubmedcentral_api) = PubMedAPI (resp. PubMedCentralAPI) instance 
@@ -50,8 +53,6 @@ def _get_data_from_apis(pubmed_api, pubmedcentral_api, extract_abstracts_only = 
                 """
         
         all_articles = []
-        pmc_prost_articles = 0
-        pmc_stomach_articles = 0 
 
         if extract_abstracts_only: logging.info(f"Extraction Process: Extracting Abstracts Only. No Calls To PubMedCentral API.\n")
         else: logging.info(f"Extraction Process: Extracting Abstracts And Body. PubMedCentral API Will Be Called For Each Article.\n")
@@ -78,21 +79,13 @@ def _get_data_from_apis(pubmed_api, pubmedcentral_api, extract_abstracts_only = 
                 # get full body if specified
                 if not extract_abstracts_only:
                     for article in articles:
-                        article["cancertype"] = cancer
                         pmc_id = article["pmcid"]
                         if pmc_id:
                             article["body"] = pubmedcentral_api.get_data_from_xml(pmc_id=pmc_id)
-                            if cancer == "prostate":
-                                pmc_prost_articles += 1
-                            else:
-                                pmc_stomach_articles += 1
 
                 start += max_results
 
 
-        if not extract_abstracts_only:
-            logging.info(f"Extraction Process: Prostate Cancer: {pmc_prost_articles} Articles Content Present In PubMedCentral.")
-            logging.info(f"Extraction Process: Stomach Cancer: {pmc_stomach_articles} Articles Content Present In PubMedCentral.")
         else: logging.info(f"Extraction Process: Finished Collecting Articles Abstracts.")
 
         return all_articles 
