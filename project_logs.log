@@ -1,93 +1,483 @@
-2025-08-22 13:06:02,108 - INFO - Logs: Logs Initialized.
+2025-08-25 01:03:59,894 - INFO - Logs: Logs Initialized.
 
-2025-08-22 13:06:02,392 - INFO - PubMed API: API Key Used.
-2025-08-22 13:06:02,393 - INFO - PubMed API: Email Used.
-2025-08-22 13:06:02,393 - INFO - PubMedCentral API: API Key Used.
-2025-08-22 13:06:02,393 - INFO - PubMedCentral API: Email Used.
-
-2025-08-22 13:06:03,776 - INFO - AtlasConnector: Deployment Pinged. Successfully Connected To MongoDB Atlas.
-2025-08-22 13:06:03,777 - INFO - AtlasConnector: Cluster: articles-cluster.
-2025-08-22 13:06:03,777 - INFO - AtlasConnector: DataBase: fetched-data-db.
-2025-08-22 13:06:03,777 - INFO - AtlasConnector: Collection: pm-pmc-data.
-2025-08-22 13:06:05,230 - INFO - Starting loading stage.
-2025-08-22 13:06:06,410 - INFO - AuraConnector: Successfully Connected To Neo4j Aura.
-2025-08-22 13:06:06,414 - INFO - AuraConnector: Loading AMINO_ACID Nodes
-2025-08-22 13:06:07,169 - INFO - AuraConnector: Found 348 AMINO_ACID Nodes In data/ready_for_neo4j/entities4neo4j.csv.
-2025-08-22 13:06:08,603 - INFO - AuraConnector: Loading ANATOMICAL_SYSTEM Nodes
-2025-08-22 13:06:09,233 - INFO - AuraConnector: Found 183 ANATOMICAL_SYSTEM Nodes In data/ready_for_neo4j/entities4neo4j.csv.
-2025-08-22 13:06:10,758 - INFO - AuraConnector: Loading CANCER Nodes
-2025-08-22 13:06:11,395 - INFO - AuraConnector: Found 39797 CANCER Nodes In data/ready_for_neo4j/entities4neo4j.csv.
-2025-08-22 13:16:21,436 - INFO - AuraConnector: Loading CELL Nodes
-2025-08-22 13:16:23,220 - INFO - AuraConnector: Found 14606 CELL Nodes In data/ready_for_neo4j/entities4neo4j.csv.
-2025-08-22 13:17:37,461 - INFO - AuraConnector: Loading CELLULAR_COMPONENT Nodes
-2025-08-22 13:17:38,790 - INFO - AuraConnector: Found 2346 CELLULAR_COMPONENT Nodes In data/ready_for_neo4j/entities4neo4j.csv.
-2025-08-22 13:17:45,103 - INFO - AuraConnector: Loading DEVELOPING_ANATOMICAL_STRUCTURE Nodes
-2025-08-22 13:17:45,931 - INFO - AuraConnector: Found 22 DEVELOPING_ANATOMICAL_STRUCTURE Nodes In data/ready_for_neo4j/entities4neo4j.csv.
-2025-08-22 13:17:46,266 - INFO - AuraConnector: Loading GENE_OR_GENE_PRODUCT Nodes
-2025-08-22 13:17:47,056 - INFO - AuraConnector: Found 30856 GENE_OR_GENE_PRODUCT Nodes In data/ready_for_neo4j/entities4neo4j.csv.
-2025-08-22 13:23:24,744 - INFO - AuraConnector: Loading IMMATERIAL_ANATOMICAL_ENTITY Nodes
-2025-08-22 13:23:26,092 - INFO - AuraConnector: Found 428 IMMATERIAL_ANATOMICAL_ENTITY Nodes In data/ready_for_neo4j/entities4neo4j.csv.
-2025-08-22 13:23:27,265 - INFO - AuraConnector: Loading MULTI_TISSUE_STRUCTURE Nodes
-2025-08-22 13:23:27,945 - INFO - AuraConnector: Found 2255 MULTI_TISSUE_STRUCTURE Nodes In data/ready_for_neo4j/entities4neo4j.csv.
-2025-08-22 13:23:33,748 - INFO - AuraConnector: Loading ORGAN Nodes
-2025-08-22 13:23:34,453 - INFO - AuraConnector: Found 587 ORGAN Nodes In data/ready_for_neo4j/entities4neo4j.csv.
-2025-08-22 13:23:35,883 - INFO - AuraConnector: Loading ORGANISM Nodes
-2025-08-22 13:23:37,107 - INFO - AuraConnector: Found 26898 ORGANISM Nodes In data/ready_for_neo4j/entities4neo4j.csv.
-2025-08-22 13:27:47,025 - INFO - AuraConnector: Loading ORGANISM_SUBDIVISION Nodes
-2025-08-22 13:27:48,041 - INFO - AuraConnector: Found 418 ORGANISM_SUBDIVISION Nodes In data/ready_for_neo4j/entities4neo4j.csv.
-2025-08-22 13:27:49,197 - INFO - AuraConnector: Loading ORGANISM_SUBSTANCE Nodes
-2025-08-22 13:27:49,955 - INFO - AuraConnector: Found 1235 ORGANISM_SUBSTANCE Nodes In data/ready_for_neo4j/entities4neo4j.csv.
-2025-08-22 13:27:53,257 - INFO - AuraConnector: Loading PATHOLOGICAL_FORMATION Nodes
-2025-08-22 13:27:53,892 - INFO - AuraConnector: Found 2654 PATHOLOGICAL_FORMATION Nodes In data/ready_for_neo4j/entities4neo4j.csv.
-2025-08-22 13:28:01,047 - INFO - AuraConnector: Loading SIMPLE_CHEMICAL Nodes
-2025-08-22 13:28:02,067 - INFO - AuraConnector: Found 12743 SIMPLE_CHEMICAL Nodes In data/ready_for_neo4j/entities4neo4j.csv.
-2025-08-22 13:28:59,304 - INFO - AuraConnector: Loading TISSUE Nodes
-2025-08-22 13:29:00,289 - INFO - AuraConnector: Found 1472 TISSUE Nodes In data/ready_for_neo4j/entities4neo4j.csv.
-2025-08-22 13:29:04,214 - INFO - AuraConnector:Loaded Successfully
-2025-08-22 13:29:04,214 - INFO - AuraConnector: Loading PRODUCES Relations
-2025-08-22 13:29:04,358 - INFO - AuraConnector: Found 53 PRODUCES Relations In data/ready_for_neo4j/relations4neo4j.csv.
-2025-08-22 13:29:13,096 - INFO - AuraConnector: Loading CONTAINS Relations
-2025-08-22 13:29:13,481 - INFO - AuraConnector: Found 295 CONTAINS Relations In data/ready_for_neo4j/relations4neo4j.csv.
-2025-08-22 13:30:11,792 - INFO - AuraConnector: Loading BINDS Relations
-2025-08-22 13:30:12,112 - INFO - AuraConnector: Found 1078 BINDS Relations In data/ready_for_neo4j/relations4neo4j.csv.
-2025-08-22 13:33:34,850 - INFO - AuraConnector: Loading REGULATES Relations
-2025-08-22 13:33:35,162 - INFO - AuraConnector: Found 3844 REGULATES Relations In data/ready_for_neo4j/relations4neo4j.csv.
-2025-08-22 13:45:40,247 - INFO - AuraConnector: Loading EXPRESSED_IN Relations
-2025-08-22 13:45:40,581 - INFO - AuraConnector: Found 942 EXPRESSED_IN Relations In data/ready_for_neo4j/relations4neo4j.csv.
-2025-08-22 13:48:38,038 - INFO - AuraConnector: Loading MUTATED_IN Relations
-2025-08-22 13:48:38,319 - INFO - AuraConnector: Found 826 MUTATED_IN Relations In data/ready_for_neo4j/relations4neo4j.csv.
-2025-08-22 13:51:13,165 - INFO - AuraConnector: Loading PART_OF Relations
-2025-08-22 13:51:13,447 - INFO - AuraConnector: Found 40 PART_OF Relations In data/ready_for_neo4j/relations4neo4j.csv.
-2025-08-22 13:51:20,988 - INFO - AuraConnector: Loading LOCATED_IN Relations
-2025-08-22 13:51:21,081 - INFO - AuraConnector: Found 80 LOCATED_IN Relations In data/ready_for_neo4j/relations4neo4j.csv.
-2025-08-22 13:51:36,518 - INFO - AuraConnector: Loading ORIGIN_OF Relations
-2025-08-22 13:51:36,802 - INFO - AuraConnector: Found 9 ORIGIN_OF Relations In data/ready_for_neo4j/relations4neo4j.csv.
-2025-08-22 13:51:38,579 - INFO - AuraConnector: Loading CONTAINS_COMPONENT Relations
-2025-08-22 13:51:38,674 - INFO - AuraConnector: Found 231 CONTAINS_COMPONENT Relations In data/ready_for_neo4j/relations4neo4j.csv.
-2025-08-22 13:52:20,913 - INFO - AuraConnector: Loading SURROUNDS Relations
-2025-08-22 13:52:21,213 - INFO - AuraConnector: Found 10 SURROUNDS Relations In data/ready_for_neo4j/relations4neo4j.csv.
-2025-08-22 13:52:23,348 - INFO - AuraConnector: Loading DEVELOPS_INTO Relations
-2025-08-22 13:52:23,439 - INFO - AuraConnector: Found 36 DEVELOPS_INTO Relations In data/ready_for_neo4j/relations4neo4j.csv.
-2025-08-22 13:52:30,407 - INFO - AuraConnector: Loading ORIGINATES_FROM Relations
-2025-08-22 13:52:30,506 - INFO - AuraConnector: Found 90 ORIGINATES_FROM Relations In data/ready_for_neo4j/relations4neo4j.csv.
-2025-08-22 13:52:46,897 - INFO - AuraConnector: Loading ARISES_FROM Relations
-2025-08-22 13:52:47,398 - INFO - AuraConnector: Found 48 ARISES_FROM Relations In data/ready_for_neo4j/relations4neo4j.csv.
-2025-08-22 13:52:56,636 - INFO - AuraConnector: Loading AFFECTS Relations
-2025-08-22 13:52:56,728 - INFO - AuraConnector: Found 395 AFFECTS Relations In data/ready_for_neo4j/relations4neo4j.csv.
-2025-08-22 13:54:10,577 - INFO - AuraConnector: Loading ASSOCIATED_WITH Relations
-2025-08-22 13:54:11,009 - INFO - AuraConnector: Found 1068 ASSOCIATED_WITH Relations In data/ready_for_neo4j/relations4neo4j.csv.
-2025-08-22 13:57:29,999 - INFO - AuraConnector: Loading DAMAGES Relations
-2025-08-22 13:57:30,286 - INFO - AuraConnector: Found 58 DAMAGES Relations In data/ready_for_neo4j/relations4neo4j.csv.
-2025-08-22 13:57:41,064 - INFO - AuraConnector: Loading BIOMARKER_FOR Relations
-2025-08-22 13:57:41,351 - INFO - AuraConnector: Found 376 BIOMARKER_FOR Relations In data/ready_for_neo4j/relations4neo4j.csv.
-2025-08-22 13:58:51,104 - INFO - AuraConnector: Loading TOXIC_TO Relations
-2025-08-22 13:58:51,388 - INFO - AuraConnector: Found 16 TOXIC_TO Relations In data/ready_for_neo4j/relations4neo4j.csv.
-2025-08-22 13:58:54,664 - INFO - AuraConnector: Loading COMPONENT_OF Relations
-2025-08-22 13:58:54,755 - INFO - AuraConnector: Found 88 COMPONENT_OF Relations In data/ready_for_neo4j/relations4neo4j.csv.
-2025-08-22 13:59:11,141 - INFO - AuraConnector: Loading SECRETED_BY Relations
-2025-08-22 13:59:11,427 - INFO - AuraConnector: Found 24 SECRETED_BY Relations In data/ready_for_neo4j/relations4neo4j.csv.
-2025-08-22 13:59:15,968 - INFO - AuraConnector: Loading TREATS Relations
-2025-08-22 13:59:16,061 - INFO - AuraConnector: Found 1527 TREATS Relations In data/ready_for_neo4j/relations4neo4j.csv.
-2025-08-22 14:04:01,369 - INFO - AuraConnector: Loaded Successfully.
-2025-08-22 14:04:01,371 - INFO - AuraConnector: Connector's Driver Closed Successfully.
-2025-08-22 14:04:01,371 - INFO - Loading stage completed.
+2025-08-25 01:04:00,115 - WARNING - PubMed API: API Key Absent.
+2025-08-25 01:04:00,116 - WARNING - PubMed API: Email Absent.
+2025-08-25 01:04:00,891 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:00,891 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:01,233 - INFO - PubMed API: max_results is not specified, getting all 7757530 results found.
+2025-08-25 01:04:01,976 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:01,977 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:03,072 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:03,072 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:04,157 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:04,157 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:05,263 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:05,263 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:06,353 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:06,353 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:07,584 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:07,584 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:08,668 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:08,669 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:09,832 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:09,832 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:10,964 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:10,964 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:12,038 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:12,038 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:13,095 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:13,095 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:14,612 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:14,612 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:15,680 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:15,680 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:16,793 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:16,793 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:18,673 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:18,673 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:19,752 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:19,753 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:20,848 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:20,849 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:21,932 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:21,932 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:22,997 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:22,998 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:24,076 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:24,076 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:25,301 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:25,301 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:26,383 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:26,383 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:27,450 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:27,450 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:28,730 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:28,730 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:29,817 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:29,817 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:30,894 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:30,894 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:31,958 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:31,958 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:33,034 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:33,034 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:34,120 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:34,120 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:35,201 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:35,201 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:36,308 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:36,308 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:37,374 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:37,374 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:38,434 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:38,435 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:39,578 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:39,578 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:41,749 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:41,749 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:42,828 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:42,828 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:43,909 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:43,909 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:44,965 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:44,965 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:46,032 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:46,032 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:47,091 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:47,091 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:48,176 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:48,176 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:49,249 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:49,249 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:50,336 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:50,336 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:51,396 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:51,396 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:52,465 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:52,466 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:53,535 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:53,536 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:54,722 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:54,722 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:55,803 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:55,803 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:56,992 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:56,992 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:04:59,488 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:04:59,488 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:00,884 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:00,885 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:01,970 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:01,971 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:03,317 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:03,317 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:04,483 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:04,483 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:05,592 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:05,592 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:07,998 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:07,998 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:09,056 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:09,057 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:10,115 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:10,116 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:11,204 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:11,204 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:12,317 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:12,317 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:13,577 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:13,577 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:14,654 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:14,654 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:15,731 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:15,731 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:16,829 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:16,829 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:17,888 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:17,888 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:18,991 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:18,991 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:20,082 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:20,082 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:21,141 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:21,141 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:22,211 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:22,211 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:23,286 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:23,286 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:24,370 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:24,371 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:25,455 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:25,455 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:26,512 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:26,513 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:27,582 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:27,582 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:28,657 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:28,657 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:29,717 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:29,718 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:30,944 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:30,945 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:32,102 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:32,102 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:33,202 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:33,202 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:34,371 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:34,371 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:35,618 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:35,618 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:36,730 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:36,730 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:37,821 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:37,821 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:38,965 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:38,966 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:40,157 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:40,158 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:41,252 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:41,252 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:42,343 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:42,343 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:43,410 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:43,410 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:44,576 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:44,578 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:45,653 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:45,653 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:46,845 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:46,845 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:47,957 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:47,957 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:49,111 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:49,112 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:50,173 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:50,173 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:51,300 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:51,300 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:52,367 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:52,367 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:53,651 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:53,651 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:54,765 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:54,765 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:55,850 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:55,851 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:57,960 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:57,960 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:05:59,154 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:05:59,154 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:00,284 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:00,284 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:01,379 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:01,379 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:02,458 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:02,458 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:03,536 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:03,536 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:04,617 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:04,617 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:05,883 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:05,883 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:07,107 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:07,107 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:08,171 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:08,171 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:09,249 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:09,250 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:10,350 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:10,350 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:11,482 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:11,482 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:12,555 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:12,555 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:13,639 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:13,640 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:14,712 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:14,712 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:15,950 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:15,950 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:17,013 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:17,013 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:18,083 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:18,083 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:19,190 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:19,190 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:20,270 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:20,270 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:21,349 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:21,349 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:22,410 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:22,410 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:23,493 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:23,493 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:24,565 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:24,565 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:25,624 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:25,624 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:26,717 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:26,717 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:27,792 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:27,793 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:28,844 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:28,844 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:29,914 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:29,914 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:31,008 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:31,008 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:32,082 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:32,082 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:33,298 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:33,298 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:34,359 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:34,359 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:35,419 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:35,419 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:36,487 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:36,487 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:37,592 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:37,592 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:38,694 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:38,694 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:39,903 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:39,903 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:40,976 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:40,976 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:42,088 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:42,088 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:43,362 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:43,362 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:44,720 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:44,720 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:45,983 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:45,983 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:47,043 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:47,044 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:48,244 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:48,244 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:49,398 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:49,398 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:50,461 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:50,461 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:51,591 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:51,591 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:52,648 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:52,648 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:53,884 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:53,884 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:54,965 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:54,965 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:56,022 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:56,022 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:57,086 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:57,086 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:58,335 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:58,335 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:06:59,402 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:06:59,403 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:00,565 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:00,565 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:01,764 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:01,764 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:02,825 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:02,825 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:03,881 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:03,881 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:04,941 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:04,941 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:06,332 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:06,332 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:07,547 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:07,547 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:08,681 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:08,681 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:09,866 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:09,866 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:10,967 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:10,967 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:12,174 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:12,174 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:13,241 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:13,241 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:14,357 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:14,357 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:15,417 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:15,417 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:16,544 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:16,544 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:17,753 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:17,754 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:18,847 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:18,847 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:19,941 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:19,942 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:21,033 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:21,033 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:22,325 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:22,325 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:23,384 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:23,384 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:24,442 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:24,442 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:25,535 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:25,536 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:26,694 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:26,694 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:27,956 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:27,956 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:29,017 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:29,017 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:30,133 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:30,133 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:31,397 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:31,397 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:32,453 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:32,453 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:33,511 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:33,511 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:34,579 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:34,579 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:35,872 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:35,872 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:36,970 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:36,970 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:38,027 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:38,027 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:39,128 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:39,129 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:40,344 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:40,344 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:41,449 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:41,449 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:42,528 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:42,529 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:43,612 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:43,612 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:44,847 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:44,847 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:45,963 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:45,963 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:47,039 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:47,039 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:48,135 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:48,136 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:49,547 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:49,547 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:50,664 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:50,664 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:51,735 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:51,735 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:52,806 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:52,806 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:54,074 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:54,074 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:55,130 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:55,130 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:56,414 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:56,415 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:57,850 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:57,850 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:07:59,286 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:07:59,287 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:00,722 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:00,722 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:01,906 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:01,906 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:03,152 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:03,153 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:04,347 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:04,348 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:05,449 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:05,450 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:06,516 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:06,517 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:07,585 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:07,585 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:08,656 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:08,656 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:09,777 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:09,777 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:11,544 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:11,544 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:12,638 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:12,638 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:13,690 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:13,690 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:14,758 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:14,759 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:15,814 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:15,814 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:16,906 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:16,907 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:17,976 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:17,976 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:19,059 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:19,060 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:20,076 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:20,076 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:21,159 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:21,159 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:22,258 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:22,259 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:23,321 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:23,321 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:24,387 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:24,387 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:25,446 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:25,447 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:26,513 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:26,513 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:27,748 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:27,748 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:28,836 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:28,838 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:29,902 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:29,902 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:30,953 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:30,954 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:32,072 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:32,072 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:33,135 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:33,135 - INFO - Search Endpoint: Sleeping For 0.34s.
+2025-08-25 01:08:34,202 - INFO - PubMed API: Search Endpoint: Response OK: 200
+2025-08-25 01:08:34,202 - INFO - Search Endpoint: Sleeping For 0.34s.

@@ -15,7 +15,21 @@ from config.apis_config import PM_API_SLEEP_TIME
    3 - fetch articles that correspond to mpids that are not in cache
 I guess that using this new logic, using the date API param will be useless."""
 
+
+
+
+
+
 class NewPubMedAPI:
+
+    """I got this from PubMed API Documentation:
+To retrieve more than 10,000 UIDs from databases other than PubMed,
+submit multiple esearch requests while incrementing the value of retstart (Me: I implemented this).
+For PubMed, ESearch can only retrieve the first 10,000 records matching the query.
+(Me: If using pubmed database and the wanted number of results is more than 10,000, will only return 10,000)
+To obtain more than 10,000 PubMed records, consider using <EDirect> (Me: it's a CLI lol) that contains additional logic
+to batch PubMed search results automatically so that an arbitrary number can be retrieved."""
+
     def __init__(self, api_key=None, email=None):
         self.base_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
         self.api_key = api_key
@@ -40,15 +54,21 @@ class NewPubMedAPI:
 
 
 
-    def get_pmids(self, query:str, max_results:int = None):
+    def get_pmids(self, query:str, database = 'pubmed', max_results:int = None):
         """Add all pmids that are returned by a query to self.cache
             Params: 
                     query: a query like the one we would write in the search bar
-                    max_results: the number of pmids we wanna get per query, 
-                                if not specified, we get everything available """
+                    database: a database supported by PubMedAPI (default = 'pubmed')
+                            see this for all available databases: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/einfo.fcgi
+
+                            NOTE: only for pubmed database, ESearch can only retrieve the first 10,000 records matching the query
+                                (so 'retstart' cannot be larger than 9998)
+                                To obtain more than 10,000 PubMed records, consider using <EDirect> (it's a CLI) so that an arbitrary number can be retrieved.
+                    max_results: the number of pmids to get per query, if not specified, we get everything available
+                                if database = 'pubmed', the max we can get is 10,000 records. """
         
         post_data = {
-            'db': 'pubmed',        #database to use (pubmed is default)
+            'db': database,        #database to use (pubmed is default)
             'term': query,  
             'retmode': 'json',     #json is available as a return type for esearch endpoint
         }
@@ -70,24 +90,36 @@ class NewPubMedAPI:
                 self.pmids_cache.update(set(ids))
         
         else: #either None or greater than hard_limit
-            post_data['retmax'] = self.hard_limit
-            
-            #if max_results is not specified, we will get everything available by setting it to count.
-            if max_results is None:
-                temp_response = self._send_post_request(post_data)
-                count = int(temp_response['esearchresult']['count'])
-                max_results = count
-
-            # + 1 for an additional iteration to get the remaining if max_results % hard_limit != 0
-            for _ in range((max_results // self.hard_limit) + 1): 
+            if database == 'pubmed':
+                # Esearch can only get 10000 records from pubmed database
+                logging.warning("PubMed API: For 'pubmed' database, ESearch Endpoint is built to only retrieve the first 10,000 records matching the query. " \
+                "To get more, either specify another database or use EDirect (a CLI).")
+                post_data['retmax'] = self.hard_limit
                 response = self._send_post_request(post_data)
                 if response:
                     ids : list = response.json()['esearchresult']['idlist']
                     self.pmids_cache.update(set(ids))
+            else: #we don't have the 10,000 constraint with other databases
 
-                    # default: 'retstart' = 0 corresponds to the first result in the search list
-                    post_data['retstart'] = self.hard_limit
-    
+                post_data['retmax'] = self.hard_limit
+            
+                #if max_results is not specified, we will get everything available by setting it to count.
+                if max_results is None:
+                    temp_response = self._send_post_request(post_data)
+                    count = int(temp_response.json()['esearchresult']['count'])
+                    logging.info(f"PubMed API: max_results is not specified, getting all {count} results found.")
+                    max_results = count
+
+                # + 1 for an additional iteration to get the remaining if max_results % hard_limit != 0
+                for _ in range((max_results // self.hard_limit) + 1): 
+                    response = self._send_post_request(post_data)
+                    if response:
+                        ids : list = response.json()['esearchresult']['idlist']
+                        self.pmids_cache.update(set(ids))
+
+                        # default: 'retstart' = 0 corresponds to the first result in the search list
+                        post_data['retstart'] = self.hard_limit
+        
         
         
     def _send_post_request(self, data_to_post: dict):
@@ -96,8 +128,8 @@ class NewPubMedAPI:
            data_to_post: data to post (passed to requests.post() data argument)"""
         search_url = f"{self.base_url}esearch.fcgi"
         try: #get recieves params, post recieves data
-            search_response = rq.post(search_url, data_to_post, headers=self.headers)
-            response_code = search_response.status_code
+            post_response = rq.post(search_url, data_to_post, headers=self.headers)
+            response_code = post_response.status_code
             if response_code == 200:
                 logging.info(f"PubMed API: Search Endpoint: Response OK: {response_code}")
                 
@@ -115,7 +147,7 @@ class NewPubMedAPI:
             logging.info(f"Search Endpoint: Sleeping For {PM_API_SLEEP_TIME['without_key']}s.")
             time.sleep(PM_API_SLEEP_TIME["without_key"]) #without an api key, we only have 3req/second 
         
-        return search_response                   
+        return post_response                   
 
 
 
@@ -328,8 +360,7 @@ class PubMedAPI:
 
 
 if __name__ == "__main__":
-    api = PubMedAPI()
-    response = api.search("human")
-    ids = response['esearchresult']['idlist']
-    count = response['esearchresult']['count']
-    print(count, type(count))
+    api = NewPubMedAPI()
+    
+    api.get_pmids(query="human", database='pmc')
+    print(len(api.pmids_cache))
