@@ -3,6 +3,9 @@ import xml.etree.ElementTree as ET
 
 import time
 import logging
+import pickle
+
+from pathlib import Path
 
 from config.apis_config import PM_API_SLEEP_TIME
 
@@ -50,8 +53,9 @@ to batch PubMed search results automatically so that an arbitrary number can be 
         self.hard_limit = int(1e4)
         #cache: 
         self.pmids_cache = set()
-
-
+        self.cache_path = Path("cache/pmids_cache.pkl")
+        #load old pmids cache
+        self._load_cache()
 
 
     def get_pmids(self, query:str, database = 'pubmed', max_results:int = None):
@@ -94,6 +98,7 @@ to batch PubMed search results automatically so that an arbitrary number can be 
                 # Esearch can only get 10000 records from pubmed database
                 logging.warning("PubMed API: For 'pubmed' database, ESearch Endpoint is built to only retrieve the first 10,000 records matching the query. " \
                 "To get more, either specify another database or use EDirect (a CLI).")
+                print("max results for 'pubmed' database is 10,000. See logs file for more info.")
                 post_data['retmax'] = self.hard_limit
                 response = self._send_post_request(post_data)
                 if response:
@@ -120,7 +125,10 @@ to batch PubMed search results automatically so that an arbitrary number can be 
                         # default: 'retstart' = 0 corresponds to the first result in the search list
                         post_data['retstart'] = self.hard_limit
         
+        self._save_cache()
         
+
+
         
     def _send_post_request(self, data_to_post: dict):
         """Send a HTTP POST request to PubMed API esearch endpoint.
@@ -148,6 +156,57 @@ to batch PubMed search results automatically so that an arbitrary number can be 
             time.sleep(PM_API_SLEEP_TIME["without_key"]) #without an api key, we only have 3req/second 
         
         return post_response                   
+
+
+
+
+    def _load_cache(self):
+        try:
+            with open(self.cache_path, "rb") as f: 
+                self.pmids_cache = pickle.load(f)
+                logging.info(f"PubMed API: loaded {len(self.pmids_cache)} cached pmids.")
+        except FileNotFoundError:
+            logging.info(f"PubMed API: no cache found, starting fresh.")
+
+
+
+    
+    def _save_cache(self):
+        #make sure the path exists 
+        self.cache_path.parent.mkdir(parents=True, exist_ok=True)
+        try:
+            with open(self.cache_path, "wb") as f: 
+                pickle.dump(obj= self.pmids_cache, file= f)
+                logging.info(f"PubMed API: saved {len(self.pmids_cache)} pmids to cache.")
+        except Exception as e: 
+            logging.error(f"PubMed API: failed to save pmids to cache. {e}")
+
+
+
+
+if __name__ == "__main__":
+    api = NewPubMedAPI()
+    
+    api.get_pmids(query="human")
+    print(len(api.pmids_cache))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -358,9 +417,3 @@ class PubMedAPI:
 
 
 
-
-if __name__ == "__main__":
-    api = NewPubMedAPI()
-    
-    api.get_pmids(query="human", database='pmc')
-    print(len(api.pmids_cache))

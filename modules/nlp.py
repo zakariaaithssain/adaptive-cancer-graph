@@ -170,9 +170,9 @@ class StreamingOptimizedNLP:
         try:
             with open('cache/normalization_cache.pkl', 'rb') as f:
                 self._normalization_cache = pickle.load(f)
-            logging.info(f"NLP: Loaded {len(self._normalization_cache)} cached normalizations")
+            logging.info(f"NLP: Loaded {len(self._normalization_cache)} cached normalizations.")
         except FileNotFoundError:
-            logging.info("NLP: No existing cache found, starting fresh")
+            logging.info("NLP: No existing cache found, starting fresh.")
     
     def _save_cache(self):
         """Save normalization cache to disk. Cache grows each time we run the pipeline,
@@ -182,7 +182,7 @@ class StreamingOptimizedNLP:
                 pickle.dump(self._normalization_cache, f)
             logging.info(f"NLP: Saved {len(self._normalization_cache)} normalizations to cache")
         except Exception as e:
-            logging.error(f"NLP: Failed to save cache: {e}")
+            logging.error(f"NLP: Failed to save normalizations to cache: {e}")
     
     def _should_normalize(self, text: str) -> bool:
         """Determine if entity should be normalized (skip very short/common ones)."""
