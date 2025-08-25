@@ -1,9 +1,13 @@
-2025-08-25 14:48:39,804 - INFO - Logs: Logs Initialized.
-
-2025-08-25 14:48:40,001 - WARNING - PubMed API: API Key Absent.
-2025-08-25 14:48:40,002 - WARNING - PubMed API: Email Absent.
-2025-08-25 14:48:40,002 - INFO - PubMed API: no cache found, starting fresh.
-2025-08-25 14:48:40,002 - WARNING - PubMed API: For 'pubmed' database, ESearch Endpoint is built to only retrieve the first 10,000 records matching the query. To get more, either specify another database or use EDirect (a CLI).
-2025-08-25 14:48:41,595 - INFO - PubMed API: Search Endpoint: Response OK: 200
-2025-08-25 14:48:41,595 - INFO - Search Endpoint: Sleeping For 0.34s.
-2025-08-25 14:48:41,948 - INFO - PubMed API: saved 9999 pmids to cache.
+2025-08-25 16:37:54,681 - INFO - Logs file initialized.
+2025-08-25 16:37:54,854 - WARNING - PubMed API: API key absent. less API rate limit allowed.
+2025-08-25 16:37:54,855 - WARNING - PubMed API: email absent.
+2025-08-25 16:37:54,855 - INFO - PubMed API: no cache found, starting fresh.
+2025-08-25 16:37:55,605 - INFO - PubMed API: search endpoint response OK: 200
+2025-08-25 16:37:55,605 - INFO - search endpoint sleeping for 0.34s.
+2025-08-25 16:37:56,697 - INFO - PubMed API: search endpoint response OK: 200
+2025-08-25 16:37:56,697 - INFO - search endpoint sleeping for 0.34s.
+2025-08-25 16:37:57,941 - INFO - PubMed API: search endpoint response OK: 200
+2025-08-25 16:37:57,941 - INFO - search endpoint sleeping for 0.34s.
+2025-08-25 16:37:58,783 - INFO - PubMed API: search endpoint response OK: 200
+2025-08-25 16:37:58,783 - INFO - search endpoint sleeping for 0.34s.
+2025-08-25 16:37:59,134 - INFO - PubMed API: saved 30350 pmids to cache.

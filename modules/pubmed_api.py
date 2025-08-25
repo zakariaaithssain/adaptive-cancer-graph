@@ -6,6 +6,7 @@ import logging
 import pickle
 
 from pathlib import Path
+from typing import Literal
 
 from config.apis_config import PM_API_SLEEP_TIME
 
@@ -43,11 +44,11 @@ to batch PubMed search results automatically so that an arbitrary number can be 
     "Content-Type": "application/x-www-form-urlencoded"
 }
 
-        if api_key: logging.info("PubMed API: API Key Used.")
-        else: logging.warning("PubMed API: API Key Absent.")
+        if api_key: logging.info("PubMed API: API key used, full API rate limit exploited.")
+        else: logging.warning("PubMed API: API key absent. less API rate limit allowed.")
 
-        if self.email: logging.info("PubMed API: Email Used.")
-        else: logging.warning("PubMed API: Email Absent.")
+        if self.email: logging.info("PubMed API: email used.")
+        else: logging.warning("PubMed API: email absent.")
 
         #the hard coded limit of how much results can PubMed API return per call (10^4)
         self.hard_limit = int(1e4)
@@ -72,9 +73,10 @@ to batch PubMed search results automatically so that an arbitrary number can be 
                                 if database = 'pubmed', the max we can get is 10,000 records. """
         
         post_data = {
-            'db': database,        #database to use (pubmed is default)
+            'db': database,  
             'term': query,  
-            'retmode': 'json',     #json is available as a return type for esearch endpoint
+            'retmode': 'json', 
+            'usehistory': 'y'  
         }
             
         #set API key and email if used
@@ -88,7 +90,7 @@ to batch PubMed search results automatically so that an arbitrary number can be 
             # add 'retmax' to HTTP POST data
             post_data['retmax'] = max_results
 
-            response = self._send_post_request(post_data)
+            response = self._send_post_request('search', post_data)
             if response:
                 ids : list = response.json()['esearchresult']['idlist']
                 self.pmids_cache.update(set(ids))
@@ -100,59 +102,78 @@ to batch PubMed search results automatically so that an arbitrary number can be 
                 "To get more, either specify another database or use EDirect (a CLI).")
                 print("max results for 'pubmed' database is 10,000. See logs file for more info.")
                 post_data['retmax'] = self.hard_limit
-                response = self._send_post_request(post_data)
+
+                response = self._send_post_request('search', post_data)
                 if response:
                     ids : list = response.json()['esearchresult']['idlist']
                     self.pmids_cache.update(set(ids))
-            else: #we don't have the 10,000 constraint with other databases
 
-                post_data['retmax'] = self.hard_limit
-            
+            else: 
                 #if max_results is not specified, we will get everything available by setting it to count.
                 if max_results is None:
-                    temp_response = self._send_post_request(post_data)
+                    temp_response = self._send_post_request('search', post_data)
                     count = int(temp_response.json()['esearchresult']['count'])
                     logging.info(f"PubMed API: max_results is not specified, getting all {count} results found.")
                     max_results = count
 
-                # + 1 for an additional iteration to get the remaining if max_results % hard_limit != 0
-                for _ in range((max_results // self.hard_limit) + 1): 
-                    response = self._send_post_request(post_data)
+                post_data['retmax'] = self.hard_limit
+                post_data['retstart'] = 0
+                # example: if max_results = 30350, this is for getting 30,000 records
+                for _ in range((max_results // self.hard_limit)): 
+                    response = self._send_post_request('search', post_data)
                     if response:
-                        ids : list = response.json()['esearchresult']['idlist']
+                        ids = response.json()['esearchresult']['idlist']
+                        print(len(ids))
                         self.pmids_cache.update(set(ids))
 
-                        # default: 'retstart' = 0 corresponds to the first result in the search list
-                        post_data['retstart'] = self.hard_limit
-        
+                        # increment 'retstart' to get next 10,000 records
+                        post_data['retstart'] += self.hard_limit
+                else: 
+                    # example: if max_results = 30350, this is for getting 350 records
+                    post_data['retmax'] = max_results % self.hard_limit
+                    response = self._send_post_request('search', post_data)
+                    if response:
+                        ids = response.json()['esearchresult']['idlist']
+                        print(len(ids))
+                        self.pmids_cache.update(set(ids))
+
         self._save_cache()
         
 
 
         
-    def _send_post_request(self, data_to_post: dict):
-        """Send a HTTP POST request to PubMed API esearch endpoint.
+    def _send_post_request(self, endpoint: Literal['search', 'fetch'], data_to_post: dict):
+        """Send a HTTP POST request to ESearch or EFetch PubMed API endpoints.
            Params: 
+           endpoint: 'search' for ESearch endpoint, 'fetch' for EFetch endpoint.
            data_to_post: data to post (passed to requests.post() data argument)"""
-        search_url = f"{self.base_url}esearch.fcgi"
-        try: #get recieves params, post recieves data
-            post_response = rq.post(search_url, data_to_post, headers=self.headers)
+        
+        if endpoint == 'search':
+            endpoint_url = f"{self.base_url}esearch.fcgi"
+        elif endpoint == 'fetch':
+            endpoint_url = f"{self.base_url}efetch.fcgi"
+        else: 
+            logging.error(f"PubMed API: 'endpoint' arg expected 'search' or 'fetch' got {endpoint}")
+            return 
+        
+        try: 
+            post_response = rq.post(endpoint_url, data_to_post, headers=self.headers)
             response_code = post_response.status_code
             if response_code == 200:
-                logging.info(f"PubMed API: Search Endpoint: Response OK: {response_code}")
+                logging.info(f"PubMed API: {endpoint} endpoint response OK: {response_code}")
                 
             else: 
-                logging.error(f"PubMed API: Search Endpoint: Response NOT OK: {response_code}")
+                logging.error(f"PubMed API: {endpoint} endpoint response NOT OK: {response_code}")
                 return
         except Exception as e:
-            logging.error(f"Search Endpoint: Likely Not Related To Endpoint: {e}")
+            logging.error(f"PubMed API: likely not due to API error: {e}")
             return
 
         if self.api_key:
-            logging.info(f"Search Endpoint: Sleeping For {PM_API_SLEEP_TIME['with_key']}s.")
+            logging.info(f"{endpoint} endpoint sleeping for {PM_API_SLEEP_TIME['with_key']}s.")
             time.sleep(PM_API_SLEEP_TIME["with_key"])    #with an api key, we are allowed to do 10req/second
         else: 
-            logging.info(f"Search Endpoint: Sleeping For {PM_API_SLEEP_TIME['without_key']}s.")
+            logging.info(f"{endpoint} endpoint sleeping for {PM_API_SLEEP_TIME['without_key']}s.")
             time.sleep(PM_API_SLEEP_TIME["without_key"]) #without an api key, we only have 3req/second 
         
         return post_response                   
@@ -165,6 +186,7 @@ to batch PubMed search results automatically so that an arbitrary number can be 
             with open(self.cache_path, "rb") as f: 
                 self.pmids_cache = pickle.load(f)
                 logging.info(f"PubMed API: loaded {len(self.pmids_cache)} cached pmids.")
+
         except FileNotFoundError:
             logging.info(f"PubMed API: no cache found, starting fresh.")
 
@@ -178,6 +200,7 @@ to batch PubMed search results automatically so that an arbitrary number can be 
             with open(self.cache_path, "wb") as f: 
                 pickle.dump(obj= self.pmids_cache, file= f)
                 logging.info(f"PubMed API: saved {len(self.pmids_cache)} pmids to cache.")
+
         except Exception as e: 
             logging.error(f"PubMed API: failed to save pmids to cache. {e}")
 
@@ -186,8 +209,7 @@ to batch PubMed search results automatically so that an arbitrary number can be 
 
 if __name__ == "__main__":
     api = NewPubMedAPI()
-    
-    api.get_pmids(query="human")
+    api.get_pmids("human", database="pmc", max_results=30350)
     print(len(api.pmids_cache))
 
 

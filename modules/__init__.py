@@ -19,7 +19,7 @@ def initialize_logs():
                                     
                 ]
                 )
-    logging.info("Logs: Logs Initialized.\n")  
+    logging.info("Logs file initialized.")  
 
 
 initialize_logs()
